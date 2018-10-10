@@ -32,8 +32,6 @@ class MediaPlayer extends Component {
         if (this.state.player) {
             const currentTime = this.state.player.currentTime
             this.props.timeUpdate(currentTime)
-        } else {
-            console.log('no player')
         }
     }
     render() {

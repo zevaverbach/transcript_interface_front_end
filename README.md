@@ -1,6 +1,6 @@
-This is an interactive transcript implemented in React.
+This is an interactive transcript implemented in React.  It takes in machine transcripts and will soon have functionality to present them to a human for correction.
 
-Currently, the media file and transcript are hardcoded, and the performance is a little sluggish.
+Currently, the media file and transcript sources are hardcoded, and the performance is a little sluggish.
 
 ## Installation
 

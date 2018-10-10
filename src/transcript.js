@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import Word from './word'
+import Paragraph from './paragraph'
 
 
 
@@ -8,33 +8,26 @@ class Transcript extends Component {
 
     render() {
 
-        const renderArray = [];
+        const paragraphs = [];
+        let paragraph = [];
 
-        for (let [index, wordObject] of Object.entries(this.props.transcript)) {
+        for (let wordObject of this.props.transcript) {
 
-            let space = wordObject.word === '.'
-                ? ''
-                : ' '
-            let style = this.props.currentWordIndex === parseInt(index)
-                ? { color: 'blue', fontStyle: 'bold', backgroundColor: 'gray' }
-                : {}
+            paragraph.push(wordObject)
 
-            if (wordObject.confidence <= .8 && wordObject.word !== '.') {
-                style = Object.assign(style, { textDecoration: 'underline' })
+            if (paragraph.length >= 80 && wordObject.word === '.') {
+                paragraphs.push(<Paragraph onClickWord={this.props.onClickWord}
+                    words={paragraph}
+                    currentWordIndex={this.props.currentWordIndex} />)
+                paragraph = [];
             }
 
-            let text = space + wordObject.word
-
-            renderArray.push(<Word key={index}
-                time={wordObject.wordStart}
-                style={style}
-                onClick={this.props.onClickWord}
-                text={text} />)
         }
 
-        return renderArray;
+        return paragraphs;
     }
-
 }
+
+
 
 export default Transcript;
