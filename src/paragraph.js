@@ -17,7 +17,7 @@ class Paragraph extends Component {
                 ? { color: 'blue', fontStyle: 'bold', backgroundColor: 'gray' }
                 : {}
 
-            if (wordObject.confidence <= .9 && wordObject.word !== '.') {
+            if (wordObject.confidence <= this.props.confidenceThreshold && wordObject.word !== '.') {
                 style = Object.assign(style, { textDecoration: 'underline' })
             }
 
