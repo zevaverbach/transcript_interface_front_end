@@ -1,0 +1,2643 @@
+{
+  "job": {
+    "lang": "en-US", 
+    "user_id": 2262, 
+    "name": "judith_butler_youtube_Bo7o2LYATDc.m4a", 
+    "duration": 180, 
+    "created_at": "Wed Oct 10 17:14:38 2018", 
+    "id": 9531556
+  }, 
+  "speakers": [
+    {
+      "duration": "10.24", 
+      "confidence": null, 
+      "name": "F1", 
+      "time": "1.29"
+    }, 
+    {
+      "duration": "164.77", 
+      "confidence": null, 
+      "name": "F2", 
+      "time": "11.55"
+    }
+  ], 
+  "words": [
+    {
+      "duration": "0.12", 
+      "confidence": "0.980", 
+      "name": "It's", 
+      "time": "1.29"
+    }, 
+    {
+      "duration": "0.15", 
+      "confidence": "1.000", 
+      "name": "one", 
+      "time": "1.41"
+    }, 
+    {
+      "duration": "0.21", 
+      "confidence": "1.000", 
+      "name": "thing", 
+      "time": "1.56"
+    }, 
+    {
+      "duration": "0.12", 
+      "confidence": "1.000", 
+      "name": "to", 
+      "time": "1.77"
+    }, 
+    {
+      "duration": "0.33", 
+      "confidence": "1.000", 
+      "name": "say", 
+      "time": "1.89"
+    }, 
+    {
+      "duration": "0.27", 
+      "confidence": "1.000", 
+      "name": "that", 
+      "time": "2.22"
+    }, 
+    {
+      "duration": "0.19", 
+      "confidence": "0.560", 
+      "name": "gender", 
+      "time": "2.51"
+    }, 
+    {
+      "duration": "0.26", 
+      "confidence": "0.480", 
+      "name": "is", 
+      "time": "2.71"
+    }, 
+    {
+      "duration": "0.81", 
+      "confidence": "1.000", 
+      "name": "performed", 
+      "time": "2.97"
+    }, 
+    {
+      "duration": "0.09", 
+      "confidence": "0.990", 
+      "name": "and", 
+      "time": "3.90"
+    }, 
+    {
+      "duration": "0.18", 
+      "confidence": "1.000", 
+      "name": "that's", 
+      "time": "3.99"
+    }, 
+    {
+      "duration": "0.06", 
+      "confidence": "1.000", 
+      "name": "a", 
+      "time": "4.17"
+    }, 
+    {
+      "duration": "0.18", 
+      "confidence": "1.000", 
+      "name": "little", 
+      "time": "4.23"
+    }, 
+    {
+      "duration": "0.33", 
+      "confidence": "1.000", 
+      "name": "different", 
+      "time": "4.41"
+    }, 
+    {
+      "duration": "0.18", 
+      "confidence": "1.000", 
+      "name": "from", 
+      "time": "4.74"
+    }, 
+    {
+      "duration": "0.21", 
+      "confidence": "0.890", 
+      "name": "saying", 
+      "time": "4.92"
+    }, 
+    {
+      "duration": "0.30", 
+      "confidence": "1.000", 
+      "name": "gender", 
+      "time": "5.13"
+    }, 
+    {
+      "duration": "0.15", 
+      "confidence": "0.810", 
+      "name": "is", 
+      "time": "5.43"
+    }, 
+    {
+      "duration": "0.84", 
+      "confidence": "1.000", 
+      "name": "performative", 
+      "time": "5.58"
+    }, 
+    {
+      "duration": "0.12", 
+      "confidence": "1.000", 
+      "name": "when", 
+      "time": "6.42"
+    }, 
+    {
+      "duration": "0.15", 
+      "confidence": "1.000", 
+      "name": "we", 
+      "time": "6.54"
+    }, 
+    {
+      "duration": "0.21", 
+      "confidence": "1.000", 
+      "name": "say", 
+      "time": "6.69"
+    }, 
+    {
+      "duration": "0.33", 
+      "confidence": "1.000", 
+      "name": "gender", 
+      "time": "6.90"
+    }, 
+    {
+      "duration": "0.12", 
+      "confidence": "0.950", 
+      "name": "is", 
+      "time": "7.23"
+    }, 
+    {
+      "duration": "0.68", 
+      "confidence": "1.000", 
+      "name": "performed", 
+      "time": "7.35"
+    }, 
+    {
+      "duration": "0.30", 
+      "confidence": "1.000", 
+      "name": "we", 
+      "time": "8.04"
+    }, 
+    {
+      "duration": "0.45", 
+      "confidence": "1.000", 
+      "name": "usually", 
+      "time": "8.67"
+    }, 
+    {
+      "duration": "0.36", 
+      "confidence": "1.000", 
+      "name": "mean", 
+      "time": "9.12"
+    }, 
+    {
+      "duration": "0.33", 
+      "confidence": "1.000", 
+      "name": "that", 
+      "time": "9.48"
+    }, 
+    {
+      "duration": "0.15", 
+      "confidence": "0.960", 
+      "name": "we've", 
+      "time": "10.29"
+    }, 
+    {
+      "duration": "0.30", 
+      "confidence": "1.000", 
+      "name": "taken", 
+      "time": "10.44"
+    }, 
+    {
+      "duration": "0.12", 
+      "confidence": "1.000", 
+      "name": "on", 
+      "time": "10.74"
+    }, 
+    {
+      "duration": "0.06", 
+      "confidence": "1.000", 
+      "name": "a", 
+      "time": "10.86"
+    }, 
+    {
+      "duration": "0.57", 
+      "confidence": "0.990", 
+      "name": "role", 
+      "time": "10.92"
+    }, 
+    {
+      "duration": "0.04", 
+      "confidence": "0.590", 
+      "name": ".", 
+      "time": "11.49"
+    }, 
+    {
+      "duration": "0.18", 
+      "confidence": "0.870", 
+      "name": "We're", 
+      "time": "11.55"
+    }, 
+    {
+      "duration": "0.57", 
+      "confidence": "1.000", 
+      "name": "acting", 
+      "time": "11.82"
+    }, 
+    {
+      "duration": "0.21", 
+      "confidence": "1.000", 
+      "name": "in", 
+      "time": "12.39"
+    }, 
+    {
+      "duration": "0.33", 
+      "confidence": "1.000", 
+      "name": "some", 
+      "time": "12.60"
+    }, 
+    {
+      "duration": "0.48", 
+      "confidence": "1.000", 
+      "name": "way", 
+      "time": "12.93"
+    }, 
+    {
+      "duration": "0.18", 
+      "confidence": "1.000", 
+      "name": "and", 
+      "time": "14.70"
+    }, 
+    {
+      "duration": "0.18", 
+      "confidence": "1.000", 
+      "name": "that", 
+      "time": "14.88"
+    }, 
+    {
+      "duration": "0.18", 
+      "confidence": "0.710", 
+      "name": "are", 
+      "time": "15.06"
+    }, 
+    {
+      "duration": "0.52", 
+      "confidence": "1.000", 
+      "name": "acting", 
+      "time": "15.29"
+    }, 
+    {
+      "duration": "0.18", 
+      "confidence": "1.000", 
+      "name": "or", 
+      "time": "15.81"
+    }, 
+    {
+      "duration": "0.06", 
+      "confidence": "0.430", 
+      "name": "a", 
+      "time": "15.99"
+    }, 
+    {
+      "duration": "0.32", 
+      "confidence": "0.980", 
+      "name": "role", 
+      "time": "16.05"
+    }, 
+    {
+      "duration": "0.49", 
+      "confidence": "0.980", 
+      "name": "playing", 
+      "time": "16.37"
+    }, 
+    {
+      "duration": "0.45", 
+      "confidence": "1.000", 
+      "name": "is", 
+      "time": "16.86"
+    }, 
+    {
+      "duration": "0.54", 
+      "confidence": "1.000", 
+      "name": "crucial", 
+      "time": "17.88"
+    }, 
+    {
+      "duration": "0.18", 
+      "confidence": "1.000", 
+      "name": "to", 
+      "time": "18.42"
+    }, 
+    {
+      "duration": "0.27", 
+      "confidence": "1.000", 
+      "name": "the", 
+      "time": "18.60"
+    }, 
+    {
+      "duration": "0.54", 
+      "confidence": "1.000", 
+      "name": "gender", 
+      "time": "19.26"
+    }, 
+    {
+      "duration": "0.12", 
+      "confidence": "1.000", 
+      "name": "that", 
+      "time": "19.80"
+    }, 
+    {
+      "duration": "0.18", 
+      "confidence": "1.000", 
+      "name": "we", 
+      "time": "19.92"
+    }, 
+    {
+      "duration": "0.42", 
+      "confidence": "1.000", 
+      "name": "are", 
+      "time": "20.10"
+    }, 
+    {
+      "duration": "0.27", 
+      "confidence": "0.900", 
+      "name": "and", 
+      "time": "20.55"
+    }, 
+    {
+      "duration": "0.18", 
+      "confidence": "1.000", 
+      "name": "the", 
+      "time": "20.85"
+    }, 
+    {
+      "duration": "0.36", 
+      "confidence": "1.000", 
+      "name": "gender", 
+      "time": "21.03"
+    }, 
+    {
+      "duration": "0.12", 
+      "confidence": "1.000", 
+      "name": "that", 
+      "time": "21.39"
+    }, 
+    {
+      "duration": "0.18", 
+      "confidence": "1.000", 
+      "name": "we", 
+      "time": "21.51"
+    }, 
+    {
+      "duration": "0.46", 
+      "confidence": "1.000", 
+      "name": "present", 
+      "time": "21.69"
+    }, 
+    {
+      "duration": "0.08", 
+      "confidence": "0.910", 
+      "name": "to", 
+      "time": "22.15"
+    }, 
+    {
+      "duration": "0.12", 
+      "confidence": "1.000", 
+      "name": "the", 
+      "time": "22.23"
+    }, 
+    {
+      "duration": "0.36", 
+      "confidence": "1.000", 
+      "name": "world", 
+      "time": "22.35"
+    }, 
+    {
+      "duration": "0.12", 
+      "confidence": "1.000", 
+      "name": "to", 
+      "time": "23.58"
+    }, 
+    {
+      "duration": "0.15", 
+      "confidence": "1.000", 
+      "name": "say", 
+      "time": "23.70"
+    }, 
+    {
+      "duration": "0.12", 
+      "confidence": "0.950", 
+      "name": "the", 
+      "time": "23.85"
+    }, 
+    {
+      "duration": "0.34", 
+      "confidence": "0.800", 
+      "name": "genders", 
+      "time": "23.97"
+    }, 
+    {
+      "duration": "0.87", 
+      "confidence": "1.000", 
+      "name": "performative", 
+      "time": "24.33"
+    }, 
+    {
+      "duration": "0.18", 
+      "confidence": "1.000", 
+      "name": "is", 
+      "time": "25.20"
+    }, 
+    {
+      "duration": "0.06", 
+      "confidence": "1.000", 
+      "name": "a", 
+      "time": "25.71"
+    }, 
+    {
+      "duration": "0.27", 
+      "confidence": "1.000", 
+      "name": "little", 
+      "time": "25.77"
+    }, 
+    {
+      "duration": "0.42", 
+      "confidence": "1.000", 
+      "name": "different", 
+      "time": "26.04"
+    }, 
+    {
+      "duration": "0.57", 
+      "confidence": "1.000", 
+      "name": "because", 
+      "time": "26.49"
+    }, 
+    {
+      "duration": "0.12", 
+      "confidence": "1.000", 
+      "name": "for", 
+      "time": "28.29"
+    }, 
+    {
+      "duration": "0.30", 
+      "confidence": "1.000", 
+      "name": "something", 
+      "time": "28.41"
+    }, 
+    {
+      "duration": "0.15", 
+      "confidence": "1.000", 
+      "name": "to", 
+      "time": "28.71"
+    }, 
+    {
+      "duration": "0.15", 
+      "confidence": "1.000", 
+      "name": "be", 
+      "time": "28.86"
+    }, 
+    {
+      "duration": "0.81", 
+      "confidence": "1.000", 
+      "name": "performative", 
+      "time": "29.19"
+    }, 
+    {
+      "duration": "0.24", 
+      "confidence": "1.000", 
+      "name": "means", 
+      "time": "30.00"
+    }, 
+    {
+      "duration": "0.12", 
+      "confidence": "1.000", 
+      "name": "that", 
+      "time": "30.24"
+    }, 
+    {
+      "duration": "0.09", 
+      "confidence": "0.990", 
+      "name": "it", 
+      "time": "30.36"
+    }, 
+    {
+      "duration": "0.69", 
+      "confidence": "1.000", 
+      "name": "produces", 
+      "time": "30.75"
+    }, 
+    {
+      "duration": "0.06", 
+      "confidence": "1.000", 
+      "name": "a", 
+      "time": "31.53"
+    }, 
+    {
+      "duration": "0.39", 
+      "confidence": "1.000", 
+      "name": "series", 
+      "time": "31.59"
+    }, 
+    {
+      "duration": "0.12", 
+      "confidence": "1.000", 
+      "name": "of", 
+      "time": "31.98"
+    }, 
+    {
+      "duration": "0.60", 
+      "confidence": "1.000", 
+      "name": "effects", 
+      "time": "32.10"
+    }, 
+    {
+      "duration": "0.18", 
+      "confidence": "1.000", 
+      "name": "we", 
+      "time": "33.54"
+    }, 
+    {
+      "duration": "0.33", 
+      "confidence": "0.950", 
+      "name": "act", 
+      "time": "33.78"
+    }, 
+    {
+      "duration": "0.33", 
+      "confidence": "1.000", 
+      "name": "and", 
+      "time": "34.11"
+    }, 
+    {
+      "duration": "0.48", 
+      "confidence": "1.000", 
+      "name": "walk", 
+      "time": "34.56"
+    }, 
+    {
+      "duration": "0.12", 
+      "confidence": "1.000", 
+      "name": "and", 
+      "time": "35.04"
+    }, 
+    {
+      "duration": "0.48", 
+      "confidence": "1.000", 
+      "name": "speak", 
+      "time": "35.16"
+    }, 
+    {
+      "duration": "0.15", 
+      "confidence": "1.000", 
+      "name": "and", 
+      "time": "35.64"
+    }, 
+    {
+      "duration": "0.54", 
+      "confidence": "1.000", 
+      "name": "talk", 
+      "time": "35.91"
+    }, 
+    {
+      "duration": "0.18", 
+      "confidence": "1.000", 
+      "name": "in", 
+      "time": "36.45"
+    }, 
+    {
+      "duration": "0.39", 
+      "confidence": "1.000", 
+      "name": "ways", 
+      "time": "36.63"
+    }, 
+    {
+      "duration": "0.48", 
+      "confidence": "1.000", 
+      "name": "that", 
+      "time": "37.05"
+    }, 
+    {
+      "duration": "0.93", 
+      "confidence": "0.990", 
+      "name": "consolidate", 
+      "time": "38.82"
+    }, 
+    {
+      "duration": "0.12", 
+      "confidence": "1.000", 
+      "name": "an", 
+      "time": "39.75"
+    }, 
+    {
+      "duration": "0.72", 
+      "confidence": "1.000", 
+      "name": "impression", 
+      "time": "39.87"
+    }, 
+    {
+      "duration": "0.24", 
+      "confidence": "1.000", 
+      "name": "of", 
+      "time": "40.62"
+    }, 
+    {
+      "duration": "0.27", 
+      "confidence": "1.000", 
+      "name": "being", 
+      "time": "41.07"
+    }, 
+    {
+      "duration": "0.03", 
+      "confidence": "0.930", 
+      "name": "a", 
+      "time": "41.34"
+    }, 
+    {
+      "duration": "0.48", 
+      "confidence": "0.930", 
+      "name": "man", 
+      "time": "41.37"
+    }, 
+    {
+      "duration": "0.27", 
+      "confidence": "1.000", 
+      "name": "or", 
+      "time": "41.91"
+    }, 
+    {
+      "duration": "0.33", 
+      "confidence": "1.000", 
+      "name": "being", 
+      "time": "42.21"
+    }, 
+    {
+      "duration": "0.06", 
+      "confidence": "1.000", 
+      "name": "a", 
+      "time": "42.54"
+    }, 
+    {
+      "duration": "0.45", 
+      "confidence": "1.000", 
+      "name": "woman", 
+      "time": "42.60"
+    }, 
+    {
+      "duration": "0.47", 
+      "confidence": "0.940", 
+      "name": ".", 
+      "time": "43.05"
+    }, 
+    {
+      "duration": "0.08", 
+      "confidence": "0.950", 
+      "name": "I", 
+      "time": "43.55"
+    }, 
+    {
+      "duration": "0.15", 
+      "confidence": "1.000", 
+      "name": "was", 
+      "time": "43.65"
+    }, 
+    {
+      "duration": "0.33", 
+      "confidence": "1.000", 
+      "name": "walking", 
+      "time": "43.80"
+    }, 
+    {
+      "duration": "0.21", 
+      "confidence": "1.000", 
+      "name": "down", 
+      "time": "44.13"
+    }, 
+    {
+      "duration": "0.09", 
+      "confidence": "1.000", 
+      "name": "the", 
+      "time": "44.34"
+    }, 
+    {
+      "duration": "0.54", 
+      "confidence": "1.000", 
+      "name": "street", 
+      "time": "44.43"
+    }, 
+    {
+      "duration": "0.12", 
+      "confidence": "1.000", 
+      "name": "in", 
+      "time": "45.27"
+    }, 
+    {
+      "duration": "0.33", 
+      "confidence": "0.990", 
+      "name": "Berkeley", 
+      "time": "45.39"
+    }, 
+    {
+      "duration": "0.12", 
+      "confidence": "1.000", 
+      "name": "when", 
+      "time": "45.72"
+    }, 
+    {
+      "duration": "0.12", 
+      "confidence": "1.000", 
+      "name": "I", 
+      "time": "45.84"
+    }, 
+    {
+      "duration": "0.33", 
+      "confidence": "1.000", 
+      "name": "first", 
+      "time": "45.96"
+    }, 
+    {
+      "duration": "0.57", 
+      "confidence": "1.000", 
+      "name": "arrived", 
+      "time": "46.29"
+    }, 
+    {
+      "duration": "0.33", 
+      "confidence": "1.000", 
+      "name": "several", 
+      "time": "46.95"
+    }, 
+    {
+      "duration": "0.24", 
+      "confidence": "1.000", 
+      "name": "years", 
+      "time": "47.28"
+    }, 
+    {
+      "duration": "0.42", 
+      "confidence": "1.000", 
+      "name": "ago", 
+      "time": "47.52"
+    }, 
+    {
+      "duration": "0.51", 
+      "confidence": "1.000", 
+      "name": "and", 
+      "time": "48.06"
+    }, 
+    {
+      "duration": "0.06", 
+      "confidence": "1.000", 
+      "name": "a", 
+      "time": "48.87"
+    }, 
+    {
+      "duration": "0.24", 
+      "confidence": "1.000", 
+      "name": "young", 
+      "time": "48.93"
+    }, 
+    {
+      "duration": "0.42", 
+      "confidence": "1.000", 
+      "name": "woman", 
+      "time": "49.17"
+    }, 
+    {
+      "duration": "0.18", 
+      "confidence": "0.920", 
+      "name": "who", 
+      "time": "49.70"
+    }, 
+    {
+      "duration": "0.18", 
+      "confidence": "0.570", 
+      "name": "is", 
+      "time": "49.89"
+    }, 
+    {
+      "duration": "0.06", 
+      "confidence": "1.000", 
+      "name": "I", 
+      "time": "50.07"
+    }, 
+    {
+      "duration": "0.21", 
+      "confidence": "1.000", 
+      "name": "think", 
+      "time": "50.13"
+    }, 
+    {
+      "duration": "0.12", 
+      "confidence": "1.000", 
+      "name": "in", 
+      "time": "50.34"
+    }, 
+    {
+      "duration": "0.18", 
+      "confidence": "1.000", 
+      "name": "high", 
+      "time": "50.46"
+    }, 
+    {
+      "duration": "0.51", 
+      "confidence": "1.000", 
+      "name": "school", 
+      "time": "50.64"
+    }, 
+    {
+      "duration": "0.30", 
+      "confidence": "1.000", 
+      "name": "leaned", 
+      "time": "51.42"
+    }, 
+    {
+      "duration": "0.09", 
+      "confidence": "1.000", 
+      "name": "out", 
+      "time": "51.72"
+    }, 
+    {
+      "duration": "0.09", 
+      "confidence": "1.000", 
+      "name": "of", 
+      "time": "51.81"
+    }, 
+    {
+      "duration": "0.09", 
+      "confidence": "1.000", 
+      "name": "her", 
+      "time": "51.90"
+    }, 
+    {
+      "duration": "0.51", 
+      "confidence": "1.000", 
+      "name": "window", 
+      "time": "51.99"
+    }, 
+    {
+      "duration": "0.18", 
+      "confidence": "1.000", 
+      "name": "and", 
+      "time": "52.50"
+    }, 
+    {
+      "duration": "0.21", 
+      "confidence": "1.000", 
+      "name": "she", 
+      "time": "52.68"
+    }, 
+    {
+      "duration": "0.45", 
+      "confidence": "1.000", 
+      "name": "yelled", 
+      "time": "52.89"
+    }, 
+    {
+      "duration": "0.12", 
+      "confidence": "1.000", 
+      "name": "Are", 
+      "time": "53.52"
+    }, 
+    {
+      "duration": "0.15", 
+      "confidence": "1.000", 
+      "name": "you", 
+      "time": "53.64"
+    }, 
+    {
+      "duration": "0.06", 
+      "confidence": "1.000", 
+      "name": "a", 
+      "time": "53.79"
+    }, 
+    {
+      "duration": "0.69", 
+      "confidence": "1.000", 
+      "name": "lesbian", 
+      "time": "53.85"
+    }, 
+    {
+      "duration": "0.93", 
+      "confidence": "0.940", 
+      "name": ".", 
+      "time": "54.54"
+    }, 
+    {
+      "duration": "0.45", 
+      "confidence": "1.000", 
+      "name": "And", 
+      "time": "56.97"
+    }, 
+    {
+      "duration": "0.18", 
+      "confidence": "1.000", 
+      "name": "she", 
+      "time": "57.81"
+    }, 
+    {
+      "duration": "0.12", 
+      "confidence": "0.990", 
+      "name": "was", 
+      "time": "57.99"
+    }, 
+    {
+      "duration": "0.30", 
+      "confidence": "1.000", 
+      "name": "looking", 
+      "time": "58.11"
+    }, 
+    {
+      "duration": "0.12", 
+      "confidence": "1.000", 
+      "name": "to", 
+      "time": "58.41"
+    }, 
+    {
+      "duration": "0.48", 
+      "confidence": "1.000", 
+      "name": "harass", 
+      "time": "58.53"
+    }, 
+    {
+      "duration": "0.27", 
+      "confidence": "1.000", 
+      "name": "me", 
+      "time": "59.01"
+    }, 
+    {
+      "duration": "0.30", 
+      "confidence": "1.000", 
+      "name": "or", 
+      "time": "59.58"
+    }, 
+    {
+      "duration": "0.33", 
+      "confidence": "1.000", 
+      "name": "maybe", 
+      "time": "60.12"
+    }, 
+    {
+      "duration": "0.18", 
+      "confidence": "1.000", 
+      "name": "she", 
+      "time": "60.45"
+    }, 
+    {
+      "duration": "0.18", 
+      "confidence": "1.000", 
+      "name": "was", 
+      "time": "60.63"
+    }, 
+    {
+      "duration": "0.30", 
+      "confidence": "1.000", 
+      "name": "just", 
+      "time": "60.81"
+    }, 
+    {
+      "duration": "0.39", 
+      "confidence": "1.000", 
+      "name": "freaked", 
+      "time": "61.32"
+    }, 
+    {
+      "duration": "0.27", 
+      "confidence": "1.000", 
+      "name": "out", 
+      "time": "61.71"
+    }, 
+    {
+      "duration": "0.21", 
+      "confidence": "1.000", 
+      "name": "or", 
+      "time": "61.98"
+    }, 
+    {
+      "duration": "0.18", 
+      "confidence": "1.000", 
+      "name": "she", 
+      "time": "62.19"
+    }, 
+    {
+      "duration": "0.18", 
+      "confidence": "1.000", 
+      "name": "thought", 
+      "time": "62.37"
+    }, 
+    {
+      "duration": "0.09", 
+      "confidence": "1.000", 
+      "name": "I", 
+      "time": "62.55"
+    }, 
+    {
+      "duration": "0.30", 
+      "confidence": "1.000", 
+      "name": "looked", 
+      "time": "62.64"
+    }, 
+    {
+      "duration": "0.18", 
+      "confidence": "1.000", 
+      "name": "like", 
+      "time": "62.94"
+    }, 
+    {
+      "duration": "0.09", 
+      "confidence": "0.960", 
+      "name": "I", 
+      "time": "63.12"
+    }, 
+    {
+      "duration": "0.36", 
+      "confidence": "1.000", 
+      "name": "probably", 
+      "time": "63.21"
+    }, 
+    {
+      "duration": "0.24", 
+      "confidence": "1.000", 
+      "name": "was", 
+      "time": "63.57"
+    }, 
+    {
+      "duration": "0.18", 
+      "confidence": "0.960", 
+      "name": "one", 
+      "time": "63.81"
+    }, 
+    {
+      "duration": "0.09", 
+      "confidence": "0.700", 
+      "name": "who", 
+      "time": "63.99"
+    }, 
+    {
+      "duration": "0.27", 
+      "confidence": "1.000", 
+      "name": "wanted", 
+      "time": "64.08"
+    }, 
+    {
+      "duration": "0.15", 
+      "confidence": "1.000", 
+      "name": "to", 
+      "time": "64.35"
+    }, 
+    {
+      "duration": "0.45", 
+      "confidence": "1.000", 
+      "name": "know", 
+      "time": "64.50"
+    }, 
+    {
+      "duration": "0.04", 
+      "confidence": "0.670", 
+      "name": ".", 
+      "time": "65.03"
+    }, 
+    {
+      "duration": "0.14", 
+      "confidence": "0.850", 
+      "name": "But", 
+      "time": "65.48"
+    }, 
+    {
+      "duration": "0.09", 
+      "confidence": "1.000", 
+      "name": "I", 
+      "time": "65.86"
+    }, 
+    {
+      "duration": "0.18", 
+      "confidence": "1.000", 
+      "name": "just", 
+      "time": "65.97"
+    }, 
+    {
+      "duration": "0.27", 
+      "confidence": "1.000", 
+      "name": "turned", 
+      "time": "66.15"
+    }, 
+    {
+      "duration": "0.30", 
+      "confidence": "1.000", 
+      "name": "around", 
+      "time": "66.42"
+    }, 
+    {
+      "duration": "0.12", 
+      "confidence": "1.000", 
+      "name": "and", 
+      "time": "66.72"
+    }, 
+    {
+      "duration": "0.06", 
+      "confidence": "0.930", 
+      "name": "I", 
+      "time": "66.84"
+    }, 
+    {
+      "duration": "0.18", 
+      "confidence": "1.000", 
+      "name": "said", 
+      "time": "66.90"
+    }, 
+    {
+      "duration": "0.42", 
+      "confidence": "1.000", 
+      "name": "Yes", 
+      "time": "67.11"
+    }, 
+    {
+      "duration": "0.18", 
+      "confidence": "1.000", 
+      "name": "I", 
+      "time": "67.53"
+    }, 
+    {
+      "duration": "0.33", 
+      "confidence": "1.000", 
+      "name": "am", 
+      "time": "67.71"
+    }, 
+    {
+      "duration": "0.59", 
+      "confidence": "0.780", 
+      "name": ".", 
+      "time": "68.04"
+    }, 
+    {
+      "duration": "0.18", 
+      "confidence": "1.000", 
+      "name": "And", 
+      "time": "69.12"
+    }, 
+    {
+      "duration": "0.21", 
+      "confidence": "1.000", 
+      "name": "that", 
+      "time": "69.30"
+    }, 
+    {
+      "duration": "0.24", 
+      "confidence": "1.000", 
+      "name": "really", 
+      "time": "69.51"
+    }, 
+    {
+      "duration": "0.42", 
+      "confidence": "1.000", 
+      "name": "shocked", 
+      "time": "69.75"
+    }, 
+    {
+      "duration": "0.24", 
+      "confidence": "1.000", 
+      "name": "her", 
+      "time": "70.17"
+    }, 
+    {
+      "duration": "0.61", 
+      "confidence": "0.930", 
+      "name": ".", 
+      "time": "70.41"
+    }, 
+    {
+      "duration": "0.27", 
+      "confidence": "1.000", 
+      "name": "We", 
+      "time": "71.07"
+    }, 
+    {
+      "duration": "0.36", 
+      "confidence": "1.000", 
+      "name": "act", 
+      "time": "71.34"
+    }, 
+    {
+      "duration": "0.18", 
+      "confidence": "1.000", 
+      "name": "as", 
+      "time": "71.70"
+    }, 
+    {
+      "duration": "0.39", 
+      "confidence": "1.000", 
+      "name": "if", 
+      "time": "71.94"
+    }, 
+    {
+      "duration": "0.20", 
+      "confidence": "0.960", 
+      "name": "that", 
+      "time": "72.56"
+    }, 
+    {
+      "duration": "0.36", 
+      "confidence": "1.000", 
+      "name": "being", 
+      "time": "72.78"
+    }, 
+    {
+      "duration": "0.11", 
+      "confidence": "0.950", 
+      "name": "of", 
+      "time": "73.14"
+    }, 
+    {
+      "duration": "0.06", 
+      "confidence": "1.000", 
+      "name": "a", 
+      "time": "73.26"
+    }, 
+    {
+      "duration": "0.33", 
+      "confidence": "1.000", 
+      "name": "man", 
+      "time": "73.32"
+    }, 
+    {
+      "duration": "0.15", 
+      "confidence": "1.000", 
+      "name": "or", 
+      "time": "73.65"
+    }, 
+    {
+      "duration": "0.18", 
+      "confidence": "1.000", 
+      "name": "that", 
+      "time": "73.80"
+    }, 
+    {
+      "duration": "0.30", 
+      "confidence": "1.000", 
+      "name": "being", 
+      "time": "73.98"
+    }, 
+    {
+      "duration": "0.12", 
+      "confidence": "1.000", 
+      "name": "of", 
+      "time": "74.28"
+    }, 
+    {
+      "duration": "0.06", 
+      "confidence": "1.000", 
+      "name": "a", 
+      "time": "74.40"
+    }, 
+    {
+      "duration": "0.24", 
+      "confidence": "1.000", 
+      "name": "woman", 
+      "time": "74.46"
+    }, 
+    {
+      "duration": "0.12", 
+      "confidence": "1.000", 
+      "name": "is", 
+      "time": "74.70"
+    }, 
+    {
+      "duration": "0.33", 
+      "confidence": "1.000", 
+      "name": "actually", 
+      "time": "74.82"
+    }, 
+    {
+      "duration": "0.09", 
+      "confidence": "0.950", 
+      "name": "an", 
+      "time": "75.15"
+    }, 
+    {
+      "duration": "0.51", 
+      "confidence": "0.870", 
+      "name": "entirely", 
+      "time": "75.24"
+    }, 
+    {
+      "duration": "0.66", 
+      "confidence": "1.000", 
+      "name": "reality", 
+      "time": "75.75"
+    }, 
+    {
+      "duration": "0.27", 
+      "confidence": "1.000", 
+      "name": "or", 
+      "time": "76.41"
+    }, 
+    {
+      "duration": "0.39", 
+      "confidence": "1.000", 
+      "name": "something", 
+      "time": "77.10"
+    }, 
+    {
+      "duration": "0.39", 
+      "confidence": "0.990", 
+      "name": "that's", 
+      "time": "77.49"
+    }, 
+    {
+      "duration": "0.48", 
+      "confidence": "1.000", 
+      "name": "simply", 
+      "time": "78.27"
+    }, 
+    {
+      "duration": "0.33", 
+      "confidence": "1.000", 
+      "name": "true", 
+      "time": "78.75"
+    }, 
+    {
+      "duration": "0.36", 
+      "confidence": "1.000", 
+      "name": "about", 
+      "time": "79.08"
+    }, 
+    {
+      "duration": "0.23", 
+      "confidence": "1.000", 
+      "name": "Us", 
+      "time": "79.44"
+    }, 
+    {
+      "duration": "0.07", 
+      "confidence": "0.810", 
+      "name": "a", 
+      "time": "79.67"
+    }, 
+    {
+      "duration": "0.51", 
+      "confidence": "1.000", 
+      "name": "fact", 
+      "time": "79.74"
+    }, 
+    {
+      "duration": "0.30", 
+      "confidence": "1.000", 
+      "name": "about", 
+      "time": "80.31"
+    }, 
+    {
+      "duration": "0.30", 
+      "confidence": "1.000", 
+      "name": "us", 
+      "time": "80.61"
+    }, 
+    {
+      "duration": "0.21", 
+      "confidence": "0.710", 
+      "name": ".", 
+      "time": "80.91"
+    }, 
+    {
+      "duration": "0.69", 
+      "confidence": "1.000", 
+      "name": "Actually", 
+      "time": "81.21"
+    }, 
+    {
+      "duration": "0.36", 
+      "confidence": "1.000", 
+      "name": "it's", 
+      "time": "82.35"
+    }, 
+    {
+      "duration": "0.06", 
+      "confidence": "1.000", 
+      "name": "a", 
+      "time": "82.92"
+    }, 
+    {
+      "duration": "0.72", 
+      "confidence": "1.000", 
+      "name": "phenomenon", 
+      "time": "82.98"
+    }, 
+    {
+      "duration": "0.21", 
+      "confidence": "0.980", 
+      "name": "that's", 
+      "time": "83.73"
+    }, 
+    {
+      "duration": "0.30", 
+      "confidence": "1.000", 
+      "name": "being", 
+      "time": "83.94"
+    }, 
+    {
+      "duration": "0.66", 
+      "confidence": "1.000", 
+      "name": "produced", 
+      "time": "84.24"
+    }, 
+    {
+      "duration": "0.09", 
+      "confidence": "1.000", 
+      "name": "all", 
+      "time": "84.90"
+    }, 
+    {
+      "duration": "0.12", 
+      "confidence": "1.000", 
+      "name": "the", 
+      "time": "84.99"
+    }, 
+    {
+      "duration": "0.39", 
+      "confidence": "1.000", 
+      "name": "time", 
+      "time": "85.11"
+    }, 
+    {
+      "duration": "0.12", 
+      "confidence": "1.000", 
+      "name": "and", 
+      "time": "85.50"
+    }, 
+    {
+      "duration": "0.75", 
+      "confidence": "1.000", 
+      "name": "reproduced", 
+      "time": "85.62"
+    }, 
+    {
+      "duration": "0.12", 
+      "confidence": "1.000", 
+      "name": "all", 
+      "time": "86.37"
+    }, 
+    {
+      "duration": "0.12", 
+      "confidence": "1.000", 
+      "name": "the", 
+      "time": "86.49"
+    }, 
+    {
+      "duration": "0.36", 
+      "confidence": "1.000", 
+      "name": "time", 
+      "time": "86.61"
+    }, 
+    {
+      "duration": "0.65", 
+      "confidence": "0.950", 
+      "name": ".", 
+      "time": "86.97"
+    }, 
+    {
+      "duration": "0.15", 
+      "confidence": "1.000", 
+      "name": "So", 
+      "time": "87.66"
+    }, 
+    {
+      "duration": "0.12", 
+      "confidence": "0.980", 
+      "name": "to", 
+      "time": "87.81"
+    }, 
+    {
+      "duration": "0.21", 
+      "confidence": "1.000", 
+      "name": "say", 
+      "time": "87.93"
+    }, 
+    {
+      "duration": "0.36", 
+      "confidence": "1.000", 
+      "name": "gender", 
+      "time": "88.14"
+    }, 
+    {
+      "duration": "0.15", 
+      "confidence": "1.000", 
+      "name": "is", 
+      "time": "88.50"
+    }, 
+    {
+      "duration": "0.87", 
+      "confidence": "1.000", 
+      "name": "performative", 
+      "time": "88.65"
+    }, 
+    {
+      "duration": "0.15", 
+      "confidence": "1.000", 
+      "name": "is", 
+      "time": "89.52"
+    }, 
+    {
+      "duration": "0.15", 
+      "confidence": "1.000", 
+      "name": "to", 
+      "time": "89.67"
+    }, 
+    {
+      "duration": "0.39", 
+      "confidence": "1.000", 
+      "name": "say", 
+      "time": "89.82"
+    }, 
+    {
+      "duration": "0.15", 
+      "confidence": "1.000", 
+      "name": "that", 
+      "time": "90.48"
+    }, 
+    {
+      "duration": "0.39", 
+      "confidence": "1.000", 
+      "name": "nobody", 
+      "time": "90.63"
+    }, 
+    {
+      "duration": "0.36", 
+      "confidence": "1.000", 
+      "name": "really", 
+      "time": "91.02"
+    }, 
+    {
+      "duration": "0.27", 
+      "confidence": "1.000", 
+      "name": "is", 
+      "time": "91.38"
+    }, 
+    {
+      "duration": "0.06", 
+      "confidence": "0.640", 
+      "name": "a", 
+      "time": "91.65"
+    }, 
+    {
+      "duration": "0.57", 
+      "confidence": "0.640", 
+      "name": "gender", 
+      "time": "91.71"
+    }, 
+    {
+      "duration": "0.21", 
+      "confidence": "1.000", 
+      "name": "from", 
+      "time": "92.28"
+    }, 
+    {
+      "duration": "0.12", 
+      "confidence": "1.000", 
+      "name": "the", 
+      "time": "92.49"
+    }, 
+    {
+      "duration": "0.57", 
+      "confidence": "1.000", 
+      "name": "start", 
+      "time": "92.61"
+    }, 
+    {
+      "duration": "0.80", 
+      "confidence": "0.770", 
+      "name": ".", 
+      "time": "93.18"
+    }, 
+    {
+      "duration": "0.06", 
+      "confidence": "0.990", 
+      "name": "I", 
+      "time": "94.23"
+    }, 
+    {
+      "duration": "0.18", 
+      "confidence": "1.000", 
+      "name": "know", 
+      "time": "94.29"
+    }, 
+    {
+      "duration": "0.12", 
+      "confidence": "1.000", 
+      "name": "it's", 
+      "time": "94.47"
+    }, 
+    {
+      "duration": "0.78", 
+      "confidence": "1.000", 
+      "name": "controversial", 
+      "time": "94.59"
+    }, 
+    {
+      "duration": "0.15", 
+      "confidence": "1.000", 
+      "name": "but", 
+      "time": "95.55"
+    }, 
+    {
+      "duration": "0.24", 
+      "confidence": "1.000", 
+      "name": "that's", 
+      "time": "95.70"
+    }, 
+    {
+      "duration": "0.18", 
+      "confidence": "1.000", 
+      "name": "my", 
+      "time": "95.94"
+    }, 
+    {
+      "duration": "0.42", 
+      "confidence": "1.000", 
+      "name": "claim", 
+      "time": "96.12"
+    }, 
+    {
+      "duration": "0.08", 
+      "confidence": "0.840", 
+      "name": ".", 
+      "time": "96.54"
+    }, 
+    {
+      "duration": "0.27", 
+      "confidence": "1.000", 
+      "name": "Think", 
+      "time": "100.69"
+    }, 
+    {
+      "duration": "0.45", 
+      "confidence": "1.000", 
+      "name": "about", 
+      "time": "100.96"
+    }, 
+    {
+      "duration": "0.57", 
+      "confidence": "1.000", 
+      "name": "how", 
+      "time": "101.65"
+    }, 
+    {
+      "duration": "0.78", 
+      "confidence": "1.000", 
+      "name": "difficult", 
+      "time": "102.31"
+    }, 
+    {
+      "duration": "0.12", 
+      "confidence": "1.000", 
+      "name": "it", 
+      "time": "103.09"
+    }, 
+    {
+      "duration": "0.33", 
+      "confidence": "1.000", 
+      "name": "is", 
+      "time": "103.21"
+    }, 
+    {
+      "duration": "0.33", 
+      "confidence": "1.000", 
+      "name": "for", 
+      "time": "103.54"
+    }, 
+    {
+      "duration": "0.39", 
+      "confidence": "0.990", 
+      "name": "sissy", 
+      "time": "103.87"
+    }, 
+    {
+      "duration": "0.60", 
+      "confidence": "1.000", 
+      "name": "boys", 
+      "time": "104.26"
+    }, 
+    {
+      "duration": "0.24", 
+      "confidence": "1.000", 
+      "name": "or", 
+      "time": "105.40"
+    }, 
+    {
+      "duration": "0.15", 
+      "confidence": "1.000", 
+      "name": "how", 
+      "time": "105.64"
+    }, 
+    {
+      "duration": "0.60", 
+      "confidence": "1.000", 
+      "name": "difficult", 
+      "time": "105.79"
+    }, 
+    {
+      "duration": "0.18", 
+      "confidence": "1.000", 
+      "name": "it", 
+      "time": "106.42"
+    }, 
+    {
+      "duration": "0.36", 
+      "confidence": "1.000", 
+      "name": "is", 
+      "time": "106.60"
+    }, 
+    {
+      "duration": "0.42", 
+      "confidence": "1.000", 
+      "name": "for", 
+      "time": "106.96"
+    }, 
+    {
+      "duration": "0.93", 
+      "confidence": "1.000", 
+      "name": "tomboys", 
+      "time": "107.41"
+    }, 
+    {
+      "duration": "0.12", 
+      "confidence": "1.000", 
+      "name": "to", 
+      "time": "108.94"
+    }, 
+    {
+      "duration": "0.42", 
+      "confidence": "1.000", 
+      "name": "function", 
+      "time": "109.06"
+    }, 
+    {
+      "duration": "0.51", 
+      "confidence": "1.000", 
+      "name": "socially", 
+      "time": "109.48"
+    }, 
+    {
+      "duration": "0.36", 
+      "confidence": "1.000", 
+      "name": "without", 
+      "time": "109.99"
+    }, 
+    {
+      "duration": "0.27", 
+      "confidence": "1.000", 
+      "name": "being", 
+      "time": "110.35"
+    }, 
+    {
+      "duration": "0.48", 
+      "confidence": "1.000", 
+      "name": "bullied", 
+      "time": "110.62"
+    }, 
+    {
+      "duration": "0.12", 
+      "confidence": "1.000", 
+      "name": "or", 
+      "time": "111.10"
+    }, 
+    {
+      "duration": "0.45", 
+      "confidence": "1.000", 
+      "name": "without", 
+      "time": "111.22"
+    }, 
+    {
+      "duration": "0.33", 
+      "confidence": "1.000", 
+      "name": "being", 
+      "time": "111.67"
+    }, 
+    {
+      "duration": "0.57", 
+      "confidence": "1.000", 
+      "name": "teased", 
+      "time": "112.00"
+    }, 
+    {
+      "duration": "0.21", 
+      "confidence": "1.000", 
+      "name": "or", 
+      "time": "112.57"
+    }, 
+    {
+      "duration": "0.51", 
+      "confidence": "1.000", 
+      "name": "without", 
+      "time": "112.78"
+    }, 
+    {
+      "duration": "0.66", 
+      "confidence": "1.000", 
+      "name": "sometimes", 
+      "time": "113.29"
+    }, 
+    {
+      "duration": "0.45", 
+      "confidence": "1.000", 
+      "name": "suffering", 
+      "time": "114.22"
+    }, 
+    {
+      "duration": "0.42", 
+      "confidence": "1.000", 
+      "name": "threats", 
+      "time": "114.67"
+    }, 
+    {
+      "duration": "0.09", 
+      "confidence": "1.000", 
+      "name": "of", 
+      "time": "115.09"
+    }, 
+    {
+      "duration": "0.72", 
+      "confidence": "1.000", 
+      "name": "violence", 
+      "time": "115.18"
+    }, 
+    {
+      "duration": "0.24", 
+      "confidence": "1.000", 
+      "name": "or", 
+      "time": "117.28"
+    }, 
+    {
+      "duration": "0.36", 
+      "confidence": "1.000", 
+      "name": "without", 
+      "time": "117.52"
+    }, 
+    {
+      "duration": "0.12", 
+      "confidence": "1.000", 
+      "name": "their", 
+      "time": "117.88"
+    }, 
+    {
+      "duration": "0.48", 
+      "confidence": "1.000", 
+      "name": "parents", 
+      "time": "118.00"
+    }, 
+    {
+      "duration": "0.63", 
+      "confidence": "1.000", 
+      "name": "intervening", 
+      "time": "118.48"
+    }, 
+    {
+      "duration": "0.15", 
+      "confidence": "1.000", 
+      "name": "to", 
+      "time": "119.11"
+    }, 
+    {
+      "duration": "0.42", 
+      "confidence": "1.000", 
+      "name": "say", 
+      "time": "119.26"
+    }, 
+    {
+      "duration": "0.24", 
+      "confidence": "1.000", 
+      "name": "maybe", 
+      "time": "119.68"
+    }, 
+    {
+      "duration": "0.12", 
+      "confidence": "1.000", 
+      "name": "you", 
+      "time": "119.92"
+    }, 
+    {
+      "duration": "0.27", 
+      "confidence": "1.000", 
+      "name": "need", 
+      "time": "120.04"
+    }, 
+    {
+      "duration": "0.06", 
+      "confidence": "1.000", 
+      "name": "a", 
+      "time": "120.31"
+    }, 
+    {
+      "duration": "1.11", 
+      "confidence": "1.000", 
+      "name": "psychiatrist", 
+      "time": "120.37"
+    }, 
+    {
+      "duration": "0.30", 
+      "confidence": "1.000", 
+      "name": "or", 
+      "time": "121.48"
+    }, 
+    {
+      "duration": "0.18", 
+      "confidence": "1.000", 
+      "name": "why", 
+      "time": "121.99"
+    }, 
+    {
+      "duration": "0.27", 
+      "confidence": "1.000", 
+      "name": "can't", 
+      "time": "122.17"
+    }, 
+    {
+      "duration": "0.09", 
+      "confidence": "1.000", 
+      "name": "you", 
+      "time": "122.44"
+    }, 
+    {
+      "duration": "0.12", 
+      "confidence": "1.000", 
+      "name": "be", 
+      "time": "122.53"
+    }, 
+    {
+      "duration": "0.60", 
+      "confidence": "1.000", 
+      "name": "normal", 
+      "time": "122.65"
+    }, 
+    {
+      "duration": "0.03", 
+      "confidence": "0.900", 
+      "name": ".", 
+      "time": "123.25"
+    }, 
+    {
+      "duration": "0.45", 
+      "confidence": "1.000", 
+      "name": "So", 
+      "time": "123.43"
+    }, 
+    {
+      "duration": "0.09", 
+      "confidence": "1.000", 
+      "name": "you", 
+      "time": "124.60"
+    }, 
+    {
+      "duration": "0.21", 
+      "confidence": "1.000", 
+      "name": "know", 
+      "time": "124.69"
+    }, 
+    {
+      "duration": "0.51", 
+      "confidence": "1.000", 
+      "name": "there", 
+      "time": "124.90"
+    }, 
+    {
+      "duration": "0.66", 
+      "confidence": "1.000", 
+      "name": "are", 
+      "time": "125.65"
+    }, 
+    {
+      "duration": "0.75", 
+      "confidence": "1.000", 
+      "name": "institutional", 
+      "time": "127.21"
+    }, 
+    {
+      "duration": "0.78", 
+      "confidence": "1.000", 
+      "name": "powers", 
+      "time": "127.96"
+    }, 
+    {
+      "duration": "0.21", 
+      "confidence": "1.000", 
+      "name": "like", 
+      "time": "128.89"
+    }, 
+    {
+      "duration": "0.66", 
+      "confidence": "1.000", 
+      "name": "psychiatric", 
+      "time": "129.10"
+    }, 
+    {
+      "duration": "1.02", 
+      "confidence": "0.760", 
+      "name": "normalization", 
+      "time": "129.76"
+    }, 
+    {
+      "duration": "0.18", 
+      "confidence": "1.000", 
+      "name": "and", 
+      "time": "131.44"
+    }, 
+    {
+      "duration": "0.27", 
+      "confidence": "1.000", 
+      "name": "there", 
+      "time": "131.62"
+    }, 
+    {
+      "duration": "0.66", 
+      "confidence": "1.000", 
+      "name": "are", 
+      "time": "131.95"
+    }, 
+    {
+      "duration": "0.48", 
+      "confidence": "1.000", 
+      "name": "informal", 
+      "time": "134.38"
+    }, 
+    {
+      "duration": "0.30", 
+      "confidence": "1.000", 
+      "name": "kinds", 
+      "time": "134.86"
+    }, 
+    {
+      "duration": "0.09", 
+      "confidence": "1.000", 
+      "name": "of", 
+      "time": "135.16"
+    }, 
+    {
+      "duration": "0.69", 
+      "confidence": "1.000", 
+      "name": "practices", 
+      "time": "135.25"
+    }, 
+    {
+      "duration": "0.21", 
+      "confidence": "1.000", 
+      "name": "like", 
+      "time": "135.94"
+    }, 
+    {
+      "duration": "0.57", 
+      "confidence": "1.000", 
+      "name": "bullying", 
+      "time": "136.15"
+    }, 
+    {
+      "duration": "0.30", 
+      "confidence": "1.000", 
+      "name": "which", 
+      "time": "136.75"
+    }, 
+    {
+      "duration": "0.15", 
+      "confidence": "0.990", 
+      "name": "try", 
+      "time": "137.26"
+    }, 
+    {
+      "duration": "0.12", 
+      "confidence": "1.000", 
+      "name": "to", 
+      "time": "137.41"
+    }, 
+    {
+      "duration": "0.36", 
+      "confidence": "1.000", 
+      "name": "keep", 
+      "time": "137.53"
+    }, 
+    {
+      "duration": "0.18", 
+      "confidence": "1.000", 
+      "name": "us", 
+      "time": "137.89"
+    }, 
+    {
+      "duration": "0.12", 
+      "confidence": "1.000", 
+      "name": "in", 
+      "time": "138.07"
+    }, 
+    {
+      "duration": "0.15", 
+      "confidence": "1.000", 
+      "name": "our", 
+      "time": "138.19"
+    }, 
+    {
+      "duration": "0.45", 
+      "confidence": "0.990", 
+      "name": "gendered", 
+      "time": "138.34"
+    }, 
+    {
+      "duration": "0.75", 
+      "confidence": "1.000", 
+      "name": "place", 
+      "time": "138.79"
+    }, 
+    {
+      "duration": "0.33", 
+      "confidence": "0.880", 
+      "name": ".", 
+      "time": "139.54"
+    }, 
+    {
+      "duration": "0.20", 
+      "confidence": "0.890", 
+      "name": "There's", 
+      "time": "139.87"
+    }, 
+    {
+      "duration": "0.06", 
+      "confidence": "1.000", 
+      "name": "a", 
+      "time": "140.08"
+    }, 
+    {
+      "duration": "0.21", 
+      "confidence": "1.000", 
+      "name": "real", 
+      "time": "140.14"
+    }, 
+    {
+      "duration": "0.63", 
+      "confidence": "1.000", 
+      "name": "question", 
+      "time": "140.35"
+    }, 
+    {
+      "duration": "0.21", 
+      "confidence": "1.000", 
+      "name": "for", 
+      "time": "141.67"
+    }, 
+    {
+      "duration": "0.36", 
+      "confidence": "1.000", 
+      "name": "me", 
+      "time": "141.88"
+    }, 
+    {
+      "duration": "0.33", 
+      "confidence": "1.000", 
+      "name": "about", 
+      "time": "142.24"
+    }, 
+    {
+      "duration": "0.24", 
+      "confidence": "1.000", 
+      "name": "how", 
+      "time": "143.14"
+    }, 
+    {
+      "duration": "0.36", 
+      "confidence": "0.970", 
+      "name": "such", 
+      "time": "143.38"
+    }, 
+    {
+      "duration": "0.39", 
+      "confidence": "1.000", 
+      "name": "gender", 
+      "time": "143.86"
+    }, 
+    {
+      "duration": "0.36", 
+      "confidence": "1.000", 
+      "name": "norms", 
+      "time": "144.25"
+    }, 
+    {
+      "duration": "0.18", 
+      "confidence": "1.000", 
+      "name": "get", 
+      "time": "144.61"
+    }, 
+    {
+      "duration": "0.69", 
+      "confidence": "1.000", 
+      "name": "established", 
+      "time": "144.79"
+    }, 
+    {
+      "duration": "0.09", 
+      "confidence": "0.990", 
+      "name": "and", 
+      "time": "145.48"
+    }, 
+    {
+      "duration": "0.60", 
+      "confidence": "1.000", 
+      "name": "policed", 
+      "time": "145.57"
+    }, 
+    {
+      "duration": "0.33", 
+      "confidence": "1.000", 
+      "name": "and", 
+      "time": "146.65"
+    }, 
+    {
+      "duration": "0.18", 
+      "confidence": "0.980", 
+      "name": "what", 
+      "time": "146.98"
+    }, 
+    {
+      "duration": "0.12", 
+      "confidence": "1.000", 
+      "name": "the", 
+      "time": "147.16"
+    }, 
+    {
+      "duration": "0.30", 
+      "confidence": "1.000", 
+      "name": "best", 
+      "time": "147.28"
+    }, 
+    {
+      "duration": "0.21", 
+      "confidence": "1.000", 
+      "name": "way", 
+      "time": "147.58"
+    }, 
+    {
+      "duration": "0.21", 
+      "confidence": "1.000", 
+      "name": "is", 
+      "time": "147.79"
+    }, 
+    {
+      "duration": "0.18", 
+      "confidence": "1.000", 
+      "name": "to", 
+      "time": "148.00"
+    }, 
+    {
+      "duration": "0.60", 
+      "confidence": "1.000", 
+      "name": "disrupt", 
+      "time": "148.18"
+    }, 
+    {
+      "duration": "0.39", 
+      "confidence": "1.000", 
+      "name": "them", 
+      "time": "148.78"
+    }, 
+    {
+      "duration": "0.39", 
+      "confidence": "1.000", 
+      "name": "and", 
+      "time": "149.26"
+    }, 
+    {
+      "duration": "0.27", 
+      "confidence": "1.000", 
+      "name": "to", 
+      "time": "149.65"
+    }, 
+    {
+      "duration": "0.51", 
+      "confidence": "1.000", 
+      "name": "overcome", 
+      "time": "149.92"
+    }, 
+    {
+      "duration": "0.12", 
+      "confidence": "1.000", 
+      "name": "the", 
+      "time": "150.43"
+    }, 
+    {
+      "duration": "0.33", 
+      "confidence": "1.000", 
+      "name": "police", 
+      "time": "150.55"
+    }, 
+    {
+      "duration": "0.48", 
+      "confidence": "0.990", 
+      "name": "function", 
+      "time": "150.88"
+    }, 
+    {
+      "duration": "0.04", 
+      "confidence": "1.000", 
+      "name": ".", 
+      "time": "151.36"
+    }, 
+    {
+      "duration": "0.18", 
+      "confidence": "0.980", 
+      "name": "It's", 
+      "time": "151.81"
+    }, 
+    {
+      "duration": "0.24", 
+      "confidence": "1.000", 
+      "name": "my", 
+      "time": "151.99"
+    }, 
+    {
+      "duration": "0.36", 
+      "confidence": "1.000", 
+      "name": "view", 
+      "time": "152.23"
+    }, 
+    {
+      "duration": "0.45", 
+      "confidence": "1.000", 
+      "name": "that", 
+      "time": "152.59"
+    }, 
+    {
+      "duration": "0.39", 
+      "confidence": "1.000", 
+      "name": "gender", 
+      "time": "154.21"
+    }, 
+    {
+      "duration": "0.24", 
+      "confidence": "1.000", 
+      "name": "is", 
+      "time": "154.60"
+    }, 
+    {
+      "duration": "0.13", 
+      "confidence": "0.590", 
+      "name": "is", 
+      "time": "155.83"
+    }, 
+    {
+      "duration": "0.48", 
+      "confidence": "1.000", 
+      "name": "culturally", 
+      "time": "156.73"
+    }, 
+    {
+      "duration": "0.54", 
+      "confidence": "1.000", 
+      "name": "formed", 
+      "time": "157.21"
+    }, 
+    {
+      "duration": "0.18", 
+      "confidence": "1.000", 
+      "name": "but", 
+      "time": "158.17"
+    }, 
+    {
+      "duration": "0.15", 
+      "confidence": "1.000", 
+      "name": "it's", 
+      "time": "158.35"
+    }, 
+    {
+      "duration": "0.69", 
+      "confidence": "1.000", 
+      "name": "also", 
+      "time": "158.50"
+    }, 
+    {
+      "duration": "0.06", 
+      "confidence": "1.000", 
+      "name": "a", 
+      "time": "159.28"
+    }, 
+    {
+      "duration": "0.63", 
+      "confidence": "1.000", 
+      "name": "domain", 
+      "time": "159.34"
+    }, 
+    {
+      "duration": "0.30", 
+      "confidence": "1.000", 
+      "name": "of", 
+      "time": "160.00"
+    }, 
+    {
+      "duration": "0.48", 
+      "confidence": "1.000", 
+      "name": "agency", 
+      "time": "160.42"
+    }, 
+    {
+      "duration": "0.12", 
+      "confidence": "0.990", 
+      "name": "or", 
+      "time": "160.90"
+    }, 
+    {
+      "duration": "0.54", 
+      "confidence": "1.000", 
+      "name": "freedom", 
+      "time": "161.02"
+    }, 
+    {
+      "duration": "0.03", 
+      "confidence": "0.820", 
+      "name": ".", 
+      "time": "161.56"
+    }, 
+    {
+      "duration": "0.18", 
+      "confidence": "0.970", 
+      "name": "It's", 
+      "time": "161.83"
+    }, 
+    {
+      "duration": "0.33", 
+      "confidence": "1.000", 
+      "name": "most", 
+      "time": "162.01"
+    }, 
+    {
+      "duration": "0.66", 
+      "confidence": "1.000", 
+      "name": "important", 
+      "time": "162.34"
+    }, 
+    {
+      "duration": "0.57", 
+      "confidence": "1.000", 
+      "name": "to", 
+      "time": "163.00"
+    }, 
+    {
+      "duration": "0.45", 
+      "confidence": "1.000", 
+      "name": "resist", 
+      "time": "163.66"
+    }, 
+    {
+      "duration": "0.18", 
+      "confidence": "1.000", 
+      "name": "the", 
+      "time": "164.26"
+    }, 
+    {
+      "duration": "0.66", 
+      "confidence": "1.000", 
+      "name": "violence", 
+      "time": "164.44"
+    }, 
+    {
+      "duration": "0.27", 
+      "confidence": "1.000", 
+      "name": "that", 
+      "time": "165.34"
+    }, 
+    {
+      "duration": "0.33", 
+      "confidence": "1.000", 
+      "name": "is", 
+      "time": "165.61"
+    }, 
+    {
+      "duration": "0.78", 
+      "confidence": "0.990", 
+      "name": "imposed", 
+      "time": "166.66"
+    }, 
+    {
+      "duration": "0.18", 
+      "confidence": "1.000", 
+      "name": "by", 
+      "time": "167.44"
+    }, 
+    {
+      "duration": "0.33", 
+      "confidence": "1.000", 
+      "name": "ideal", 
+      "time": "167.62"
+    }, 
+    {
+      "duration": "0.33", 
+      "confidence": "1.000", 
+      "name": "gender", 
+      "time": "167.95"
+    }, 
+    {
+      "duration": "0.45", 
+      "confidence": "1.000", 
+      "name": "norms", 
+      "time": "168.28"
+    }, 
+    {
+      "duration": "0.75", 
+      "confidence": "1.000", 
+      "name": "especially", 
+      "time": "168.94"
+    }, 
+    {
+      "duration": "0.39", 
+      "confidence": "1.000", 
+      "name": "against", 
+      "time": "170.17"
+    }, 
+    {
+      "duration": "0.36", 
+      "confidence": "1.000", 
+      "name": "those", 
+      "time": "170.56"
+    }, 
+    {
+      "duration": "0.18", 
+      "confidence": "1.000", 
+      "name": "who", 
+      "time": "170.92"
+    }, 
+    {
+      "duration": "0.36", 
+      "confidence": "1.000", 
+      "name": "are", 
+      "time": "171.10"
+    }, 
+    {
+      "duration": "0.54", 
+      "confidence": "0.990", 
+      "name": "gender", 
+      "time": "171.79"
+    }, 
+    {
+      "duration": "0.48", 
+      "confidence": "1.000", 
+      "name": "different", 
+      "time": "172.33"
+    }, 
+    {
+      "duration": "0.18", 
+      "confidence": "1.000", 
+      "name": "who", 
+      "time": "172.90"
+    }, 
+    {
+      "duration": "0.15", 
+      "confidence": "1.000", 
+      "name": "are", 
+      "time": "173.08"
+    }, 
+    {
+      "duration": "0.24", 
+      "confidence": "0.980", 
+      "name": "not", 
+      "time": "173.23"
+    }, 
+    {
+      "duration": "0.90", 
+      "confidence": "1.000", 
+      "name": "nonconforming", 
+      "time": "173.56"
+    }, 
+    {
+      "duration": "0.18", 
+      "confidence": "0.960", 
+      "name": "in", 
+      "time": "174.55"
+    }, 
+    {
+      "duration": "0.26", 
+      "confidence": "0.960", 
+      "name": "their", 
+      "time": "174.72"
+    }, 
+    {
+      "duration": "0.12", 
+      "confidence": "0.680", 
+      "name": "in", 
+      "time": "175.09"
+    }, 
+    {
+      "duration": "0.15", 
+      "confidence": "1.000", 
+      "name": "their", 
+      "time": "175.22"
+    }, 
+    {
+      "duration": "0.30", 
+      "confidence": "1.000", 
+      "name": "gender", 
+      "time": "175.39"
+    }, 
+    {
+      "duration": "0.63", 
+      "confidence": "1.000", 
+      "name": "presentation", 
+      "time": "175.69"
+    }, 
+    {
+      "duration": "0.00", 
+      "confidence": "1.000", 
+      "name": ".", 
+      "time": "176.32"
+    }
+  ], 
+  "format": "1.0"
+}
