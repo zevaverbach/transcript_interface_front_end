@@ -1,24 +1,37 @@
-import React from 'react';
+import React, { Component } from 'react';
+
+import Word from './word'
 
 
-const Transcript = ({ currentWordIndex, transcript }) => {
 
-    const renderArray = [];
+class Transcript extends Component {
 
-    for (let [index, wordObject] of Object.entries(transcript)) {
+    render() {
 
-        let word = wordObject.name;
-        let space = word === '.'
-            ? ''
-            : ' '
-        let style = currentWordIndex === parseInt(index)
-            ? { color: 'blue', fontStyle: 'bold', backgroundColor: 'gray' }
-            : {}
+        const renderArray = [];
 
-        renderArray.push(<span key={index} style={style}>{space}{word}</span>)
+        for (let [index, wordObject] of Object.entries(this.props.transcript)) {
+
+            let word = wordObject.name;
+            let space = word === '.'
+                ? ''
+                : ' '
+            let style = this.props.currentWordIndex === parseInt(index)
+                ? { color: 'blue', fontStyle: 'bold', backgroundColor: 'gray' }
+                : {}
+
+            let text = space + word
+
+            renderArray.push(<Word key={index}
+                time={wordObject.time}
+                style={style}
+                onClick={this.props.onClickWord}
+                text={text} />)
+        }
+
+        return renderArray;
     }
 
-    return renderArray;
 }
 
 export default Transcript;

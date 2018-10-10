@@ -9,22 +9,18 @@ class InteractiveTranscript extends Component {
         currentWordIndex: 0,
         transcript: transcript.words,
         playPosition: 0,
+        updatePlayer: false,
     }
 
     getNewWordIndex = newPosition => {
-        let startAtSlice = this.state.currentWordIndex
 
-        if (newPosition < this.state.playPosition) {
-            startAtSlice = 0
-        }
-
-        for (let [index, wordObject] of Object.entries(this.state.transcript.slice(startAtSlice))) {
+        for (let [index, wordObject] of Object.entries(this.state.transcript)) {
 
             let wordStart = parseFloat(wordObject.time)
             let wordEnd = wordStart + parseFloat(wordObject.duration)
 
             if (newPosition >= wordStart && newPosition <= wordEnd) {
-                return parseInt(index) + startAtSlice
+                return parseInt(index)
             }
 
         }
@@ -34,17 +30,26 @@ class InteractiveTranscript extends Component {
         const newWordIndex = this.getNewWordIndex(newPosition)
         if (newWordIndex) {
             this.setState({ currentWordIndex: newWordIndex })
-            console.log(newWordIndex)
         }
+    }
+
+    onClickWord = timeString => {
+        this.setState({ playPosition: parseFloat(timeString), updatePlayer: true })
     }
 
     render() {
         return <React.Fragment>
             <div>
-                <MediaPlayer src={this.props.mediaSource} timeUpdate={this.timeUpdate} />
+                <MediaPlayer
+                    src={this.props.mediaSource}
+                    timeUpdate={this.timeUpdate}
+                    updatePlayer={this.state.updatePlayer}
+                    currentTime={this.state.playPosition} />
             </div>
             <div>
-                <Transcript transcript={this.state.transcript} currentWordIndex={this.state.currentWordIndex} />
+                <Transcript transcript={this.state.transcript}
+                    currentWordIndex={this.state.currentWordIndex}
+                    onClickWord={this.onClickWord} />
             </div>
         </React.Fragment>
     }
