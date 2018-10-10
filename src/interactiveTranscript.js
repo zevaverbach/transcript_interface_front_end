@@ -7,7 +7,14 @@ import transcript from './transcript.json';
 class InteractiveTranscript extends Component {
     state = {
         currentWordIndex: 0,
-        transcript: transcript.words,
+        transcript: transcript.words.map(word => {
+            return {
+                wordStart: parseFloat(word.time),
+                wordEnd: parseFloat(word.time) + parseFloat(word.duration),
+                word: word.name,
+                confidence: parseFloat(word.confidence)
+            }
+        }),
         playPosition: 0,
         updatePlayer: false,
     }
@@ -16,10 +23,7 @@ class InteractiveTranscript extends Component {
 
         for (let [index, wordObject] of Object.entries(this.state.transcript)) {
 
-            let wordStart = parseFloat(wordObject.time)
-            let wordEnd = wordStart + parseFloat(wordObject.duration)
-
-            if (newPosition >= wordStart && newPosition <= wordEnd) {
+            if (newPosition >= wordObject.wordStart && newPosition <= wordObject.wordEnd) {
                 return parseInt(index)
             }
 

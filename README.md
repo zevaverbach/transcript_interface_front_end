@@ -21,11 +21,9 @@ Alternatively, to render an interactive transcript of your own files,
 ## Features
 
 * Click a word to jump to that spot in the associated media file.
+* Words are highlighted as they're spoken.
 * Seek to a position in the media file, and the word highlighting will adjust accordingly.
 
 ## Roadmap
 
-### Improve performance
-
-* Iterating through the entire transcript on each render is probably one bottleneck.
-* Manipulating the media player via a DOM selector is probably not ideal.
+See [issues](https://github.com/zevaverbach/react_interactive_transcript/issues).

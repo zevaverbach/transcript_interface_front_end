@@ -12,18 +12,21 @@ class Transcript extends Component {
 
         for (let [index, wordObject] of Object.entries(this.props.transcript)) {
 
-            let word = wordObject.name;
-            let space = word === '.'
+            let space = wordObject.word === '.'
                 ? ''
                 : ' '
             let style = this.props.currentWordIndex === parseInt(index)
                 ? { color: 'blue', fontStyle: 'bold', backgroundColor: 'gray' }
                 : {}
 
-            let text = space + word
+            if (wordObject.confidence <= .8 && wordObject.word !== '.') {
+                style = Object.assign(style, { textDecoration: 'underline' })
+            }
+
+            let text = space + wordObject.word
 
             renderArray.push(<Word key={index}
-                time={wordObject.time}
+                time={wordObject.wordStart}
                 style={style}
                 onClick={this.props.onClickWord}
                 text={text} />)
