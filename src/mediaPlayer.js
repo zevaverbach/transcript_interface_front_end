@@ -24,7 +24,8 @@ class MediaPlayer extends Component {
             && this.state.playPosition !== nextProps.playPosition) {
 
             this.state.player.currentTime = nextProps.playPosition;
-            this.setState({ playPosition: nextProps.playPosition })
+            this.setState({ playPosition: nextProps.playPosition})
+            this.props.setUpdatePlayerFalse();
         }
     }
 

@@ -31,46 +31,47 @@ class InteractiveTranscript extends Component {
         document.addEventListener('keydown', this.handleKeyDown)
     }
 
-    wordAtIndex = index => this.state.transcript[index]
-
     makeNewSentenceAfterCurrentWord = () => {
-        const cwi = this.state.currentWordIndex;
+        let index = this.state.currentWordIndex;
+        console.log(this.state.transcript[index + 1].word)
+        // if ([',', '.'].some(punc => punc === this.state.transcript[index + 1].word)) return
+        // if (this.state.transcript[index + 1].word === ',') index--;
         this.setState({
             transcript: (
-                this.state.transcript.slice(0, cwi + 1)
+                this.state.transcript.slice(0, index + 1)
                     .concat([{
                         wordStart: null,
                         wordEnd: null,
                         confidence: 1,
                         word: '.',
-                        index: cwi + 1
+                        index: index + 1
                     }])
                     .concat([
-                        Object.assign(this.state.transcript[cwi + 1], {
-                            word: toTitleCase(this.state.transcript[cwi + 1].word),
-                            index: this.state.transcript[cwi + 1].index + 1
+                        Object.assign(this.state.transcript[index + 1], {
+                            word: toTitleCase(this.state.transcript[index + 1].word),
+                            index: this.state.transcript[index + 1].index + 1
                         })
                     ])
-                    .concat(this.state.transcript.slice(cwi + 2)
+                    .concat(this.state.transcript.slice(index + 2)
                         .map(word => Object.assign(word, { index: word.index + 1 })))
             )
         })
     }
 
     addCommaAfterCurrentWord = () => {
-        const cwi = this.state.currentWordIndex;
+        const index = this.state.currentWordIndex;
         this.setState({
             transcript: (
-                this.state.transcript.slice(0, cwi + 1)
+                this.state.transcript.slice(0, index + 1)
                     .concat([{
                         wordStart: null,
                         wordEnd: null,
                         confidence: 1,
                         word: ',',
-                        index: cwi + 1,
+                        index: index + 1,
                         space: false,
                     }])
-                    .concat(this.state.transcript.slice(cwi + 1)
+                    .concat(this.state.transcript.slice(index + 1)
                         .map(word => Object.assign(word, { index: word.index + 1 })))
             )
         })
@@ -108,8 +109,8 @@ class InteractiveTranscript extends Component {
         }
     }
 
-    onClickWord = timeString => {
-        this.setState({ playPosition: parseFloat(timeString), updatePlayer: true })
+    onClickWord = word => {
+        this.setState({ playPosition: word.wordStart, currentWordIndex: word.index, updatePlayer: true })
     }
 
     handleConfidenceThresholdChange = confidenceThreshold => {
@@ -117,7 +118,10 @@ class InteractiveTranscript extends Component {
         this.setState({ confidenceThreshold })
     }
 
+    setUpdatePlayerFalse = () => this.setState({ updatePlayer: false })
+
     render() {
+        console.log(this.state.playPosition)
         return (
             <React.Fragment>
                 <div>
@@ -125,7 +129,10 @@ class InteractiveTranscript extends Component {
                         src={this.props.mediaSource}
                         onTimeUpdate={this.onTimeUpdate}
                         updatePlayer={this.state.updatePlayer}
-                        playPosition={this.state.playPosition} />
+                        playPosition={this.state.playPosition}
+                        setUpdatePlayerFalse={this.setUpdatePlayerFalse}
+                    />
+
                 </div>
                 <div>
                     <ConfidenceSlider onChange={this.handleConfidenceThresholdChange} />
@@ -136,7 +143,8 @@ class InteractiveTranscript extends Component {
                         transcript={this.state.transcript}
                         currentWordIndex={this.state.currentWordIndex}
                         confidenceThreshold={this.state.confidenceThreshold}
-                        onClickWord={this.onClickWord} />
+                        onClickWord={this.onClickWord}
+                    />
                 </div>
             </React.Fragment>
         )

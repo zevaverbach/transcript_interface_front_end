@@ -11,7 +11,7 @@ const Transcript = props => {
     let currentWordIndexFound = false;
     let includesCurrentWord = false;
 
-    for (let [index, wordObject] of Object.entries(props.transcript)) {
+    for (let wordObject of props.transcript) {
 
         paragraph.push(wordObject)
 
@@ -23,7 +23,7 @@ const Transcript = props => {
             paragraphs.push(
                 <Paragraph
                     onClickWord={props.onClickWord}
-                    key={index}
+                    key={wordObject.index}
                     words={paragraph}
                     confidenceThreshold={props.confidenceThreshold}
                     includesCurrentWord={includesCurrentWord}

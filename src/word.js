@@ -4,7 +4,9 @@ import React, { Fragment } from 'react';
 
 const Word = props => {
 
-    const onClick = () => props.onClick(props.word.wordStart)
+    const onClick = () => {
+        props.onClick(props.word)
+    }
 
     let style = props.currentlyPlaying
         ? { color: 'blue', fontStyle: 'bold', backgroundColor: 'gray' }
@@ -16,7 +18,7 @@ const Word = props => {
 
     return (
         <Fragment>
-            <span>{props.word.word === '.' ? '' : ' '}</span>
+            <span>{['.', ','].includes(props.word.word) ? '' : ' '}</span>
             <span
                 onClick={onClick}
                 style={style}>{props.word.word}</span>
