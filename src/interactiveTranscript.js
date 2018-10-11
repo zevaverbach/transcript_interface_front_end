@@ -31,31 +31,48 @@ class InteractiveTranscript extends Component {
         document.addEventListener('keydown', this.handleKeyDown)
     }
 
-    makeNewSentenceAfterCurrentWord = () => {
-        let index = this.state.currentWordIndex;
-        console.log(this.state.transcript[index + 1].word)
-        // if ([',', '.'].some(punc => punc === this.state.transcript[index + 1].word)) return
-        // if (this.state.transcript[index + 1].word === ',') index--;
-        this.setState({
-            transcript: (
-                this.state.transcript.slice(0, index + 1)
-                    .concat([{
-                        wordStart: null,
-                        wordEnd: null,
-                        confidence: 1,
-                        word: '.',
-                        index: index + 1
-                    }])
-                    .concat([
-                        Object.assign(this.state.transcript[index + 1], {
-                            word: toTitleCase(this.state.transcript[index + 1].word),
-                            index: this.state.transcript[index + 1].index + 1
-                        })
-                    ])
-                    .concat(this.state.transcript.slice(index + 2)
-                        .map(word => Object.assign(word, { index: word.index + 1 })))
-            )
-        })
+    wordAtIndex = index => this.state.transcript[index]
+
+    makeNewSentenceAfterCurrentWord = char => {
+        const cwi = this.state.currentWordIndex;
+        const nextWord = this.state.transcript[cwi + 1].word
+        if (nextWord === char) return
+        if (['.', '?'].includes(nextWord)) {
+            this.setState({
+                transcript: (
+                    this.state.transcript.slice(0, cwi + 1)
+                        .concat([{
+                            wordStart: null,
+                            wordEnd: null,
+                            confidence: 1,
+                            word: char,
+                            index: cwi + 1
+                        }])
+                        .concat(this.state.transcript.slice(cwi + 2))
+                )
+            })
+        } else {
+            this.setState({
+                transcript: (
+                    this.state.transcript.slice(0, cwi + 1)
+                        .concat([{
+                            wordStart: null,
+                            wordEnd: null,
+                            confidence: 1,
+                            word: char,
+                            index: cwi + 1
+                        }])
+                        .concat([
+                            Object.assign(this.state.transcript[cwi + 1], {
+                                word: toTitleCase(this.state.transcript[cwi + 1].word),
+                                index: this.state.transcript[cwi + 1].index + 1
+                            })
+                        ])
+                        .concat(this.state.transcript.slice(cwi + 2)
+                            .map(word => Object.assign(word, { index: word.index + 1 })))
+                )
+            })
+        }
     }
 
     addCommaAfterCurrentWord = () => {
@@ -81,11 +98,15 @@ class InteractiveTranscript extends Component {
         switch (event.keyCode) {
             case 190:
                 // period
-                this.makeNewSentenceAfterCurrentWord()
+                this.makeNewSentenceAfterCurrentWord('.')
                 break;
             case 188:
                 // comma
                 this.addCommaAfterCurrentWord()
+                break
+            case 191:
+                // question mark (or slash)
+                this.makeNewSentenceAfterCurrentWord('?')
                 break
             default:
                 return
