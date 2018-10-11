@@ -115,25 +115,27 @@ class InteractiveTranscript extends Component {
     onConfidenceChange = confidencePercent => this.setState({ confidenceThreshold: confidencePercent })
 
     render() {
-        return <React.Fragment>
-            <div>
-                <MediaPlayer
-                    src={this.props.mediaSource}
-                    timeUpdate={this.timeUpdate}
-                    updatePlayer={this.state.updatePlayer}
-                    currentTime={this.state.playPosition} />
-            </div>
-            <div>
-                <ConfidenceSlider onChange={this.onConfidenceChange} />
-                <span>ASR Confidence Threshold: {(this.state.confidenceThreshold * 100).toPrecision(2)}%</span>
-            </div>
-            <div>
-                <Transcript transcript={this.state.transcript}
-                    currentWordIndex={this.state.currentWordIndex}
-                    confidenceThreshold={this.state.confidenceThreshold}
-                    onClickWord={this.onClickWord} />
-            </div>
-        </React.Fragment>
+        return (
+            <React.Fragment>
+                <div>
+                    <MediaPlayer
+                        src={this.props.mediaSource}
+                        timeUpdate={this.timeUpdate}
+                        updatePlayer={this.state.updatePlayer}
+                        currentTime={this.state.playPosition} />
+                </div>
+                <div>
+                    <ConfidenceSlider onChange={this.onConfidenceChange} />
+                    <span>ASR Confidence Threshold: {(this.state.confidenceThreshold * 100).toPrecision(2)}%</span>
+                </div>
+                <div>
+                    <Transcript transcript={this.state.transcript}
+                        currentWordIndex={this.state.currentWordIndex}
+                        confidenceThreshold={this.state.confidenceThreshold}
+                        onClickWord={this.onClickWord} />
+                </div>
+            </React.Fragment>
+        )
     }
 }
 

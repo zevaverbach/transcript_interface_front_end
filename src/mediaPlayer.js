@@ -36,14 +36,27 @@ class MediaPlayer extends Component {
     }
     render() {
         if (this.state.mediaType === 'audio') {
-            return <audio src={this.props.src}
+            return (
+                <audio
+                    src={this.props.src}
+                    onPause={this.timeUpdate}
+                    onPlay={this.timeUpdate}
+                    onSeeked={this.timeUpdate}
+                    onTimeUpdate={this.timeUpdate}
+                    controls>
+                </audio>
+            )
+        }
+        return (
+            <video
+                src={this.props.src}
                 onPause={this.timeUpdate}
                 onPlay={this.timeUpdate}
                 onSeeked={this.timeUpdate}
                 onTimeUpdate={this.timeUpdate}
-                controls></audio>
-        }
-        return <video src={this.props.src} onTimeUpdate={this.timeUpdate} controls></video>
+                controls>
+            </video>
+        )
     }
 }
 
