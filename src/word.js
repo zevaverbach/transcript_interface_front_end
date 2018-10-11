@@ -16,7 +16,7 @@ const Word = props => {
 
     return (
         <Fragment>
-            <span>{props.word.word === '.' ? '' : ' '}</span>
+            <span>{['.', ',', '?'].includes(props.word.word) ? '' : ' '}</span>
             <span
                 onClick={onClick}
                 style={style}>{props.word.word}</span>
