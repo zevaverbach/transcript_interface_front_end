@@ -5,7 +5,7 @@ class MediaPlayer extends Component {
 
     state = {
         player: null,
-        playPosition: 0,
+        playPosition: this.props.playPosition,
         mediaType: ['.mp3', '.wav', '.m4a']
             .some(fileExtension => this.props.src.endsWith(fileExtension))
             ? 'audio'
@@ -19,19 +19,19 @@ class MediaPlayer extends Component {
     }
 
     componentWillReceiveProps(nextProps) {
-        if (this.state.player
-            && this.props.updatePlayer
-            && this.state.playPosition !== nextProps.currentTime) {
+        if (this.props.updatePlayer
+            && this.state.player
+            && this.state.playPosition !== nextProps.playPosition) {
 
-            this.state.player.currentTime = nextProps.currentTime;
-            this.setState({ playPosition: nextProps.currentTime })
+            this.state.player.currentTime = nextProps.playPosition;
+            this.setState({ playPosition: nextProps.playPosition })
         }
     }
 
-    timeUpdate = e => {
+    onTimeUpdate = e => {
         if (this.state.player) {
-            const currentTime = this.state.player.currentTime
-            this.props.timeUpdate(currentTime)
+            const playPosition = this.state.player.currentTime
+            this.props.onTimeUpdate(playPosition)
         }
     }
     render() {
@@ -39,10 +39,10 @@ class MediaPlayer extends Component {
             return (
                 <audio
                     src={this.props.src}
-                    onPause={this.timeUpdate}
-                    onPlay={this.timeUpdate}
-                    onSeeked={this.timeUpdate}
-                    onTimeUpdate={this.timeUpdate}
+                    onPause={this.onTimeUpdate}
+                    onPlay={this.onTimeUpdate}
+                    onSeeked={this.onTimeUpdate}
+                    onTimeUpdate={this.onTimeUpdate}
                     controls>
                 </audio>
             )
@@ -50,10 +50,10 @@ class MediaPlayer extends Component {
         return (
             <video
                 src={this.props.src}
-                onPause={this.timeUpdate}
-                onPlay={this.timeUpdate}
-                onSeeked={this.timeUpdate}
-                onTimeUpdate={this.timeUpdate}
+                onPause={this.onTimeUpdate}
+                onPlay={this.onTimeUpdate}
+                onSeeked={this.onTimeUpdate}
+                onTimeUpdate={this.onTimeUpdate}
                 controls>
             </video>
         )

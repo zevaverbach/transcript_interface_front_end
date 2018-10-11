@@ -1,37 +1,38 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import Paragraph from './paragraph'
 
 
 
-class Transcript extends Component {
+const Transcript = props => {
 
-    render() {
+    const paragraphs = [];
+    let paragraph = [];
+    let currentWordIndexFound = false;
+    let includesCurrentWord = false;
 
-        const paragraphs = [];
-        let paragraph = [];
+    for (let [index, wordObject] of Object.entries(props.transcript)) {
 
-        for (let [index, wordObject] of Object.entries(this.props.transcript)) {
+        paragraph.push(wordObject)
 
-            paragraph.push(wordObject)
-
-            if (paragraph.length >= 80 && wordObject.word === '.') {
-                paragraphs.push(
-                    <Paragraph
-                        onClickWord={this.props.onClickWord}
-                        key={index}
-                        words={paragraph}
-                        confidenceThreshold={this.props.confidenceThreshold}
-                        currentWordIndex={this.props.currentWordIndex} />)
-                paragraph = [];
-            }
-
+        if (!currentWordIndexFound && wordObject.index === props.currentWordIndex) {
+            includesCurrentWord = true
         }
 
-        return paragraphs;
+        if (paragraph.length >= 80 && wordObject.word === '.') {
+            paragraphs.push(
+                <Paragraph
+                    onClickWord={props.onClickWord}
+                    key={index}
+                    words={paragraph}
+                    confidenceThreshold={props.confidenceThreshold}
+                    includesCurrentWord={includesCurrentWord}
+                    currentWordIndex={props.currentWordIndex} />)
+            paragraph = [];
+            includesCurrentWord = false;
+        }
     }
+    return paragraphs;
 }
-
-
 
 export default Transcript;

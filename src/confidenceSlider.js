@@ -11,9 +11,11 @@ class ConfidenceSlider extends Component {
         this.props.onChange(event.target.value);
         this.setState({ value: event.target.value })
     }
+
     render() {
         return (
-            <input type='range'
+            <input
+                type='range'
                 min='.50'
                 max='.99'
                 step='.01'

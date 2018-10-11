@@ -1,19 +1,28 @@
-import React, { Component, Fragment } from 'react';
+import React, { Fragment } from 'react';
 
 
-class Word extends Component {
-    onClick = () => this.props.onClick(this.props.time)
-    render() {
-        return (
-            <Fragment>
-                <span>{this.props.space}</span>
-                <span
-                    onClick={this.onClick}
-                    style={this.props.style}>{this.props.text}</span>
 
-            </Fragment>
-        )
+const Word = props => {
+
+    const onClick = () => props.onClick(props.word.wordStart)
+
+    let style = props.currentlyPlaying
+        ? { color: 'blue', fontStyle: 'bold', backgroundColor: 'gray' }
+        : {}
+
+    if (props.word.confidence <= props.confidenceThreshold && props.word.word !== '.') {
+        style = Object.assign(style, { textDecoration: 'underline' })
     }
+
+    return (
+        <Fragment>
+            <span>{props.word.word === '.' ? '' : ' '}</span>
+            <span
+                onClick={onClick}
+                style={style}>{props.word.word}</span>
+
+        </Fragment>
+    )
 }
 
 export default Word;

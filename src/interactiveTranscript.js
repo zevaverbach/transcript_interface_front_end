@@ -7,6 +7,7 @@ import toTitleCase from './helpers'
 
 
 class InteractiveTranscript extends Component {
+
     state = {
         currentWordIndex: 0,
         transcript: transcript.words.map((word, index) => (
@@ -97,11 +98,10 @@ class InteractiveTranscript extends Component {
             if (newPosition >= wordObject.wordStart && newPosition <= wordObject.wordEnd) {
                 return wordObject.index
             }
-
         }
     }
 
-    timeUpdate = newPosition => {
+    onTimeUpdate = newPosition => {
         const newWordIndex = this.getNewWordIndex(newPosition)
         if (newWordIndex) {
             this.setState({ currentWordIndex: newWordIndex })
@@ -112,7 +112,10 @@ class InteractiveTranscript extends Component {
         this.setState({ playPosition: parseFloat(timeString), updatePlayer: true })
     }
 
-    onConfidenceChange = confidencePercent => this.setState({ confidenceThreshold: confidencePercent })
+    handleConfidenceThresholdChange = confidenceThreshold => {
+
+        this.setState({ confidenceThreshold })
+    }
 
     render() {
         return (
@@ -120,16 +123,17 @@ class InteractiveTranscript extends Component {
                 <div>
                     <MediaPlayer
                         src={this.props.mediaSource}
-                        timeUpdate={this.timeUpdate}
+                        onTimeUpdate={this.onTimeUpdate}
                         updatePlayer={this.state.updatePlayer}
-                        currentTime={this.state.playPosition} />
+                        playPosition={this.state.playPosition} />
                 </div>
                 <div>
-                    <ConfidenceSlider onChange={this.onConfidenceChange} />
+                    <ConfidenceSlider onChange={this.handleConfidenceThresholdChange} />
                     <span>ASR Confidence Threshold: {(this.state.confidenceThreshold * 100).toPrecision(2)}%</span>
                 </div>
                 <div>
-                    <Transcript transcript={this.state.transcript}
+                    <Transcript
+                        transcript={this.state.transcript}
                         currentWordIndex={this.state.currentWordIndex}
                         confidenceThreshold={this.state.confidenceThreshold}
                         onClickWord={this.onClickWord} />
