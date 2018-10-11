@@ -3,13 +3,14 @@ import MediaPlayer from './mediaPlayer';
 import Transcript from './transcript';
 import ConfidenceSlider from './confidenceSlider';
 import transcript from './transcript.json';
+import toTitleCase from './helpers'
 
 
 class InteractiveTranscript extends Component {
     state = {
         currentWordIndex: 0,
-        transcript: transcript.words.map((word, index) => {
-            return {
+        transcript: transcript.words.map((word, index) => (
+            {
                 wordStart: parseFloat(word.time),
                 wordEnd: parseFloat(word.time) + parseFloat(word.duration),
                 word: word.name,
@@ -19,7 +20,7 @@ class InteractiveTranscript extends Component {
                     ? ''
                     : ' '
             }
-        }),
+        )),
         playPosition: 0,
         updatePlayer: false,
         confidenceThreshold: .5,
@@ -30,8 +31,6 @@ class InteractiveTranscript extends Component {
     }
 
     wordAtIndex = index => this.state.transcript[index]
-
-    toTitleCase = word => word.split('').map((letter, index) => index === 0 ? letter.toUpperCase() : letter).join('')
 
     makeNewSentenceAfterCurrentWord = () => {
         const cwi = this.state.currentWordIndex;
@@ -47,7 +46,7 @@ class InteractiveTranscript extends Component {
                     }])
                     .concat([
                         Object.assign(this.state.transcript[cwi + 1], {
-                            word: this.toTitleCase(this.state.transcript[cwi + 1].word),
+                            word: toTitleCase(this.state.transcript[cwi + 1].word),
                             index: this.state.transcript[cwi + 1].index + 1
                         })
                     ])
