@@ -10,9 +10,6 @@ class Paragraph extends Component {
 
         for (let wordObject of this.props.words) {
 
-            let space = wordObject.word === '.'
-                ? ''
-                : ' '
             let style = this.props.currentWordIndex === parseInt(wordObject.index)
                 ? { color: 'blue', fontStyle: 'bold', backgroundColor: 'gray' }
                 : {}
@@ -21,13 +18,12 @@ class Paragraph extends Component {
                 style = Object.assign(style, { textDecoration: 'underline' })
             }
 
-            let text = space + wordObject.word
-
             renderArray.push(<Word key={wordObject.index}
                 time={wordObject.wordStart}
                 style={style}
+                space={wordObject.space}
                 onClick={this.props.onClickWord}
-                text={text} />)
+                text={wordObject.word} />)
 
         }
 

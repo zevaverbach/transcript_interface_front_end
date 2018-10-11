@@ -15,11 +15,80 @@ class InteractiveTranscript extends Component {
                 word: word.name,
                 confidence: parseFloat(word.confidence),
                 index: index,
+                space: word.name === '.'
+                    ? ''
+                    : ' '
             }
         }),
         playPosition: 0,
         updatePlayer: false,
-        confidenceThreshold: 0,
+        confidenceThreshold: .5,
+    }
+
+    componentDidMount() {
+        document.addEventListener('keydown', this.handleKeyDown)
+    }
+
+    wordAtIndex = index => this.state.transcript[index]
+
+    toTitleCase = word => word.split('').map((letter, index) => index === 0 ? letter.toUpperCase() : letter).join('')
+
+    makeNewSentenceAfterCurrentWord = () => {
+        const cwi = this.state.currentWordIndex;
+        this.setState({
+            transcript: (
+                this.state.transcript.slice(0, cwi + 1)
+                    .concat([{
+                        wordStart: null,
+                        wordEnd: null,
+                        confidence: 1,
+                        word: '.',
+                        index: cwi + 1
+                    }])
+                    .concat([
+                        Object.assign(this.state.transcript[cwi + 1], {
+                            word: this.toTitleCase(this.state.transcript[cwi + 1].word),
+                            index: this.state.transcript[cwi + 1].index + 1
+                        })
+                    ])
+                    .concat(this.state.transcript.slice(cwi + 2)
+                        .map(word => Object.assign(word, { index: word.index + 1 })))
+            )
+        })
+    }
+
+    addCommaAfterCurrentWord = () => {
+        const cwi = this.state.currentWordIndex;
+        this.setState({
+            transcript: (
+                this.state.transcript.slice(0, cwi + 1)
+                    .concat([{
+                        wordStart: null,
+                        wordEnd: null,
+                        confidence: 1,
+                        word: ',',
+                        index: cwi + 1,
+                        space: false,
+                    }])
+                    .concat(this.state.transcript.slice(cwi + 1)
+                        .map(word => Object.assign(word, { index: word.index + 1 })))
+            )
+        })
+    }
+
+    handleKeyDown = event => {
+        switch (event.keyCode) {
+            case 190:
+                // period
+                this.makeNewSentenceAfterCurrentWord()
+                break;
+            case 188:
+                // comma
+                this.addCommaAfterCurrentWord()
+                break
+            default:
+                return
+        }
     }
 
     getNewWordIndex = newPosition => {
