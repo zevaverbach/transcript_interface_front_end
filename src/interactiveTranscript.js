@@ -37,7 +37,9 @@ class InteractiveTranscript extends Component {
     insertPuncAfterCurrentWord = punc => {
 
         const index = this.state.currentWordIndex;
-        const nextWord = this.state.transcript[index + 1].word
+        const nextWordObject = this.state.transcript[index + 1]
+        const nextWordStart = nextWordObject.wordStart
+        const nextWord = nextWordObject.word
         if (nextWord === punc) return
 
         // entire transcript up to and including the currently selected word
@@ -59,17 +61,27 @@ class InteractiveTranscript extends Component {
             thirdTranscriptChunk = this.state.transcript.slice(index + 1).map(word => Object.assign(word, { index: word.index + 1 }))
         }
 
-        const firstWordNextPhrase = this.state.transcript[index + 2].word
+        const firstWordNextPhrase = thirdTranscriptChunk[0].word
 
         if (endsSentence(punc) && !isCapitalized(firstWordNextPhrase)) {
-            thirdTranscriptChunk = [Object.assign(thirdTranscriptChunk[0], {
-                word: toTitleCase(thirdTranscriptChunk[0].word)
+            thirdTranscriptChunk = [Object.assign(firstWordNextPhrase, {
+                word: toTitleCase(firstWordNextPhrase),
+                key: index + 2,
+                index: index + 2,
+                wordStart: nextWordStart,
             })].concat(thirdTranscriptChunk.slice(1))
         }
 
+        console.log(punc)
+        console.log(firstWordNextPhrase)
+        console.log(isCapitalized(firstWordNextPhrase))
+
         if (punc === ',' && isCapitalized(firstWordNextPhrase)) {
-            thirdTranscriptChunk = [Object.assign(thirdTranscriptChunk[0], {
-                word: thirdTranscriptChunk[0].word.toLowerCase()
+            thirdTranscriptChunk = [Object.assign(firstWordNextPhrase, {
+                word: firstWordNextPhrase.toLowerCase(),
+                key: index + 2,
+                index: index + 2,
+                wordStart: nextWordStart,
             })].concat(thirdTranscriptChunk.slice(1))
         }
 
@@ -108,18 +120,32 @@ class InteractiveTranscript extends Component {
 
     goToNextWord = () => {
         if (this.state.currentWordIndex < this.state.transcript.length) {
+            let numWordsForward = 1
+            let selectedWord = this.state.transcript[this.state.currentWordIndex + numWordsForward]
+            while (selectedWord.wordStart === null) {
+                numWordsForward++;
+                selectedWord = this.state.transcript[this.state.currentWordIndex + numWordsForward]
+            }
+
             this.setState({
-                currentWordIndex: this.state.currentWordIndex + 1,
-                playPosition: this.state.transcript[this.state.currentWordIndex + 1].wordStart,
-                updatePlayer: true,
+                currentWordIndex: this.state.currentWordIndex + numWordsForward,
+                playPosition: selectedWord.wordStart,
+                updatePlayer: true
             })
         }
     }
     goToPreviousWord = () => {
         if (this.state.currentWordIndex > 0) {
+            let numWordsBack = 1
+            let selectedWord = this.state.transcript[this.state.currentWordIndex - numWordsBack]
+            while (selectedWord.wordStart === null) {
+                numWordsBack++;
+                selectedWord = this.state.transcript[this.state.currentWordIndex - numWordsBack]
+            }
+
             this.setState({
-                currentWordIndex: this.state.currentWordIndex - 1,
-                playPosition: this.state.transcript[this.state.currentWordIndex - 1].wordStart,
+                currentWordIndex: this.state.currentWordIndex - numWordsBack,
+                playPosition: selectedWord.wordStart,
                 updatePlayer: true
             })
         }

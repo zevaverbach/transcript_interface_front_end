@@ -6,15 +6,19 @@ import { isPunc } from './helpers'
 const Word = props => {
 
     const onClick = () => {
-        props.onClick(props.word)
+        if (!isPunc(props.word.word)) props.onClick(props.word)
     }
 
-    let style = props.currentlyPlaying
+    let style = props.currentlyPlaying && !isPunc(props.word.word)
         ? { color: 'blue', fontStyle: 'bold', backgroundColor: 'gray' }
         : {}
 
     if (props.word.confidence <= props.confidenceThreshold && props.word.word !== '.') {
         style = Object.assign(style, { textDecoration: 'underline' })
+    }
+
+    if (props.currentlyPlaying) {
+        console.log(props.word.word, props.word.wordStart, props.word.index)
     }
 
     return (

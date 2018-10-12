@@ -25,6 +25,11 @@ export const hhmmssToSeconds = hhmmss => {
 
 }
 
-export const isCapitalized = word => word === word.toUpperCase()
+const shouldAlwaysBeCapitalized = word => {
+    // check for proper nouns
+    // "I"
+}
+
+export const isCapitalized = word => word === toTitleCase(word)
 export const isPunc = word => ['.', '?', ',', ':'].includes(word)
 export const endsSentence = word => ['.', '?', ':'].includes(word)
