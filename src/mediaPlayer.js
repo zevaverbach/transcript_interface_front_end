@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-
+import * as Mousetrap from 'mousetrap';
+import { hhmmssToSeconds } from './helpers';
 
 class MediaPlayer extends Component {
 
@@ -16,6 +17,42 @@ class MediaPlayer extends Component {
     componentDidMount() {
         const player = document.getElementsByTagName(this.state.mediaType)[0]
         this.setState({ player: player })
+
+        Mousetrap.bind(';', () => {
+            this.state.player.playbackRate = 1;
+            if (this.state.player.paused) {
+                this.state.player.play();
+            } else {
+                this.state.player.currentTime -= 1.65
+            }
+        });
+
+        Mousetrap.bind('`', () => {
+            this.state.player.pause();
+            this.state.player.currentTime -= 1.65
+            this.state.player.playbackRate = 1;
+        });
+
+
+        Mousetrap.bind('ctrl+;', () => {
+            this.state.player.playbackRate = 5;
+            if (this.state.player.paused) this.state.player.play();
+        }, 'keydown');
+
+        Mousetrap.bind('ctrl+;', () => {
+            this.state.player.playbackRate = 1;
+            this.state.player.play();
+        }, 'keyup');
+
+        Mousetrap.bind('ctrl+\'', () => {
+            this.state.player.currentTime -= 10;
+        });
+
+        Mousetrap.bind('meta+j', () => {
+            if (!this.state.player.paused) this.state.player.pause();
+            const newPosition = hhmmssToSeconds(prompt('Jump to time: '))
+            this.state.player.currentTime = newPosition
+        });
     }
 
     componentWillReceiveProps(nextProps) {
@@ -25,7 +62,21 @@ class MediaPlayer extends Component {
 
             this.state.player.currentTime = nextProps.playPosition;
             this.setState({ playPosition: nextProps.playPosition })
-            this.props.setUpdatePlayerFalse();
+
+        } else {
+
+            if (this.props.updatePlayer
+                && this.state.player
+                && this.props.play) {
+
+                if (this.state.player.paused) {
+                    this.state.player.play()
+                } else {
+                    this.state.player.currentTime = this.state.player.currentTime - 1.65
+                    this.setState({ currentTime: this.state.player.currentTime })
+                }
+
+            }
         }
     }
 
@@ -35,6 +86,16 @@ class MediaPlayer extends Component {
             this.props.onTimeUpdate(playPosition)
         }
     }
+
+    play = () => {
+        if (this.state.player.paused) {
+            this.state.player.play()
+        } else {
+            this.state.player.currentTime = this.state.player.currentTime - 1.5
+            this.setState({ playPosition: this.state.player.currentTime })
+        }
+    }
+
     render() {
         if (this.state.mediaType === 'audio') {
             return (

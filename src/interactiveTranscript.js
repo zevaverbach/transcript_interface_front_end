@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import MediaPlayer from './mediaPlayer';
 import Transcript from './transcript';
-import ConfidenceSlider from './confidenceSlider';
+// import ConfidenceSlider from './confidenceSlider';
 import transcript from './transcript.json';
-import toTitleCase from './helpers'
+import { isPunc, toTitleCase, isCapitalized, endsSentence } from './helpers'
 
 
 class InteractiveTranscript extends Component {
@@ -23,6 +23,7 @@ class InteractiveTranscript extends Component {
             }
         )),
         playPosition: 0,
+        play: false,
         updatePlayer: false,
         confidenceThreshold: .5,
     }
@@ -33,109 +34,97 @@ class InteractiveTranscript extends Component {
 
     wordAtIndex = index => this.state.transcript[index]
 
-    makeNewSentenceAfterCurrentWord = char => {
+    insertPuncAfterCurrentWord = punc => {
+
         const index = this.state.currentWordIndex;
         const nextWord = this.state.transcript[index + 1].word
-        if (nextWord === char) return
-        if (['.', '?'].includes(nextWord)) {
-            this.setState({
-                transcript: (
-                    this.state.transcript.slice(0, index + 1)
-                        .concat([{
-                            wordStart: null,
-                            wordEnd: null,
-                            confidence: 1,
-                            word: char,
-                            index: index + 1
-                        }])
-                        .concat(this.state.transcript.slice(index + 2))
-                )
-            })
+        if (nextWord === punc) return
+
+        // entire transcript up to and including the currently selected word
+        const firstTranscriptChunk = this.state.transcript.slice(0, index + 1)
+
+        const punctuationChunk = [{
+            wordStart: null,
+            wordEnd: null,
+            confidence: 1,
+            word: punc,
+            index: index + 1
+        }]
+
+        let thirdTranscriptChunk = []
+
+        if (isPunc(nextWord)) {
+            thirdTranscriptChunk = this.state.transcript.slice(index + 2)
         } else {
-            this.setState({
-                transcript: (
-                    this.state.transcript.slice(0, index + 1)
-                        .concat([{
-                            wordStart: null,
-                            wordEnd: null,
-                            confidence: 1,
-                            word: char,
-                            index: index + 1
-                        }])
-                        .concat([
-                            Object.assign(this.state.transcript[index + 1], {
-                                word: toTitleCase(this.state.transcript[index + 1].word),
-                                index: this.state.transcript[index + 1].index + 1
-                            })
-                        ])
-                        .concat(this.state.transcript.slice(index + 2)
-                            .map(word => Object.assign(word, { index: word.index + 1 })))
-                )
-            })
+            thirdTranscriptChunk = this.state.transcript.slice(index + 1).map(word => Object.assign(word, { index: word.index + 1 }))
         }
+
+        const firstWordNextPhrase = this.state.transcript[index + 2].word
+
+        if (endsSentence(punc) && !isCapitalized(firstWordNextPhrase)) {
+            thirdTranscriptChunk = [Object.assign(thirdTranscriptChunk[0], {
+                word: toTitleCase(thirdTranscriptChunk[0].word)
+            })].concat(thirdTranscriptChunk.slice(1))
+        }
+
+        if (punc === ',' && isCapitalized(firstWordNextPhrase)) {
+            thirdTranscriptChunk = [Object.assign(thirdTranscriptChunk[0], {
+                word: thirdTranscriptChunk[0].word.toLowerCase()
+            })].concat(thirdTranscriptChunk.slice(1))
+        }
+
+        this.setState({
+            transcript: firstTranscriptChunk.concat(punctuationChunk).concat(thirdTranscriptChunk)
+        })
     }
 
-    addCommaAfterCurrentWord = () => {
-        const index = this.state.currentWordIndex;
-        const nextWord = this.state.transcript[index + 1].word
-        if (nextWord === ',') return
-        if (['.', '?'].includes(nextWord)) {
-            this.setState({
-                transcript: (
-                    this.state.transcript.slice(0, index + 1)
-                        .concat([{
-                            wordStart: null,
-                            wordEnd: null,
-                            confidence: 1,
-                            word: ',',
-                            index: index + 1
-                        }])
-                        .concat([
-                            Object.assign(this.state.transcript[index + 1], {
-                                word: this.state.transcript[index + 1].word.toLowerCase(),
-                                index: this.state.transcript[index + 1].index + 1
-                            })
-                        ])
-                        .concat(this.state.transcript.slice(index + 2))
-                )
-            })
-        } else {
-            this.setState({
-                transcript: (
-                    this.state.transcript.slice(0, index + 1)
-                        .concat([{
-                            wordStart: null,
-                            wordEnd: null,
-                            confidence: 1,
-                            word: ',',
-                            index: index + 1,
-                            space: false,
-                        }])
-                        .concat(this.state.transcript.slice(index + 1)
-                            .map(word => Object.assign(word, { index: word.index + 1 })))
-                )
-            })
-        }
-    }
 
     handleKeyDown = event => {
         switch (event.keyCode) {
-            case 190:
-                // period
-                this.makeNewSentenceAfterCurrentWord('.')
+            case 190: // period
+                this.insertPuncAfterCurrentWord('.')
                 break;
-            case 188:
-                // comma
-                this.addCommaAfterCurrentWord()
+            case 188: // comma
+                this.insertPuncAfterCurrentWord(',')
                 break
-            case 191:
-                // question mark (or slash)
-                this.makeNewSentenceAfterCurrentWord('?')
+            case 191: // question mark (or slash)
+                this.insertPuncAfterCurrentWord('?')
+                break
+            case 9: // tab
+                event.preventDefault()
+                if (event.shiftKey) {
+                    this.goToPreviousWord();
+                } else {
+                    this.goToNextWord()
+                }
+                break
+            case 186: // colon
+                if (event.shiftKey) this.insertPuncAfterCurrentWord(':')
                 break
             default:
                 return
         }
     }
+
+    goToNextWord = () => {
+        if (this.state.currentWordIndex < this.state.transcript.length) {
+            this.setState({
+                currentWordIndex: this.state.currentWordIndex + 1,
+                playPosition: this.state.transcript[this.state.currentWordIndex + 1].wordStart,
+                updatePlayer: true,
+            })
+        }
+    }
+    goToPreviousWord = () => {
+        if (this.state.currentWordIndex > 0) {
+            this.setState({
+                currentWordIndex: this.state.currentWordIndex - 1,
+                playPosition: this.state.transcript[this.state.currentWordIndex - 1].wordStart,
+                updatePlayer: true
+            })
+        }
+    }
+
 
     getNewWordIndex = newPosition => {
         for (let wordObject of this.state.transcript) {
@@ -152,12 +141,15 @@ class InteractiveTranscript extends Component {
         }
     }
 
-    onClickWord = word => this.setState({ playPosition: word.wordStart, currentWordIndex: word.index, updatePlayer: true })
+    onClickWord = word => this.setState({
+        playPosition: word.wordStart,
+        currentWordIndex: word.index,
+        updatePlayer: true,
+    })
+
     handleConfidenceThresholdChange = confidenceThreshold => this.setState({ confidenceThreshold })
-    setUpdatePlayerFalse = () => this.setState({ updatePlayer: false })
 
     render() {
-        console.log(this.state.currentWordIndex)
         return (
             <React.Fragment>
                 <div>
@@ -166,14 +158,14 @@ class InteractiveTranscript extends Component {
                         onTimeUpdate={this.onTimeUpdate}
                         updatePlayer={this.state.updatePlayer}
                         playPosition={this.state.playPosition}
-                        setUpdatePlayerFalse={this.setUpdatePlayerFalse}
+                        play={this.state.play}
                     />
 
                 </div>
-                <div>
+                {/* <div>
                     <ConfidenceSlider onChange={this.handleConfidenceThresholdChange} />
                     <span>ASR Confidence Threshold: {(this.state.confidenceThreshold * 100).toPrecision(2)}%</span>
-                </div>
+                </div> */}
                 <div>
                     <Transcript
                         transcript={this.state.transcript}

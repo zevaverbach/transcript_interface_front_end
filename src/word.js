@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import { isPunc } from './helpers'
 
 
 
@@ -18,7 +19,7 @@ const Word = props => {
 
     return (
         <Fragment>
-            <span>{['.', ',', '?'].includes(props.word.word) ? '' : ' '}</span>
+            <span>{isPunc(props.word.word) ? '' : ' '}</span>
             <span
                 onClick={onClick}
                 style={style}>{props.word.word}</span>
