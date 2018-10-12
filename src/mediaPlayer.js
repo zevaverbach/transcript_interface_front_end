@@ -24,7 +24,7 @@ class MediaPlayer extends Component {
             && this.state.playPosition !== nextProps.playPosition) {
 
             this.state.player.currentTime = nextProps.playPosition;
-            this.setState({ playPosition: nextProps.playPosition})
+            this.setState({ playPosition: nextProps.playPosition })
             this.props.setUpdatePlayerFalse();
         }
     }
@@ -40,9 +40,6 @@ class MediaPlayer extends Component {
             return (
                 <audio
                     src={this.props.src}
-                    onPause={this.onTimeUpdate}
-                    onPlay={this.onTimeUpdate}
-                    onSeeked={this.onTimeUpdate}
                     onTimeUpdate={this.onTimeUpdate}
                     controls>
                 </audio>
@@ -51,9 +48,6 @@ class MediaPlayer extends Component {
         return (
             <video
                 src={this.props.src}
-                onPause={this.onTimeUpdate}
-                onPlay={this.onTimeUpdate}
-                onSeeked={this.onTimeUpdate}
                 onTimeUpdate={this.onTimeUpdate}
                 controls>
             </video>

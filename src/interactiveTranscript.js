@@ -34,41 +34,41 @@ class InteractiveTranscript extends Component {
     wordAtIndex = index => this.state.transcript[index]
 
     makeNewSentenceAfterCurrentWord = char => {
-        const cwi = this.state.currentWordIndex;
-        const nextWord = this.state.transcript[cwi + 1].word
+        const index = this.state.currentWordIndex;
+        const nextWord = this.state.transcript[index + 1].word
         if (nextWord === char) return
         if (['.', '?'].includes(nextWord)) {
             this.setState({
                 transcript: (
-                    this.state.transcript.slice(0, cwi + 1)
+                    this.state.transcript.slice(0, index + 1)
                         .concat([{
                             wordStart: null,
                             wordEnd: null,
                             confidence: 1,
                             word: char,
-                            index: cwi + 1
+                            index: index + 1
                         }])
-                        .concat(this.state.transcript.slice(cwi + 2))
+                        .concat(this.state.transcript.slice(index + 2))
                 )
             })
         } else {
             this.setState({
                 transcript: (
-                    this.state.transcript.slice(0, cwi + 1)
+                    this.state.transcript.slice(0, index + 1)
                         .concat([{
                             wordStart: null,
                             wordEnd: null,
                             confidence: 1,
                             word: char,
-                            index: cwi + 1
+                            index: index + 1
                         }])
                         .concat([
-                            Object.assign(this.state.transcript[cwi + 1], {
-                                word: toTitleCase(this.state.transcript[cwi + 1].word),
-                                index: this.state.transcript[cwi + 1].index + 1
+                            Object.assign(this.state.transcript[index + 1], {
+                                word: toTitleCase(this.state.transcript[index + 1].word),
+                                index: this.state.transcript[index + 1].index + 1
                             })
                         ])
-                        .concat(this.state.transcript.slice(cwi + 2)
+                        .concat(this.state.transcript.slice(index + 2)
                             .map(word => Object.assign(word, { index: word.index + 1 })))
                 )
             })
@@ -77,21 +77,45 @@ class InteractiveTranscript extends Component {
 
     addCommaAfterCurrentWord = () => {
         const index = this.state.currentWordIndex;
-        this.setState({
-            transcript: (
-                this.state.transcript.slice(0, index + 1)
-                    .concat([{
-                        wordStart: null,
-                        wordEnd: null,
-                        confidence: 1,
-                        word: ',',
-                        index: index + 1,
-                        space: false,
-                    }])
-                    .concat(this.state.transcript.slice(index + 1)
-                        .map(word => Object.assign(word, { index: word.index + 1 })))
-            )
-        })
+        const nextWord = this.state.transcript[index + 1].word
+        if (nextWord === ',') return
+        if (['.', '?'].includes(nextWord)) {
+            this.setState({
+                transcript: (
+                    this.state.transcript.slice(0, index + 1)
+                        .concat([{
+                            wordStart: null,
+                            wordEnd: null,
+                            confidence: 1,
+                            word: ',',
+                            index: index + 1
+                        }])
+                        .concat([
+                            Object.assign(this.state.transcript[index + 1], {
+                                word: this.state.transcript[index + 1].word.toLowerCase(),
+                                index: this.state.transcript[index + 1].index + 1
+                            })
+                        ])
+                        .concat(this.state.transcript.slice(index + 2))
+                )
+            })
+        } else {
+            this.setState({
+                transcript: (
+                    this.state.transcript.slice(0, index + 1)
+                        .concat([{
+                            wordStart: null,
+                            wordEnd: null,
+                            confidence: 1,
+                            word: ',',
+                            index: index + 1,
+                            space: false,
+                        }])
+                        .concat(this.state.transcript.slice(index + 1)
+                            .map(word => Object.assign(word, { index: word.index + 1 })))
+                )
+            })
+        }
     }
 
     handleKeyDown = event => {
@@ -114,9 +138,7 @@ class InteractiveTranscript extends Component {
     }
 
     getNewWordIndex = newPosition => {
-
         for (let wordObject of this.state.transcript) {
-
             if (newPosition >= wordObject.wordStart && newPosition <= wordObject.wordEnd) {
                 return wordObject.index
             }
@@ -130,19 +152,12 @@ class InteractiveTranscript extends Component {
         }
     }
 
-    onClickWord = word => {
-        this.setState({ playPosition: word.wordStart, currentWordIndex: word.index, updatePlayer: true })
-    }
-
-    handleConfidenceThresholdChange = confidenceThreshold => {
-
-        this.setState({ confidenceThreshold })
-    }
-
+    onClickWord = word => this.setState({ playPosition: word.wordStart, currentWordIndex: word.index, updatePlayer: true })
+    handleConfidenceThresholdChange = confidenceThreshold => this.setState({ confidenceThreshold })
     setUpdatePlayerFalse = () => this.setState({ updatePlayer: false })
 
     render() {
-        console.log(this.state.playPosition)
+        console.log(this.state.currentWordIndex)
         return (
             <React.Fragment>
                 <div>
