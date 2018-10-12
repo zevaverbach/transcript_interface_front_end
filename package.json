@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "ajv": "^6.5.4",
+    "compromise": "^11.12.1",
     "mousetrap": "^1.6.2",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",

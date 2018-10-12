@@ -1,2643 +1,3926 @@
-{
-  "job": {
-    "lang": "en-US", 
-    "user_id": 2262, 
-    "name": "judith_butler_youtube_Bo7o2LYATDc.m4a", 
-    "duration": 180, 
-    "created_at": "Wed Oct 10 17:14:38 2018", 
-    "id": 9531556
-  }, 
-  "speakers": [
+[
     {
-      "duration": "10.24", 
-      "confidence": null, 
-      "name": "F1", 
-      "time": "1.29"
-    }, 
+        "wordStart": 1.29,
+        "wordEnd": 1.4100000000000001,
+        "confidence": 0.98,
+        "word": "It's",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 0
+    },
     {
-      "duration": "164.77", 
-      "confidence": null, 
-      "name": "F2", 
-      "time": "11.55"
+        "wordStart": 1.41,
+        "wordEnd": 1.5599999999999998,
+        "confidence": 1.0,
+        "word": "one",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 1
+    },
+    {
+        "wordStart": 1.56,
+        "wordEnd": 1.77,
+        "confidence": 1.0,
+        "word": "thing",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 2
+    },
+    {
+        "wordStart": 1.77,
+        "wordEnd": 1.8900000000000001,
+        "confidence": 1.0,
+        "word": "to",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 3
+    },
+    {
+        "wordStart": 1.89,
+        "wordEnd": 2.2199999999999998,
+        "confidence": 1.0,
+        "word": "say",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 4
+    },
+    {
+        "wordStart": 2.22,
+        "wordEnd": 2.49,
+        "confidence": 1.0,
+        "word": "that",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 5
+    },
+    {
+        "wordStart": 2.51,
+        "wordEnd": 2.6999999999999997,
+        "confidence": 0.56,
+        "word": "gender",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 6
+    },
+    {
+        "wordStart": 2.71,
+        "wordEnd": 2.9699999999999998,
+        "confidence": 0.48,
+        "word": "is",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 7
+    },
+    {
+        "wordStart": 2.97,
+        "wordEnd": 3.7800000000000002,
+        "confidence": 1.0,
+        "word": "performed",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 8
+    },
+    {
+        "wordStart": 3.9,
+        "wordEnd": 3.9899999999999998,
+        "confidence": 0.99,
+        "word": "and",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 9
+    },
+    {
+        "wordStart": 3.99,
+        "wordEnd": 4.17,
+        "confidence": 1.0,
+        "word": "that's",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 10
+    },
+    {
+        "wordStart": 4.17,
+        "wordEnd": 4.2299999999999995,
+        "confidence": 1.0,
+        "word": "a",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 11
+    },
+    {
+        "wordStart": 4.23,
+        "wordEnd": 4.41,
+        "confidence": 1.0,
+        "word": "little",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 12
+    },
+    {
+        "wordStart": 4.41,
+        "wordEnd": 4.74,
+        "confidence": 1.0,
+        "word": "different",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 13
+    },
+    {
+        "wordStart": 4.74,
+        "wordEnd": 4.92,
+        "confidence": 1.0,
+        "word": "from",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 14
+    },
+    {
+        "wordStart": 4.92,
+        "wordEnd": 5.13,
+        "confidence": 0.89,
+        "word": "saying",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 15
+    },
+    {
+        "wordStart": 5.13,
+        "wordEnd": 5.43,
+        "confidence": 1.0,
+        "word": "gender",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 16
+    },
+    {
+        "wordStart": 5.43,
+        "wordEnd": 5.58,
+        "confidence": 0.81,
+        "word": "is",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 17
+    },
+    {
+        "wordStart": 5.58,
+        "wordEnd": 6.42,
+        "confidence": 1.0,
+        "word": "performative",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 18
+    },
+    {
+        "wordStart": 6.42,
+        "wordEnd": 6.54,
+        "confidence": 1.0,
+        "word": "when",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 19
+    },
+    {
+        "wordStart": 6.54,
+        "wordEnd": 6.69,
+        "confidence": 1.0,
+        "word": "we",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 20
+    },
+    {
+        "wordStart": 6.69,
+        "wordEnd": 6.9,
+        "confidence": 1.0,
+        "word": "say",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 21
+    },
+    {
+        "wordStart": 6.9,
+        "wordEnd": 7.23,
+        "confidence": 1.0,
+        "word": "gender",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 22
+    },
+    {
+        "wordStart": 7.23,
+        "wordEnd": 7.3500000000000005,
+        "confidence": 0.95,
+        "word": "is",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 23
+    },
+    {
+        "wordStart": 7.35,
+        "wordEnd": 8.03,
+        "confidence": 1.0,
+        "word": "performed",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 24
+    },
+    {
+        "wordStart": 8.04,
+        "wordEnd": 8.34,
+        "confidence": 1.0,
+        "word": "we",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 25
+    },
+    {
+        "wordStart": 8.67,
+        "wordEnd": 9.12,
+        "confidence": 1.0,
+        "word": "usually",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 26
+    },
+    {
+        "wordStart": 9.12,
+        "wordEnd": 9.479999999999999,
+        "confidence": 1.0,
+        "word": "mean",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 27
+    },
+    {
+        "wordStart": 9.48,
+        "wordEnd": 9.81,
+        "confidence": 1.0,
+        "word": "that",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 28
+    },
+    {
+        "wordStart": 10.29,
+        "wordEnd": 10.44,
+        "confidence": 0.96,
+        "word": "we've",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 29
+    },
+    {
+        "wordStart": 10.44,
+        "wordEnd": 10.74,
+        "confidence": 1.0,
+        "word": "taken",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 30
+    },
+    {
+        "wordStart": 10.74,
+        "wordEnd": 10.86,
+        "confidence": 1.0,
+        "word": "on",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 31
+    },
+    {
+        "wordStart": 10.86,
+        "wordEnd": 10.92,
+        "confidence": 1.0,
+        "word": "a",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 32
+    },
+    {
+        "wordStart": 10.92,
+        "wordEnd": 11.49,
+        "confidence": 0.99,
+        "word": "role",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 33
+    },
+    {
+        "wordStart": 11.49,
+        "wordEnd": 11.53,
+        "confidence": 0.59,
+        "word": ".",
+        "space": "",
+        "alwaysCapitalized": false,
+        "index": 34
+    },
+    {
+        "wordStart": 11.55,
+        "wordEnd": 11.73,
+        "confidence": 0.87,
+        "word": "We're",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 35
+    },
+    {
+        "wordStart": 11.82,
+        "wordEnd": 12.39,
+        "confidence": 1.0,
+        "word": "acting",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 36
+    },
+    {
+        "wordStart": 12.39,
+        "wordEnd": 12.600000000000001,
+        "confidence": 1.0,
+        "word": "in",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 37
+    },
+    {
+        "wordStart": 12.6,
+        "wordEnd": 12.93,
+        "confidence": 1.0,
+        "word": "some",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 38
+    },
+    {
+        "wordStart": 12.93,
+        "wordEnd": 13.41,
+        "confidence": 1.0,
+        "word": "way",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 39
+    },
+    {
+        "wordStart": 14.7,
+        "wordEnd": 14.879999999999999,
+        "confidence": 1.0,
+        "word": "and",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 40
+    },
+    {
+        "wordStart": 14.88,
+        "wordEnd": 15.06,
+        "confidence": 1.0,
+        "word": "that",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 41
+    },
+    {
+        "wordStart": 15.06,
+        "wordEnd": 15.24,
+        "confidence": 0.71,
+        "word": "are",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 42
+    },
+    {
+        "wordStart": 15.29,
+        "wordEnd": 15.809999999999999,
+        "confidence": 1.0,
+        "word": "acting",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 43
+    },
+    {
+        "wordStart": 15.81,
+        "wordEnd": 15.99,
+        "confidence": 1.0,
+        "word": "or",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 44
+    },
+    {
+        "wordStart": 15.99,
+        "wordEnd": 16.05,
+        "confidence": 0.43,
+        "word": "a",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 45
+    },
+    {
+        "wordStart": 16.05,
+        "wordEnd": 16.37,
+        "confidence": 0.98,
+        "word": "role",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 46
+    },
+    {
+        "wordStart": 16.37,
+        "wordEnd": 16.86,
+        "confidence": 0.98,
+        "word": "playing",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 47
+    },
+    {
+        "wordStart": 16.86,
+        "wordEnd": 17.31,
+        "confidence": 1.0,
+        "word": "is",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 48
+    },
+    {
+        "wordStart": 17.88,
+        "wordEnd": 18.419999999999998,
+        "confidence": 1.0,
+        "word": "crucial",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 49
+    },
+    {
+        "wordStart": 18.42,
+        "wordEnd": 18.6,
+        "confidence": 1.0,
+        "word": "to",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 50
+    },
+    {
+        "wordStart": 18.6,
+        "wordEnd": 18.87,
+        "confidence": 1.0,
+        "word": "the",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 51
+    },
+    {
+        "wordStart": 19.26,
+        "wordEnd": 19.8,
+        "confidence": 1.0,
+        "word": "gender",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 52
+    },
+    {
+        "wordStart": 19.8,
+        "wordEnd": 19.92,
+        "confidence": 1.0,
+        "word": "that",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 53
+    },
+    {
+        "wordStart": 19.92,
+        "wordEnd": 20.1,
+        "confidence": 1.0,
+        "word": "we",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 54
+    },
+    {
+        "wordStart": 20.1,
+        "wordEnd": 20.520000000000003,
+        "confidence": 1.0,
+        "word": "are",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 55
+    },
+    {
+        "wordStart": 20.55,
+        "wordEnd": 20.82,
+        "confidence": 0.9,
+        "word": "and",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 56
+    },
+    {
+        "wordStart": 20.85,
+        "wordEnd": 21.03,
+        "confidence": 1.0,
+        "word": "the",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 57
+    },
+    {
+        "wordStart": 21.03,
+        "wordEnd": 21.39,
+        "confidence": 1.0,
+        "word": "gender",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 58
+    },
+    {
+        "wordStart": 21.39,
+        "wordEnd": 21.51,
+        "confidence": 1.0,
+        "word": "that",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 59
+    },
+    {
+        "wordStart": 21.51,
+        "wordEnd": 21.69,
+        "confidence": 1.0,
+        "word": "we",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 60
+    },
+    {
+        "wordStart": 21.69,
+        "wordEnd": 22.150000000000002,
+        "confidence": 1.0,
+        "word": "present",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 61
+    },
+    {
+        "wordStart": 22.15,
+        "wordEnd": 22.229999999999997,
+        "confidence": 0.91,
+        "word": "to",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 62
+    },
+    {
+        "wordStart": 22.23,
+        "wordEnd": 22.35,
+        "confidence": 1.0,
+        "word": "the",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 63
+    },
+    {
+        "wordStart": 22.35,
+        "wordEnd": 22.71,
+        "confidence": 1.0,
+        "word": "world",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 64
+    },
+    {
+        "wordStart": 23.58,
+        "wordEnd": 23.7,
+        "confidence": 1.0,
+        "word": "to",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 65
+    },
+    {
+        "wordStart": 23.7,
+        "wordEnd": 23.849999999999998,
+        "confidence": 1.0,
+        "word": "say",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 66
+    },
+    {
+        "wordStart": 23.85,
+        "wordEnd": 23.970000000000002,
+        "confidence": 0.95,
+        "word": "the",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 67
+    },
+    {
+        "wordStart": 23.97,
+        "wordEnd": 24.31,
+        "confidence": 0.8,
+        "word": "genders",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 68
+    },
+    {
+        "wordStart": 24.33,
+        "wordEnd": 25.2,
+        "confidence": 1.0,
+        "word": "performative",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 69
+    },
+    {
+        "wordStart": 25.2,
+        "wordEnd": 25.38,
+        "confidence": 1.0,
+        "word": "is",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 70
+    },
+    {
+        "wordStart": 25.71,
+        "wordEnd": 25.77,
+        "confidence": 1.0,
+        "word": "a",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 71
+    },
+    {
+        "wordStart": 25.77,
+        "wordEnd": 26.04,
+        "confidence": 1.0,
+        "word": "little",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 72
+    },
+    {
+        "wordStart": 26.04,
+        "wordEnd": 26.46,
+        "confidence": 1.0,
+        "word": "different",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 73
+    },
+    {
+        "wordStart": 26.49,
+        "wordEnd": 27.06,
+        "confidence": 1.0,
+        "word": "because",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 74
+    },
+    {
+        "wordStart": 28.29,
+        "wordEnd": 28.41,
+        "confidence": 1.0,
+        "word": "for",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 75
+    },
+    {
+        "wordStart": 28.41,
+        "wordEnd": 28.71,
+        "confidence": 1.0,
+        "word": "something",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 76
+    },
+    {
+        "wordStart": 28.71,
+        "wordEnd": 28.86,
+        "confidence": 1.0,
+        "word": "to",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 77
+    },
+    {
+        "wordStart": 28.86,
+        "wordEnd": 29.009999999999998,
+        "confidence": 1.0,
+        "word": "be",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 78
+    },
+    {
+        "wordStart": 29.19,
+        "wordEnd": 30.0,
+        "confidence": 1.0,
+        "word": "performative",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 79
+    },
+    {
+        "wordStart": 30.0,
+        "wordEnd": 30.24,
+        "confidence": 1.0,
+        "word": "means",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 80
+    },
+    {
+        "wordStart": 30.24,
+        "wordEnd": 30.36,
+        "confidence": 1.0,
+        "word": "that",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 81
+    },
+    {
+        "wordStart": 30.36,
+        "wordEnd": 30.45,
+        "confidence": 0.99,
+        "word": "it",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 82
+    },
+    {
+        "wordStart": 30.75,
+        "wordEnd": 31.44,
+        "confidence": 1.0,
+        "word": "produces",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 83
+    },
+    {
+        "wordStart": 31.53,
+        "wordEnd": 31.59,
+        "confidence": 1.0,
+        "word": "a",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 84
+    },
+    {
+        "wordStart": 31.59,
+        "wordEnd": 31.98,
+        "confidence": 1.0,
+        "word": "series",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 85
+    },
+    {
+        "wordStart": 31.98,
+        "wordEnd": 32.1,
+        "confidence": 1.0,
+        "word": "of",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 86
+    },
+    {
+        "wordStart": 32.1,
+        "wordEnd": 32.7,
+        "confidence": 1.0,
+        "word": "effects",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 87
+    },
+    {
+        "wordStart": 33.54,
+        "wordEnd": 33.72,
+        "confidence": 1.0,
+        "word": "we",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 88
+    },
+    {
+        "wordStart": 33.78,
+        "wordEnd": 34.11,
+        "confidence": 0.95,
+        "word": "act",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 89
+    },
+    {
+        "wordStart": 34.11,
+        "wordEnd": 34.44,
+        "confidence": 1.0,
+        "word": "and",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 90
+    },
+    {
+        "wordStart": 34.56,
+        "wordEnd": 35.04,
+        "confidence": 1.0,
+        "word": "walk",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 91
+    },
+    {
+        "wordStart": 35.04,
+        "wordEnd": 35.16,
+        "confidence": 1.0,
+        "word": "and",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 92
+    },
+    {
+        "wordStart": 35.16,
+        "wordEnd": 35.63999999999999,
+        "confidence": 1.0,
+        "word": "speak",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 93
+    },
+    {
+        "wordStart": 35.64,
+        "wordEnd": 35.79,
+        "confidence": 1.0,
+        "word": "and",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 94
+    },
+    {
+        "wordStart": 35.91,
+        "wordEnd": 36.449999999999996,
+        "confidence": 1.0,
+        "word": "talk",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 95
+    },
+    {
+        "wordStart": 36.45,
+        "wordEnd": 36.63,
+        "confidence": 1.0,
+        "word": "in",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 96
+    },
+    {
+        "wordStart": 36.63,
+        "wordEnd": 37.02,
+        "confidence": 1.0,
+        "word": "ways",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 97
+    },
+    {
+        "wordStart": 37.05,
+        "wordEnd": 37.529999999999994,
+        "confidence": 1.0,
+        "word": "that",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 98
+    },
+    {
+        "wordStart": 38.82,
+        "wordEnd": 39.75,
+        "confidence": 0.99,
+        "word": "consolidate",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 99
+    },
+    {
+        "wordStart": 39.75,
+        "wordEnd": 39.87,
+        "confidence": 1.0,
+        "word": "an",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 100
+    },
+    {
+        "wordStart": 39.87,
+        "wordEnd": 40.589999999999996,
+        "confidence": 1.0,
+        "word": "impression",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 101
+    },
+    {
+        "wordStart": 40.62,
+        "wordEnd": 40.86,
+        "confidence": 1.0,
+        "word": "of",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 102
+    },
+    {
+        "wordStart": 41.07,
+        "wordEnd": 41.34,
+        "confidence": 1.0,
+        "word": "being",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 103
+    },
+    {
+        "wordStart": 41.34,
+        "wordEnd": 41.370000000000005,
+        "confidence": 0.93,
+        "word": "a",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 104
+    },
+    {
+        "wordStart": 41.37,
+        "wordEnd": 41.849999999999994,
+        "confidence": 0.93,
+        "word": "man",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 105
+    },
+    {
+        "wordStart": 41.91,
+        "wordEnd": 42.18,
+        "confidence": 1.0,
+        "word": "or",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 106
+    },
+    {
+        "wordStart": 42.21,
+        "wordEnd": 42.54,
+        "confidence": 1.0,
+        "word": "being",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 107
+    },
+    {
+        "wordStart": 42.54,
+        "wordEnd": 42.6,
+        "confidence": 1.0,
+        "word": "a",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 108
+    },
+    {
+        "wordStart": 42.6,
+        "wordEnd": 43.050000000000004,
+        "confidence": 1.0,
+        "word": "woman",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 109
+    },
+    {
+        "wordStart": 43.05,
+        "wordEnd": 43.519999999999996,
+        "confidence": 0.94,
+        "word": ".",
+        "space": "",
+        "alwaysCapitalized": false,
+        "index": 110
+    },
+    {
+        "wordStart": 43.55,
+        "wordEnd": 43.629999999999995,
+        "confidence": 0.95,
+        "word": "I",
+        "space": " ",
+        "alwaysCapitalized": true,
+        "index": 111
+    },
+    {
+        "wordStart": 43.65,
+        "wordEnd": 43.8,
+        "confidence": 1.0,
+        "word": "was",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 112
+    },
+    {
+        "wordStart": 43.8,
+        "wordEnd": 44.129999999999995,
+        "confidence": 1.0,
+        "word": "walking",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 113
+    },
+    {
+        "wordStart": 44.13,
+        "wordEnd": 44.34,
+        "confidence": 1.0,
+        "word": "down",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 114
+    },
+    {
+        "wordStart": 44.34,
+        "wordEnd": 44.43000000000001,
+        "confidence": 1.0,
+        "word": "the",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 115
+    },
+    {
+        "wordStart": 44.43,
+        "wordEnd": 44.97,
+        "confidence": 1.0,
+        "word": "street",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 116
+    },
+    {
+        "wordStart": 45.27,
+        "wordEnd": 45.39,
+        "confidence": 1.0,
+        "word": "in",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 117
+    },
+    {
+        "wordStart": 45.39,
+        "wordEnd": 45.72,
+        "confidence": 0.99,
+        "word": "Berkeley",
+        "space": " ",
+        "alwaysCapitalized": true,
+        "index": 118
+    },
+    {
+        "wordStart": 45.72,
+        "wordEnd": 45.839999999999996,
+        "confidence": 1.0,
+        "word": "when",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 119
+    },
+    {
+        "wordStart": 45.84,
+        "wordEnd": 45.96,
+        "confidence": 1.0,
+        "word": "I",
+        "space": " ",
+        "alwaysCapitalized": true,
+        "index": 120
+    },
+    {
+        "wordStart": 45.96,
+        "wordEnd": 46.29,
+        "confidence": 1.0,
+        "word": "first",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 121
+    },
+    {
+        "wordStart": 46.29,
+        "wordEnd": 46.86,
+        "confidence": 1.0,
+        "word": "arrived",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 122
+    },
+    {
+        "wordStart": 46.95,
+        "wordEnd": 47.28,
+        "confidence": 1.0,
+        "word": "several",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 123
+    },
+    {
+        "wordStart": 47.28,
+        "wordEnd": 47.52,
+        "confidence": 1.0,
+        "word": "years",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 124
+    },
+    {
+        "wordStart": 47.52,
+        "wordEnd": 47.940000000000005,
+        "confidence": 1.0,
+        "word": "ago",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 125
+    },
+    {
+        "wordStart": 48.06,
+        "wordEnd": 48.57,
+        "confidence": 1.0,
+        "word": "and",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 126
+    },
+    {
+        "wordStart": 48.87,
+        "wordEnd": 48.93,
+        "confidence": 1.0,
+        "word": "a",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 127
+    },
+    {
+        "wordStart": 48.93,
+        "wordEnd": 49.17,
+        "confidence": 1.0,
+        "word": "young",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 128
+    },
+    {
+        "wordStart": 49.17,
+        "wordEnd": 49.59,
+        "confidence": 1.0,
+        "word": "woman",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 129
+    },
+    {
+        "wordStart": 49.7,
+        "wordEnd": 49.88,
+        "confidence": 0.92,
+        "word": "who",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 130
+    },
+    {
+        "wordStart": 49.89,
+        "wordEnd": 50.07,
+        "confidence": 0.57,
+        "word": "is",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 131
+    },
+    {
+        "wordStart": 50.07,
+        "wordEnd": 50.13,
+        "confidence": 1.0,
+        "word": "I",
+        "space": " ",
+        "alwaysCapitalized": true,
+        "index": 132
+    },
+    {
+        "wordStart": 50.13,
+        "wordEnd": 50.34,
+        "confidence": 1.0,
+        "word": "think",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 133
+    },
+    {
+        "wordStart": 50.34,
+        "wordEnd": 50.46,
+        "confidence": 1.0,
+        "word": "in",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 134
+    },
+    {
+        "wordStart": 50.46,
+        "wordEnd": 50.64,
+        "confidence": 1.0,
+        "word": "high",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 135
+    },
+    {
+        "wordStart": 50.64,
+        "wordEnd": 51.15,
+        "confidence": 1.0,
+        "word": "school",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 136
+    },
+    {
+        "wordStart": 51.42,
+        "wordEnd": 51.72,
+        "confidence": 1.0,
+        "word": "leaned",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 137
+    },
+    {
+        "wordStart": 51.72,
+        "wordEnd": 51.81,
+        "confidence": 1.0,
+        "word": "out",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 138
+    },
+    {
+        "wordStart": 51.81,
+        "wordEnd": 51.900000000000006,
+        "confidence": 1.0,
+        "word": "of",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 139
+    },
+    {
+        "wordStart": 51.9,
+        "wordEnd": 51.99,
+        "confidence": 1.0,
+        "word": "her",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 140
+    },
+    {
+        "wordStart": 51.99,
+        "wordEnd": 52.5,
+        "confidence": 1.0,
+        "word": "window",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 141
+    },
+    {
+        "wordStart": 52.5,
+        "wordEnd": 52.68,
+        "confidence": 1.0,
+        "word": "and",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 142
+    },
+    {
+        "wordStart": 52.68,
+        "wordEnd": 52.89,
+        "confidence": 1.0,
+        "word": "she",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 143
+    },
+    {
+        "wordStart": 52.89,
+        "wordEnd": 53.34,
+        "confidence": 1.0,
+        "word": "yelled",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 144
+    },
+    {
+        "wordStart": 53.52,
+        "wordEnd": 53.64,
+        "confidence": 1.0,
+        "word": "Are",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 145
+    },
+    {
+        "wordStart": 53.64,
+        "wordEnd": 53.79,
+        "confidence": 1.0,
+        "word": "you",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 146
+    },
+    {
+        "wordStart": 53.79,
+        "wordEnd": 53.85,
+        "confidence": 1.0,
+        "word": "a",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 147
+    },
+    {
+        "wordStart": 53.85,
+        "wordEnd": 54.54,
+        "confidence": 1.0,
+        "word": "lesbian",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 148
+    },
+    {
+        "wordStart": 54.54,
+        "wordEnd": 55.47,
+        "confidence": 0.94,
+        "word": ".",
+        "space": "",
+        "alwaysCapitalized": false,
+        "index": 149
+    },
+    {
+        "wordStart": 56.97,
+        "wordEnd": 57.42,
+        "confidence": 1.0,
+        "word": "And",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 150
+    },
+    {
+        "wordStart": 57.81,
+        "wordEnd": 57.99,
+        "confidence": 1.0,
+        "word": "she",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 151
+    },
+    {
+        "wordStart": 57.99,
+        "wordEnd": 58.11,
+        "confidence": 0.99,
+        "word": "was",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 152
+    },
+    {
+        "wordStart": 58.11,
+        "wordEnd": 58.41,
+        "confidence": 1.0,
+        "word": "looking",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 153
+    },
+    {
+        "wordStart": 58.41,
+        "wordEnd": 58.529999999999994,
+        "confidence": 1.0,
+        "word": "to",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 154
+    },
+    {
+        "wordStart": 58.53,
+        "wordEnd": 59.01,
+        "confidence": 1.0,
+        "word": "harass",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 155
+    },
+    {
+        "wordStart": 59.01,
+        "wordEnd": 59.28,
+        "confidence": 1.0,
+        "word": "me",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 156
+    },
+    {
+        "wordStart": 59.58,
+        "wordEnd": 59.879999999999995,
+        "confidence": 1.0,
+        "word": "or",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 157
+    },
+    {
+        "wordStart": 60.12,
+        "wordEnd": 60.449999999999996,
+        "confidence": 1.0,
+        "word": "maybe",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 158
+    },
+    {
+        "wordStart": 60.45,
+        "wordEnd": 60.63,
+        "confidence": 1.0,
+        "word": "she",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 159
+    },
+    {
+        "wordStart": 60.63,
+        "wordEnd": 60.81,
+        "confidence": 1.0,
+        "word": "was",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 160
+    },
+    {
+        "wordStart": 60.81,
+        "wordEnd": 61.11,
+        "confidence": 1.0,
+        "word": "just",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 161
+    },
+    {
+        "wordStart": 61.32,
+        "wordEnd": 61.71,
+        "confidence": 1.0,
+        "word": "freaked",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 162
+    },
+    {
+        "wordStart": 61.71,
+        "wordEnd": 61.980000000000004,
+        "confidence": 1.0,
+        "word": "out",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 163
+    },
+    {
+        "wordStart": 61.98,
+        "wordEnd": 62.19,
+        "confidence": 1.0,
+        "word": "or",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 164
+    },
+    {
+        "wordStart": 62.19,
+        "wordEnd": 62.37,
+        "confidence": 1.0,
+        "word": "she",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 165
+    },
+    {
+        "wordStart": 62.37,
+        "wordEnd": 62.55,
+        "confidence": 1.0,
+        "word": "thought",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 166
+    },
+    {
+        "wordStart": 62.55,
+        "wordEnd": 62.64,
+        "confidence": 1.0,
+        "word": "I",
+        "space": " ",
+        "alwaysCapitalized": true,
+        "index": 167
+    },
+    {
+        "wordStart": 62.64,
+        "wordEnd": 62.94,
+        "confidence": 1.0,
+        "word": "looked",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 168
+    },
+    {
+        "wordStart": 62.94,
+        "wordEnd": 63.12,
+        "confidence": 1.0,
+        "word": "like",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 169
+    },
+    {
+        "wordStart": 63.12,
+        "wordEnd": 63.21,
+        "confidence": 0.96,
+        "word": "I",
+        "space": " ",
+        "alwaysCapitalized": true,
+        "index": 170
+    },
+    {
+        "wordStart": 63.21,
+        "wordEnd": 63.57,
+        "confidence": 1.0,
+        "word": "probably",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 171
+    },
+    {
+        "wordStart": 63.57,
+        "wordEnd": 63.81,
+        "confidence": 1.0,
+        "word": "was",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 172
+    },
+    {
+        "wordStart": 63.81,
+        "wordEnd": 63.99,
+        "confidence": 0.96,
+        "word": "one",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 173
+    },
+    {
+        "wordStart": 63.99,
+        "wordEnd": 64.08,
+        "confidence": 0.7,
+        "word": "who",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 174
+    },
+    {
+        "wordStart": 64.08,
+        "wordEnd": 64.35,
+        "confidence": 1.0,
+        "word": "wanted",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 175
+    },
+    {
+        "wordStart": 64.35,
+        "wordEnd": 64.5,
+        "confidence": 1.0,
+        "word": "to",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 176
+    },
+    {
+        "wordStart": 64.5,
+        "wordEnd": 64.95,
+        "confidence": 1.0,
+        "word": "know",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 177
+    },
+    {
+        "wordStart": 65.03,
+        "wordEnd": 65.07000000000001,
+        "confidence": 0.67,
+        "word": ".",
+        "space": "",
+        "alwaysCapitalized": false,
+        "index": 178
+    },
+    {
+        "wordStart": 65.48,
+        "wordEnd": 65.62,
+        "confidence": 0.85,
+        "word": "But",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 179
+    },
+    {
+        "wordStart": 65.86,
+        "wordEnd": 65.95,
+        "confidence": 1.0,
+        "word": "I",
+        "space": " ",
+        "alwaysCapitalized": true,
+        "index": 180
+    },
+    {
+        "wordStart": 65.97,
+        "wordEnd": 66.15,
+        "confidence": 1.0,
+        "word": "just",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 181
+    },
+    {
+        "wordStart": 66.15,
+        "wordEnd": 66.42,
+        "confidence": 1.0,
+        "word": "turned",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 182
+    },
+    {
+        "wordStart": 66.42,
+        "wordEnd": 66.72,
+        "confidence": 1.0,
+        "word": "around",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 183
+    },
+    {
+        "wordStart": 66.72,
+        "wordEnd": 66.84,
+        "confidence": 1.0,
+        "word": "and",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 184
+    },
+    {
+        "wordStart": 66.84,
+        "wordEnd": 66.9,
+        "confidence": 0.93,
+        "word": "I",
+        "space": " ",
+        "alwaysCapitalized": true,
+        "index": 185
+    },
+    {
+        "wordStart": 66.9,
+        "wordEnd": 67.08000000000001,
+        "confidence": 1.0,
+        "word": "said",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 186
+    },
+    {
+        "wordStart": 67.11,
+        "wordEnd": 67.53,
+        "confidence": 1.0,
+        "word": "Yes",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 187
+    },
+    {
+        "wordStart": 67.53,
+        "wordEnd": 67.71000000000001,
+        "confidence": 1.0,
+        "word": "I",
+        "space": " ",
+        "alwaysCapitalized": true,
+        "index": 188
+    },
+    {
+        "wordStart": 67.71,
+        "wordEnd": 68.03999999999999,
+        "confidence": 1.0,
+        "word": "am",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 189
+    },
+    {
+        "wordStart": 68.04,
+        "wordEnd": 68.63000000000001,
+        "confidence": 0.78,
+        "word": ".",
+        "space": "",
+        "alwaysCapitalized": false,
+        "index": 190
+    },
+    {
+        "wordStart": 69.12,
+        "wordEnd": 69.30000000000001,
+        "confidence": 1.0,
+        "word": "And",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 191
+    },
+    {
+        "wordStart": 69.3,
+        "wordEnd": 69.50999999999999,
+        "confidence": 1.0,
+        "word": "that",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 192
+    },
+    {
+        "wordStart": 69.51,
+        "wordEnd": 69.75,
+        "confidence": 1.0,
+        "word": "really",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 193
+    },
+    {
+        "wordStart": 69.75,
+        "wordEnd": 70.17,
+        "confidence": 1.0,
+        "word": "shocked",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 194
+    },
+    {
+        "wordStart": 70.17,
+        "wordEnd": 70.41,
+        "confidence": 1.0,
+        "word": "her",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 195
+    },
+    {
+        "wordStart": 70.41,
+        "wordEnd": 71.02,
+        "confidence": 0.93,
+        "word": ".",
+        "space": "",
+        "alwaysCapitalized": false,
+        "index": 196
+    },
+    {
+        "wordStart": 71.07,
+        "wordEnd": 71.33999999999999,
+        "confidence": 1.0,
+        "word": "We",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 197
+    },
+    {
+        "wordStart": 71.34,
+        "wordEnd": 71.7,
+        "confidence": 1.0,
+        "word": "act",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 198
+    },
+    {
+        "wordStart": 71.7,
+        "wordEnd": 71.88000000000001,
+        "confidence": 1.0,
+        "word": "as",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 199
+    },
+    {
+        "wordStart": 71.94,
+        "wordEnd": 72.33,
+        "confidence": 1.0,
+        "word": "if",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 200
+    },
+    {
+        "wordStart": 72.56,
+        "wordEnd": 72.76,
+        "confidence": 0.96,
+        "word": "that",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 201
+    },
+    {
+        "wordStart": 72.78,
+        "wordEnd": 73.14,
+        "confidence": 1.0,
+        "word": "being",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 202
+    },
+    {
+        "wordStart": 73.14,
+        "wordEnd": 73.25,
+        "confidence": 0.95,
+        "word": "of",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 203
+    },
+    {
+        "wordStart": 73.26,
+        "wordEnd": 73.32000000000001,
+        "confidence": 1.0,
+        "word": "a",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 204
+    },
+    {
+        "wordStart": 73.32,
+        "wordEnd": 73.64999999999999,
+        "confidence": 1.0,
+        "word": "man",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 205
+    },
+    {
+        "wordStart": 73.65,
+        "wordEnd": 73.80000000000001,
+        "confidence": 1.0,
+        "word": "or",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 206
+    },
+    {
+        "wordStart": 73.8,
+        "wordEnd": 73.98,
+        "confidence": 1.0,
+        "word": "that",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 207
+    },
+    {
+        "wordStart": 73.98,
+        "wordEnd": 74.28,
+        "confidence": 1.0,
+        "word": "being",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 208
+    },
+    {
+        "wordStart": 74.28,
+        "wordEnd": 74.4,
+        "confidence": 1.0,
+        "word": "of",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 209
+    },
+    {
+        "wordStart": 74.4,
+        "wordEnd": 74.46000000000001,
+        "confidence": 1.0,
+        "word": "a",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 210
+    },
+    {
+        "wordStart": 74.46,
+        "wordEnd": 74.69999999999999,
+        "confidence": 1.0,
+        "word": "woman",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 211
+    },
+    {
+        "wordStart": 74.7,
+        "wordEnd": 74.82000000000001,
+        "confidence": 1.0,
+        "word": "is",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 212
+    },
+    {
+        "wordStart": 74.82,
+        "wordEnd": 75.14999999999999,
+        "confidence": 1.0,
+        "word": "actually",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 213
+    },
+    {
+        "wordStart": 75.15,
+        "wordEnd": 75.24000000000001,
+        "confidence": 0.95,
+        "word": "an",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 214
+    },
+    {
+        "wordStart": 75.24,
+        "wordEnd": 75.75,
+        "confidence": 0.87,
+        "word": "entirely",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 215
+    },
+    {
+        "wordStart": 75.75,
+        "wordEnd": 76.41,
+        "confidence": 1.0,
+        "word": "reality",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 216
+    },
+    {
+        "wordStart": 76.41,
+        "wordEnd": 76.67999999999999,
+        "confidence": 1.0,
+        "word": "or",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 217
+    },
+    {
+        "wordStart": 77.1,
+        "wordEnd": 77.49,
+        "confidence": 1.0,
+        "word": "something",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 218
+    },
+    {
+        "wordStart": 77.49,
+        "wordEnd": 77.88,
+        "confidence": 0.99,
+        "word": "that's",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 219
+    },
+    {
+        "wordStart": 78.27,
+        "wordEnd": 78.75,
+        "confidence": 1.0,
+        "word": "simply",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 220
+    },
+    {
+        "wordStart": 78.75,
+        "wordEnd": 79.08,
+        "confidence": 1.0,
+        "word": "true",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 221
+    },
+    {
+        "wordStart": 79.08,
+        "wordEnd": 79.44,
+        "confidence": 1.0,
+        "word": "about",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 222
+    },
+    {
+        "wordStart": 79.44,
+        "wordEnd": 79.67,
+        "confidence": 1.0,
+        "word": "Us",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 223
+    },
+    {
+        "wordStart": 79.67,
+        "wordEnd": 79.74,
+        "confidence": 0.81,
+        "word": "a",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 224
+    },
+    {
+        "wordStart": 79.74,
+        "wordEnd": 80.25,
+        "confidence": 1.0,
+        "word": "fact",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 225
+    },
+    {
+        "wordStart": 80.31,
+        "wordEnd": 80.61,
+        "confidence": 1.0,
+        "word": "about",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 226
+    },
+    {
+        "wordStart": 80.61,
+        "wordEnd": 80.91,
+        "confidence": 1.0,
+        "word": "us",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 227
+    },
+    {
+        "wordStart": 80.91,
+        "wordEnd": 81.11999999999999,
+        "confidence": 0.71,
+        "word": ".",
+        "space": "",
+        "alwaysCapitalized": false,
+        "index": 228
+    },
+    {
+        "wordStart": 81.21,
+        "wordEnd": 81.89999999999999,
+        "confidence": 1.0,
+        "word": "Actually",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 229
+    },
+    {
+        "wordStart": 82.35,
+        "wordEnd": 82.71,
+        "confidence": 1.0,
+        "word": "it's",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 230
+    },
+    {
+        "wordStart": 82.92,
+        "wordEnd": 82.98,
+        "confidence": 1.0,
+        "word": "a",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 231
+    },
+    {
+        "wordStart": 82.98,
+        "wordEnd": 83.7,
+        "confidence": 1.0,
+        "word": "phenomenon",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 232
+    },
+    {
+        "wordStart": 83.73,
+        "wordEnd": 83.94,
+        "confidence": 0.98,
+        "word": "that's",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 233
+    },
+    {
+        "wordStart": 83.94,
+        "wordEnd": 84.24,
+        "confidence": 1.0,
+        "word": "being",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 234
+    },
+    {
+        "wordStart": 84.24,
+        "wordEnd": 84.89999999999999,
+        "confidence": 1.0,
+        "word": "produced",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 235
+    },
+    {
+        "wordStart": 84.9,
+        "wordEnd": 84.99000000000001,
+        "confidence": 1.0,
+        "word": "all",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 236
+    },
+    {
+        "wordStart": 84.99,
+        "wordEnd": 85.11,
+        "confidence": 1.0,
+        "word": "the",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 237
+    },
+    {
+        "wordStart": 85.11,
+        "wordEnd": 85.5,
+        "confidence": 1.0,
+        "word": "time",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 238
+    },
+    {
+        "wordStart": 85.5,
+        "wordEnd": 85.62,
+        "confidence": 1.0,
+        "word": "and",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 239
+    },
+    {
+        "wordStart": 85.62,
+        "wordEnd": 86.37,
+        "confidence": 1.0,
+        "word": "reproduced",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 240
+    },
+    {
+        "wordStart": 86.37,
+        "wordEnd": 86.49000000000001,
+        "confidence": 1.0,
+        "word": "all",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 241
+    },
+    {
+        "wordStart": 86.49,
+        "wordEnd": 86.61,
+        "confidence": 1.0,
+        "word": "the",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 242
+    },
+    {
+        "wordStart": 86.61,
+        "wordEnd": 86.97,
+        "confidence": 1.0,
+        "word": "time",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 243
+    },
+    {
+        "wordStart": 86.97,
+        "wordEnd": 87.62,
+        "confidence": 0.95,
+        "word": ".",
+        "space": "",
+        "alwaysCapitalized": false,
+        "index": 244
+    },
+    {
+        "wordStart": 87.66,
+        "wordEnd": 87.81,
+        "confidence": 1.0,
+        "word": "So",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 245
+    },
+    {
+        "wordStart": 87.81,
+        "wordEnd": 87.93,
+        "confidence": 0.98,
+        "word": "to",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 246
+    },
+    {
+        "wordStart": 87.93,
+        "wordEnd": 88.14,
+        "confidence": 1.0,
+        "word": "say",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 247
+    },
+    {
+        "wordStart": 88.14,
+        "wordEnd": 88.5,
+        "confidence": 1.0,
+        "word": "gender",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 248
+    },
+    {
+        "wordStart": 88.5,
+        "wordEnd": 88.65,
+        "confidence": 1.0,
+        "word": "is",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 249
+    },
+    {
+        "wordStart": 88.65,
+        "wordEnd": 89.52000000000001,
+        "confidence": 1.0,
+        "word": "performative",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 250
+    },
+    {
+        "wordStart": 89.52,
+        "wordEnd": 89.67,
+        "confidence": 1.0,
+        "word": "is",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 251
+    },
+    {
+        "wordStart": 89.67,
+        "wordEnd": 89.82000000000001,
+        "confidence": 1.0,
+        "word": "to",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 252
+    },
+    {
+        "wordStart": 89.82,
+        "wordEnd": 90.21,
+        "confidence": 1.0,
+        "word": "say",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 253
+    },
+    {
+        "wordStart": 90.48,
+        "wordEnd": 90.63000000000001,
+        "confidence": 1.0,
+        "word": "that",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 254
+    },
+    {
+        "wordStart": 90.63,
+        "wordEnd": 91.02,
+        "confidence": 1.0,
+        "word": "nobody",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 255
+    },
+    {
+        "wordStart": 91.02,
+        "wordEnd": 91.38,
+        "confidence": 1.0,
+        "word": "really",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 256
+    },
+    {
+        "wordStart": 91.38,
+        "wordEnd": 91.64999999999999,
+        "confidence": 1.0,
+        "word": "is",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 257
+    },
+    {
+        "wordStart": 91.65,
+        "wordEnd": 91.71000000000001,
+        "confidence": 0.64,
+        "word": "a",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 258
+    },
+    {
+        "wordStart": 91.71,
+        "wordEnd": 92.27999999999999,
+        "confidence": 0.64,
+        "word": "gender",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 259
+    },
+    {
+        "wordStart": 92.28,
+        "wordEnd": 92.49,
+        "confidence": 1.0,
+        "word": "from",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 260
+    },
+    {
+        "wordStart": 92.49,
+        "wordEnd": 92.61,
+        "confidence": 1.0,
+        "word": "the",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 261
+    },
+    {
+        "wordStart": 92.61,
+        "wordEnd": 93.17999999999999,
+        "confidence": 1.0,
+        "word": "start",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 262
+    },
+    {
+        "wordStart": 93.18,
+        "wordEnd": 93.98,
+        "confidence": 0.77,
+        "word": ".",
+        "space": "",
+        "alwaysCapitalized": false,
+        "index": 263
+    },
+    {
+        "wordStart": 94.23,
+        "wordEnd": 94.29,
+        "confidence": 0.99,
+        "word": "I",
+        "space": " ",
+        "alwaysCapitalized": true,
+        "index": 264
+    },
+    {
+        "wordStart": 94.29,
+        "wordEnd": 94.47000000000001,
+        "confidence": 1.0,
+        "word": "know",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 265
+    },
+    {
+        "wordStart": 94.47,
+        "wordEnd": 94.59,
+        "confidence": 1.0,
+        "word": "it's",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 266
+    },
+    {
+        "wordStart": 94.59,
+        "wordEnd": 95.37,
+        "confidence": 1.0,
+        "word": "controversial",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 267
+    },
+    {
+        "wordStart": 95.55,
+        "wordEnd": 95.7,
+        "confidence": 1.0,
+        "word": "but",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 268
+    },
+    {
+        "wordStart": 95.7,
+        "wordEnd": 95.94,
+        "confidence": 1.0,
+        "word": "that's",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 269
+    },
+    {
+        "wordStart": 95.94,
+        "wordEnd": 96.12,
+        "confidence": 1.0,
+        "word": "my",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 270
+    },
+    {
+        "wordStart": 96.12,
+        "wordEnd": 96.54,
+        "confidence": 1.0,
+        "word": "claim",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 271
+    },
+    {
+        "wordStart": 96.54,
+        "wordEnd": 96.62,
+        "confidence": 0.84,
+        "word": ".",
+        "space": "",
+        "alwaysCapitalized": false,
+        "index": 272
+    },
+    {
+        "wordStart": 100.69,
+        "wordEnd": 100.96,
+        "confidence": 1.0,
+        "word": "Think",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 273
+    },
+    {
+        "wordStart": 100.96,
+        "wordEnd": 101.41,
+        "confidence": 1.0,
+        "word": "about",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 274
+    },
+    {
+        "wordStart": 101.65,
+        "wordEnd": 102.22,
+        "confidence": 1.0,
+        "word": "how",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 275
+    },
+    {
+        "wordStart": 102.31,
+        "wordEnd": 103.09,
+        "confidence": 1.0,
+        "word": "difficult",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 276
+    },
+    {
+        "wordStart": 103.09,
+        "wordEnd": 103.21000000000001,
+        "confidence": 1.0,
+        "word": "it",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 277
+    },
+    {
+        "wordStart": 103.21,
+        "wordEnd": 103.53999999999999,
+        "confidence": 1.0,
+        "word": "is",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 278
+    },
+    {
+        "wordStart": 103.54,
+        "wordEnd": 103.87,
+        "confidence": 1.0,
+        "word": "for",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 279
+    },
+    {
+        "wordStart": 103.87,
+        "wordEnd": 104.26,
+        "confidence": 0.99,
+        "word": "sissy",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 280
+    },
+    {
+        "wordStart": 104.26,
+        "wordEnd": 104.86,
+        "confidence": 1.0,
+        "word": "boys",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 281
+    },
+    {
+        "wordStart": 105.4,
+        "wordEnd": 105.64,
+        "confidence": 1.0,
+        "word": "or",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 282
+    },
+    {
+        "wordStart": 105.64,
+        "wordEnd": 105.79,
+        "confidence": 1.0,
+        "word": "how",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 283
+    },
+    {
+        "wordStart": 105.79,
+        "wordEnd": 106.39,
+        "confidence": 1.0,
+        "word": "difficult",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 284
+    },
+    {
+        "wordStart": 106.42,
+        "wordEnd": 106.60000000000001,
+        "confidence": 1.0,
+        "word": "it",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 285
+    },
+    {
+        "wordStart": 106.6,
+        "wordEnd": 106.96,
+        "confidence": 1.0,
+        "word": "is",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 286
+    },
+    {
+        "wordStart": 106.96,
+        "wordEnd": 107.38,
+        "confidence": 1.0,
+        "word": "for",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 287
+    },
+    {
+        "wordStart": 107.41,
+        "wordEnd": 108.34,
+        "confidence": 1.0,
+        "word": "tomboys",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 288
+    },
+    {
+        "wordStart": 108.94,
+        "wordEnd": 109.06,
+        "confidence": 1.0,
+        "word": "to",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 289
+    },
+    {
+        "wordStart": 109.06,
+        "wordEnd": 109.48,
+        "confidence": 1.0,
+        "word": "function",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 290
+    },
+    {
+        "wordStart": 109.48,
+        "wordEnd": 109.99000000000001,
+        "confidence": 1.0,
+        "word": "socially",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 291
+    },
+    {
+        "wordStart": 109.99,
+        "wordEnd": 110.35,
+        "confidence": 1.0,
+        "word": "without",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 292
+    },
+    {
+        "wordStart": 110.35,
+        "wordEnd": 110.61999999999999,
+        "confidence": 1.0,
+        "word": "being",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 293
+    },
+    {
+        "wordStart": 110.62,
+        "wordEnd": 111.10000000000001,
+        "confidence": 1.0,
+        "word": "bullied",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 294
+    },
+    {
+        "wordStart": 111.1,
+        "wordEnd": 111.22,
+        "confidence": 1.0,
+        "word": "or",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 295
+    },
+    {
+        "wordStart": 111.22,
+        "wordEnd": 111.67,
+        "confidence": 1.0,
+        "word": "without",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 296
+    },
+    {
+        "wordStart": 111.67,
+        "wordEnd": 112.0,
+        "confidence": 1.0,
+        "word": "being",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 297
+    },
+    {
+        "wordStart": 112.0,
+        "wordEnd": 112.57,
+        "confidence": 1.0,
+        "word": "teased",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 298
+    },
+    {
+        "wordStart": 112.57,
+        "wordEnd": 112.77999999999999,
+        "confidence": 1.0,
+        "word": "or",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 299
+    },
+    {
+        "wordStart": 112.78,
+        "wordEnd": 113.29,
+        "confidence": 1.0,
+        "word": "without",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 300
+    },
+    {
+        "wordStart": 113.29,
+        "wordEnd": 113.95,
+        "confidence": 1.0,
+        "word": "sometimes",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 301
+    },
+    {
+        "wordStart": 114.22,
+        "wordEnd": 114.67,
+        "confidence": 1.0,
+        "word": "suffering",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 302
+    },
+    {
+        "wordStart": 114.67,
+        "wordEnd": 115.09,
+        "confidence": 1.0,
+        "word": "threats",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 303
+    },
+    {
+        "wordStart": 115.09,
+        "wordEnd": 115.18,
+        "confidence": 1.0,
+        "word": "of",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 304
+    },
+    {
+        "wordStart": 115.18,
+        "wordEnd": 115.9,
+        "confidence": 1.0,
+        "word": "violence",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 305
+    },
+    {
+        "wordStart": 117.28,
+        "wordEnd": 117.52,
+        "confidence": 1.0,
+        "word": "or",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 306
+    },
+    {
+        "wordStart": 117.52,
+        "wordEnd": 117.88,
+        "confidence": 1.0,
+        "word": "without",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 307
+    },
+    {
+        "wordStart": 117.88,
+        "wordEnd": 118.0,
+        "confidence": 1.0,
+        "word": "their",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 308
+    },
+    {
+        "wordStart": 118.0,
+        "wordEnd": 118.48,
+        "confidence": 1.0,
+        "word": "parents",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 309
+    },
+    {
+        "wordStart": 118.48,
+        "wordEnd": 119.11,
+        "confidence": 1.0,
+        "word": "intervening",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 310
+    },
+    {
+        "wordStart": 119.11,
+        "wordEnd": 119.26,
+        "confidence": 1.0,
+        "word": "to",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 311
+    },
+    {
+        "wordStart": 119.26,
+        "wordEnd": 119.68,
+        "confidence": 1.0,
+        "word": "say",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 312
+    },
+    {
+        "wordStart": 119.68,
+        "wordEnd": 119.92,
+        "confidence": 1.0,
+        "word": "maybe",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 313
+    },
+    {
+        "wordStart": 119.92,
+        "wordEnd": 120.04,
+        "confidence": 1.0,
+        "word": "you",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 314
+    },
+    {
+        "wordStart": 120.04,
+        "wordEnd": 120.31,
+        "confidence": 1.0,
+        "word": "need",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 315
+    },
+    {
+        "wordStart": 120.31,
+        "wordEnd": 120.37,
+        "confidence": 1.0,
+        "word": "a",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 316
+    },
+    {
+        "wordStart": 120.37,
+        "wordEnd": 121.48,
+        "confidence": 1.0,
+        "word": "psychiatrist",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 317
+    },
+    {
+        "wordStart": 121.48,
+        "wordEnd": 121.78,
+        "confidence": 1.0,
+        "word": "or",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 318
+    },
+    {
+        "wordStart": 121.99,
+        "wordEnd": 122.17,
+        "confidence": 1.0,
+        "word": "why",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 319
+    },
+    {
+        "wordStart": 122.17,
+        "wordEnd": 122.44,
+        "confidence": 1.0,
+        "word": "can't",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 320
+    },
+    {
+        "wordStart": 122.44,
+        "wordEnd": 122.53,
+        "confidence": 1.0,
+        "word": "you",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 321
+    },
+    {
+        "wordStart": 122.53,
+        "wordEnd": 122.65,
+        "confidence": 1.0,
+        "word": "be",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 322
+    },
+    {
+        "wordStart": 122.65,
+        "wordEnd": 123.25,
+        "confidence": 1.0,
+        "word": "normal",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 323
+    },
+    {
+        "wordStart": 123.25,
+        "wordEnd": 123.28,
+        "confidence": 0.9,
+        "word": ".",
+        "space": "",
+        "alwaysCapitalized": false,
+        "index": 324
+    },
+    {
+        "wordStart": 123.43,
+        "wordEnd": 123.88000000000001,
+        "confidence": 1.0,
+        "word": "So",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 325
+    },
+    {
+        "wordStart": 124.6,
+        "wordEnd": 124.69,
+        "confidence": 1.0,
+        "word": "you",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 326
+    },
+    {
+        "wordStart": 124.69,
+        "wordEnd": 124.89999999999999,
+        "confidence": 1.0,
+        "word": "know",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 327
+    },
+    {
+        "wordStart": 124.9,
+        "wordEnd": 125.41000000000001,
+        "confidence": 1.0,
+        "word": "there",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 328
+    },
+    {
+        "wordStart": 125.65,
+        "wordEnd": 126.31,
+        "confidence": 1.0,
+        "word": "are",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 329
+    },
+    {
+        "wordStart": 127.21,
+        "wordEnd": 127.96,
+        "confidence": 1.0,
+        "word": "institutional",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 330
+    },
+    {
+        "wordStart": 127.96,
+        "wordEnd": 128.73999999999998,
+        "confidence": 1.0,
+        "word": "powers",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 331
+    },
+    {
+        "wordStart": 128.89,
+        "wordEnd": 129.1,
+        "confidence": 1.0,
+        "word": "like",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 332
+    },
+    {
+        "wordStart": 129.1,
+        "wordEnd": 129.76,
+        "confidence": 1.0,
+        "word": "psychiatric",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 333
+    },
+    {
+        "wordStart": 129.76,
+        "wordEnd": 130.78,
+        "confidence": 0.76,
+        "word": "normalization",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 334
+    },
+    {
+        "wordStart": 131.44,
+        "wordEnd": 131.62,
+        "confidence": 1.0,
+        "word": "and",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 335
+    },
+    {
+        "wordStart": 131.62,
+        "wordEnd": 131.89000000000001,
+        "confidence": 1.0,
+        "word": "there",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 336
+    },
+    {
+        "wordStart": 131.95,
+        "wordEnd": 132.60999999999999,
+        "confidence": 1.0,
+        "word": "are",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 337
+    },
+    {
+        "wordStart": 134.38,
+        "wordEnd": 134.85999999999999,
+        "confidence": 1.0,
+        "word": "informal",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 338
+    },
+    {
+        "wordStart": 134.86,
+        "wordEnd": 135.16000000000003,
+        "confidence": 1.0,
+        "word": "kinds",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 339
+    },
+    {
+        "wordStart": 135.16,
+        "wordEnd": 135.25,
+        "confidence": 1.0,
+        "word": "of",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 340
+    },
+    {
+        "wordStart": 135.25,
+        "wordEnd": 135.94,
+        "confidence": 1.0,
+        "word": "practices",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 341
+    },
+    {
+        "wordStart": 135.94,
+        "wordEnd": 136.15,
+        "confidence": 1.0,
+        "word": "like",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 342
+    },
+    {
+        "wordStart": 136.15,
+        "wordEnd": 136.72,
+        "confidence": 1.0,
+        "word": "bullying",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 343
+    },
+    {
+        "wordStart": 136.75,
+        "wordEnd": 137.05,
+        "confidence": 1.0,
+        "word": "which",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 344
+    },
+    {
+        "wordStart": 137.26,
+        "wordEnd": 137.41,
+        "confidence": 0.99,
+        "word": "try",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 345
+    },
+    {
+        "wordStart": 137.41,
+        "wordEnd": 137.53,
+        "confidence": 1.0,
+        "word": "to",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 346
+    },
+    {
+        "wordStart": 137.53,
+        "wordEnd": 137.89000000000001,
+        "confidence": 1.0,
+        "word": "keep",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 347
+    },
+    {
+        "wordStart": 137.89,
+        "wordEnd": 138.07,
+        "confidence": 1.0,
+        "word": "us",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 348
+    },
+    {
+        "wordStart": 138.07,
+        "wordEnd": 138.19,
+        "confidence": 1.0,
+        "word": "in",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 349
+    },
+    {
+        "wordStart": 138.19,
+        "wordEnd": 138.34,
+        "confidence": 1.0,
+        "word": "our",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 350
+    },
+    {
+        "wordStart": 138.34,
+        "wordEnd": 138.79,
+        "confidence": 0.99,
+        "word": "gendered",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 351
+    },
+    {
+        "wordStart": 138.79,
+        "wordEnd": 139.54,
+        "confidence": 1.0,
+        "word": "place",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 352
+    },
+    {
+        "wordStart": 139.54,
+        "wordEnd": 139.87,
+        "confidence": 0.88,
+        "word": ".",
+        "space": "",
+        "alwaysCapitalized": false,
+        "index": 353
+    },
+    {
+        "wordStart": 139.87,
+        "wordEnd": 140.07,
+        "confidence": 0.89,
+        "word": "There's",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 354
+    },
+    {
+        "wordStart": 140.08,
+        "wordEnd": 140.14000000000001,
+        "confidence": 1.0,
+        "word": "a",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 355
+    },
+    {
+        "wordStart": 140.14,
+        "wordEnd": 140.35,
+        "confidence": 1.0,
+        "word": "real",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 356
+    },
+    {
+        "wordStart": 140.35,
+        "wordEnd": 140.98,
+        "confidence": 1.0,
+        "word": "question",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 357
+    },
+    {
+        "wordStart": 141.67,
+        "wordEnd": 141.88,
+        "confidence": 1.0,
+        "word": "for",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 358
+    },
+    {
+        "wordStart": 141.88,
+        "wordEnd": 142.24,
+        "confidence": 1.0,
+        "word": "me",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 359
+    },
+    {
+        "wordStart": 142.24,
+        "wordEnd": 142.57000000000002,
+        "confidence": 1.0,
+        "word": "about",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 360
+    },
+    {
+        "wordStart": 143.14,
+        "wordEnd": 143.38,
+        "confidence": 1.0,
+        "word": "how",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 361
+    },
+    {
+        "wordStart": 143.38,
+        "wordEnd": 143.74,
+        "confidence": 0.97,
+        "word": "such",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 362
+    },
+    {
+        "wordStart": 143.86,
+        "wordEnd": 144.25,
+        "confidence": 1.0,
+        "word": "gender",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 363
+    },
+    {
+        "wordStart": 144.25,
+        "wordEnd": 144.61,
+        "confidence": 1.0,
+        "word": "norms",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 364
+    },
+    {
+        "wordStart": 144.61,
+        "wordEnd": 144.79000000000002,
+        "confidence": 1.0,
+        "word": "get",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 365
+    },
+    {
+        "wordStart": 144.79,
+        "wordEnd": 145.48,
+        "confidence": 1.0,
+        "word": "established",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 366
+    },
+    {
+        "wordStart": 145.48,
+        "wordEnd": 145.57,
+        "confidence": 0.99,
+        "word": "and",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 367
+    },
+    {
+        "wordStart": 145.57,
+        "wordEnd": 146.17,
+        "confidence": 1.0,
+        "word": "policed",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 368
+    },
+    {
+        "wordStart": 146.65,
+        "wordEnd": 146.98000000000002,
+        "confidence": 1.0,
+        "word": "and",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 369
+    },
+    {
+        "wordStart": 146.98,
+        "wordEnd": 147.16,
+        "confidence": 0.98,
+        "word": "what",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 370
+    },
+    {
+        "wordStart": 147.16,
+        "wordEnd": 147.28,
+        "confidence": 1.0,
+        "word": "the",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 371
+    },
+    {
+        "wordStart": 147.28,
+        "wordEnd": 147.58,
+        "confidence": 1.0,
+        "word": "best",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 372
+    },
+    {
+        "wordStart": 147.58,
+        "wordEnd": 147.79000000000002,
+        "confidence": 1.0,
+        "word": "way",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 373
+    },
+    {
+        "wordStart": 147.79,
+        "wordEnd": 148.0,
+        "confidence": 1.0,
+        "word": "is",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 374
+    },
+    {
+        "wordStart": 148.0,
+        "wordEnd": 148.18,
+        "confidence": 1.0,
+        "word": "to",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 375
+    },
+    {
+        "wordStart": 148.18,
+        "wordEnd": 148.78,
+        "confidence": 1.0,
+        "word": "disrupt",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 376
+    },
+    {
+        "wordStart": 148.78,
+        "wordEnd": 149.17,
+        "confidence": 1.0,
+        "word": "them",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 377
+    },
+    {
+        "wordStart": 149.26,
+        "wordEnd": 149.64999999999998,
+        "confidence": 1.0,
+        "word": "and",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 378
+    },
+    {
+        "wordStart": 149.65,
+        "wordEnd": 149.92000000000002,
+        "confidence": 1.0,
+        "word": "to",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 379
+    },
+    {
+        "wordStart": 149.92,
+        "wordEnd": 150.42999999999998,
+        "confidence": 1.0,
+        "word": "overcome",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 380
+    },
+    {
+        "wordStart": 150.43,
+        "wordEnd": 150.55,
+        "confidence": 1.0,
+        "word": "the",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 381
+    },
+    {
+        "wordStart": 150.55,
+        "wordEnd": 150.88000000000002,
+        "confidence": 1.0,
+        "word": "police",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 382
+    },
+    {
+        "wordStart": 150.88,
+        "wordEnd": 151.35999999999999,
+        "confidence": 0.99,
+        "word": "function",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 383
+    },
+    {
+        "wordStart": 151.36,
+        "wordEnd": 151.4,
+        "confidence": 1.0,
+        "word": ".",
+        "space": "",
+        "alwaysCapitalized": false,
+        "index": 384
+    },
+    {
+        "wordStart": 151.81,
+        "wordEnd": 151.99,
+        "confidence": 0.98,
+        "word": "It's",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 385
+    },
+    {
+        "wordStart": 151.99,
+        "wordEnd": 152.23000000000002,
+        "confidence": 1.0,
+        "word": "my",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 386
+    },
+    {
+        "wordStart": 152.23,
+        "wordEnd": 152.59,
+        "confidence": 1.0,
+        "word": "view",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 387
+    },
+    {
+        "wordStart": 152.59,
+        "wordEnd": 153.04,
+        "confidence": 1.0,
+        "word": "that",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 388
+    },
+    {
+        "wordStart": 154.21,
+        "wordEnd": 154.6,
+        "confidence": 1.0,
+        "word": "gender",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 389
+    },
+    {
+        "wordStart": 154.6,
+        "wordEnd": 154.84,
+        "confidence": 1.0,
+        "word": "is",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 390
+    },
+    {
+        "wordStart": 155.83,
+        "wordEnd": 155.96,
+        "confidence": 0.59,
+        "word": "is",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 391
+    },
+    {
+        "wordStart": 156.73,
+        "wordEnd": 157.20999999999998,
+        "confidence": 1.0,
+        "word": "culturally",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 392
+    },
+    {
+        "wordStart": 157.21,
+        "wordEnd": 157.75,
+        "confidence": 1.0,
+        "word": "formed",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 393
+    },
+    {
+        "wordStart": 158.17,
+        "wordEnd": 158.35,
+        "confidence": 1.0,
+        "word": "but",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 394
+    },
+    {
+        "wordStart": 158.35,
+        "wordEnd": 158.5,
+        "confidence": 1.0,
+        "word": "it's",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 395
+    },
+    {
+        "wordStart": 158.5,
+        "wordEnd": 159.19,
+        "confidence": 1.0,
+        "word": "also",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 396
+    },
+    {
+        "wordStart": 159.28,
+        "wordEnd": 159.34,
+        "confidence": 1.0,
+        "word": "a",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 397
+    },
+    {
+        "wordStart": 159.34,
+        "wordEnd": 159.97,
+        "confidence": 1.0,
+        "word": "domain",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 398
+    },
+    {
+        "wordStart": 160.0,
+        "wordEnd": 160.3,
+        "confidence": 1.0,
+        "word": "of",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 399
+    },
+    {
+        "wordStart": 160.42,
+        "wordEnd": 160.89999999999998,
+        "confidence": 1.0,
+        "word": "agency",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 400
+    },
+    {
+        "wordStart": 160.9,
+        "wordEnd": 161.02,
+        "confidence": 0.99,
+        "word": "or",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 401
+    },
+    {
+        "wordStart": 161.02,
+        "wordEnd": 161.56,
+        "confidence": 1.0,
+        "word": "freedom",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 402
+    },
+    {
+        "wordStart": 161.56,
+        "wordEnd": 161.59,
+        "confidence": 0.82,
+        "word": ".",
+        "space": "",
+        "alwaysCapitalized": false,
+        "index": 403
+    },
+    {
+        "wordStart": 161.83,
+        "wordEnd": 162.01000000000002,
+        "confidence": 0.97,
+        "word": "It's",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 404
+    },
+    {
+        "wordStart": 162.01,
+        "wordEnd": 162.34,
+        "confidence": 1.0,
+        "word": "most",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 405
+    },
+    {
+        "wordStart": 162.34,
+        "wordEnd": 163.0,
+        "confidence": 1.0,
+        "word": "important",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 406
+    },
+    {
+        "wordStart": 163.0,
+        "wordEnd": 163.57,
+        "confidence": 1.0,
+        "word": "to",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 407
+    },
+    {
+        "wordStart": 163.66,
+        "wordEnd": 164.10999999999999,
+        "confidence": 1.0,
+        "word": "resist",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 408
+    },
+    {
+        "wordStart": 164.26,
+        "wordEnd": 164.44,
+        "confidence": 1.0,
+        "word": "the",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 409
+    },
+    {
+        "wordStart": 164.44,
+        "wordEnd": 165.1,
+        "confidence": 1.0,
+        "word": "violence",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 410
+    },
+    {
+        "wordStart": 165.34,
+        "wordEnd": 165.61,
+        "confidence": 1.0,
+        "word": "that",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 411
+    },
+    {
+        "wordStart": 165.61,
+        "wordEnd": 165.94000000000003,
+        "confidence": 1.0,
+        "word": "is",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 412
+    },
+    {
+        "wordStart": 166.66,
+        "wordEnd": 167.44,
+        "confidence": 0.99,
+        "word": "imposed",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 413
+    },
+    {
+        "wordStart": 167.44,
+        "wordEnd": 167.62,
+        "confidence": 1.0,
+        "word": "by",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 414
+    },
+    {
+        "wordStart": 167.62,
+        "wordEnd": 167.95000000000002,
+        "confidence": 1.0,
+        "word": "ideal",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 415
+    },
+    {
+        "wordStart": 167.95,
+        "wordEnd": 168.28,
+        "confidence": 1.0,
+        "word": "gender",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 416
+    },
+    {
+        "wordStart": 168.28,
+        "wordEnd": 168.73,
+        "confidence": 1.0,
+        "word": "norms",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 417
+    },
+    {
+        "wordStart": 168.94,
+        "wordEnd": 169.69,
+        "confidence": 1.0,
+        "word": "especially",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 418
+    },
+    {
+        "wordStart": 170.17,
+        "wordEnd": 170.55999999999997,
+        "confidence": 1.0,
+        "word": "against",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 419
+    },
+    {
+        "wordStart": 170.56,
+        "wordEnd": 170.92000000000002,
+        "confidence": 1.0,
+        "word": "those",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 420
+    },
+    {
+        "wordStart": 170.92,
+        "wordEnd": 171.1,
+        "confidence": 1.0,
+        "word": "who",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 421
+    },
+    {
+        "wordStart": 171.1,
+        "wordEnd": 171.46,
+        "confidence": 1.0,
+        "word": "are",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 422
+    },
+    {
+        "wordStart": 171.79,
+        "wordEnd": 172.32999999999998,
+        "confidence": 0.99,
+        "word": "gender",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 423
+    },
+    {
+        "wordStart": 172.33,
+        "wordEnd": 172.81,
+        "confidence": 1.0,
+        "word": "different",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 424
+    },
+    {
+        "wordStart": 172.9,
+        "wordEnd": 173.08,
+        "confidence": 1.0,
+        "word": "who",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 425
+    },
+    {
+        "wordStart": 173.08,
+        "wordEnd": 173.23000000000002,
+        "confidence": 1.0,
+        "word": "are",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 426
+    },
+    {
+        "wordStart": 173.23,
+        "wordEnd": 173.47,
+        "confidence": 0.98,
+        "word": "not",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 427
+    },
+    {
+        "wordStart": 173.56,
+        "wordEnd": 174.46,
+        "confidence": 1.0,
+        "word": "nonconforming",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 428
+    },
+    {
+        "wordStart": 174.55,
+        "wordEnd": 174.73000000000002,
+        "confidence": 0.96,
+        "word": "in",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 429
+    },
+    {
+        "wordStart": 174.72,
+        "wordEnd": 174.98,
+        "confidence": 0.96,
+        "word": "their",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 430
+    },
+    {
+        "wordStart": 175.09,
+        "wordEnd": 175.21,
+        "confidence": 0.68,
+        "word": "in",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 431
+    },
+    {
+        "wordStart": 175.22,
+        "wordEnd": 175.37,
+        "confidence": 1.0,
+        "word": "their",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 432
+    },
+    {
+        "wordStart": 175.39,
+        "wordEnd": 175.69,
+        "confidence": 1.0,
+        "word": "gender",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 433
+    },
+    {
+        "wordStart": 175.69,
+        "wordEnd": 176.32,
+        "confidence": 1.0,
+        "word": "presentation",
+        "space": " ",
+        "alwaysCapitalized": false,
+        "index": 434
+    },
+    {
+        "wordStart": 176.32,
+        "wordEnd": 176.32,
+        "confidence": 1.0,
+        "word": ".",
+        "space": "",
+        "alwaysCapitalized": false,
+        "index": 435
     }
-  ], 
-  "words": [
-    {
-      "duration": "0.12", 
-      "confidence": "0.980", 
-      "name": "It's", 
-      "time": "1.29"
-    }, 
-    {
-      "duration": "0.15", 
-      "confidence": "1.000", 
-      "name": "one", 
-      "time": "1.41"
-    }, 
-    {
-      "duration": "0.21", 
-      "confidence": "1.000", 
-      "name": "thing", 
-      "time": "1.56"
-    }, 
-    {
-      "duration": "0.12", 
-      "confidence": "1.000", 
-      "name": "to", 
-      "time": "1.77"
-    }, 
-    {
-      "duration": "0.33", 
-      "confidence": "1.000", 
-      "name": "say", 
-      "time": "1.89"
-    }, 
-    {
-      "duration": "0.27", 
-      "confidence": "1.000", 
-      "name": "that", 
-      "time": "2.22"
-    }, 
-    {
-      "duration": "0.19", 
-      "confidence": "0.560", 
-      "name": "gender", 
-      "time": "2.51"
-    }, 
-    {
-      "duration": "0.26", 
-      "confidence": "0.480", 
-      "name": "is", 
-      "time": "2.71"
-    }, 
-    {
-      "duration": "0.81", 
-      "confidence": "1.000", 
-      "name": "performed", 
-      "time": "2.97"
-    }, 
-    {
-      "duration": "0.09", 
-      "confidence": "0.990", 
-      "name": "and", 
-      "time": "3.90"
-    }, 
-    {
-      "duration": "0.18", 
-      "confidence": "1.000", 
-      "name": "that's", 
-      "time": "3.99"
-    }, 
-    {
-      "duration": "0.06", 
-      "confidence": "1.000", 
-      "name": "a", 
-      "time": "4.17"
-    }, 
-    {
-      "duration": "0.18", 
-      "confidence": "1.000", 
-      "name": "little", 
-      "time": "4.23"
-    }, 
-    {
-      "duration": "0.33", 
-      "confidence": "1.000", 
-      "name": "different", 
-      "time": "4.41"
-    }, 
-    {
-      "duration": "0.18", 
-      "confidence": "1.000", 
-      "name": "from", 
-      "time": "4.74"
-    }, 
-    {
-      "duration": "0.21", 
-      "confidence": "0.890", 
-      "name": "saying", 
-      "time": "4.92"
-    }, 
-    {
-      "duration": "0.30", 
-      "confidence": "1.000", 
-      "name": "gender", 
-      "time": "5.13"
-    }, 
-    {
-      "duration": "0.15", 
-      "confidence": "0.810", 
-      "name": "is", 
-      "time": "5.43"
-    }, 
-    {
-      "duration": "0.84", 
-      "confidence": "1.000", 
-      "name": "performative", 
-      "time": "5.58"
-    }, 
-    {
-      "duration": "0.12", 
-      "confidence": "1.000", 
-      "name": "when", 
-      "time": "6.42"
-    }, 
-    {
-      "duration": "0.15", 
-      "confidence": "1.000", 
-      "name": "we", 
-      "time": "6.54"
-    }, 
-    {
-      "duration": "0.21", 
-      "confidence": "1.000", 
-      "name": "say", 
-      "time": "6.69"
-    }, 
-    {
-      "duration": "0.33", 
-      "confidence": "1.000", 
-      "name": "gender", 
-      "time": "6.90"
-    }, 
-    {
-      "duration": "0.12", 
-      "confidence": "0.950", 
-      "name": "is", 
-      "time": "7.23"
-    }, 
-    {
-      "duration": "0.68", 
-      "confidence": "1.000", 
-      "name": "performed", 
-      "time": "7.35"
-    }, 
-    {
-      "duration": "0.30", 
-      "confidence": "1.000", 
-      "name": "we", 
-      "time": "8.04"
-    }, 
-    {
-      "duration": "0.45", 
-      "confidence": "1.000", 
-      "name": "usually", 
-      "time": "8.67"
-    }, 
-    {
-      "duration": "0.36", 
-      "confidence": "1.000", 
-      "name": "mean", 
-      "time": "9.12"
-    }, 
-    {
-      "duration": "0.33", 
-      "confidence": "1.000", 
-      "name": "that", 
-      "time": "9.48"
-    }, 
-    {
-      "duration": "0.15", 
-      "confidence": "0.960", 
-      "name": "we've", 
-      "time": "10.29"
-    }, 
-    {
-      "duration": "0.30", 
-      "confidence": "1.000", 
-      "name": "taken", 
-      "time": "10.44"
-    }, 
-    {
-      "duration": "0.12", 
-      "confidence": "1.000", 
-      "name": "on", 
-      "time": "10.74"
-    }, 
-    {
-      "duration": "0.06", 
-      "confidence": "1.000", 
-      "name": "a", 
-      "time": "10.86"
-    }, 
-    {
-      "duration": "0.57", 
-      "confidence": "0.990", 
-      "name": "role", 
-      "time": "10.92"
-    }, 
-    {
-      "duration": "0.04", 
-      "confidence": "0.590", 
-      "name": ".", 
-      "time": "11.49"
-    }, 
-    {
-      "duration": "0.18", 
-      "confidence": "0.870", 
-      "name": "We're", 
-      "time": "11.55"
-    }, 
-    {
-      "duration": "0.57", 
-      "confidence": "1.000", 
-      "name": "acting", 
-      "time": "11.82"
-    }, 
-    {
-      "duration": "0.21", 
-      "confidence": "1.000", 
-      "name": "in", 
-      "time": "12.39"
-    }, 
-    {
-      "duration": "0.33", 
-      "confidence": "1.000", 
-      "name": "some", 
-      "time": "12.60"
-    }, 
-    {
-      "duration": "0.48", 
-      "confidence": "1.000", 
-      "name": "way", 
-      "time": "12.93"
-    }, 
-    {
-      "duration": "0.18", 
-      "confidence": "1.000", 
-      "name": "and", 
-      "time": "14.70"
-    }, 
-    {
-      "duration": "0.18", 
-      "confidence": "1.000", 
-      "name": "that", 
-      "time": "14.88"
-    }, 
-    {
-      "duration": "0.18", 
-      "confidence": "0.710", 
-      "name": "are", 
-      "time": "15.06"
-    }, 
-    {
-      "duration": "0.52", 
-      "confidence": "1.000", 
-      "name": "acting", 
-      "time": "15.29"
-    }, 
-    {
-      "duration": "0.18", 
-      "confidence": "1.000", 
-      "name": "or", 
-      "time": "15.81"
-    }, 
-    {
-      "duration": "0.06", 
-      "confidence": "0.430", 
-      "name": "a", 
-      "time": "15.99"
-    }, 
-    {
-      "duration": "0.32", 
-      "confidence": "0.980", 
-      "name": "role", 
-      "time": "16.05"
-    }, 
-    {
-      "duration": "0.49", 
-      "confidence": "0.980", 
-      "name": "playing", 
-      "time": "16.37"
-    }, 
-    {
-      "duration": "0.45", 
-      "confidence": "1.000", 
-      "name": "is", 
-      "time": "16.86"
-    }, 
-    {
-      "duration": "0.54", 
-      "confidence": "1.000", 
-      "name": "crucial", 
-      "time": "17.88"
-    }, 
-    {
-      "duration": "0.18", 
-      "confidence": "1.000", 
-      "name": "to", 
-      "time": "18.42"
-    }, 
-    {
-      "duration": "0.27", 
-      "confidence": "1.000", 
-      "name": "the", 
-      "time": "18.60"
-    }, 
-    {
-      "duration": "0.54", 
-      "confidence": "1.000", 
-      "name": "gender", 
-      "time": "19.26"
-    }, 
-    {
-      "duration": "0.12", 
-      "confidence": "1.000", 
-      "name": "that", 
-      "time": "19.80"
-    }, 
-    {
-      "duration": "0.18", 
-      "confidence": "1.000", 
-      "name": "we", 
-      "time": "19.92"
-    }, 
-    {
-      "duration": "0.42", 
-      "confidence": "1.000", 
-      "name": "are", 
-      "time": "20.10"
-    }, 
-    {
-      "duration": "0.27", 
-      "confidence": "0.900", 
-      "name": "and", 
-      "time": "20.55"
-    }, 
-    {
-      "duration": "0.18", 
-      "confidence": "1.000", 
-      "name": "the", 
-      "time": "20.85"
-    }, 
-    {
-      "duration": "0.36", 
-      "confidence": "1.000", 
-      "name": "gender", 
-      "time": "21.03"
-    }, 
-    {
-      "duration": "0.12", 
-      "confidence": "1.000", 
-      "name": "that", 
-      "time": "21.39"
-    }, 
-    {
-      "duration": "0.18", 
-      "confidence": "1.000", 
-      "name": "we", 
-      "time": "21.51"
-    }, 
-    {
-      "duration": "0.46", 
-      "confidence": "1.000", 
-      "name": "present", 
-      "time": "21.69"
-    }, 
-    {
-      "duration": "0.08", 
-      "confidence": "0.910", 
-      "name": "to", 
-      "time": "22.15"
-    }, 
-    {
-      "duration": "0.12", 
-      "confidence": "1.000", 
-      "name": "the", 
-      "time": "22.23"
-    }, 
-    {
-      "duration": "0.36", 
-      "confidence": "1.000", 
-      "name": "world", 
-      "time": "22.35"
-    }, 
-    {
-      "duration": "0.12", 
-      "confidence": "1.000", 
-      "name": "to", 
-      "time": "23.58"
-    }, 
-    {
-      "duration": "0.15", 
-      "confidence": "1.000", 
-      "name": "say", 
-      "time": "23.70"
-    }, 
-    {
-      "duration": "0.12", 
-      "confidence": "0.950", 
-      "name": "the", 
-      "time": "23.85"
-    }, 
-    {
-      "duration": "0.34", 
-      "confidence": "0.800", 
-      "name": "genders", 
-      "time": "23.97"
-    }, 
-    {
-      "duration": "0.87", 
-      "confidence": "1.000", 
-      "name": "performative", 
-      "time": "24.33"
-    }, 
-    {
-      "duration": "0.18", 
-      "confidence": "1.000", 
-      "name": "is", 
-      "time": "25.20"
-    }, 
-    {
-      "duration": "0.06", 
-      "confidence": "1.000", 
-      "name": "a", 
-      "time": "25.71"
-    }, 
-    {
-      "duration": "0.27", 
-      "confidence": "1.000", 
-      "name": "little", 
-      "time": "25.77"
-    }, 
-    {
-      "duration": "0.42", 
-      "confidence": "1.000", 
-      "name": "different", 
-      "time": "26.04"
-    }, 
-    {
-      "duration": "0.57", 
-      "confidence": "1.000", 
-      "name": "because", 
-      "time": "26.49"
-    }, 
-    {
-      "duration": "0.12", 
-      "confidence": "1.000", 
-      "name": "for", 
-      "time": "28.29"
-    }, 
-    {
-      "duration": "0.30", 
-      "confidence": "1.000", 
-      "name": "something", 
-      "time": "28.41"
-    }, 
-    {
-      "duration": "0.15", 
-      "confidence": "1.000", 
-      "name": "to", 
-      "time": "28.71"
-    }, 
-    {
-      "duration": "0.15", 
-      "confidence": "1.000", 
-      "name": "be", 
-      "time": "28.86"
-    }, 
-    {
-      "duration": "0.81", 
-      "confidence": "1.000", 
-      "name": "performative", 
-      "time": "29.19"
-    }, 
-    {
-      "duration": "0.24", 
-      "confidence": "1.000", 
-      "name": "means", 
-      "time": "30.00"
-    }, 
-    {
-      "duration": "0.12", 
-      "confidence": "1.000", 
-      "name": "that", 
-      "time": "30.24"
-    }, 
-    {
-      "duration": "0.09", 
-      "confidence": "0.990", 
-      "name": "it", 
-      "time": "30.36"
-    }, 
-    {
-      "duration": "0.69", 
-      "confidence": "1.000", 
-      "name": "produces", 
-      "time": "30.75"
-    }, 
-    {
-      "duration": "0.06", 
-      "confidence": "1.000", 
-      "name": "a", 
-      "time": "31.53"
-    }, 
-    {
-      "duration": "0.39", 
-      "confidence": "1.000", 
-      "name": "series", 
-      "time": "31.59"
-    }, 
-    {
-      "duration": "0.12", 
-      "confidence": "1.000", 
-      "name": "of", 
-      "time": "31.98"
-    }, 
-    {
-      "duration": "0.60", 
-      "confidence": "1.000", 
-      "name": "effects", 
-      "time": "32.10"
-    }, 
-    {
-      "duration": "0.18", 
-      "confidence": "1.000", 
-      "name": "we", 
-      "time": "33.54"
-    }, 
-    {
-      "duration": "0.33", 
-      "confidence": "0.950", 
-      "name": "act", 
-      "time": "33.78"
-    }, 
-    {
-      "duration": "0.33", 
-      "confidence": "1.000", 
-      "name": "and", 
-      "time": "34.11"
-    }, 
-    {
-      "duration": "0.48", 
-      "confidence": "1.000", 
-      "name": "walk", 
-      "time": "34.56"
-    }, 
-    {
-      "duration": "0.12", 
-      "confidence": "1.000", 
-      "name": "and", 
-      "time": "35.04"
-    }, 
-    {
-      "duration": "0.48", 
-      "confidence": "1.000", 
-      "name": "speak", 
-      "time": "35.16"
-    }, 
-    {
-      "duration": "0.15", 
-      "confidence": "1.000", 
-      "name": "and", 
-      "time": "35.64"
-    }, 
-    {
-      "duration": "0.54", 
-      "confidence": "1.000", 
-      "name": "talk", 
-      "time": "35.91"
-    }, 
-    {
-      "duration": "0.18", 
-      "confidence": "1.000", 
-      "name": "in", 
-      "time": "36.45"
-    }, 
-    {
-      "duration": "0.39", 
-      "confidence": "1.000", 
-      "name": "ways", 
-      "time": "36.63"
-    }, 
-    {
-      "duration": "0.48", 
-      "confidence": "1.000", 
-      "name": "that", 
-      "time": "37.05"
-    }, 
-    {
-      "duration": "0.93", 
-      "confidence": "0.990", 
-      "name": "consolidate", 
-      "time": "38.82"
-    }, 
-    {
-      "duration": "0.12", 
-      "confidence": "1.000", 
-      "name": "an", 
-      "time": "39.75"
-    }, 
-    {
-      "duration": "0.72", 
-      "confidence": "1.000", 
-      "name": "impression", 
-      "time": "39.87"
-    }, 
-    {
-      "duration": "0.24", 
-      "confidence": "1.000", 
-      "name": "of", 
-      "time": "40.62"
-    }, 
-    {
-      "duration": "0.27", 
-      "confidence": "1.000", 
-      "name": "being", 
-      "time": "41.07"
-    }, 
-    {
-      "duration": "0.03", 
-      "confidence": "0.930", 
-      "name": "a", 
-      "time": "41.34"
-    }, 
-    {
-      "duration": "0.48", 
-      "confidence": "0.930", 
-      "name": "man", 
-      "time": "41.37"
-    }, 
-    {
-      "duration": "0.27", 
-      "confidence": "1.000", 
-      "name": "or", 
-      "time": "41.91"
-    }, 
-    {
-      "duration": "0.33", 
-      "confidence": "1.000", 
-      "name": "being", 
-      "time": "42.21"
-    }, 
-    {
-      "duration": "0.06", 
-      "confidence": "1.000", 
-      "name": "a", 
-      "time": "42.54"
-    }, 
-    {
-      "duration": "0.45", 
-      "confidence": "1.000", 
-      "name": "woman", 
-      "time": "42.60"
-    }, 
-    {
-      "duration": "0.47", 
-      "confidence": "0.940", 
-      "name": ".", 
-      "time": "43.05"
-    }, 
-    {
-      "duration": "0.08", 
-      "confidence": "0.950", 
-      "name": "I", 
-      "time": "43.55"
-    }, 
-    {
-      "duration": "0.15", 
-      "confidence": "1.000", 
-      "name": "was", 
-      "time": "43.65"
-    }, 
-    {
-      "duration": "0.33", 
-      "confidence": "1.000", 
-      "name": "walking", 
-      "time": "43.80"
-    }, 
-    {
-      "duration": "0.21", 
-      "confidence": "1.000", 
-      "name": "down", 
-      "time": "44.13"
-    }, 
-    {
-      "duration": "0.09", 
-      "confidence": "1.000", 
-      "name": "the", 
-      "time": "44.34"
-    }, 
-    {
-      "duration": "0.54", 
-      "confidence": "1.000", 
-      "name": "street", 
-      "time": "44.43"
-    }, 
-    {
-      "duration": "0.12", 
-      "confidence": "1.000", 
-      "name": "in", 
-      "time": "45.27"
-    }, 
-    {
-      "duration": "0.33", 
-      "confidence": "0.990", 
-      "name": "Berkeley", 
-      "time": "45.39"
-    }, 
-    {
-      "duration": "0.12", 
-      "confidence": "1.000", 
-      "name": "when", 
-      "time": "45.72"
-    }, 
-    {
-      "duration": "0.12", 
-      "confidence": "1.000", 
-      "name": "I", 
-      "time": "45.84"
-    }, 
-    {
-      "duration": "0.33", 
-      "confidence": "1.000", 
-      "name": "first", 
-      "time": "45.96"
-    }, 
-    {
-      "duration": "0.57", 
-      "confidence": "1.000", 
-      "name": "arrived", 
-      "time": "46.29"
-    }, 
-    {
-      "duration": "0.33", 
-      "confidence": "1.000", 
-      "name": "several", 
-      "time": "46.95"
-    }, 
-    {
-      "duration": "0.24", 
-      "confidence": "1.000", 
-      "name": "years", 
-      "time": "47.28"
-    }, 
-    {
-      "duration": "0.42", 
-      "confidence": "1.000", 
-      "name": "ago", 
-      "time": "47.52"
-    }, 
-    {
-      "duration": "0.51", 
-      "confidence": "1.000", 
-      "name": "and", 
-      "time": "48.06"
-    }, 
-    {
-      "duration": "0.06", 
-      "confidence": "1.000", 
-      "name": "a", 
-      "time": "48.87"
-    }, 
-    {
-      "duration": "0.24", 
-      "confidence": "1.000", 
-      "name": "young", 
-      "time": "48.93"
-    }, 
-    {
-      "duration": "0.42", 
-      "confidence": "1.000", 
-      "name": "woman", 
-      "time": "49.17"
-    }, 
-    {
-      "duration": "0.18", 
-      "confidence": "0.920", 
-      "name": "who", 
-      "time": "49.70"
-    }, 
-    {
-      "duration": "0.18", 
-      "confidence": "0.570", 
-      "name": "is", 
-      "time": "49.89"
-    }, 
-    {
-      "duration": "0.06", 
-      "confidence": "1.000", 
-      "name": "I", 
-      "time": "50.07"
-    }, 
-    {
-      "duration": "0.21", 
-      "confidence": "1.000", 
-      "name": "think", 
-      "time": "50.13"
-    }, 
-    {
-      "duration": "0.12", 
-      "confidence": "1.000", 
-      "name": "in", 
-      "time": "50.34"
-    }, 
-    {
-      "duration": "0.18", 
-      "confidence": "1.000", 
-      "name": "high", 
-      "time": "50.46"
-    }, 
-    {
-      "duration": "0.51", 
-      "confidence": "1.000", 
-      "name": "school", 
-      "time": "50.64"
-    }, 
-    {
-      "duration": "0.30", 
-      "confidence": "1.000", 
-      "name": "leaned", 
-      "time": "51.42"
-    }, 
-    {
-      "duration": "0.09", 
-      "confidence": "1.000", 
-      "name": "out", 
-      "time": "51.72"
-    }, 
-    {
-      "duration": "0.09", 
-      "confidence": "1.000", 
-      "name": "of", 
-      "time": "51.81"
-    }, 
-    {
-      "duration": "0.09", 
-      "confidence": "1.000", 
-      "name": "her", 
-      "time": "51.90"
-    }, 
-    {
-      "duration": "0.51", 
-      "confidence": "1.000", 
-      "name": "window", 
-      "time": "51.99"
-    }, 
-    {
-      "duration": "0.18", 
-      "confidence": "1.000", 
-      "name": "and", 
-      "time": "52.50"
-    }, 
-    {
-      "duration": "0.21", 
-      "confidence": "1.000", 
-      "name": "she", 
-      "time": "52.68"
-    }, 
-    {
-      "duration": "0.45", 
-      "confidence": "1.000", 
-      "name": "yelled", 
-      "time": "52.89"
-    }, 
-    {
-      "duration": "0.12", 
-      "confidence": "1.000", 
-      "name": "Are", 
-      "time": "53.52"
-    }, 
-    {
-      "duration": "0.15", 
-      "confidence": "1.000", 
-      "name": "you", 
-      "time": "53.64"
-    }, 
-    {
-      "duration": "0.06", 
-      "confidence": "1.000", 
-      "name": "a", 
-      "time": "53.79"
-    }, 
-    {
-      "duration": "0.69", 
-      "confidence": "1.000", 
-      "name": "lesbian", 
-      "time": "53.85"
-    }, 
-    {
-      "duration": "0.93", 
-      "confidence": "0.940", 
-      "name": ".", 
-      "time": "54.54"
-    }, 
-    {
-      "duration": "0.45", 
-      "confidence": "1.000", 
-      "name": "And", 
-      "time": "56.97"
-    }, 
-    {
-      "duration": "0.18", 
-      "confidence": "1.000", 
-      "name": "she", 
-      "time": "57.81"
-    }, 
-    {
-      "duration": "0.12", 
-      "confidence": "0.990", 
-      "name": "was", 
-      "time": "57.99"
-    }, 
-    {
-      "duration": "0.30", 
-      "confidence": "1.000", 
-      "name": "looking", 
-      "time": "58.11"
-    }, 
-    {
-      "duration": "0.12", 
-      "confidence": "1.000", 
-      "name": "to", 
-      "time": "58.41"
-    }, 
-    {
-      "duration": "0.48", 
-      "confidence": "1.000", 
-      "name": "harass", 
-      "time": "58.53"
-    }, 
-    {
-      "duration": "0.27", 
-      "confidence": "1.000", 
-      "name": "me", 
-      "time": "59.01"
-    }, 
-    {
-      "duration": "0.30", 
-      "confidence": "1.000", 
-      "name": "or", 
-      "time": "59.58"
-    }, 
-    {
-      "duration": "0.33", 
-      "confidence": "1.000", 
-      "name": "maybe", 
-      "time": "60.12"
-    }, 
-    {
-      "duration": "0.18", 
-      "confidence": "1.000", 
-      "name": "she", 
-      "time": "60.45"
-    }, 
-    {
-      "duration": "0.18", 
-      "confidence": "1.000", 
-      "name": "was", 
-      "time": "60.63"
-    }, 
-    {
-      "duration": "0.30", 
-      "confidence": "1.000", 
-      "name": "just", 
-      "time": "60.81"
-    }, 
-    {
-      "duration": "0.39", 
-      "confidence": "1.000", 
-      "name": "freaked", 
-      "time": "61.32"
-    }, 
-    {
-      "duration": "0.27", 
-      "confidence": "1.000", 
-      "name": "out", 
-      "time": "61.71"
-    }, 
-    {
-      "duration": "0.21", 
-      "confidence": "1.000", 
-      "name": "or", 
-      "time": "61.98"
-    }, 
-    {
-      "duration": "0.18", 
-      "confidence": "1.000", 
-      "name": "she", 
-      "time": "62.19"
-    }, 
-    {
-      "duration": "0.18", 
-      "confidence": "1.000", 
-      "name": "thought", 
-      "time": "62.37"
-    }, 
-    {
-      "duration": "0.09", 
-      "confidence": "1.000", 
-      "name": "I", 
-      "time": "62.55"
-    }, 
-    {
-      "duration": "0.30", 
-      "confidence": "1.000", 
-      "name": "looked", 
-      "time": "62.64"
-    }, 
-    {
-      "duration": "0.18", 
-      "confidence": "1.000", 
-      "name": "like", 
-      "time": "62.94"
-    }, 
-    {
-      "duration": "0.09", 
-      "confidence": "0.960", 
-      "name": "I", 
-      "time": "63.12"
-    }, 
-    {
-      "duration": "0.36", 
-      "confidence": "1.000", 
-      "name": "probably", 
-      "time": "63.21"
-    }, 
-    {
-      "duration": "0.24", 
-      "confidence": "1.000", 
-      "name": "was", 
-      "time": "63.57"
-    }, 
-    {
-      "duration": "0.18", 
-      "confidence": "0.960", 
-      "name": "one", 
-      "time": "63.81"
-    }, 
-    {
-      "duration": "0.09", 
-      "confidence": "0.700", 
-      "name": "who", 
-      "time": "63.99"
-    }, 
-    {
-      "duration": "0.27", 
-      "confidence": "1.000", 
-      "name": "wanted", 
-      "time": "64.08"
-    }, 
-    {
-      "duration": "0.15", 
-      "confidence": "1.000", 
-      "name": "to", 
-      "time": "64.35"
-    }, 
-    {
-      "duration": "0.45", 
-      "confidence": "1.000", 
-      "name": "know", 
-      "time": "64.50"
-    }, 
-    {
-      "duration": "0.04", 
-      "confidence": "0.670", 
-      "name": ".", 
-      "time": "65.03"
-    }, 
-    {
-      "duration": "0.14", 
-      "confidence": "0.850", 
-      "name": "But", 
-      "time": "65.48"
-    }, 
-    {
-      "duration": "0.09", 
-      "confidence": "1.000", 
-      "name": "I", 
-      "time": "65.86"
-    }, 
-    {
-      "duration": "0.18", 
-      "confidence": "1.000", 
-      "name": "just", 
-      "time": "65.97"
-    }, 
-    {
-      "duration": "0.27", 
-      "confidence": "1.000", 
-      "name": "turned", 
-      "time": "66.15"
-    }, 
-    {
-      "duration": "0.30", 
-      "confidence": "1.000", 
-      "name": "around", 
-      "time": "66.42"
-    }, 
-    {
-      "duration": "0.12", 
-      "confidence": "1.000", 
-      "name": "and", 
-      "time": "66.72"
-    }, 
-    {
-      "duration": "0.06", 
-      "confidence": "0.930", 
-      "name": "I", 
-      "time": "66.84"
-    }, 
-    {
-      "duration": "0.18", 
-      "confidence": "1.000", 
-      "name": "said", 
-      "time": "66.90"
-    }, 
-    {
-      "duration": "0.42", 
-      "confidence": "1.000", 
-      "name": "Yes", 
-      "time": "67.11"
-    }, 
-    {
-      "duration": "0.18", 
-      "confidence": "1.000", 
-      "name": "I", 
-      "time": "67.53"
-    }, 
-    {
-      "duration": "0.33", 
-      "confidence": "1.000", 
-      "name": "am", 
-      "time": "67.71"
-    }, 
-    {
-      "duration": "0.59", 
-      "confidence": "0.780", 
-      "name": ".", 
-      "time": "68.04"
-    }, 
-    {
-      "duration": "0.18", 
-      "confidence": "1.000", 
-      "name": "And", 
-      "time": "69.12"
-    }, 
-    {
-      "duration": "0.21", 
-      "confidence": "1.000", 
-      "name": "that", 
-      "time": "69.30"
-    }, 
-    {
-      "duration": "0.24", 
-      "confidence": "1.000", 
-      "name": "really", 
-      "time": "69.51"
-    }, 
-    {
-      "duration": "0.42", 
-      "confidence": "1.000", 
-      "name": "shocked", 
-      "time": "69.75"
-    }, 
-    {
-      "duration": "0.24", 
-      "confidence": "1.000", 
-      "name": "her", 
-      "time": "70.17"
-    }, 
-    {
-      "duration": "0.61", 
-      "confidence": "0.930", 
-      "name": ".", 
-      "time": "70.41"
-    }, 
-    {
-      "duration": "0.27", 
-      "confidence": "1.000", 
-      "name": "We", 
-      "time": "71.07"
-    }, 
-    {
-      "duration": "0.36", 
-      "confidence": "1.000", 
-      "name": "act", 
-      "time": "71.34"
-    }, 
-    {
-      "duration": "0.18", 
-      "confidence": "1.000", 
-      "name": "as", 
-      "time": "71.70"
-    }, 
-    {
-      "duration": "0.39", 
-      "confidence": "1.000", 
-      "name": "if", 
-      "time": "71.94"
-    }, 
-    {
-      "duration": "0.20", 
-      "confidence": "0.960", 
-      "name": "that", 
-      "time": "72.56"
-    }, 
-    {
-      "duration": "0.36", 
-      "confidence": "1.000", 
-      "name": "being", 
-      "time": "72.78"
-    }, 
-    {
-      "duration": "0.11", 
-      "confidence": "0.950", 
-      "name": "of", 
-      "time": "73.14"
-    }, 
-    {
-      "duration": "0.06", 
-      "confidence": "1.000", 
-      "name": "a", 
-      "time": "73.26"
-    }, 
-    {
-      "duration": "0.33", 
-      "confidence": "1.000", 
-      "name": "man", 
-      "time": "73.32"
-    }, 
-    {
-      "duration": "0.15", 
-      "confidence": "1.000", 
-      "name": "or", 
-      "time": "73.65"
-    }, 
-    {
-      "duration": "0.18", 
-      "confidence": "1.000", 
-      "name": "that", 
-      "time": "73.80"
-    }, 
-    {
-      "duration": "0.30", 
-      "confidence": "1.000", 
-      "name": "being", 
-      "time": "73.98"
-    }, 
-    {
-      "duration": "0.12", 
-      "confidence": "1.000", 
-      "name": "of", 
-      "time": "74.28"
-    }, 
-    {
-      "duration": "0.06", 
-      "confidence": "1.000", 
-      "name": "a", 
-      "time": "74.40"
-    }, 
-    {
-      "duration": "0.24", 
-      "confidence": "1.000", 
-      "name": "woman", 
-      "time": "74.46"
-    }, 
-    {
-      "duration": "0.12", 
-      "confidence": "1.000", 
-      "name": "is", 
-      "time": "74.70"
-    }, 
-    {
-      "duration": "0.33", 
-      "confidence": "1.000", 
-      "name": "actually", 
-      "time": "74.82"
-    }, 
-    {
-      "duration": "0.09", 
-      "confidence": "0.950", 
-      "name": "an", 
-      "time": "75.15"
-    }, 
-    {
-      "duration": "0.51", 
-      "confidence": "0.870", 
-      "name": "entirely", 
-      "time": "75.24"
-    }, 
-    {
-      "duration": "0.66", 
-      "confidence": "1.000", 
-      "name": "reality", 
-      "time": "75.75"
-    }, 
-    {
-      "duration": "0.27", 
-      "confidence": "1.000", 
-      "name": "or", 
-      "time": "76.41"
-    }, 
-    {
-      "duration": "0.39", 
-      "confidence": "1.000", 
-      "name": "something", 
-      "time": "77.10"
-    }, 
-    {
-      "duration": "0.39", 
-      "confidence": "0.990", 
-      "name": "that's", 
-      "time": "77.49"
-    }, 
-    {
-      "duration": "0.48", 
-      "confidence": "1.000", 
-      "name": "simply", 
-      "time": "78.27"
-    }, 
-    {
-      "duration": "0.33", 
-      "confidence": "1.000", 
-      "name": "true", 
-      "time": "78.75"
-    }, 
-    {
-      "duration": "0.36", 
-      "confidence": "1.000", 
-      "name": "about", 
-      "time": "79.08"
-    }, 
-    {
-      "duration": "0.23", 
-      "confidence": "1.000", 
-      "name": "Us", 
-      "time": "79.44"
-    }, 
-    {
-      "duration": "0.07", 
-      "confidence": "0.810", 
-      "name": "a", 
-      "time": "79.67"
-    }, 
-    {
-      "duration": "0.51", 
-      "confidence": "1.000", 
-      "name": "fact", 
-      "time": "79.74"
-    }, 
-    {
-      "duration": "0.30", 
-      "confidence": "1.000", 
-      "name": "about", 
-      "time": "80.31"
-    }, 
-    {
-      "duration": "0.30", 
-      "confidence": "1.000", 
-      "name": "us", 
-      "time": "80.61"
-    }, 
-    {
-      "duration": "0.21", 
-      "confidence": "0.710", 
-      "name": ".", 
-      "time": "80.91"
-    }, 
-    {
-      "duration": "0.69", 
-      "confidence": "1.000", 
-      "name": "Actually", 
-      "time": "81.21"
-    }, 
-    {
-      "duration": "0.36", 
-      "confidence": "1.000", 
-      "name": "it's", 
-      "time": "82.35"
-    }, 
-    {
-      "duration": "0.06", 
-      "confidence": "1.000", 
-      "name": "a", 
-      "time": "82.92"
-    }, 
-    {
-      "duration": "0.72", 
-      "confidence": "1.000", 
-      "name": "phenomenon", 
-      "time": "82.98"
-    }, 
-    {
-      "duration": "0.21", 
-      "confidence": "0.980", 
-      "name": "that's", 
-      "time": "83.73"
-    }, 
-    {
-      "duration": "0.30", 
-      "confidence": "1.000", 
-      "name": "being", 
-      "time": "83.94"
-    }, 
-    {
-      "duration": "0.66", 
-      "confidence": "1.000", 
-      "name": "produced", 
-      "time": "84.24"
-    }, 
-    {
-      "duration": "0.09", 
-      "confidence": "1.000", 
-      "name": "all", 
-      "time": "84.90"
-    }, 
-    {
-      "duration": "0.12", 
-      "confidence": "1.000", 
-      "name": "the", 
-      "time": "84.99"
-    }, 
-    {
-      "duration": "0.39", 
-      "confidence": "1.000", 
-      "name": "time", 
-      "time": "85.11"
-    }, 
-    {
-      "duration": "0.12", 
-      "confidence": "1.000", 
-      "name": "and", 
-      "time": "85.50"
-    }, 
-    {
-      "duration": "0.75", 
-      "confidence": "1.000", 
-      "name": "reproduced", 
-      "time": "85.62"
-    }, 
-    {
-      "duration": "0.12", 
-      "confidence": "1.000", 
-      "name": "all", 
-      "time": "86.37"
-    }, 
-    {
-      "duration": "0.12", 
-      "confidence": "1.000", 
-      "name": "the", 
-      "time": "86.49"
-    }, 
-    {
-      "duration": "0.36", 
-      "confidence": "1.000", 
-      "name": "time", 
-      "time": "86.61"
-    }, 
-    {
-      "duration": "0.65", 
-      "confidence": "0.950", 
-      "name": ".", 
-      "time": "86.97"
-    }, 
-    {
-      "duration": "0.15", 
-      "confidence": "1.000", 
-      "name": "So", 
-      "time": "87.66"
-    }, 
-    {
-      "duration": "0.12", 
-      "confidence": "0.980", 
-      "name": "to", 
-      "time": "87.81"
-    }, 
-    {
-      "duration": "0.21", 
-      "confidence": "1.000", 
-      "name": "say", 
-      "time": "87.93"
-    }, 
-    {
-      "duration": "0.36", 
-      "confidence": "1.000", 
-      "name": "gender", 
-      "time": "88.14"
-    }, 
-    {
-      "duration": "0.15", 
-      "confidence": "1.000", 
-      "name": "is", 
-      "time": "88.50"
-    }, 
-    {
-      "duration": "0.87", 
-      "confidence": "1.000", 
-      "name": "performative", 
-      "time": "88.65"
-    }, 
-    {
-      "duration": "0.15", 
-      "confidence": "1.000", 
-      "name": "is", 
-      "time": "89.52"
-    }, 
-    {
-      "duration": "0.15", 
-      "confidence": "1.000", 
-      "name": "to", 
-      "time": "89.67"
-    }, 
-    {
-      "duration": "0.39", 
-      "confidence": "1.000", 
-      "name": "say", 
-      "time": "89.82"
-    }, 
-    {
-      "duration": "0.15", 
-      "confidence": "1.000", 
-      "name": "that", 
-      "time": "90.48"
-    }, 
-    {
-      "duration": "0.39", 
-      "confidence": "1.000", 
-      "name": "nobody", 
-      "time": "90.63"
-    }, 
-    {
-      "duration": "0.36", 
-      "confidence": "1.000", 
-      "name": "really", 
-      "time": "91.02"
-    }, 
-    {
-      "duration": "0.27", 
-      "confidence": "1.000", 
-      "name": "is", 
-      "time": "91.38"
-    }, 
-    {
-      "duration": "0.06", 
-      "confidence": "0.640", 
-      "name": "a", 
-      "time": "91.65"
-    }, 
-    {
-      "duration": "0.57", 
-      "confidence": "0.640", 
-      "name": "gender", 
-      "time": "91.71"
-    }, 
-    {
-      "duration": "0.21", 
-      "confidence": "1.000", 
-      "name": "from", 
-      "time": "92.28"
-    }, 
-    {
-      "duration": "0.12", 
-      "confidence": "1.000", 
-      "name": "the", 
-      "time": "92.49"
-    }, 
-    {
-      "duration": "0.57", 
-      "confidence": "1.000", 
-      "name": "start", 
-      "time": "92.61"
-    }, 
-    {
-      "duration": "0.80", 
-      "confidence": "0.770", 
-      "name": ".", 
-      "time": "93.18"
-    }, 
-    {
-      "duration": "0.06", 
-      "confidence": "0.990", 
-      "name": "I", 
-      "time": "94.23"
-    }, 
-    {
-      "duration": "0.18", 
-      "confidence": "1.000", 
-      "name": "know", 
-      "time": "94.29"
-    }, 
-    {
-      "duration": "0.12", 
-      "confidence": "1.000", 
-      "name": "it's", 
-      "time": "94.47"
-    }, 
-    {
-      "duration": "0.78", 
-      "confidence": "1.000", 
-      "name": "controversial", 
-      "time": "94.59"
-    }, 
-    {
-      "duration": "0.15", 
-      "confidence": "1.000", 
-      "name": "but", 
-      "time": "95.55"
-    }, 
-    {
-      "duration": "0.24", 
-      "confidence": "1.000", 
-      "name": "that's", 
-      "time": "95.70"
-    }, 
-    {
-      "duration": "0.18", 
-      "confidence": "1.000", 
-      "name": "my", 
-      "time": "95.94"
-    }, 
-    {
-      "duration": "0.42", 
-      "confidence": "1.000", 
-      "name": "claim", 
-      "time": "96.12"
-    }, 
-    {
-      "duration": "0.08", 
-      "confidence": "0.840", 
-      "name": ".", 
-      "time": "96.54"
-    }, 
-    {
-      "duration": "0.27", 
-      "confidence": "1.000", 
-      "name": "Think", 
-      "time": "100.69"
-    }, 
-    {
-      "duration": "0.45", 
-      "confidence": "1.000", 
-      "name": "about", 
-      "time": "100.96"
-    }, 
-    {
-      "duration": "0.57", 
-      "confidence": "1.000", 
-      "name": "how", 
-      "time": "101.65"
-    }, 
-    {
-      "duration": "0.78", 
-      "confidence": "1.000", 
-      "name": "difficult", 
-      "time": "102.31"
-    }, 
-    {
-      "duration": "0.12", 
-      "confidence": "1.000", 
-      "name": "it", 
-      "time": "103.09"
-    }, 
-    {
-      "duration": "0.33", 
-      "confidence": "1.000", 
-      "name": "is", 
-      "time": "103.21"
-    }, 
-    {
-      "duration": "0.33", 
-      "confidence": "1.000", 
-      "name": "for", 
-      "time": "103.54"
-    }, 
-    {
-      "duration": "0.39", 
-      "confidence": "0.990", 
-      "name": "sissy", 
-      "time": "103.87"
-    }, 
-    {
-      "duration": "0.60", 
-      "confidence": "1.000", 
-      "name": "boys", 
-      "time": "104.26"
-    }, 
-    {
-      "duration": "0.24", 
-      "confidence": "1.000", 
-      "name": "or", 
-      "time": "105.40"
-    }, 
-    {
-      "duration": "0.15", 
-      "confidence": "1.000", 
-      "name": "how", 
-      "time": "105.64"
-    }, 
-    {
-      "duration": "0.60", 
-      "confidence": "1.000", 
-      "name": "difficult", 
-      "time": "105.79"
-    }, 
-    {
-      "duration": "0.18", 
-      "confidence": "1.000", 
-      "name": "it", 
-      "time": "106.42"
-    }, 
-    {
-      "duration": "0.36", 
-      "confidence": "1.000", 
-      "name": "is", 
-      "time": "106.60"
-    }, 
-    {
-      "duration": "0.42", 
-      "confidence": "1.000", 
-      "name": "for", 
-      "time": "106.96"
-    }, 
-    {
-      "duration": "0.93", 
-      "confidence": "1.000", 
-      "name": "tomboys", 
-      "time": "107.41"
-    }, 
-    {
-      "duration": "0.12", 
-      "confidence": "1.000", 
-      "name": "to", 
-      "time": "108.94"
-    }, 
-    {
-      "duration": "0.42", 
-      "confidence": "1.000", 
-      "name": "function", 
-      "time": "109.06"
-    }, 
-    {
-      "duration": "0.51", 
-      "confidence": "1.000", 
-      "name": "socially", 
-      "time": "109.48"
-    }, 
-    {
-      "duration": "0.36", 
-      "confidence": "1.000", 
-      "name": "without", 
-      "time": "109.99"
-    }, 
-    {
-      "duration": "0.27", 
-      "confidence": "1.000", 
-      "name": "being", 
-      "time": "110.35"
-    }, 
-    {
-      "duration": "0.48", 
-      "confidence": "1.000", 
-      "name": "bullied", 
-      "time": "110.62"
-    }, 
-    {
-      "duration": "0.12", 
-      "confidence": "1.000", 
-      "name": "or", 
-      "time": "111.10"
-    }, 
-    {
-      "duration": "0.45", 
-      "confidence": "1.000", 
-      "name": "without", 
-      "time": "111.22"
-    }, 
-    {
-      "duration": "0.33", 
-      "confidence": "1.000", 
-      "name": "being", 
-      "time": "111.67"
-    }, 
-    {
-      "duration": "0.57", 
-      "confidence": "1.000", 
-      "name": "teased", 
-      "time": "112.00"
-    }, 
-    {
-      "duration": "0.21", 
-      "confidence": "1.000", 
-      "name": "or", 
-      "time": "112.57"
-    }, 
-    {
-      "duration": "0.51", 
-      "confidence": "1.000", 
-      "name": "without", 
-      "time": "112.78"
-    }, 
-    {
-      "duration": "0.66", 
-      "confidence": "1.000", 
-      "name": "sometimes", 
-      "time": "113.29"
-    }, 
-    {
-      "duration": "0.45", 
-      "confidence": "1.000", 
-      "name": "suffering", 
-      "time": "114.22"
-    }, 
-    {
-      "duration": "0.42", 
-      "confidence": "1.000", 
-      "name": "threats", 
-      "time": "114.67"
-    }, 
-    {
-      "duration": "0.09", 
-      "confidence": "1.000", 
-      "name": "of", 
-      "time": "115.09"
-    }, 
-    {
-      "duration": "0.72", 
-      "confidence": "1.000", 
-      "name": "violence", 
-      "time": "115.18"
-    }, 
-    {
-      "duration": "0.24", 
-      "confidence": "1.000", 
-      "name": "or", 
-      "time": "117.28"
-    }, 
-    {
-      "duration": "0.36", 
-      "confidence": "1.000", 
-      "name": "without", 
-      "time": "117.52"
-    }, 
-    {
-      "duration": "0.12", 
-      "confidence": "1.000", 
-      "name": "their", 
-      "time": "117.88"
-    }, 
-    {
-      "duration": "0.48", 
-      "confidence": "1.000", 
-      "name": "parents", 
-      "time": "118.00"
-    }, 
-    {
-      "duration": "0.63", 
-      "confidence": "1.000", 
-      "name": "intervening", 
-      "time": "118.48"
-    }, 
-    {
-      "duration": "0.15", 
-      "confidence": "1.000", 
-      "name": "to", 
-      "time": "119.11"
-    }, 
-    {
-      "duration": "0.42", 
-      "confidence": "1.000", 
-      "name": "say", 
-      "time": "119.26"
-    }, 
-    {
-      "duration": "0.24", 
-      "confidence": "1.000", 
-      "name": "maybe", 
-      "time": "119.68"
-    }, 
-    {
-      "duration": "0.12", 
-      "confidence": "1.000", 
-      "name": "you", 
-      "time": "119.92"
-    }, 
-    {
-      "duration": "0.27", 
-      "confidence": "1.000", 
-      "name": "need", 
-      "time": "120.04"
-    }, 
-    {
-      "duration": "0.06", 
-      "confidence": "1.000", 
-      "name": "a", 
-      "time": "120.31"
-    }, 
-    {
-      "duration": "1.11", 
-      "confidence": "1.000", 
-      "name": "psychiatrist", 
-      "time": "120.37"
-    }, 
-    {
-      "duration": "0.30", 
-      "confidence": "1.000", 
-      "name": "or", 
-      "time": "121.48"
-    }, 
-    {
-      "duration": "0.18", 
-      "confidence": "1.000", 
-      "name": "why", 
-      "time": "121.99"
-    }, 
-    {
-      "duration": "0.27", 
-      "confidence": "1.000", 
-      "name": "can't", 
-      "time": "122.17"
-    }, 
-    {
-      "duration": "0.09", 
-      "confidence": "1.000", 
-      "name": "you", 
-      "time": "122.44"
-    }, 
-    {
-      "duration": "0.12", 
-      "confidence": "1.000", 
-      "name": "be", 
-      "time": "122.53"
-    }, 
-    {
-      "duration": "0.60", 
-      "confidence": "1.000", 
-      "name": "normal", 
-      "time": "122.65"
-    }, 
-    {
-      "duration": "0.03", 
-      "confidence": "0.900", 
-      "name": ".", 
-      "time": "123.25"
-    }, 
-    {
-      "duration": "0.45", 
-      "confidence": "1.000", 
-      "name": "So", 
-      "time": "123.43"
-    }, 
-    {
-      "duration": "0.09", 
-      "confidence": "1.000", 
-      "name": "you", 
-      "time": "124.60"
-    }, 
-    {
-      "duration": "0.21", 
-      "confidence": "1.000", 
-      "name": "know", 
-      "time": "124.69"
-    }, 
-    {
-      "duration": "0.51", 
-      "confidence": "1.000", 
-      "name": "there", 
-      "time": "124.90"
-    }, 
-    {
-      "duration": "0.66", 
-      "confidence": "1.000", 
-      "name": "are", 
-      "time": "125.65"
-    }, 
-    {
-      "duration": "0.75", 
-      "confidence": "1.000", 
-      "name": "institutional", 
-      "time": "127.21"
-    }, 
-    {
-      "duration": "0.78", 
-      "confidence": "1.000", 
-      "name": "powers", 
-      "time": "127.96"
-    }, 
-    {
-      "duration": "0.21", 
-      "confidence": "1.000", 
-      "name": "like", 
-      "time": "128.89"
-    }, 
-    {
-      "duration": "0.66", 
-      "confidence": "1.000", 
-      "name": "psychiatric", 
-      "time": "129.10"
-    }, 
-    {
-      "duration": "1.02", 
-      "confidence": "0.760", 
-      "name": "normalization", 
-      "time": "129.76"
-    }, 
-    {
-      "duration": "0.18", 
-      "confidence": "1.000", 
-      "name": "and", 
-      "time": "131.44"
-    }, 
-    {
-      "duration": "0.27", 
-      "confidence": "1.000", 
-      "name": "there", 
-      "time": "131.62"
-    }, 
-    {
-      "duration": "0.66", 
-      "confidence": "1.000", 
-      "name": "are", 
-      "time": "131.95"
-    }, 
-    {
-      "duration": "0.48", 
-      "confidence": "1.000", 
-      "name": "informal", 
-      "time": "134.38"
-    }, 
-    {
-      "duration": "0.30", 
-      "confidence": "1.000", 
-      "name": "kinds", 
-      "time": "134.86"
-    }, 
-    {
-      "duration": "0.09", 
-      "confidence": "1.000", 
-      "name": "of", 
-      "time": "135.16"
-    }, 
-    {
-      "duration": "0.69", 
-      "confidence": "1.000", 
-      "name": "practices", 
-      "time": "135.25"
-    }, 
-    {
-      "duration": "0.21", 
-      "confidence": "1.000", 
-      "name": "like", 
-      "time": "135.94"
-    }, 
-    {
-      "duration": "0.57", 
-      "confidence": "1.000", 
-      "name": "bullying", 
-      "time": "136.15"
-    }, 
-    {
-      "duration": "0.30", 
-      "confidence": "1.000", 
-      "name": "which", 
-      "time": "136.75"
-    }, 
-    {
-      "duration": "0.15", 
-      "confidence": "0.990", 
-      "name": "try", 
-      "time": "137.26"
-    }, 
-    {
-      "duration": "0.12", 
-      "confidence": "1.000", 
-      "name": "to", 
-      "time": "137.41"
-    }, 
-    {
-      "duration": "0.36", 
-      "confidence": "1.000", 
-      "name": "keep", 
-      "time": "137.53"
-    }, 
-    {
-      "duration": "0.18", 
-      "confidence": "1.000", 
-      "name": "us", 
-      "time": "137.89"
-    }, 
-    {
-      "duration": "0.12", 
-      "confidence": "1.000", 
-      "name": "in", 
-      "time": "138.07"
-    }, 
-    {
-      "duration": "0.15", 
-      "confidence": "1.000", 
-      "name": "our", 
-      "time": "138.19"
-    }, 
-    {
-      "duration": "0.45", 
-      "confidence": "0.990", 
-      "name": "gendered", 
-      "time": "138.34"
-    }, 
-    {
-      "duration": "0.75", 
-      "confidence": "1.000", 
-      "name": "place", 
-      "time": "138.79"
-    }, 
-    {
-      "duration": "0.33", 
-      "confidence": "0.880", 
-      "name": ".", 
-      "time": "139.54"
-    }, 
-    {
-      "duration": "0.20", 
-      "confidence": "0.890", 
-      "name": "There's", 
-      "time": "139.87"
-    }, 
-    {
-      "duration": "0.06", 
-      "confidence": "1.000", 
-      "name": "a", 
-      "time": "140.08"
-    }, 
-    {
-      "duration": "0.21", 
-      "confidence": "1.000", 
-      "name": "real", 
-      "time": "140.14"
-    }, 
-    {
-      "duration": "0.63", 
-      "confidence": "1.000", 
-      "name": "question", 
-      "time": "140.35"
-    }, 
-    {
-      "duration": "0.21", 
-      "confidence": "1.000", 
-      "name": "for", 
-      "time": "141.67"
-    }, 
-    {
-      "duration": "0.36", 
-      "confidence": "1.000", 
-      "name": "me", 
-      "time": "141.88"
-    }, 
-    {
-      "duration": "0.33", 
-      "confidence": "1.000", 
-      "name": "about", 
-      "time": "142.24"
-    }, 
-    {
-      "duration": "0.24", 
-      "confidence": "1.000", 
-      "name": "how", 
-      "time": "143.14"
-    }, 
-    {
-      "duration": "0.36", 
-      "confidence": "0.970", 
-      "name": "such", 
-      "time": "143.38"
-    }, 
-    {
-      "duration": "0.39", 
-      "confidence": "1.000", 
-      "name": "gender", 
-      "time": "143.86"
-    }, 
-    {
-      "duration": "0.36", 
-      "confidence": "1.000", 
-      "name": "norms", 
-      "time": "144.25"
-    }, 
-    {
-      "duration": "0.18", 
-      "confidence": "1.000", 
-      "name": "get", 
-      "time": "144.61"
-    }, 
-    {
-      "duration": "0.69", 
-      "confidence": "1.000", 
-      "name": "established", 
-      "time": "144.79"
-    }, 
-    {
-      "duration": "0.09", 
-      "confidence": "0.990", 
-      "name": "and", 
-      "time": "145.48"
-    }, 
-    {
-      "duration": "0.60", 
-      "confidence": "1.000", 
-      "name": "policed", 
-      "time": "145.57"
-    }, 
-    {
-      "duration": "0.33", 
-      "confidence": "1.000", 
-      "name": "and", 
-      "time": "146.65"
-    }, 
-    {
-      "duration": "0.18", 
-      "confidence": "0.980", 
-      "name": "what", 
-      "time": "146.98"
-    }, 
-    {
-      "duration": "0.12", 
-      "confidence": "1.000", 
-      "name": "the", 
-      "time": "147.16"
-    }, 
-    {
-      "duration": "0.30", 
-      "confidence": "1.000", 
-      "name": "best", 
-      "time": "147.28"
-    }, 
-    {
-      "duration": "0.21", 
-      "confidence": "1.000", 
-      "name": "way", 
-      "time": "147.58"
-    }, 
-    {
-      "duration": "0.21", 
-      "confidence": "1.000", 
-      "name": "is", 
-      "time": "147.79"
-    }, 
-    {
-      "duration": "0.18", 
-      "confidence": "1.000", 
-      "name": "to", 
-      "time": "148.00"
-    }, 
-    {
-      "duration": "0.60", 
-      "confidence": "1.000", 
-      "name": "disrupt", 
-      "time": "148.18"
-    }, 
-    {
-      "duration": "0.39", 
-      "confidence": "1.000", 
-      "name": "them", 
-      "time": "148.78"
-    }, 
-    {
-      "duration": "0.39", 
-      "confidence": "1.000", 
-      "name": "and", 
-      "time": "149.26"
-    }, 
-    {
-      "duration": "0.27", 
-      "confidence": "1.000", 
-      "name": "to", 
-      "time": "149.65"
-    }, 
-    {
-      "duration": "0.51", 
-      "confidence": "1.000", 
-      "name": "overcome", 
-      "time": "149.92"
-    }, 
-    {
-      "duration": "0.12", 
-      "confidence": "1.000", 
-      "name": "the", 
-      "time": "150.43"
-    }, 
-    {
-      "duration": "0.33", 
-      "confidence": "1.000", 
-      "name": "police", 
-      "time": "150.55"
-    }, 
-    {
-      "duration": "0.48", 
-      "confidence": "0.990", 
-      "name": "function", 
-      "time": "150.88"
-    }, 
-    {
-      "duration": "0.04", 
-      "confidence": "1.000", 
-      "name": ".", 
-      "time": "151.36"
-    }, 
-    {
-      "duration": "0.18", 
-      "confidence": "0.980", 
-      "name": "It's", 
-      "time": "151.81"
-    }, 
-    {
-      "duration": "0.24", 
-      "confidence": "1.000", 
-      "name": "my", 
-      "time": "151.99"
-    }, 
-    {
-      "duration": "0.36", 
-      "confidence": "1.000", 
-      "name": "view", 
-      "time": "152.23"
-    }, 
-    {
-      "duration": "0.45", 
-      "confidence": "1.000", 
-      "name": "that", 
-      "time": "152.59"
-    }, 
-    {
-      "duration": "0.39", 
-      "confidence": "1.000", 
-      "name": "gender", 
-      "time": "154.21"
-    }, 
-    {
-      "duration": "0.24", 
-      "confidence": "1.000", 
-      "name": "is", 
-      "time": "154.60"
-    }, 
-    {
-      "duration": "0.13", 
-      "confidence": "0.590", 
-      "name": "is", 
-      "time": "155.83"
-    }, 
-    {
-      "duration": "0.48", 
-      "confidence": "1.000", 
-      "name": "culturally", 
-      "time": "156.73"
-    }, 
-    {
-      "duration": "0.54", 
-      "confidence": "1.000", 
-      "name": "formed", 
-      "time": "157.21"
-    }, 
-    {
-      "duration": "0.18", 
-      "confidence": "1.000", 
-      "name": "but", 
-      "time": "158.17"
-    }, 
-    {
-      "duration": "0.15", 
-      "confidence": "1.000", 
-      "name": "it's", 
-      "time": "158.35"
-    }, 
-    {
-      "duration": "0.69", 
-      "confidence": "1.000", 
-      "name": "also", 
-      "time": "158.50"
-    }, 
-    {
-      "duration": "0.06", 
-      "confidence": "1.000", 
-      "name": "a", 
-      "time": "159.28"
-    }, 
-    {
-      "duration": "0.63", 
-      "confidence": "1.000", 
-      "name": "domain", 
-      "time": "159.34"
-    }, 
-    {
-      "duration": "0.30", 
-      "confidence": "1.000", 
-      "name": "of", 
-      "time": "160.00"
-    }, 
-    {
-      "duration": "0.48", 
-      "confidence": "1.000", 
-      "name": "agency", 
-      "time": "160.42"
-    }, 
-    {
-      "duration": "0.12", 
-      "confidence": "0.990", 
-      "name": "or", 
-      "time": "160.90"
-    }, 
-    {
-      "duration": "0.54", 
-      "confidence": "1.000", 
-      "name": "freedom", 
-      "time": "161.02"
-    }, 
-    {
-      "duration": "0.03", 
-      "confidence": "0.820", 
-      "name": ".", 
-      "time": "161.56"
-    }, 
-    {
-      "duration": "0.18", 
-      "confidence": "0.970", 
-      "name": "It's", 
-      "time": "161.83"
-    }, 
-    {
-      "duration": "0.33", 
-      "confidence": "1.000", 
-      "name": "most", 
-      "time": "162.01"
-    }, 
-    {
-      "duration": "0.66", 
-      "confidence": "1.000", 
-      "name": "important", 
-      "time": "162.34"
-    }, 
-    {
-      "duration": "0.57", 
-      "confidence": "1.000", 
-      "name": "to", 
-      "time": "163.00"
-    }, 
-    {
-      "duration": "0.45", 
-      "confidence": "1.000", 
-      "name": "resist", 
-      "time": "163.66"
-    }, 
-    {
-      "duration": "0.18", 
-      "confidence": "1.000", 
-      "name": "the", 
-      "time": "164.26"
-    }, 
-    {
-      "duration": "0.66", 
-      "confidence": "1.000", 
-      "name": "violence", 
-      "time": "164.44"
-    }, 
-    {
-      "duration": "0.27", 
-      "confidence": "1.000", 
-      "name": "that", 
-      "time": "165.34"
-    }, 
-    {
-      "duration": "0.33", 
-      "confidence": "1.000", 
-      "name": "is", 
-      "time": "165.61"
-    }, 
-    {
-      "duration": "0.78", 
-      "confidence": "0.990", 
-      "name": "imposed", 
-      "time": "166.66"
-    }, 
-    {
-      "duration": "0.18", 
-      "confidence": "1.000", 
-      "name": "by", 
-      "time": "167.44"
-    }, 
-    {
-      "duration": "0.33", 
-      "confidence": "1.000", 
-      "name": "ideal", 
-      "time": "167.62"
-    }, 
-    {
-      "duration": "0.33", 
-      "confidence": "1.000", 
-      "name": "gender", 
-      "time": "167.95"
-    }, 
-    {
-      "duration": "0.45", 
-      "confidence": "1.000", 
-      "name": "norms", 
-      "time": "168.28"
-    }, 
-    {
-      "duration": "0.75", 
-      "confidence": "1.000", 
-      "name": "especially", 
-      "time": "168.94"
-    }, 
-    {
-      "duration": "0.39", 
-      "confidence": "1.000", 
-      "name": "against", 
-      "time": "170.17"
-    }, 
-    {
-      "duration": "0.36", 
-      "confidence": "1.000", 
-      "name": "those", 
-      "time": "170.56"
-    }, 
-    {
-      "duration": "0.18", 
-      "confidence": "1.000", 
-      "name": "who", 
-      "time": "170.92"
-    }, 
-    {
-      "duration": "0.36", 
-      "confidence": "1.000", 
-      "name": "are", 
-      "time": "171.10"
-    }, 
-    {
-      "duration": "0.54", 
-      "confidence": "0.990", 
-      "name": "gender", 
-      "time": "171.79"
-    }, 
-    {
-      "duration": "0.48", 
-      "confidence": "1.000", 
-      "name": "different", 
-      "time": "172.33"
-    }, 
-    {
-      "duration": "0.18", 
-      "confidence": "1.000", 
-      "name": "who", 
-      "time": "172.90"
-    }, 
-    {
-      "duration": "0.15", 
-      "confidence": "1.000", 
-      "name": "are", 
-      "time": "173.08"
-    }, 
-    {
-      "duration": "0.24", 
-      "confidence": "0.980", 
-      "name": "not", 
-      "time": "173.23"
-    }, 
-    {
-      "duration": "0.90", 
-      "confidence": "1.000", 
-      "name": "nonconforming", 
-      "time": "173.56"
-    }, 
-    {
-      "duration": "0.18", 
-      "confidence": "0.960", 
-      "name": "in", 
-      "time": "174.55"
-    }, 
-    {
-      "duration": "0.26", 
-      "confidence": "0.960", 
-      "name": "their", 
-      "time": "174.72"
-    }, 
-    {
-      "duration": "0.12", 
-      "confidence": "0.680", 
-      "name": "in", 
-      "time": "175.09"
-    }, 
-    {
-      "duration": "0.15", 
-      "confidence": "1.000", 
-      "name": "their", 
-      "time": "175.22"
-    }, 
-    {
-      "duration": "0.30", 
-      "confidence": "1.000", 
-      "name": "gender", 
-      "time": "175.39"
-    }, 
-    {
-      "duration": "0.63", 
-      "confidence": "1.000", 
-      "name": "presentation", 
-      "time": "175.69"
-    }, 
-    {
-      "duration": "0.00", 
-      "confidence": "1.000", 
-      "name": ".", 
-      "time": "176.32"
-    }
-  ], 
-  "format": "1.0"
-}
+]

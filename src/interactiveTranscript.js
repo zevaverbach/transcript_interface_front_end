@@ -10,18 +10,7 @@ class InteractiveTranscript extends Component {
 
     state = {
         currentWordIndex: 0,
-        transcript: transcript.words.map((word, index) => (
-            {
-                wordStart: parseFloat(word.time),
-                wordEnd: parseFloat(word.time) + parseFloat(word.duration),
-                word: word.name,
-                confidence: parseFloat(word.confidence),
-                index: index,
-                space: word.name === '.'
-                    ? ''
-                    : ' '
-            }
-        )),
+        transcript: transcript,
         playPosition: 0,
         play: false,
         updatePlayer: false,
@@ -61,24 +50,24 @@ class InteractiveTranscript extends Component {
             thirdTranscriptChunk = this.state.transcript.slice(index + 1).map(word => Object.assign(word, { index: word.index + 1 }))
         }
 
-        const firstWordNextPhrase = thirdTranscriptChunk[0].word
+        const firstWordNextPhrase = thirdTranscriptChunk[0]
 
-        if (endsSentence(punc) && !isCapitalized(firstWordNextPhrase)) {
+        if (endsSentence(punc)
+            && !isCapitalized(firstWordNextPhrase.word)
+            && !firstWordNextPhrase.alwaysCapitalized) {
             thirdTranscriptChunk = [Object.assign(firstWordNextPhrase, {
-                word: toTitleCase(firstWordNextPhrase),
+                word: toTitleCase(firstWordNextPhrase.word),
                 key: index + 2,
                 index: index + 2,
                 wordStart: nextWordStart,
             })].concat(thirdTranscriptChunk.slice(1))
         }
 
-        console.log(punc)
-        console.log(firstWordNextPhrase)
-        console.log(isCapitalized(firstWordNextPhrase))
-
-        if (punc === ',' && isCapitalized(firstWordNextPhrase)) {
+        if (punc === ','
+            && isCapitalized(firstWordNextPhrase.word)
+            && !firstWordNextPhrase.alwaysCapitalized) {
             thirdTranscriptChunk = [Object.assign(firstWordNextPhrase, {
-                word: firstWordNextPhrase.toLowerCase(),
+                word: firstWordNextPhrase.word.toLowerCase(),
                 key: index + 2,
                 index: index + 2,
                 wordStart: nextWordStart,

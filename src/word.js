@@ -23,7 +23,7 @@ const Word = props => {
 
     return (
         <Fragment>
-            <span>{isPunc(props.word.word) ? '' : ' '}</span>
+            <span>{props.word.space}</span>
             <span
                 onClick={onClick}
                 style={style}>{props.word.word}</span>

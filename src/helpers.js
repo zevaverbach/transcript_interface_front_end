@@ -1,3 +1,5 @@
+import nlp from 'compromise'
+
 export const toTitleCase = word => word.split('').map((letter, index) => index === 0 ? letter.toUpperCase() : letter).join('');
 
 export const hhmmssToSeconds = hhmmss => {
@@ -29,6 +31,8 @@ const shouldAlwaysBeCapitalized = word => {
     // check for proper nouns
     // "I"
 }
+
+console.log(nlp('Portsmouth').places())
 
 export const isCapitalized = word => word === toTitleCase(word)
 export const isPunc = word => ['.', '?', ',', ':'].includes(word)
