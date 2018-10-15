@@ -11,6 +11,8 @@ class InteractiveTranscript extends Component {
     state = {
         currentWordIndex: 0,
         transcript: transcript,
+        undoQueue: [],
+        redoQueue: [],
         playPosition: 0,
         play: false,
         updatePlayer: false,
@@ -42,12 +44,19 @@ class InteractiveTranscript extends Component {
             index: index + 1
         }]
 
+        this.setState({
+            undoQueue: this.state.undoQueue.concat(punctuationChunk)
+        })
+
+
         let thirdTranscriptChunk = []
 
         if (isPunc(nextWord)) {
             thirdTranscriptChunk = this.state.transcript.slice(index + 2)
         } else {
-            thirdTranscriptChunk = this.state.transcript.slice(index + 1).map(word => Object.assign(word, { index: word.index + 1 }))
+            thirdTranscriptChunk = this.state.transcript
+                .slice(index + 1)
+                .map(word => Object.assign(word, { index: word.index + 1 }))
         }
 
         const firstWordNextPhrase = thirdTranscriptChunk[0]
@@ -55,23 +64,27 @@ class InteractiveTranscript extends Component {
         if (endsSentence(punc)
             && !isCapitalized(firstWordNextPhrase.word)
             && !firstWordNextPhrase.alwaysCapitalized) {
+
             thirdTranscriptChunk = [Object.assign(firstWordNextPhrase, {
                 word: toTitleCase(firstWordNextPhrase.word),
                 key: index + 2,
                 index: index + 2,
                 wordStart: nextWordStart,
-            })].concat(thirdTranscriptChunk.slice(1))
+            })]
+                .concat(thirdTranscriptChunk.slice(1))
         }
 
         if (punc === ','
             && isCapitalized(firstWordNextPhrase.word)
             && !firstWordNextPhrase.alwaysCapitalized) {
+
             thirdTranscriptChunk = [Object.assign(firstWordNextPhrase, {
                 word: firstWordNextPhrase.word.toLowerCase(),
                 key: index + 2,
                 index: index + 2,
                 wordStart: nextWordStart,
-            })].concat(thirdTranscriptChunk.slice(1))
+            })]
+                .concat(thirdTranscriptChunk.slice(1))
         }
 
         this.setState({
@@ -87,6 +100,7 @@ class InteractiveTranscript extends Component {
                 break;
             case 188: // comma
                 this.insertPuncAfterCurrentWord(',')
+
                 break
             case 191: // question mark (or slash)
                 this.insertPuncAfterCurrentWord('?')
@@ -99,11 +113,103 @@ class InteractiveTranscript extends Component {
                     this.goToNextWord()
                 }
                 break
-            case 186: // colon
-                if (event.shiftKey) this.insertPuncAfterCurrentWord(':')
+            case 222:
+                if (event.metaKey && event.ctrlKey) { // ctrl + meta + '
+                    this.goToPreviousPhrase();
+                }
+                break
+            case 186:
+                if (event.metaKey && event.ctrlKey) { // ctrl + meta + ;
+                    this.goToNextPhrase();
+                } else { // colon
+                    if (event.shiftKey) this.insertPuncAfterCurrentWord(':')
+                }
+                break
+            case 90:
+                if (event.metaKey && event.shiftKey) { // meta + shift + z
+                    event.preventDefault()
+                    this.redo()
+                } else if (event.metaKey) { // meta + z
+                    event.preventDefault()
+                    this.undo()
+                }
                 break
             default:
                 return
+        }
+    }
+
+    undo = () => {
+        if (this.state.undoQueue.length > 0) {
+            const wordToRemove = this.state.undoQueue.slice(-1)[0]
+            const previousState = this.state.transcript
+                .filter(word => word.index !== wordToRemove.index)
+                .map(word => word.index > wordToRemove.index ? Object.assign(word, { index: word.index - 1 }) : word)
+
+            this.setState({
+                transcript: previousState,
+                undoQueue: this.state.undoQueue.slice(0, -1),
+                redoQueue: this.state.redoQueue.concat(wordToRemove)
+            })
+        }
+    }
+
+    redo = () => {
+        if (this.state.redoQueue.length > 0) {
+            const wordToAdd = this.state.redoQueue.slice(-1)[0]
+
+            let previousState = this.state.transcript
+            previousState.splice(wordToAdd.index, 0, wordToAdd)
+            previousState = previousState
+                .map(word => word.index >= wordToAdd.index ? Object.assign(word, { index: word.index + 1 }) : word)
+
+            this.setState({
+                transcript: previousState,
+                redoQueue: this.state.redoQueue.slice(0, -1),
+                undoQueue: this.state.undoQueue.concat(wordToAdd)
+            })
+        }
+    }
+
+    findClosestPunctuation = (nextPrev) => {
+
+        let iterateOn = []
+
+        if (nextPrev === 'next') {
+            iterateOn = this.state.transcript.slice(this.state.currentWordIndex + 1)
+        } else {
+            iterateOn = this.state.transcript.slice(0, this.state.currentWordIndex - 1).reverse()
+        }
+        for (let word of iterateOn) {
+            if (isPunc(word.word)) {
+                // prevent iterating past the beginning and back to the end when searching for previous
+                if (nextPrev === 'previous' && word.index > this.state.currentWordIndex) return 0
+                return word.index
+            }
+        }
+        if (nextPrev === 'previous') return 0; // hack to get back to the beginning when searching for previous
+    }
+
+    goToNextPhrase = () => {
+        const nextPunctuationIndex = this.findClosestPunctuation('next')
+        if (nextPunctuationIndex !== null && nextPunctuationIndex < this.state.transcript.length - 1) {
+            this.setState({
+                currentWordIndex: nextPunctuationIndex + 1,
+                playPosition: this.state.transcript[nextPunctuationIndex + 1].wordStart,
+                updatePlayer: true
+            })
+        }
+    }
+
+    goToPreviousPhrase = () => {
+        let previousPunctuationIndex = this.findClosestPunctuation('previous')
+        if (previousPunctuationIndex === 0) previousPunctuationIndex = -1
+        if (previousPunctuationIndex) {
+            this.setState({
+                currentWordIndex: previousPunctuationIndex + 1,
+                playPosition: this.state.transcript[previousPunctuationIndex + 1].wordStart,
+                updatePlayer: true
+            })
         }
     }
 
@@ -119,10 +225,11 @@ class InteractiveTranscript extends Component {
             this.setState({
                 currentWordIndex: this.state.currentWordIndex + numWordsForward,
                 playPosition: selectedWord.wordStart,
-                updatePlayer: true
+                updatePlayer: true,
             })
         }
     }
+
     goToPreviousWord = () => {
         if (this.state.currentWordIndex > 0) {
             let numWordsBack = 1
@@ -139,7 +246,6 @@ class InteractiveTranscript extends Component {
             })
         }
     }
-
 
     getNewWordIndex = newPosition => {
         for (let wordObject of this.state.transcript) {

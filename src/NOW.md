@@ -1,2 +1,2 @@
-1. Undo
-2. bind semicolon to play/windback
+1. move highlight to nearby word on undo/redo
+2. don't render paragraphs on every state change

@@ -17,13 +17,9 @@ const Word = props => {
         style = Object.assign(style, { textDecoration: 'underline' })
     }
 
-    if (props.currentlyPlaying) {
-        console.log(props.word.word, props.word.wordStart, props.word.index)
-    }
-
     return (
         <Fragment>
-            <span>{props.word.space}</span>
+            <span onClick={onClick}>{props.word.space}</span>
             <span
                 onClick={onClick}
                 style={style}>{props.word.word}</span>
