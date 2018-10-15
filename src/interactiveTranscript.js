@@ -142,9 +142,16 @@ class InteractiveTranscript extends Component {
     undo = () => {
         if (this.state.undoQueue.length > 0) {
             const wordToRemove = this.state.undoQueue.slice(-1)[0]
-            const previousState = this.state.transcript
+            let previousState = this.state.transcript
                 .filter(word => word.index !== wordToRemove.index)
                 .map(word => word.index > wordToRemove.index ? Object.assign(word, { index: word.index - 1 }) : word)
+
+            const nextWord = previousState[wordToRemove.index]
+            if (!nextWord.alwaysCapitalized && isCapitalized(nextWord.word) && endsSentence(wordToRemove.word)) {
+                previousState = previousState.map(word => word === nextWord
+                    ? Object.assign(nextWord, { word: nextWord.word.toLowerCase() })
+                    : word)
+            }
 
             this.setState({
                 transcript: previousState,
@@ -159,9 +166,18 @@ class InteractiveTranscript extends Component {
             const wordToAdd = this.state.redoQueue.slice(-1)[0]
 
             let previousState = this.state.transcript
-            previousState.splice(wordToAdd.index, 0, wordToAdd)
             previousState = previousState
                 .map(word => word.index >= wordToAdd.index ? Object.assign(word, { index: word.index + 1 }) : word)
+            previousState.splice(wordToAdd.index, 0, wordToAdd)
+
+            const nextWord = previousState[wordToAdd.index + 1]
+            console.log(nextWord)
+            if (endsSentence(wordToAdd.word) && !isCapitalized(nextWord.word)) {
+                previousState = previousState.map(word => word === nextWord
+                    ? Object.assign(nextWord, { word: toTitleCase(nextWord.word) })
+                    : word)
+            }
+
 
             this.setState({
                 transcript: previousState,
