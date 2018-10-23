@@ -13,10 +13,6 @@ const Word = props => {
         ? { color: 'blue', fontStyle: 'bold', backgroundColor: 'gray' }
         : {}
 
-    if (props.word.confidence <= props.confidenceThreshold && props.word.word !== '.') {
-        style = Object.assign(style, { textDecoration: 'underline' })
-    }
-
     return (
         <Fragment>
             <span onClick={onClick}>{props.word.space}</span>

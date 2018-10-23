@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import MediaPlayer from './mediaPlayer';
 import Transcript from './transcript';
-// import ConfidenceSlider from './confidenceSlider';
 import transcript from './transcript.json';
 import { isPunc, toTitleCase, isCapitalized, endsSentence } from './helpers'
 
@@ -16,7 +15,6 @@ class InteractiveTranscript extends Component {
         playPosition: 0,
         play: false,
         updatePlayer: false,
-        confidenceThreshold: .5,
     }
 
     componentDidMount() {
@@ -272,6 +270,7 @@ class InteractiveTranscript extends Component {
     }
 
     onTimeUpdate = newPosition => {
+        if (newPosition === this.state.playPosition) return
         const newWordIndex = this.getNewWordIndex(newPosition)
         if (newWordIndex) {
             this.setState({ currentWordIndex: newWordIndex })
@@ -283,8 +282,6 @@ class InteractiveTranscript extends Component {
         currentWordIndex: word.index,
         updatePlayer: true,
     })
-
-    handleConfidenceThresholdChange = confidenceThreshold => this.setState({ confidenceThreshold })
 
     render() {
         return (
@@ -299,15 +296,10 @@ class InteractiveTranscript extends Component {
                     />
 
                 </div>
-                {/* <div>
-                    <ConfidenceSlider onChange={this.handleConfidenceThresholdChange} />
-                    <span>ASR Confidence Threshold: {(this.state.confidenceThreshold * 100).toPrecision(2)}%</span>
-                </div> */}
                 <div>
                     <Transcript
                         transcript={this.state.transcript}
                         currentWordIndex={this.state.currentWordIndex}
-                        confidenceThreshold={this.state.confidenceThreshold}
                         onClickWord={this.onClickWord}
                     />
                 </div>

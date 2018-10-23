@@ -25,7 +25,6 @@ const Transcript = props => {
                     onClickWord={props.onClickWord}
                     key={wordObject.index}
                     words={paragraph}
-                    confidenceThreshold={props.confidenceThreshold}
                     includesCurrentWord={includesCurrentWord}
                     currentWordIndex={props.currentWordIndex} />)
             paragraph = [];
