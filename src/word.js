@@ -9,13 +9,31 @@ const Word = props => {
         if (!isPunc(props.word.word)) props.onClick(props.word)
     }
 
-    let style = props.selected && !isPunc(props.word.word)
-        ? { color: 'blue', fontStyle: 'bold', backgroundColor: 'gray' }
-        : {}
+    let style = {};
+    if (props.selected && !isPunc(props.word.word)) {
+        style = { color: 'blue', fontStyle: 'bold', backgroundColor: 'gray' }
+    }
+
+    if (props.selected && props.offset) {
+        style = { color: 'blue', fontStyle: 'bold', backgroundColor: 'gray' }
+    }
+
+    const renderSpace = () => {
+
+        if (props.offset === 0 || (props.offset < 0 && props.word.index === props.firstSelectedWordIndex)) {
+            return <span onClick={onClick}>{props.word.space}</span>
+        } else {
+            return <span
+                onClick={onClick}
+                style={style}
+            >{props.word.space}
+            </span>
+        }
+    }
 
     return (
         <Fragment>
-            <span onClick={onClick}>{props.word.space}</span>
+            {renderSpace()}
             <span
                 onClick={onClick}
                 style={style}>{props.word.word}</span>

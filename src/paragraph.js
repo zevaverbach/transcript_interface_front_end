@@ -26,6 +26,12 @@ const Paragraph = props =>
             }
 
 
+            let firstSelectedWordIndex;
+            if (offset >= 0) {
+                firstSelectedWordIndex = start
+            } else {
+                firstSelectedWordIndex = start + offset
+            }
 
             return (
                 <Word
@@ -34,6 +40,8 @@ const Paragraph = props =>
                     onClick={props.onClickWord}
                     confidenceThreshold={props.confidenceThreshold}
                     selected={selected}
+                    offset={offset}
+                    firstSelectedWordIndex={firstSelectedWordIndex}
                 />
             )
         })}

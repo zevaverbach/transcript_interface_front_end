@@ -37,7 +37,7 @@ class InteractiveTranscript extends Component {
                 }
                 break;
             // case 13: // enter
-            //     this.editWord();
+            //     this.edit();
             //     break;
             case 190: // period
                 this.insertPuncAfterSelectedWords('.')
