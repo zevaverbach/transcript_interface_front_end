@@ -381,7 +381,7 @@ class InteractiveTranscript extends Component {
     }
 
     onClickWord = word => this.setState({
-        playPosition: word.wordStart,
+        playPosition: word.wordStart + Math.random() * .1,
         selectedWordIndices: {
             start: word.index,
             offset: 0,
