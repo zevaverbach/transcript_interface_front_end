@@ -58,8 +58,10 @@ class MediaPlayer extends Component {
     componentWillReceiveProps(nextProps) {
         if (this.props.updatePlayer
             && this.state.player
-            && this.state.playPosition !== nextProps.playPosition) {
+            && this.state.playPosition !== nextProps.playPosition
+        ) {
 
+            console.log(nextProps.playPosition)
             this.state.player.currentTime = nextProps.playPosition;
             this.setState({ playPosition: nextProps.playPosition })
 

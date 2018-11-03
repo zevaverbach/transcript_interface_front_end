@@ -24,12 +24,71 @@ class InteractiveTranscript extends Component {
         document.addEventListener('keydown', this.handleKeyDown)
     }
 
+    handleKeyDown = event => {
+        switch (event.keyCode) {
+            case 39:
+                if (event.shiftKey) { // shift + left
+                    this.increaseWordSelection();
+                }
+                break;
+            case 37:
+                if (event.shiftKey) { // shift + left
+                    this.decreaseWordSelection();
+                }
+                break;
+            // case 13: // enter
+            //     this.editWord();
+            //     break;
+            case 190: // period
+                this.insertPuncAfterSelectedWords('.')
+                break;
+            case 188: // comma
+                this.insertPuncAfterSelectedWords(',')
+                break
+            case 191: // question mark (or slash)
+                this.insertPuncAfterSelectedWords('?')
+                break
+            case 9: // tab
+                event.preventDefault()
+                if (event.shiftKey) {
+                    this.goToPreviousWord();
+                } else {
+                    this.goToNextWord()
+                }
+                break
+            case 222:
+                if (event.metaKey && event.ctrlKey) { // ctrl + meta + '
+                    this.goToPreviousPhrase();
+                }
+                break
+            case 186:
+                if (event.metaKey && event.ctrlKey) { // ctrl + meta + ;
+                    this.goToNextPhrase();
+                } else { // colon
+                    if (event.shiftKey) this.insertPuncAfterSelectedWords(':')
+                }
+                break
+            case 90:
+                if (event.metaKey && event.shiftKey) { // meta + shift + z
+                    event.preventDefault()
+                    this.redo()
+                } else if (event.metaKey) { // meta + z
+                    event.preventDefault()
+                    this.undo()
+                }
+                break
+            default:
+                return
+        }
+    }
+
+
     wordAtIndex = index => this.state.transcript[index]
 
     insertPuncAfterSelectedWords = punc => {
 
         const { transcript, selectedWordIndices, undoQueue } = this.state
-        const index = selectedWordIndices.start + selectedWordIndices.offset - 1;
+        const index = selectedWordIndices.start + selectedWordIndices.offset;
         const nextWordObject = this.wordAtIndex(index + 1)
         const nextWordStart = nextWordObject.wordStart
         const nextWord = nextWordObject.word
@@ -123,65 +182,6 @@ class InteractiveTranscript extends Component {
         })
     }
 
-    handleKeyDown = event => {
-        switch (event.keyCode) {
-            case 39:
-                if (event.shiftKey) { // shift + left
-                    this.increaseWordSelection();
-                }
-                break;
-            case 37:
-                if (event.shiftKey) { // shift + left
-                    this.decreaseWordSelection();
-                }
-                break;
-            // case 13: // enter
-            //     this.editWord();
-            //     break;
-            case 190: // period
-                this.insertPuncAfterSelectedWords('.')
-                break;
-            case 188: // comma
-                this.insertPuncAfterSelectedWords(',')
-
-                break
-            case 191: // question mark (or slash)
-                this.insertPuncAfterSelectedWords('?')
-                break
-            case 9: // tab
-                event.preventDefault()
-                if (event.shiftKey) {
-                    this.goToPreviousWord();
-                } else {
-                    this.goToNextWord()
-                }
-                break
-            case 222:
-                if (event.metaKey && event.ctrlKey) { // ctrl + meta + '
-                    this.goToPreviousPhrase();
-                }
-                break
-            case 186:
-                if (event.metaKey && event.ctrlKey) { // ctrl + meta + ;
-                    this.goToNextPhrase();
-                } else { // colon
-                    if (event.shiftKey) this.insertPuncAfterSelectedWords(':')
-                }
-                break
-            case 90:
-                if (event.metaKey && event.shiftKey) { // meta + shift + z
-                    event.preventDefault()
-                    this.redo()
-                } else if (event.metaKey) { // meta + z
-                    event.preventDefault()
-                    this.undo()
-                }
-                break
-            default:
-                return
-        }
-    }
-
     undo = () => {
         if (this.state.undoQueue.length > 0) {
             const wordToRemove = this.state.undoQueue.slice(-1)[0]
@@ -236,14 +236,14 @@ class InteractiveTranscript extends Component {
         let iterateOn = []
 
         if (nextPrev === 'next') {
-            iterateOn = transcript.slice(selectedWordIndices.last + 1)
+            iterateOn = transcript.slice(selectedWordIndices.start + selectedWordIndices.offset + 1)
         } else {
-            iterateOn = transcript.slice(0, selectedWordIndices.first - 1).reverse()
+            iterateOn = transcript.slice(0, selectedWordIndices.start - 1).reverse()
         }
         for (let word of iterateOn) {
             if (isPunc(word.word)) {
                 // prevent iterating past the beginning and back to the end when searching for previous
-                if (nextPrev === 'previous' && word.index > selectedWordIndices.first) return 0
+                if (nextPrev === 'previous' && word.index > selectedWordIndices.start) return 0
                 return word.index
             }
         }
@@ -256,8 +256,8 @@ class InteractiveTranscript extends Component {
         if (nextPunctuationIndex !== null && nextPunctuationIndex < transcript.length - 1) {
             this.setState({
                 selectedWordIndices: {
-                    first: nextPunctuationIndex + 1,
-                    last: nextPunctuationIndex + 2,
+                    start: nextPunctuationIndex + 1,
+                    offset: 0,
                 },
                 playPosition: this.wordAtIndex(nextPunctuationIndex + 1).wordStart,
                 updatePlayer: true
@@ -269,12 +269,13 @@ class InteractiveTranscript extends Component {
         let previousPunctuationIndex = this.findClosestPunctuation('previous')
         if (previousPunctuationIndex === 0) previousPunctuationIndex = -1
         if (previousPunctuationIndex) {
+            const playPosition = this.wordAtIndex(previousPunctuationIndex + 1).wordStart
             this.setState({
                 selectedWordIndices: {
-                    first: previousPunctuationIndex + 1,
-                    last: previousPunctuationIndex + 2,
+                    start: previousPunctuationIndex + 1,
+                    offset: 0,
                 },
-                playPosition: this.wordAtIndex(previousPunctuationIndex + 1).wordStart,
+                playPosition: playPosition - (Math.random() * .1),
                 updatePlayer: true
             })
         }
@@ -373,7 +374,7 @@ class InteractiveTranscript extends Component {
             this.setState({
                 selectedWordIndices: {
                     start: newWordIndex,
-                    offset: 1,
+                    offset: 0,
                 },
             })
         }
@@ -383,7 +384,7 @@ class InteractiveTranscript extends Component {
         playPosition: word.wordStart,
         selectedWordIndices: {
             start: word.index,
-            offset: 1,
+            offset: 0,
         },
         updatePlayer: true,
     })
