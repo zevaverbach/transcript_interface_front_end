@@ -21,6 +21,11 @@ class MediaPlayer extends Component {
         Mousetrap.bind(';', () => {
             this.state.player.playbackRate = 1;
             if (this.state.player.paused) {
+                console.log(this.state.player.duration)
+                console.log(this.state.player.currentTime)
+                if (this.state.player.currentTime === this.state.player.duration) {
+                    this.state.player.currentTime -= 1.65
+                }
                 this.state.player.play();
             } else {
                 this.state.player.currentTime -= 1.65
