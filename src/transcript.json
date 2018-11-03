@@ -3915,8 +3915,8 @@
         "index": 434
     },
     {
-        "wordStart": 176.32,
-        "wordEnd": 176.32,
+        "wordStart": null,
+        "wordEnd": null,
         "confidence": 1.0,
         "word": ".",
         "space": "",

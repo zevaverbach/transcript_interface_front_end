@@ -9,7 +9,7 @@ const Word = props => {
         if (!isPunc(props.word.word)) props.onClick(props.word)
     }
 
-    let style = props.currentlyPlaying && !isPunc(props.word.word)
+    let style = props.selected && !isPunc(props.word.word)
         ? { color: 'blue', fontStyle: 'bold', backgroundColor: 'gray' }
         : {}
 

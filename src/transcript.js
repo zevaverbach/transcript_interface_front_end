@@ -8,16 +8,10 @@ const Transcript = props => {
 
     const paragraphs = [];
     let paragraph = [];
-    let currentWordIndexFound = false;
-    let includesCurrentWord = false;
 
     for (let wordObject of props.transcript) {
 
         paragraph.push(wordObject)
-
-        if (!currentWordIndexFound && wordObject.index === props.currentWordIndex) {
-            includesCurrentWord = true
-        }
 
         if (paragraph.length >= 80 && wordObject.word === '.') {
             paragraphs.push(
@@ -25,10 +19,8 @@ const Transcript = props => {
                     onClickWord={props.onClickWord}
                     key={wordObject.index}
                     words={paragraph}
-                    includesCurrentWord={includesCurrentWord}
-                    currentWordIndex={props.currentWordIndex} />)
+                    selectedWordIndices={props.selectedWordIndices} />)
             paragraph = [];
-            includesCurrentWord = false;
         }
     }
     return paragraphs;
