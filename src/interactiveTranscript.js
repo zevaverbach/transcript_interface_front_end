@@ -51,6 +51,16 @@ class InteractiveTranscript extends Component {
             case 191: // question mark (or slash)
                 this.insertPuncAfterSelectedWords('?')
                 break
+            case 49: // exclamation point
+                if (event.shiftKey) {
+                    this.insertPuncAfterSelectedWords('!')
+                }
+                break
+            case 186: // colon
+                if (event.shiftKey) {
+                    this.insertPuncAfterSelectedWords(':')
+                }
+                break
             case 9: // tab
                 event.preventDefault()
                 if (event.shiftKey) {
