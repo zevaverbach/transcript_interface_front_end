@@ -56,11 +56,6 @@ class InteractiveTranscript extends Component {
                     this.insertPuncAfterSelectedWords('!')
                 }
                 break
-            case 186: // colon
-                if (event.shiftKey) {
-                    this.insertPuncAfterSelectedWords(':')
-                }
-                break
             case 9: // tab
                 event.preventDefault()
                 if (event.shiftKey) {
