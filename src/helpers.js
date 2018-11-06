@@ -27,5 +27,10 @@ export const hhmmssToSeconds = hhmmss => {
 
 
 export const isCapitalized = word => word === toTitleCase(word)
-export const isPunc = word => ['.', '?', ',', ':'].includes(word)
-export const endsSentence = word => ['.', '?', ':'].includes(word)
+export const isPunc = word => ['.', '?', ',', ':', '"', '!'].includes(word)
+export const endsSentence = word => ['.', '?', ':', '!'].includes(word)
+
+export const alwaysCapitalized = word => {
+    // TODO: call an endpoint for this (use code already in use in Python)
+    return word === 'I'
+}

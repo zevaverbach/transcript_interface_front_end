@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import MediaPlayer from './mediaPlayer';
 import Transcript from './transcript';
 import transcript from './transcript.json';
-import { isPunc, toTitleCase, isCapitalized, endsSentence } from './helpers'
+import { isPunc, toTitleCase, isCapitalized, endsSentence, alwaysCapitalized } from './helpers'
 
 
 class InteractiveTranscript extends Component {
@@ -59,6 +59,8 @@ class InteractiveTranscript extends Component {
             case 222:
                 if (event.metaKey && event.ctrlKey) { // ctrl + meta + '
                     this.goToPreviousPhrase();
+                } else if (!event.altKey) {
+                    this.surroundSelectionWithQuotes();
                 }
                 break
             case 186:
@@ -82,75 +84,125 @@ class InteractiveTranscript extends Component {
         }
     }
 
+    firstSelectedWordIndex = () => {
+        const { selectedWordIndices } = this.state
+        const { offset, start } = selectedWordIndices
+        return offset < 0 ? start + offset : start
+    }
+
+    lastSelectedWordIndex = () => {
+        const { selectedWordIndices } = this.state
+        const { offset, start } = selectedWordIndices
+        return offset > 0 ? start + offset : start
+    }
+
+    selectedWords = () => this.transcript.slice(this.firstSelectedWordIndex(), this.lastSelectedWordIndex() + 1)
+
+    surroundSelectionWithQuotes = () => {
+        console.log(this.firstSelectedWordIndex())
+        console.log(this.lastSelectedWordIndex())
+        this.insertWords(['"'], this.firstSelectedWordIndex())
+        this.insertWords(['"'], this.lastSelectedWordIndex() + 1)
+    }
+
+    insertWords = (words, index, replaceUpToIndex = false) => {
+
+        if (replaceUpToIndex && replaceUpToIndex < index) {
+            throw Error('replaceUpToIndex must be equal to or greater than index')
+        }
+
+        const { transcript, undoQueue } = this.state
+
+        // TODO: check if a given word is punctuation, and act accordingly:
+        // wordStart and wordEnd are null
+        // capitalization of next word after a period/question mark/exclamation
+        // un-capitalization of next word if a period/q/ex is replaced with a non-terminating punc
+
+        // TODO: refactor undo/redo to store 'types' of changes
+        // this is in order to differentiate insertions and deletions from replacements
+
+        const firstTranscriptChunk = transcript.slice(0, index)
+
+        const newWordsTemplate = this.wordAtIndex(index)
+
+        const newWords = words.map((word, idx) => {
+            return {
+                ...newWordsTemplate,
+                confidence: 1.0,
+                word,
+                space: endsSentence(word) ? "" : " ",
+                alwaysCapitalized: alwaysCapitalized(word),
+                index: index + idx,
+                key: index + idx,
+            }
+        })
+
+        const lastTranscriptChunkStartAt = replaceUpToIndex ? replaceUpToIndex : index
+        const lastTranscriptChunkFirstIndex = newWords.slice(-1)[0].index + 1
+
+        console.log(lastTranscriptChunkStartAt)
+        console.log(lastTranscriptChunkFirstIndex)
+
+        const lastTranscriptChunk = transcript.slice(lastTranscriptChunkStartAt).map((word, index) => {
+            return {
+                ...word,
+                index: lastTranscriptChunkFirstIndex + index
+            }
+        })
+
+        this.setState({
+            transcript: firstTranscriptChunk.concat(newWords).concat(lastTranscriptChunk),
+            undoQueue: undoQueue.concat(newWords)
+        })
+
+        // if (isPunc(nextWord)) {
+        //     thirdTranscriptChunk = transcript.slice(index + 2)
+        // } else {
+        //     thirdTranscriptChunk = transcript
+        //         .slice(index + 1)
+        //         .map(word => Object.assign(word, { index: word.index + 1 }))
+        // }
+
+        // const firstWordNextPhrase = thirdTranscriptChunk[0]
+
+        // if (endsSentence(punc)
+        //     && !isCapitalized(firstWordNextPhrase.word)
+        //     && !firstWordNextPhrase.alwaysCapitalized) {
+
+        //     thirdTranscriptChunk = [Object.assign(firstWordNextPhrase, {
+        //         word: toTitleCase(firstWordNextPhrase.word),
+        //         key: index + 2,
+        //         index: index + 2,
+        //         wordStart: nextWordStart,
+        //     })]
+        //         .concat(thirdTranscriptChunk.slice(1))
+        // }
+
+        // if (punc === ','
+        //     && isCapitalized(firstWordNextPhrase.word)
+        //     && !firstWordNextPhrase.alwaysCapitalized) {
+
+        //     thirdTranscriptChunk = [Object.assign(firstWordNextPhrase, {
+        //         word: firstWordNextPhrase.word.toLowerCase(),
+        //         key: index + 2,
+        //         index: index + 2,
+        //         wordStart: nextWordStart,
+        //     })]
+        //         .concat(thirdTranscriptChunk.slice(1))
+        // }
+
+    }
 
     wordAtIndex = index => this.state.transcript[index]
 
     insertPuncAfterSelectedWords = punc => {
 
-        const { transcript, selectedWordIndices, undoQueue } = this.state
-        const index = selectedWordIndices.start + selectedWordIndices.offset;
+        const index = this.lastSelectedWordIndex()
         const nextWordObject = this.wordAtIndex(index + 1)
-        const nextWordStart = nextWordObject.wordStart
         const nextWord = nextWordObject.word
         if (nextWord === punc) return
 
-        // entire transcript up to and including the currently selected word
-        const firstTranscriptChunk = transcript.slice(0, index + 1)
-
-        const punctuationChunk = [{
-            wordStart: null,
-            wordEnd: null,
-            confidence: 1,
-            word: punc,
-            index: index + 1
-        }]
-
-        this.setState({
-            undoQueue: undoQueue.concat(punctuationChunk)
-        })
-
-
-        let thirdTranscriptChunk = []
-
-        if (isPunc(nextWord)) {
-            thirdTranscriptChunk = transcript.slice(index + 2)
-        } else {
-            thirdTranscriptChunk = transcript
-                .slice(index + 1)
-                .map(word => Object.assign(word, { index: word.index + 1 }))
-        }
-
-        const firstWordNextPhrase = thirdTranscriptChunk[0]
-
-        if (endsSentence(punc)
-            && !isCapitalized(firstWordNextPhrase.word)
-            && !firstWordNextPhrase.alwaysCapitalized) {
-
-            thirdTranscriptChunk = [Object.assign(firstWordNextPhrase, {
-                word: toTitleCase(firstWordNextPhrase.word),
-                key: index + 2,
-                index: index + 2,
-                wordStart: nextWordStart,
-            })]
-                .concat(thirdTranscriptChunk.slice(1))
-        }
-
-        if (punc === ','
-            && isCapitalized(firstWordNextPhrase.word)
-            && !firstWordNextPhrase.alwaysCapitalized) {
-
-            thirdTranscriptChunk = [Object.assign(firstWordNextPhrase, {
-                word: firstWordNextPhrase.word.toLowerCase(),
-                key: index + 2,
-                index: index + 2,
-                wordStart: nextWordStart,
-            })]
-                .concat(thirdTranscriptChunk.slice(1))
-        }
-
-        this.setState({
-            transcript: firstTranscriptChunk.concat(punctuationChunk).concat(thirdTranscriptChunk)
-        })
+        this.insertWords([punc], index + 1)
     }
 
     increaseWordSelection = () => {
@@ -183,9 +235,10 @@ class InteractiveTranscript extends Component {
     }
 
     undo = () => {
-        if (this.state.undoQueue.length > 0) {
-            const wordToRemove = this.state.undoQueue.slice(-1)[0]
-            let previousState = this.state.transcript
+        const { redoQueue, undoQueue, transcript } = this.state
+        if (undoQueue.length > 0) {
+            const wordToRemove = undoQueue.slice(-1)[0]
+            let previousState = transcript
                 .filter(word => word.index !== wordToRemove.index)
                 .map(word => word.index > wordToRemove.index ? Object.assign(word, { index: word.index - 1 }) : word)
 
@@ -198,17 +251,18 @@ class InteractiveTranscript extends Component {
 
             this.setState({
                 transcript: previousState,
-                undoQueue: this.state.undoQueue.slice(0, -1),
-                redoQueue: this.state.redoQueue.concat(wordToRemove)
+                undoQueue: undoQueue.slice(0, -1),
+                redoQueue: redoQueue.concat(wordToRemove)
             })
         }
     }
 
     redo = () => {
-        if (this.state.redoQueue.length > 0) {
-            const wordToAdd = this.state.redoQueue.slice(-1)[0]
+        const { redoQueue, undoQueue, transcript } = this.state
+        if (redoQueue.length > 0) {
+            const wordToAdd = redoQueue.slice(-1)[0]
 
-            let previousState = this.state.transcript
+            let previousState = transcript
             previousState = previousState
                 .map(word => word.index >= wordToAdd.index ? Object.assign(word, { index: word.index + 1 }) : word)
             previousState.splice(wordToAdd.index, 0, wordToAdd)
@@ -223,8 +277,8 @@ class InteractiveTranscript extends Component {
 
             this.setState({
                 transcript: previousState,
-                redoQueue: this.state.redoQueue.slice(0, -1),
-                undoQueue: this.state.undoQueue.concat(wordToAdd)
+                redoQueue: redoQueue.slice(0, -1),
+                undoQueue: undoQueue.concat(wordToAdd)
             })
         }
     }
@@ -281,26 +335,6 @@ class InteractiveTranscript extends Component {
         }
     }
 
-    goToNextWord = () => {
-        const { transcript, selectedWordIndices } = this.state
-        if (selectedWordIndices.last < transcript.length) {
-            let numWordsForward = 1
-            let selectedWord = this.wordAtIndex(selectedWordIndices.last + numWordsForward)
-            while (selectedWord.wordStart === null) {
-                numWordsForward++;
-                selectedWord = this.wordAtIndex(selectedWordIndices.last + numWordsForward)
-            }
-
-            this.setState({
-                selectedWordIndices: {
-                    first: selectedWordIndices.last + numWordsForward,
-                    last: selectedWordIndices.last + numWordsForward + 1,
-                },
-                playPosition: selectedWord.wordStart,
-                updatePlayer: true,
-            })
-        }
-    }
     goToNextWord = () => {
         const { transcript, selectedWordIndices } = this.state
         let transcriptLength = transcript.length;
