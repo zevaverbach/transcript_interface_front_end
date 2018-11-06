@@ -87,6 +87,9 @@ class InteractiveTranscript extends Component {
         }
     }
 
+    redo = () => this.undoRedo(1)
+    undo = () => this.undoRedo(0)
+
     firstSelectedWordIndex = () => {
         const { selectedWordIndices } = this.state
         const { offset, start } = selectedWordIndices
@@ -104,22 +107,22 @@ class InteractiveTranscript extends Component {
     surroundSelectionWithQuotes = () => {
         console.log(this.firstSelectedWordIndex())
         console.log(this.lastSelectedWordIndex())
-        this.insertWords(['"'], this.firstSelectedWordIndex())
-        this.insertWords(['"'], this.lastSelectedWordIndex() + 1)
+        this.edit(['"'], this.firstSelectedWordIndex())
+        this.edit(['"'], this.lastSelectedWordIndex() + 1)
     }
 
     deleteWords = () => {
-        this.insertWords(
+        this.edit(
             [],
             this.firstSelectedWordIndex(),
             this.lastSelectedWordIndex()
         )
     }
 
-    insertWords = (words, index, replaceUpToIndex = false) => {
+    edit = (words, startIndex, replaceUpToIndex = false) => {
 
-        if (replaceUpToIndex && replaceUpToIndex < index) {
-            throw Error('replaceUpToIndex must be equal to or greater than index')
+        if (replaceUpToIndex && replaceUpToIndex < startIndex) {
+            throw Error('replaceUpToIndex must be equal to or greater than startIndex')
         }
 
         const { transcript, undoQueue } = this.state
@@ -132,31 +135,31 @@ class InteractiveTranscript extends Component {
         // TODO: refactor undo/redo to store 'types' of changes
         // this is in order to differentiate insertions and deletions from replacements
 
-        const firstTranscriptChunk = transcript.slice(0, index)
+        const firstTranscriptChunk = transcript.slice(0, startIndex)
 
-        const newWordsTemplate = this.wordAtIndex(index)
+        const newWordsTemplate = this.wordAtIndex(startIndex)
 
-        const insert = words.map((word, idx) => {
+        const insert = words.map((word, index) => {
             return {
                 ...newWordsTemplate,
                 confidence: 1.0,
                 word,
                 space: endsSentence(word) ? "" : " ",
                 alwaysCapitalized: alwaysCapitalized(word),
-                index: index + idx,
-                key: index + idx,
+                index: startIndex + index,
+                key: startIndex + index,
             }
         })
 
-        let lastTranscriptChunkStartAt = replaceUpToIndex ? replaceUpToIndex : index
+        let lastTranscriptChunkStartAt = replaceUpToIndex ? replaceUpToIndex : startIndex
         let lastTranscriptChunkFirstIndex, indexModifier = 0, newUndoQueue
 
         if (insert.length === 0) {
             // for deletion
             lastTranscriptChunkStartAt++;
-            lastTranscriptChunkFirstIndex = index + 1;
+            lastTranscriptChunkFirstIndex = startIndex + 1;
             indexModifier = -1
-            newUndoQueue = { delete: [[transcript[index]]] }
+            newUndoQueue = { delete: [transcript.slice(startIndex, replaceUpToIndex + 1)] }
         } else {
             lastTranscriptChunkFirstIndex = insert.slice(-1)[0].index + 1
             newUndoQueue = { insert: [insert] }
@@ -170,7 +173,8 @@ class InteractiveTranscript extends Component {
 
         this.setState({
             transcript: firstTranscriptChunk.concat(insert).concat(lastTranscriptChunk),
-            undoQueue: undoQueue.concat(newUndoQueue)
+            undoQueue: undoQueue.concat(newUndoQueue),
+            redoQueue: [],
         })
 
         // if (isPunc(nextWord)) {
@@ -220,7 +224,7 @@ class InteractiveTranscript extends Component {
         const nextWord = nextWordObject.word
         if (nextWord === punc) return
 
-        this.insertWords([punc], index + 1)
+        this.edit([punc], index + 1)
     }
 
     increaseWordSelection = () => {
@@ -252,59 +256,71 @@ class InteractiveTranscript extends Component {
         })
     }
 
-    undo = () => {
-        let { redoQueue, undoQueue, transcript } = this.state
-        if (undoQueue.length === 0) return
+    insertQueueStep = (transcript, step) => {
 
-        const undoStep = undoQueue.slice(-1)[0]
+        let prevInsertLength = 0
+        let newSelectedWordIndex
+
+        step.forEach(insertChunk => {
+            const numWords = insertChunk.length
+
+            transcript = transcript
+                .slice(0, insertChunk[0].index + prevInsertLength)
+                .concat(insertChunk
+                    .map(word => ({
+                        ...word,
+                        index: word.index + prevInsertLength,
+                        key: word.index + prevInsertLength
+                    })))
+                .concat(transcript.slice(insertChunk[0].index + prevInsertLength)
+                    .map(word => ({
+                        ...word,
+                        index: word.index + numWords,
+                        key: word.index + numWords
+                    })))
+
+            prevInsertLength = numWords
+
+            newSelectedWordIndex = insertChunk.slice(-1)[0].index
+
+        })
+
+        return [transcript, newSelectedWordIndex]
+
+    }
+
+    deleteQueueStep = (transcript, step) => {
+
         let prevDeleteLength = 0
         let newSelectedWordIndex
 
-        if (undoStep.insert) {
-            undoStep.insert.forEach(deleteChunk => {
-                const numWords = deleteChunk.length
-                const indicesToRemove = Array(numWords).fill()
-                    .map((_, i) => deleteChunk[0].index - prevDeleteLength + i)
+        step.forEach(deleteChunk => {
+            const numWords = deleteChunk.length
+            const indicesToRemove = Array(numWords).fill()
+                .map((_, i) => deleteChunk[0].index - prevDeleteLength + i)
 
-                transcript = transcript
-                    .filter(word => !indicesToRemove.includes(word.index))
-                    .map(word => word.index > indicesToRemove[0]
-                        ? {
-                            ...word,
-                            index: word.index - numWords
-                        }
-                        : word)
+            transcript = transcript
+                .filter(word => !indicesToRemove.includes(word.index))
+                .map(word => word.index > indicesToRemove[0]
+                    ? {
+                        ...word,
+                        index: word.index - numWords
+                    }
+                    : word)
 
-                prevDeleteLength = numWords
-                newSelectedWordIndex = indicesToRemove[0] - 1
-            })
-        }
+            prevDeleteLength = numWords
+            newSelectedWordIndex = indicesToRemove[0] - 1
+        })
+        return [transcript, newSelectedWordIndex]
+    }
 
-        let prevInsertLength = 0
+    undoRedo = whichOne => {
+        let { redoQueue, undoQueue, transcript } = this.state
+        const queue = whichOne ? redoQueue : undoQueue
+        if (queue.length === 0) return
 
-        if (undoStep.delete) {
-            undoStep.delete.forEach(insertChunk => {
-                const numWords = insertChunk.length
-
-                transcript = transcript
-                    .slice(0, insertChunk[0].index + prevInsertLength)
-                    .concat(insertChunk
-                        .map(word => ({
-                            ...word,
-                            index: word.index + prevInsertLength,
-                            key: word.index + prevInsertLength
-                        })))
-                    .concat(transcript.slice(insertChunk[0].index + prevInsertLength)
-                        .map(word => ({
-                            ...word,
-                            index: word.index + numWords,
-                            key: word.index + numWords
-                        })))
-
-                prevInsertLength = numWords
-                newSelectedWordIndex = insertChunk.slice(-1)[0].index
-            })
-        }
+        const step = queue.slice(-1)[0]
+        let newSelectedWordIndex
 
         // const nextWord = previousState[wordToRemove.index]
         // if (!nextWord.alwaysCapitalized && isCapitalized(nextWord.word) && endsSentence(wordToRemove.word)) {
@@ -312,54 +328,44 @@ class InteractiveTranscript extends Component {
         //         ? Object.assign(nextWord, { word: nextWord.word.toLowerCase() })
         //         : word)
 
-        console.log(newSelectedWordIndex)
+        if (step.insert) {
+            if (whichOne) {
+                [transcript, newSelectedWordIndex] = this.insertQueueStep(transcript, step.insert)
+            } else {
+                [transcript, newSelectedWordIndex] = this.deleteQueueStep(transcript, step.insert)
+            }
+        }
+
+        if (step.delete) {
+            if (whichOne) {
+                [transcript, newSelectedWordIndex] = this.deleteQueueStep(transcript, step.delete)
+            } else {
+                [transcript, newSelectedWordIndex] = this.insertQueueStep(transcript, step.delete)
+            }
+        }
+
+        let queueState = {}
+        if (whichOne) {
+            queueState = {
+                redoQueue: queue.slice(0, -1),
+                undoQueue: undoQueue.concat(step),
+            }
+        } else {
+            queueState = {
+                undoQueue: queue.slice(0, -1),
+                redoQueue: redoQueue.concat(step),
+            }
+        }
+
+        console.log(queueState)
 
         this.setState({
             transcript,
-            undoQueue: undoQueue.slice(0, -1),
+            ...queueState,
             selectedWordIndices: {
                 start: newSelectedWordIndex,
                 offset: 0
             }
-            // redoQueue: redoQueue.concat(wordToRemove)
-        })
-    }
-
-    redo = () => {
-        const { redoQueue, undoQueue, transcript } = this.state
-        if (redoQueue.length === 0) return
-
-        const redoStep = {
-            insert: [
-                // transcript.slice(0, 10),
-                // transcript.slice(50, 80),
-            ],
-            delete: [
-                transcript.slice(30, 40),
-                transcript.slice(90, 140),
-            ],
-        }
-
-
-        const wordToAdd = redoQueue.slice(-1)[0]
-
-        let previousState = transcript
-        previousState = previousState
-            .map(word => word.index >= wordToAdd.index ? Object.assign(word, { index: word.index + 1 }) : word)
-        previousState.splice(wordToAdd.index, 0, wordToAdd)
-
-        const nextWord = previousState[wordToAdd.index + 1]
-        if (endsSentence(wordToAdd.word) && !isCapitalized(nextWord.word)) {
-            previousState = previousState.map(word => word === nextWord
-                ? Object.assign(nextWord, { word: toTitleCase(nextWord.word) })
-                : word)
-        }
-
-
-        this.setState({
-            transcript: previousState,
-            redoQueue: redoQueue.slice(0, -1),
-            undoQueue: undoQueue.concat(wordToAdd)
         })
     }
 
