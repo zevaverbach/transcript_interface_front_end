@@ -101,32 +101,27 @@ class InteractiveTranscript extends Component {
     redo = () => this.undoRedoEdit('redo')
     undo = () => this.undoRedoEdit('undo')
 
-    firstSelectedWordIndex = () => {
+    getSelectedWordIndex = firstLast => {
         const { selectedWordIndices } = this.state
         const { offset, start } = selectedWordIndices
-        return offset < 0 ? start + offset : start
-    }
-
-    lastSelectedWordIndex = () => {
-        const { selectedWordIndices } = this.state
-        const { offset, start } = selectedWordIndices
+        if (firstLast === 'first') {
+            return offset < 0 ? start + offset : start
+        }
         return offset > 0 ? start + offset : start
     }
 
-    selectedWords = () => this.transcript.slice(this.firstSelectedWordIndex(), this.lastSelectedWordIndex() + 1)
+    selectedWords = () => this.transcript.slice(this.getSelectedWordIndex('first'), this.getSelectedWordIndex('last') + 1)
 
     surroundSelectionWithQuotes = () => {
-        console.log(this.firstSelectedWordIndex())
-        console.log(this.lastSelectedWordIndex())
         this.edit(['"'], this.firstSelectedWordIndex())
-        this.edit(['"'], this.lastSelectedWordIndex() + 1)
+        this.edit(['"'], this.getSelectedWordIndex('last') + 1)
     }
 
     deleteWords = () => {
         this.edit(
             [],
-            this.firstSelectedWordIndex(),
-            this.lastSelectedWordIndex()
+            this.getSelectedWordIndex('first'),
+            this.getSelectedWordIndex('last')
         )
     }
 
@@ -290,7 +285,7 @@ class InteractiveTranscript extends Component {
 
     insertPuncAfterSelectedWords = punc => {
 
-        const index = this.lastSelectedWordIndex()
+        const index = this.getSelectedWordIndex('last')
         let startIndex = index + 1
         let replaceUpToIndex = false
         let nextWordObject = this.wordAtIndex(startIndex)
@@ -323,7 +318,7 @@ class InteractiveTranscript extends Component {
 
     }
 
-    findClosestPunctuation = (nextPrev) => {
+    findClosestPunctuation = nextPrev => {
 
         const { transcript, selectedWordIndices } = this.state
 
