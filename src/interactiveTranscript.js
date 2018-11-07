@@ -24,6 +24,8 @@ class InteractiveTranscript extends Component {
         document.addEventListener('keydown', this.handleKeyDown)
     }
 
+    wordAtIndex = index => this.state.transcript[index]
+
     handleKeyDown = event => {
         switch (event.keyCode) {
             case 8:
@@ -31,14 +33,14 @@ class InteractiveTranscript extends Component {
                 break;
             case 39:
                 if (event.shiftKey) { // shift + left
-                    this.increaseWordSelection();
+                    this.selectWords('increase');
                 } else {
                     this.goToNextWord();
                 }
                 break;
             case 37:
                 if (event.shiftKey) { // shift + left
-                    this.decreaseWordSelection();
+                    this.selectWords('decrease');
                 } else {
                     this.goToPreviousWord();
                 }
@@ -96,8 +98,8 @@ class InteractiveTranscript extends Component {
         }
     }
 
-    redo = () => this.undoRedo(1)
-    undo = () => this.undoRedo(0)
+    redo = () => this.undoRedoEdit('redo')
+    undo = () => this.undoRedoEdit('undo')
 
     firstSelectedWordIndex = () => {
         const { selectedWordIndices } = this.state
@@ -130,26 +132,12 @@ class InteractiveTranscript extends Component {
 
     edit = (words, startIndex, replaceUpToIndex = false) => {
 
-        if (replaceUpToIndex && replaceUpToIndex < startIndex) {
-            throw Error('replaceUpToIndex must be equal to or greater than startIndex')
-        }
-
-        const { transcript, undoQueue } = this.state
-
-        // TODO: check if a given word is punctuation, and act accordingly:
-        // wordStart and wordEnd are null
-        // capitalization of next word after a period/question mark/exclamation
-        // un-capitalization of next word if a period/q/ex is replaced with a non-terminating punc
-
-        // TODO: refactor undo/redo to store 'types' of changes
-        // this is in order to differentiate insertions and deletions from replacements
-
-        const firstTranscriptChunk = transcript.slice(0, startIndex)
-
+        const { transcript } = this.state
         const newWordsTemplate = this.wordAtIndex(startIndex)
+        const edits = {}
 
-        const insert = words.map((word, index) => {
-            return {
+        if (words.length > 0) {
+            edits.insert = [words.map((word, index) => ({
                 ...newWordsTemplate,
                 confidence: 1.0,
                 word,
@@ -157,128 +145,16 @@ class InteractiveTranscript extends Component {
                 alwaysCapitalized: alwaysCapitalized(word),
                 index: startIndex + index,
                 key: startIndex + index,
-            }
-        })
-
-        let lastTranscriptChunkStartAt = replaceUpToIndex ? replaceUpToIndex : startIndex
-        let lastTranscriptChunkFirstIndex, indexModifier = 0, newUndoQueue, selectedWordIndices
-
-        if (insert.length === 0) {
-            // for deletion
-            lastTranscriptChunkStartAt++;
-            lastTranscriptChunkFirstIndex = startIndex + 1;
-            indexModifier = -1
-            newUndoQueue = { delete: [transcript.slice(startIndex, replaceUpToIndex + 1)] }
-            selectedWordIndices = {
-                start: startIndex,
-                offset: 0
-            }
-        } else {
-            lastTranscriptChunkFirstIndex = insert.slice(-1)[0].index + 1
-            newUndoQueue = { insert: [insert] }
-            selectedWordIndices = {
-                start: startIndex + words.length,
-                offset: 0
-            }
+            }))]
         }
 
-        const lastTranscriptChunk = transcript.slice(lastTranscriptChunkStartAt).map((word, index) => ({
-            ...word,
-            index: lastTranscriptChunkFirstIndex + index + indexModifier,
-            key: lastTranscriptChunkFirstIndex + index + indexModifier
-        }))
-
-        this.setState({
-            transcript: firstTranscriptChunk.concat(insert).concat(lastTranscriptChunk),
-            undoQueue: undoQueue.concat(newUndoQueue),
-            redoQueue: [],
-            selectedWordIndices
-        })
-
-        // if (isPunc(nextWord)) {
-        //     thirdTranscriptChunk = transcript.slice(index + 2)
-        // } else {
-        //     thirdTranscriptChunk = transcript
-        //         .slice(index + 1)
-        //         .map(word => Object.assign(word, { index: word.index + 1 }))
-        // }
-
-        // const firstWordNextPhrase = thirdTranscriptChunk[0]
-
-        // if (endsSentence(punc)
-        //     && !isCapitalized(firstWordNextPhrase.word)
-        //     && !firstWordNextPhrase.alwaysCapitalized) {
-
-        //     thirdTranscriptChunk = [Object.assign(firstWordNextPhrase, {
-        //         word: toTitleCase(firstWordNextPhrase.word),
-        //         key: index + 2,
-        //         index: index + 2,
-        //         wordStart: nextWordStart,
-        //     })]
-        //         .concat(thirdTranscriptChunk.slice(1))
-        // }
-
-        // if (punc === ','
-        //     && isCapitalized(firstWordNextPhrase.word)
-        //     && !firstWordNextPhrase.alwaysCapitalized) {
-
-        //     thirdTranscriptChunk = [Object.assign(firstWordNextPhrase, {
-        //         word: firstWordNextPhrase.word.toLowerCase(),
-        //         key: index + 2,
-        //         index: index + 2,
-        //         wordStart: nextWordStart,
-        //     })]
-        //         .concat(thirdTranscriptChunk.slice(1))
-        // }
-
-    }
-
-    wordAtIndex = index => this.state.transcript[index]
-
-    insertPuncAfterSelectedWords = punc => {
-
-        const index = this.lastSelectedWordIndex()
-        let startIndex = index + 1
-        let replaceUpToIndex = false
-        let nextWordObject = this.wordAtIndex(startIndex)
-        if (nextWordObject) {
-            const nextWord = nextWordObject.word
-            if (nextWord === punc) return
-        } else {
-            // punctuation at end of selection, so replace it
-            startIndex = index
-            replaceUpToIndex = index
+        if (replaceUpToIndex) {
+            // define this
+            edits.delete = [transcript.slice(startIndex, replaceUpToIndex + 1)]
         }
-        this.edit([punc], startIndex, replaceUpToIndex)
-    }
 
-    increaseWordSelection = () => {
-        const { selectedWordIndices, transcript } = this.state
-        const lastWordIndex = selectedWordIndices.start + selectedWordIndices.offset
+        this.undoRedoEdit('edit', edits)
 
-        if (lastWordIndex === transcript.length) return
-
-        this.setState({
-            selectedWordIndices: {
-                ...selectedWordIndices,
-                offset: selectedWordIndices.offset + 1
-            }
-        })
-    }
-
-    decreaseWordSelection = () => {
-        const { selectedWordIndices } = this.state
-
-        const firstWordIndex = selectedWordIndices.start + selectedWordIndices.offset
-
-        if (firstWordIndex === 0) return
-
-        this.setState({
-            selectedWordIndices: {
-                ...selectedWordIndices,
-                offset: selectedWordIndices.offset - 1
-            }
-        })
     }
 
     insertQueueStep = (transcript, step) => {
@@ -351,25 +227,28 @@ class InteractiveTranscript extends Component {
         return [transcript, { start: newSelectedWordIndex, offset: 0 }]
     }
 
-    undoRedo = whichOne => {
+    undoRedoEdit = (whichOne, edit = false) => {
         let { redoQueue, undoQueue, transcript } = this.state
-        let offset = 0
-        const UNDO = whichOne === 0
-        const queue = UNDO ? undoQueue : redoQueue
+        let queue, step, selectedWordIndices
 
-        if (queue.length === 0) return
+        if (edit) {
+            queue = null
+            step = edit
+        }
 
-        const step = queue.slice(-1)[0]
-        let selectedWordIndices
+        if (whichOne === 'undo') {
+            queue = undoQueue
+        } else if (whichOne === 'redo') {
+            queue = redoQueue
+        }
 
-        // const nextWord = previousState[wordToRemove.index]
-        // if (!nextWord.alwaysCapitalized && isCapitalized(nextWord.word) && endsSentence(wordToRemove.word)) {
-        //     previousState = previousState.map(word => word === nextWord
-        //         ? Object.assign(nextWord, { word: nextWord.word.toLowerCase() })
-        //         : word)
+        if (queue) {
+            if (queue.length === 0) return
+            step = queue.slice(-1)[0]
+        }
 
         if (step.insert) {
-            if (UNDO) {
+            if (whichOne === 'undo') {
                 [transcript, selectedWordIndices] = this.deleteQueueStep(transcript, step.insert)
             } else {
                 [transcript, selectedWordIndices] = this.insertQueueStep(transcript, step.insert)
@@ -377,7 +256,7 @@ class InteractiveTranscript extends Component {
         }
 
         if (step.delete) {
-            if (UNDO) {
+            if (whichOne === 'undo') {
                 [transcript, selectedWordIndices] = this.insertQueueStep(transcript, step.delete)
             } else {
                 [transcript, selectedWordIndices] = this.deleteQueueStep(transcript, step.delete)
@@ -385,15 +264,19 @@ class InteractiveTranscript extends Component {
         }
 
         let queueState = {}
-        if (UNDO) {
+        if (whichOne === 'undo') {
             queueState = {
                 undoQueue: queue.slice(0, -1),
                 redoQueue: redoQueue.concat(step),
             }
-        } else {
+        } else if (whichOne === 'redo') {
             queueState = {
                 redoQueue: queue.slice(0, -1),
                 undoQueue: undoQueue.concat(step),
+            }
+        } else {
+            queueState = {
+                undoQueue: undoQueue.concat(step)
             }
         }
 
@@ -402,6 +285,42 @@ class InteractiveTranscript extends Component {
             ...queueState,
             selectedWordIndices
         })
+
+    }
+
+    insertPuncAfterSelectedWords = punc => {
+
+        const index = this.lastSelectedWordIndex()
+        let startIndex = index + 1
+        let replaceUpToIndex = false
+        let nextWordObject = this.wordAtIndex(startIndex)
+        if (nextWordObject) {
+            const nextWord = nextWordObject.word
+            if (nextWord === punc) return
+        } else {
+            // punctuation at end of selection, so replace it
+            startIndex = index
+            replaceUpToIndex = index
+        }
+        this.edit([punc], startIndex, replaceUpToIndex)
+    }
+
+    selectWords = whichOne => {
+        const { selectedWordIndices, transcript } = this.state
+        const firstOrLastWordIndex = selectedWordIndices.start + selectedWordIndices.offset
+
+        if ((whichOne === 'increase' && firstOrLastWordIndex === transcript.length)
+            || (whichOne === 'decrease' && firstOrLastWordIndex === 0)) return
+
+        const offset = whichOne === 'increase' ? 1 : -1
+
+        this.setState({
+            selectedWordIndices: {
+                ...selectedWordIndices,
+                offset: selectedWordIndices.offset + offset
+            }
+        })
+
     }
 
     findClosestPunctuation = (nextPrev) => {

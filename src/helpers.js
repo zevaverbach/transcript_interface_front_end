@@ -1,3 +1,50 @@
+// const nextWord = previousState[wordToRemove.index]
+// if (!nextWord.alwaysCapitalized && isCapitalized(nextWord.word) && endsSentence(wordToRemove.word)) {
+//     previousState = previousState.map(word => word === nextWord
+//         ? Object.assign(nextWord, { word: nextWord.word.toLowerCase() })
+//         : word)
+// TODO: check if a given word is punctuation, and act accordingly:
+// wordStart and wordEnd are null
+// capitalization of next word after a period/question mark/exclamation
+// un-capitalization of next word if a period/q/ex is replaced with a non-terminating punc
+// if (isPunc(nextWord)) {
+//     thirdTranscriptChunk = transcript.slice(index + 2)
+// } else {
+//     thirdTranscriptChunk = transcript
+//         .slice(index + 1)
+//         .map(word => Object.assign(word, { index: word.index + 1 }))
+// }
+
+// const firstWordNextPhrase = thirdTranscriptChunk[0]
+
+// if (endsSentence(punc)
+//     && !isCapitalized(firstWordNextPhrase.word)
+//     && !firstWordNextPhrase.alwaysCapitalized) {
+
+//     thirdTranscriptChunk = [Object.assign(firstWordNextPhrase, {
+//         word: toTitleCase(firstWordNextPhrase.word),
+//         key: index + 2,
+//         index: index + 2,
+//         wordStart: nextWordStart,
+//     })]
+//         .concat(thirdTranscriptChunk.slice(1))
+// }
+
+// if (punc === ','
+//     && isCapitalized(firstWordNextPhrase.word)
+//     && !firstWordNextPhrase.alwaysCapitalized) {
+
+//     thirdTranscriptChunk = [Object.assign(firstWordNextPhrase, {
+//         word: firstWordNextPhrase.word.toLowerCase(),
+//         key: index + 2,
+//         index: index + 2,
+//         wordStart: nextWordStart,
+//     })]
+//         .concat(thirdTranscriptChunk.slice(1))
+// }
+
+
+
 export const toTitleCase = word => word.split('').map((letter, index) => index === 0 ? letter.toUpperCase() : letter).join('');
 
 export const hhmmssToSeconds = hhmmss => {
