@@ -24,7 +24,7 @@ const Word = props => {
     const renderSpace = () => {
 
         if (offset === 0
-            || (offset < 0
+            || (offset !== 0
                 && word.index === firstSelectedWordIndex)) {
             return <span onClick={onClick}>{space}</span>
         } else {
