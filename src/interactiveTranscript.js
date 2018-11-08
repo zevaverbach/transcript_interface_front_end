@@ -18,6 +18,7 @@ class InteractiveTranscript extends Component {
         playPosition: 0,
         play: false,
         updatePlayer: false,
+        editModal: false,
     }
 
     componentDidMount() {
@@ -28,6 +29,9 @@ class InteractiveTranscript extends Component {
 
     handleKeyDown = event => {
         switch (event.keyCode) {
+            // case 13: // enter
+            //     this.setState({editModal: true})
+            //     break;
             case 8:
                 this.deleteWords();
                 break;
@@ -45,9 +49,6 @@ class InteractiveTranscript extends Component {
                     this.goToPreviousWord();
                 }
                 break;
-            // case 13: // enter
-            //     this.edit();
-            //     break;
             case 190: // period
                 this.insertPuncAfterSelectedWords('.')
                 break;
@@ -110,20 +111,15 @@ class InteractiveTranscript extends Component {
         return offset > 0 ? start + offset : start
     }
 
-    selectedWords = () => this.transcript.slice(this.getSelectedWordIndex('first'), this.getSelectedWordIndex('last') + 1)
+    selectedWords = () => this.state.transcript.slice(
+        this.getSelectedWordIndex('first'),
+        this.getSelectedWordIndex('last') + 1)
 
     surroundSelectionWithStuff = stuff => {
 
-        const firstWordIndex = this.getSelectedWordIndex('first')
-        const lastWordIndex = this.getSelectedWordIndex('last')
-        const numWordsSelected = lastWordIndex - firstWordIndex
-
         this.undoRedoEdit('edit',
             {
-                selectedWords: {
-                    start: firstWordIndex + 1,
-                    offset: numWordsSelected
-                },
+                selectedWords: this.getSelectedWordsObject(1),
                 insert: [
                     [
                         {
@@ -132,7 +128,7 @@ class InteractiveTranscript extends Component {
                             "confidence": 1.0,
                             "word": stuff,
                             "alwaysCapitalized": false,
-                            "index": firstWordIndex,
+                            "index": this.getSelectedWordIndex('first'),
                         }
                     ],
                     [
@@ -142,31 +138,20 @@ class InteractiveTranscript extends Component {
                             "confidence": 1.0,
                             "word": stuff,
                             "alwaysCapitalized": false,
-                            "index": lastWordIndex + 1,
+                            "index": this.getSelectedWordIndex('last') + 1,
                         },
                     ],
                 ],
             }
         )
-        console.log(this.state.undoQueue)
     }
 
     deleteWords = () => {
 
-        const firstWordIndex = this.getSelectedWordIndex('first')
-        const lastWordIndex = this.getSelectedWordIndex('last')
-
-        const selectedWords = {
-            start: firstWordIndex,
-            offset: lastWordIndex - firstWordIndex
-        }
-
         this.undoRedoEdit('edit',
             {
-                selectedWords,
-                delete: [this.state.transcript.slice(
-                    this.getSelectedWordIndex('first'),
-                    this.getSelectedWordIndex('last') + 1)]
+                selectedWords: this.getSelectedWordsObject(),
+                delete: [this.selectedWords()]
             },
         )
     }
@@ -354,18 +339,19 @@ class InteractiveTranscript extends Component {
 
     }
 
-    insertPuncAfterSelectedWords = punc => {
+    getSelectedWordsObject = (increment = 0) => {
+        const firstWordIndex = this.getSelectedWordIndex('first') + increment
+        const lastWordIndex = this.getSelectedWordIndex('last') + increment
 
-        const firstWordIndex = this.getSelectedWordIndex('first')
-
-        const lastWordIndex = this.getSelectedWordIndex('last')
-
-        const selectedWords = {
+        return {
             start: firstWordIndex,
             offset: lastWordIndex - firstWordIndex
         }
+    }
 
-        const index = lastWordIndex
+    insertPuncAfterSelectedWords = punc => {
+
+        const index = this.getSelectedWordIndex('last')
         let startIndex = index + 1
         let replaceUpToIndex = false
         let nextWordObject = this.wordAtIndex(startIndex)
@@ -377,7 +363,7 @@ class InteractiveTranscript extends Component {
             startIndex = index
             replaceUpToIndex = index
         }
-        this.edit([punc], startIndex, replaceUpToIndex, selectedWords)
+        this.edit([punc], startIndex, replaceUpToIndex, this.getSelectedWordsObject())
     }
 
     selectWords = whichOne => {
