@@ -74,7 +74,7 @@ class InteractiveTranscript extends Component {
                 if (event.metaKey && event.ctrlKey) { // ctrl + meta + '
                     this.goToPreviousPhrase();
                 } else if (!event.altKey) {
-                    this.surroundSelectionWithQuotes();
+                    this.surroundSelectionWithStuff('"');
                 }
                 break
             case 186:
@@ -112,16 +112,44 @@ class InteractiveTranscript extends Component {
 
     selectedWords = () => this.transcript.slice(this.getSelectedWordIndex('first'), this.getSelectedWordIndex('last') + 1)
 
-    surroundSelectionWithQuotes = () => {
-        this.edit(['"'], this.firstSelectedWordIndex())
-        this.edit(['"'], this.getSelectedWordIndex('last') + 1)
+    surroundSelectionWithStuff = stuff => {
+
+        this.undoRedoEdit('edit',
+            {
+                insert: [
+                    [
+                        {
+                            "wordStart": null,
+                            "wordEnd": null,
+                            "confidence": 1.0,
+                            "word": stuff,
+                            "alwaysCapitalized": false,
+                            "index": this.getSelectedWordIndex('first'),
+                        }
+                    ],
+                    [
+                        {
+                            "wordStart": null,
+                            "wordEnd": null,
+                            "confidence": 1.0,
+                            "word": stuff,
+                            "alwaysCapitalized": false,
+                            "index": this.getSelectedWordIndex('last') + 1,
+                        },
+                    ],
+                ],
+            }
+        )
+        console.log(this.state.undoQueue)
     }
 
     deleteWords = () => {
-        this.edit(
-            [],
-            this.getSelectedWordIndex('first'),
-            this.getSelectedWordIndex('last')
+        this.undoRedoEdit('edit',
+            {
+                delete: [this.state.transcript.slice(
+                    this.getSelectedWordIndex('first'),
+                    this.getSelectedWordIndex('last') + 1)]
+            },
         )
     }
 
@@ -132,20 +160,23 @@ class InteractiveTranscript extends Component {
         const edits = {}
 
         if (words.length > 0) {
-            edits.insert = [words.map((word, index) => ({
-                ...newWordsTemplate,
-                confidence: 1.0,
-                word,
-                space: endsSentence(word) ? "" : " ",
-                alwaysCapitalized: alwaysCapitalized(word),
-                index: startIndex + index,
-                key: startIndex + index,
-            }))]
+            if (!edits.insert) edits.insert = []
+            edits.insert.push(
+                words.map((word, index) => ({
+                    ...newWordsTemplate,
+                    confidence: 1.0,
+                    word,
+                    space: endsSentence(word) ? "" : " ",
+                    alwaysCapitalized: alwaysCapitalized(word),
+                    index: startIndex + index,
+                    key: startIndex + index,
+                }))
+            )
         }
 
         if (replaceUpToIndex) {
-            // define this
-            edits.delete = [transcript.slice(startIndex, replaceUpToIndex + 1)]
+            if (!edits.delete) edits.delete = []
+            edits.delete.push(transcript.slice(startIndex, replaceUpToIndex + 1))
         }
 
         this.undoRedoEdit('edit', edits)
@@ -200,6 +231,7 @@ class InteractiveTranscript extends Component {
     deleteQueueStep = (transcript, step) => {
 
         let prevDeleteLength = 0
+        let lastIndexDeleted = step[0][0].index
         let newSelectedWordIndex
 
         step.forEach(deleteChunk => {
@@ -216,8 +248,10 @@ class InteractiveTranscript extends Component {
                     }
                     : word)
 
-            prevDeleteLength = numWords
+            // only adjust indicesToRemove if the deletions are next to each other: to fix bug in surroundWithStuff
+            if (indicesToRemove[0] - lastIndexDeleted === 1) prevDeleteLength = numWords
             newSelectedWordIndex = indicesToRemove[0]
+            lastIndexDeleted = indicesToRemove.slice(-1)[0]
         })
         return [transcript, { start: newSelectedWordIndex, offset: 0 }]
     }
@@ -258,6 +292,10 @@ class InteractiveTranscript extends Component {
             }
         }
 
+        if (step.edit) {
+            [transcript, selectedWordIndices] = this.editQueueStep(whichOne, transcript, step)
+        }
+
         let queueState = {}
         if (whichOne === 'undo') {
             queueState = {
@@ -281,6 +319,12 @@ class InteractiveTranscript extends Component {
             selectedWordIndices
         })
 
+    }
+
+    editQueueStep = (undoRedoEdit, transcript, step) => {
+        step.forEach(editChunk => {
+
+        })
     }
 
     insertPuncAfterSelectedWords = punc => {

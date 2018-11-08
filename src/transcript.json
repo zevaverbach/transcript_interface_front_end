@@ -4,7 +4,6 @@
         "wordEnd": 1.4100000000000001,
         "confidence": 0.98,
         "word": "It's",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 0
     },
@@ -13,7 +12,6 @@
         "wordEnd": 1.5599999999999998,
         "confidence": 1.0,
         "word": "one",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 1
     },
@@ -22,7 +20,6 @@
         "wordEnd": 1.77,
         "confidence": 1.0,
         "word": "thing",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 2
     },
@@ -31,7 +28,6 @@
         "wordEnd": 1.8900000000000001,
         "confidence": 1.0,
         "word": "to",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 3
     },
@@ -40,7 +36,6 @@
         "wordEnd": 2.2199999999999998,
         "confidence": 1.0,
         "word": "say",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 4
     },
@@ -49,7 +44,6 @@
         "wordEnd": 2.49,
         "confidence": 1.0,
         "word": "that",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 5
     },
@@ -58,7 +52,6 @@
         "wordEnd": 2.6999999999999997,
         "confidence": 0.56,
         "word": "gender",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 6
     },
@@ -67,7 +60,6 @@
         "wordEnd": 2.9699999999999998,
         "confidence": 0.48,
         "word": "is",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 7
     },
@@ -76,7 +68,6 @@
         "wordEnd": 3.7800000000000002,
         "confidence": 1.0,
         "word": "performed",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 8
     },
@@ -85,7 +76,6 @@
         "wordEnd": 3.9899999999999998,
         "confidence": 0.99,
         "word": "and",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 9
     },
@@ -94,7 +84,6 @@
         "wordEnd": 4.17,
         "confidence": 1.0,
         "word": "that's",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 10
     },
@@ -103,7 +92,6 @@
         "wordEnd": 4.2299999999999995,
         "confidence": 1.0,
         "word": "a",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 11
     },
@@ -112,7 +100,6 @@
         "wordEnd": 4.41,
         "confidence": 1.0,
         "word": "little",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 12
     },
@@ -121,7 +108,6 @@
         "wordEnd": 4.74,
         "confidence": 1.0,
         "word": "different",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 13
     },
@@ -130,7 +116,6 @@
         "wordEnd": 4.92,
         "confidence": 1.0,
         "word": "from",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 14
     },
@@ -139,7 +124,6 @@
         "wordEnd": 5.13,
         "confidence": 0.89,
         "word": "saying",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 15
     },
@@ -148,7 +132,6 @@
         "wordEnd": 5.43,
         "confidence": 1.0,
         "word": "gender",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 16
     },
@@ -157,7 +140,6 @@
         "wordEnd": 5.58,
         "confidence": 0.81,
         "word": "is",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 17
     },
@@ -166,7 +148,6 @@
         "wordEnd": 6.42,
         "confidence": 1.0,
         "word": "performative",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 18
     },
@@ -175,7 +156,6 @@
         "wordEnd": 6.54,
         "confidence": 1.0,
         "word": "when",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 19
     },
@@ -184,7 +164,6 @@
         "wordEnd": 6.69,
         "confidence": 1.0,
         "word": "we",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 20
     },
@@ -193,7 +172,6 @@
         "wordEnd": 6.9,
         "confidence": 1.0,
         "word": "say",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 21
     },
@@ -202,7 +180,6 @@
         "wordEnd": 7.23,
         "confidence": 1.0,
         "word": "gender",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 22
     },
@@ -211,7 +188,6 @@
         "wordEnd": 7.3500000000000005,
         "confidence": 0.95,
         "word": "is",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 23
     },
@@ -220,7 +196,6 @@
         "wordEnd": 8.03,
         "confidence": 1.0,
         "word": "performed",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 24
     },
@@ -229,7 +204,6 @@
         "wordEnd": 8.34,
         "confidence": 1.0,
         "word": "we",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 25
     },
@@ -238,7 +212,6 @@
         "wordEnd": 9.12,
         "confidence": 1.0,
         "word": "usually",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 26
     },
@@ -247,7 +220,6 @@
         "wordEnd": 9.479999999999999,
         "confidence": 1.0,
         "word": "mean",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 27
     },
@@ -256,7 +228,6 @@
         "wordEnd": 9.81,
         "confidence": 1.0,
         "word": "that",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 28
     },
@@ -265,7 +236,6 @@
         "wordEnd": 10.44,
         "confidence": 0.96,
         "word": "we've",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 29
     },
@@ -274,7 +244,6 @@
         "wordEnd": 10.74,
         "confidence": 1.0,
         "word": "taken",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 30
     },
@@ -283,7 +252,6 @@
         "wordEnd": 10.86,
         "confidence": 1.0,
         "word": "on",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 31
     },
@@ -292,7 +260,6 @@
         "wordEnd": 10.92,
         "confidence": 1.0,
         "word": "a",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 32
     },
@@ -301,7 +268,6 @@
         "wordEnd": 11.49,
         "confidence": 0.99,
         "word": "role",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 33
     },
@@ -310,7 +276,6 @@
         "wordEnd": 11.53,
         "confidence": 0.59,
         "word": ".",
-        "space": "",
         "alwaysCapitalized": false,
         "index": 34
     },
@@ -319,7 +284,6 @@
         "wordEnd": 11.73,
         "confidence": 0.87,
         "word": "We're",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 35
     },
@@ -328,7 +292,6 @@
         "wordEnd": 12.39,
         "confidence": 1.0,
         "word": "acting",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 36
     },
@@ -337,7 +300,6 @@
         "wordEnd": 12.600000000000001,
         "confidence": 1.0,
         "word": "in",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 37
     },
@@ -346,7 +308,6 @@
         "wordEnd": 12.93,
         "confidence": 1.0,
         "word": "some",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 38
     },
@@ -355,7 +316,6 @@
         "wordEnd": 13.41,
         "confidence": 1.0,
         "word": "way",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 39
     },
@@ -364,7 +324,6 @@
         "wordEnd": 14.879999999999999,
         "confidence": 1.0,
         "word": "and",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 40
     },
@@ -373,7 +332,6 @@
         "wordEnd": 15.06,
         "confidence": 1.0,
         "word": "that",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 41
     },
@@ -382,7 +340,6 @@
         "wordEnd": 15.24,
         "confidence": 0.71,
         "word": "are",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 42
     },
@@ -391,7 +348,6 @@
         "wordEnd": 15.809999999999999,
         "confidence": 1.0,
         "word": "acting",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 43
     },
@@ -400,7 +356,6 @@
         "wordEnd": 15.99,
         "confidence": 1.0,
         "word": "or",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 44
     },
@@ -409,7 +364,6 @@
         "wordEnd": 16.05,
         "confidence": 0.43,
         "word": "a",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 45
     },
@@ -418,7 +372,6 @@
         "wordEnd": 16.37,
         "confidence": 0.98,
         "word": "role",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 46
     },
@@ -427,7 +380,6 @@
         "wordEnd": 16.86,
         "confidence": 0.98,
         "word": "playing",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 47
     },
@@ -436,7 +388,6 @@
         "wordEnd": 17.31,
         "confidence": 1.0,
         "word": "is",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 48
     },
@@ -445,7 +396,6 @@
         "wordEnd": 18.419999999999998,
         "confidence": 1.0,
         "word": "crucial",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 49
     },
@@ -454,7 +404,6 @@
         "wordEnd": 18.6,
         "confidence": 1.0,
         "word": "to",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 50
     },
@@ -463,7 +412,6 @@
         "wordEnd": 18.87,
         "confidence": 1.0,
         "word": "the",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 51
     },
@@ -472,7 +420,6 @@
         "wordEnd": 19.8,
         "confidence": 1.0,
         "word": "gender",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 52
     },
@@ -481,7 +428,6 @@
         "wordEnd": 19.92,
         "confidence": 1.0,
         "word": "that",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 53
     },
@@ -490,7 +436,6 @@
         "wordEnd": 20.1,
         "confidence": 1.0,
         "word": "we",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 54
     },
@@ -499,7 +444,6 @@
         "wordEnd": 20.520000000000003,
         "confidence": 1.0,
         "word": "are",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 55
     },
@@ -508,7 +452,6 @@
         "wordEnd": 20.82,
         "confidence": 0.9,
         "word": "and",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 56
     },
@@ -517,7 +460,6 @@
         "wordEnd": 21.03,
         "confidence": 1.0,
         "word": "the",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 57
     },
@@ -526,7 +468,6 @@
         "wordEnd": 21.39,
         "confidence": 1.0,
         "word": "gender",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 58
     },
@@ -535,7 +476,6 @@
         "wordEnd": 21.51,
         "confidence": 1.0,
         "word": "that",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 59
     },
@@ -544,7 +484,6 @@
         "wordEnd": 21.69,
         "confidence": 1.0,
         "word": "we",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 60
     },
@@ -553,7 +492,6 @@
         "wordEnd": 22.150000000000002,
         "confidence": 1.0,
         "word": "present",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 61
     },
@@ -562,7 +500,6 @@
         "wordEnd": 22.229999999999997,
         "confidence": 0.91,
         "word": "to",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 62
     },
@@ -571,7 +508,6 @@
         "wordEnd": 22.35,
         "confidence": 1.0,
         "word": "the",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 63
     },
@@ -580,7 +516,6 @@
         "wordEnd": 22.71,
         "confidence": 1.0,
         "word": "world",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 64
     },
@@ -589,7 +524,6 @@
         "wordEnd": 23.7,
         "confidence": 1.0,
         "word": "to",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 65
     },
@@ -598,7 +532,6 @@
         "wordEnd": 23.849999999999998,
         "confidence": 1.0,
         "word": "say",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 66
     },
@@ -607,7 +540,6 @@
         "wordEnd": 23.970000000000002,
         "confidence": 0.95,
         "word": "the",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 67
     },
@@ -616,7 +548,6 @@
         "wordEnd": 24.31,
         "confidence": 0.8,
         "word": "genders",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 68
     },
@@ -625,7 +556,6 @@
         "wordEnd": 25.2,
         "confidence": 1.0,
         "word": "performative",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 69
     },
@@ -634,7 +564,6 @@
         "wordEnd": 25.38,
         "confidence": 1.0,
         "word": "is",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 70
     },
@@ -643,7 +572,6 @@
         "wordEnd": 25.77,
         "confidence": 1.0,
         "word": "a",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 71
     },
@@ -652,7 +580,6 @@
         "wordEnd": 26.04,
         "confidence": 1.0,
         "word": "little",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 72
     },
@@ -661,7 +588,6 @@
         "wordEnd": 26.46,
         "confidence": 1.0,
         "word": "different",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 73
     },
@@ -670,7 +596,6 @@
         "wordEnd": 27.06,
         "confidence": 1.0,
         "word": "because",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 74
     },
@@ -679,7 +604,6 @@
         "wordEnd": 28.41,
         "confidence": 1.0,
         "word": "for",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 75
     },
@@ -688,7 +612,6 @@
         "wordEnd": 28.71,
         "confidence": 1.0,
         "word": "something",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 76
     },
@@ -697,7 +620,6 @@
         "wordEnd": 28.86,
         "confidence": 1.0,
         "word": "to",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 77
     },
@@ -706,7 +628,6 @@
         "wordEnd": 29.009999999999998,
         "confidence": 1.0,
         "word": "be",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 78
     },
@@ -715,7 +636,6 @@
         "wordEnd": 30.0,
         "confidence": 1.0,
         "word": "performative",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 79
     },
@@ -724,7 +644,6 @@
         "wordEnd": 30.24,
         "confidence": 1.0,
         "word": "means",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 80
     },
@@ -733,7 +652,6 @@
         "wordEnd": 30.36,
         "confidence": 1.0,
         "word": "that",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 81
     },
@@ -742,7 +660,6 @@
         "wordEnd": 30.45,
         "confidence": 0.99,
         "word": "it",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 82
     },
@@ -751,7 +668,6 @@
         "wordEnd": 31.44,
         "confidence": 1.0,
         "word": "produces",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 83
     },
@@ -760,7 +676,6 @@
         "wordEnd": 31.59,
         "confidence": 1.0,
         "word": "a",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 84
     },
@@ -769,7 +684,6 @@
         "wordEnd": 31.98,
         "confidence": 1.0,
         "word": "series",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 85
     },
@@ -778,7 +692,6 @@
         "wordEnd": 32.1,
         "confidence": 1.0,
         "word": "of",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 86
     },
@@ -787,7 +700,6 @@
         "wordEnd": 32.7,
         "confidence": 1.0,
         "word": "effects",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 87
     },
@@ -796,7 +708,6 @@
         "wordEnd": 33.72,
         "confidence": 1.0,
         "word": "we",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 88
     },
@@ -805,7 +716,6 @@
         "wordEnd": 34.11,
         "confidence": 0.95,
         "word": "act",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 89
     },
@@ -814,7 +724,6 @@
         "wordEnd": 34.44,
         "confidence": 1.0,
         "word": "and",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 90
     },
@@ -823,7 +732,6 @@
         "wordEnd": 35.04,
         "confidence": 1.0,
         "word": "walk",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 91
     },
@@ -832,7 +740,6 @@
         "wordEnd": 35.16,
         "confidence": 1.0,
         "word": "and",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 92
     },
@@ -841,7 +748,6 @@
         "wordEnd": 35.63999999999999,
         "confidence": 1.0,
         "word": "speak",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 93
     },
@@ -850,7 +756,6 @@
         "wordEnd": 35.79,
         "confidence": 1.0,
         "word": "and",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 94
     },
@@ -859,7 +764,6 @@
         "wordEnd": 36.449999999999996,
         "confidence": 1.0,
         "word": "talk",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 95
     },
@@ -868,7 +772,6 @@
         "wordEnd": 36.63,
         "confidence": 1.0,
         "word": "in",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 96
     },
@@ -877,7 +780,6 @@
         "wordEnd": 37.02,
         "confidence": 1.0,
         "word": "ways",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 97
     },
@@ -886,7 +788,6 @@
         "wordEnd": 37.529999999999994,
         "confidence": 1.0,
         "word": "that",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 98
     },
@@ -895,7 +796,6 @@
         "wordEnd": 39.75,
         "confidence": 0.99,
         "word": "consolidate",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 99
     },
@@ -904,7 +804,6 @@
         "wordEnd": 39.87,
         "confidence": 1.0,
         "word": "an",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 100
     },
@@ -913,7 +812,6 @@
         "wordEnd": 40.589999999999996,
         "confidence": 1.0,
         "word": "impression",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 101
     },
@@ -922,7 +820,6 @@
         "wordEnd": 40.86,
         "confidence": 1.0,
         "word": "of",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 102
     },
@@ -931,7 +828,6 @@
         "wordEnd": 41.34,
         "confidence": 1.0,
         "word": "being",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 103
     },
@@ -940,7 +836,6 @@
         "wordEnd": 41.370000000000005,
         "confidence": 0.93,
         "word": "a",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 104
     },
@@ -949,7 +844,6 @@
         "wordEnd": 41.849999999999994,
         "confidence": 0.93,
         "word": "man",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 105
     },
@@ -958,7 +852,6 @@
         "wordEnd": 42.18,
         "confidence": 1.0,
         "word": "or",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 106
     },
@@ -967,7 +860,6 @@
         "wordEnd": 42.54,
         "confidence": 1.0,
         "word": "being",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 107
     },
@@ -976,7 +868,6 @@
         "wordEnd": 42.6,
         "confidence": 1.0,
         "word": "a",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 108
     },
@@ -985,7 +876,6 @@
         "wordEnd": 43.050000000000004,
         "confidence": 1.0,
         "word": "woman",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 109
     },
@@ -994,7 +884,6 @@
         "wordEnd": 43.519999999999996,
         "confidence": 0.94,
         "word": ".",
-        "space": "",
         "alwaysCapitalized": false,
         "index": 110
     },
@@ -1003,7 +892,6 @@
         "wordEnd": 43.629999999999995,
         "confidence": 0.95,
         "word": "I",
-        "space": " ",
         "alwaysCapitalized": true,
         "index": 111
     },
@@ -1012,7 +900,6 @@
         "wordEnd": 43.8,
         "confidence": 1.0,
         "word": "was",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 112
     },
@@ -1021,7 +908,6 @@
         "wordEnd": 44.129999999999995,
         "confidence": 1.0,
         "word": "walking",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 113
     },
@@ -1030,7 +916,6 @@
         "wordEnd": 44.34,
         "confidence": 1.0,
         "word": "down",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 114
     },
@@ -1039,7 +924,6 @@
         "wordEnd": 44.43000000000001,
         "confidence": 1.0,
         "word": "the",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 115
     },
@@ -1048,7 +932,6 @@
         "wordEnd": 44.97,
         "confidence": 1.0,
         "word": "street",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 116
     },
@@ -1057,7 +940,6 @@
         "wordEnd": 45.39,
         "confidence": 1.0,
         "word": "in",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 117
     },
@@ -1066,7 +948,6 @@
         "wordEnd": 45.72,
         "confidence": 0.99,
         "word": "Berkeley",
-        "space": " ",
         "alwaysCapitalized": true,
         "index": 118
     },
@@ -1075,7 +956,6 @@
         "wordEnd": 45.839999999999996,
         "confidence": 1.0,
         "word": "when",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 119
     },
@@ -1084,7 +964,6 @@
         "wordEnd": 45.96,
         "confidence": 1.0,
         "word": "I",
-        "space": " ",
         "alwaysCapitalized": true,
         "index": 120
     },
@@ -1093,7 +972,6 @@
         "wordEnd": 46.29,
         "confidence": 1.0,
         "word": "first",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 121
     },
@@ -1102,7 +980,6 @@
         "wordEnd": 46.86,
         "confidence": 1.0,
         "word": "arrived",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 122
     },
@@ -1111,7 +988,6 @@
         "wordEnd": 47.28,
         "confidence": 1.0,
         "word": "several",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 123
     },
@@ -1120,7 +996,6 @@
         "wordEnd": 47.52,
         "confidence": 1.0,
         "word": "years",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 124
     },
@@ -1129,7 +1004,6 @@
         "wordEnd": 47.940000000000005,
         "confidence": 1.0,
         "word": "ago",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 125
     },
@@ -1138,7 +1012,6 @@
         "wordEnd": 48.57,
         "confidence": 1.0,
         "word": "and",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 126
     },
@@ -1147,7 +1020,6 @@
         "wordEnd": 48.93,
         "confidence": 1.0,
         "word": "a",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 127
     },
@@ -1156,7 +1028,6 @@
         "wordEnd": 49.17,
         "confidence": 1.0,
         "word": "young",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 128
     },
@@ -1165,7 +1036,6 @@
         "wordEnd": 49.59,
         "confidence": 1.0,
         "word": "woman",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 129
     },
@@ -1174,7 +1044,6 @@
         "wordEnd": 49.88,
         "confidence": 0.92,
         "word": "who",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 130
     },
@@ -1183,7 +1052,6 @@
         "wordEnd": 50.07,
         "confidence": 0.57,
         "word": "is",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 131
     },
@@ -1192,7 +1060,6 @@
         "wordEnd": 50.13,
         "confidence": 1.0,
         "word": "I",
-        "space": " ",
         "alwaysCapitalized": true,
         "index": 132
     },
@@ -1201,7 +1068,6 @@
         "wordEnd": 50.34,
         "confidence": 1.0,
         "word": "think",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 133
     },
@@ -1210,7 +1076,6 @@
         "wordEnd": 50.46,
         "confidence": 1.0,
         "word": "in",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 134
     },
@@ -1219,7 +1084,6 @@
         "wordEnd": 50.64,
         "confidence": 1.0,
         "word": "high",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 135
     },
@@ -1228,7 +1092,6 @@
         "wordEnd": 51.15,
         "confidence": 1.0,
         "word": "school",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 136
     },
@@ -1237,7 +1100,6 @@
         "wordEnd": 51.72,
         "confidence": 1.0,
         "word": "leaned",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 137
     },
@@ -1246,7 +1108,6 @@
         "wordEnd": 51.81,
         "confidence": 1.0,
         "word": "out",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 138
     },
@@ -1255,7 +1116,6 @@
         "wordEnd": 51.900000000000006,
         "confidence": 1.0,
         "word": "of",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 139
     },
@@ -1264,7 +1124,6 @@
         "wordEnd": 51.99,
         "confidence": 1.0,
         "word": "her",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 140
     },
@@ -1273,7 +1132,6 @@
         "wordEnd": 52.5,
         "confidence": 1.0,
         "word": "window",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 141
     },
@@ -1282,7 +1140,6 @@
         "wordEnd": 52.68,
         "confidence": 1.0,
         "word": "and",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 142
     },
@@ -1291,7 +1148,6 @@
         "wordEnd": 52.89,
         "confidence": 1.0,
         "word": "she",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 143
     },
@@ -1300,7 +1156,6 @@
         "wordEnd": 53.34,
         "confidence": 1.0,
         "word": "yelled",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 144
     },
@@ -1309,7 +1164,6 @@
         "wordEnd": 53.64,
         "confidence": 1.0,
         "word": "Are",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 145
     },
@@ -1318,7 +1172,6 @@
         "wordEnd": 53.79,
         "confidence": 1.0,
         "word": "you",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 146
     },
@@ -1327,7 +1180,6 @@
         "wordEnd": 53.85,
         "confidence": 1.0,
         "word": "a",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 147
     },
@@ -1336,7 +1188,6 @@
         "wordEnd": 54.54,
         "confidence": 1.0,
         "word": "lesbian",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 148
     },
@@ -1345,7 +1196,6 @@
         "wordEnd": 55.47,
         "confidence": 0.94,
         "word": ".",
-        "space": "",
         "alwaysCapitalized": false,
         "index": 149
     },
@@ -1354,7 +1204,6 @@
         "wordEnd": 57.42,
         "confidence": 1.0,
         "word": "And",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 150
     },
@@ -1363,7 +1212,6 @@
         "wordEnd": 57.99,
         "confidence": 1.0,
         "word": "she",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 151
     },
@@ -1372,7 +1220,6 @@
         "wordEnd": 58.11,
         "confidence": 0.99,
         "word": "was",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 152
     },
@@ -1381,7 +1228,6 @@
         "wordEnd": 58.41,
         "confidence": 1.0,
         "word": "looking",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 153
     },
@@ -1390,7 +1236,6 @@
         "wordEnd": 58.529999999999994,
         "confidence": 1.0,
         "word": "to",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 154
     },
@@ -1399,7 +1244,6 @@
         "wordEnd": 59.01,
         "confidence": 1.0,
         "word": "harass",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 155
     },
@@ -1408,7 +1252,6 @@
         "wordEnd": 59.28,
         "confidence": 1.0,
         "word": "me",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 156
     },
@@ -1417,7 +1260,6 @@
         "wordEnd": 59.879999999999995,
         "confidence": 1.0,
         "word": "or",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 157
     },
@@ -1426,7 +1268,6 @@
         "wordEnd": 60.449999999999996,
         "confidence": 1.0,
         "word": "maybe",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 158
     },
@@ -1435,7 +1276,6 @@
         "wordEnd": 60.63,
         "confidence": 1.0,
         "word": "she",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 159
     },
@@ -1444,7 +1284,6 @@
         "wordEnd": 60.81,
         "confidence": 1.0,
         "word": "was",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 160
     },
@@ -1453,7 +1292,6 @@
         "wordEnd": 61.11,
         "confidence": 1.0,
         "word": "just",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 161
     },
@@ -1462,7 +1300,6 @@
         "wordEnd": 61.71,
         "confidence": 1.0,
         "word": "freaked",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 162
     },
@@ -1471,7 +1308,6 @@
         "wordEnd": 61.980000000000004,
         "confidence": 1.0,
         "word": "out",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 163
     },
@@ -1480,7 +1316,6 @@
         "wordEnd": 62.19,
         "confidence": 1.0,
         "word": "or",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 164
     },
@@ -1489,7 +1324,6 @@
         "wordEnd": 62.37,
         "confidence": 1.0,
         "word": "she",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 165
     },
@@ -1498,7 +1332,6 @@
         "wordEnd": 62.55,
         "confidence": 1.0,
         "word": "thought",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 166
     },
@@ -1507,7 +1340,6 @@
         "wordEnd": 62.64,
         "confidence": 1.0,
         "word": "I",
-        "space": " ",
         "alwaysCapitalized": true,
         "index": 167
     },
@@ -1516,7 +1348,6 @@
         "wordEnd": 62.94,
         "confidence": 1.0,
         "word": "looked",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 168
     },
@@ -1525,7 +1356,6 @@
         "wordEnd": 63.12,
         "confidence": 1.0,
         "word": "like",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 169
     },
@@ -1534,7 +1364,6 @@
         "wordEnd": 63.21,
         "confidence": 0.96,
         "word": "I",
-        "space": " ",
         "alwaysCapitalized": true,
         "index": 170
     },
@@ -1543,7 +1372,6 @@
         "wordEnd": 63.57,
         "confidence": 1.0,
         "word": "probably",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 171
     },
@@ -1552,7 +1380,6 @@
         "wordEnd": 63.81,
         "confidence": 1.0,
         "word": "was",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 172
     },
@@ -1561,7 +1388,6 @@
         "wordEnd": 63.99,
         "confidence": 0.96,
         "word": "one",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 173
     },
@@ -1570,7 +1396,6 @@
         "wordEnd": 64.08,
         "confidence": 0.7,
         "word": "who",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 174
     },
@@ -1579,7 +1404,6 @@
         "wordEnd": 64.35,
         "confidence": 1.0,
         "word": "wanted",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 175
     },
@@ -1588,7 +1412,6 @@
         "wordEnd": 64.5,
         "confidence": 1.0,
         "word": "to",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 176
     },
@@ -1597,7 +1420,6 @@
         "wordEnd": 64.95,
         "confidence": 1.0,
         "word": "know",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 177
     },
@@ -1606,7 +1428,6 @@
         "wordEnd": 65.07000000000001,
         "confidence": 0.67,
         "word": ".",
-        "space": "",
         "alwaysCapitalized": false,
         "index": 178
     },
@@ -1615,7 +1436,6 @@
         "wordEnd": 65.62,
         "confidence": 0.85,
         "word": "But",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 179
     },
@@ -1624,7 +1444,6 @@
         "wordEnd": 65.95,
         "confidence": 1.0,
         "word": "I",
-        "space": " ",
         "alwaysCapitalized": true,
         "index": 180
     },
@@ -1633,7 +1452,6 @@
         "wordEnd": 66.15,
         "confidence": 1.0,
         "word": "just",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 181
     },
@@ -1642,7 +1460,6 @@
         "wordEnd": 66.42,
         "confidence": 1.0,
         "word": "turned",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 182
     },
@@ -1651,7 +1468,6 @@
         "wordEnd": 66.72,
         "confidence": 1.0,
         "word": "around",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 183
     },
@@ -1660,7 +1476,6 @@
         "wordEnd": 66.84,
         "confidence": 1.0,
         "word": "and",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 184
     },
@@ -1669,7 +1484,6 @@
         "wordEnd": 66.9,
         "confidence": 0.93,
         "word": "I",
-        "space": " ",
         "alwaysCapitalized": true,
         "index": 185
     },
@@ -1678,7 +1492,6 @@
         "wordEnd": 67.08000000000001,
         "confidence": 1.0,
         "word": "said",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 186
     },
@@ -1687,7 +1500,6 @@
         "wordEnd": 67.53,
         "confidence": 1.0,
         "word": "Yes",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 187
     },
@@ -1696,7 +1508,6 @@
         "wordEnd": 67.71000000000001,
         "confidence": 1.0,
         "word": "I",
-        "space": " ",
         "alwaysCapitalized": true,
         "index": 188
     },
@@ -1705,7 +1516,6 @@
         "wordEnd": 68.03999999999999,
         "confidence": 1.0,
         "word": "am",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 189
     },
@@ -1714,7 +1524,6 @@
         "wordEnd": 68.63000000000001,
         "confidence": 0.78,
         "word": ".",
-        "space": "",
         "alwaysCapitalized": false,
         "index": 190
     },
@@ -1723,7 +1532,6 @@
         "wordEnd": 69.30000000000001,
         "confidence": 1.0,
         "word": "And",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 191
     },
@@ -1732,7 +1540,6 @@
         "wordEnd": 69.50999999999999,
         "confidence": 1.0,
         "word": "that",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 192
     },
@@ -1741,7 +1548,6 @@
         "wordEnd": 69.75,
         "confidence": 1.0,
         "word": "really",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 193
     },
@@ -1750,7 +1556,6 @@
         "wordEnd": 70.17,
         "confidence": 1.0,
         "word": "shocked",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 194
     },
@@ -1759,7 +1564,6 @@
         "wordEnd": 70.41,
         "confidence": 1.0,
         "word": "her",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 195
     },
@@ -1768,7 +1572,6 @@
         "wordEnd": 71.02,
         "confidence": 0.93,
         "word": ".",
-        "space": "",
         "alwaysCapitalized": false,
         "index": 196
     },
@@ -1777,7 +1580,6 @@
         "wordEnd": 71.33999999999999,
         "confidence": 1.0,
         "word": "We",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 197
     },
@@ -1786,7 +1588,6 @@
         "wordEnd": 71.7,
         "confidence": 1.0,
         "word": "act",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 198
     },
@@ -1795,7 +1596,6 @@
         "wordEnd": 71.88000000000001,
         "confidence": 1.0,
         "word": "as",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 199
     },
@@ -1804,7 +1604,6 @@
         "wordEnd": 72.33,
         "confidence": 1.0,
         "word": "if",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 200
     },
@@ -1813,7 +1612,6 @@
         "wordEnd": 72.76,
         "confidence": 0.96,
         "word": "that",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 201
     },
@@ -1822,7 +1620,6 @@
         "wordEnd": 73.14,
         "confidence": 1.0,
         "word": "being",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 202
     },
@@ -1831,7 +1628,6 @@
         "wordEnd": 73.25,
         "confidence": 0.95,
         "word": "of",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 203
     },
@@ -1840,7 +1636,6 @@
         "wordEnd": 73.32000000000001,
         "confidence": 1.0,
         "word": "a",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 204
     },
@@ -1849,7 +1644,6 @@
         "wordEnd": 73.64999999999999,
         "confidence": 1.0,
         "word": "man",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 205
     },
@@ -1858,7 +1652,6 @@
         "wordEnd": 73.80000000000001,
         "confidence": 1.0,
         "word": "or",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 206
     },
@@ -1867,7 +1660,6 @@
         "wordEnd": 73.98,
         "confidence": 1.0,
         "word": "that",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 207
     },
@@ -1876,7 +1668,6 @@
         "wordEnd": 74.28,
         "confidence": 1.0,
         "word": "being",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 208
     },
@@ -1885,7 +1676,6 @@
         "wordEnd": 74.4,
         "confidence": 1.0,
         "word": "of",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 209
     },
@@ -1894,7 +1684,6 @@
         "wordEnd": 74.46000000000001,
         "confidence": 1.0,
         "word": "a",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 210
     },
@@ -1903,7 +1692,6 @@
         "wordEnd": 74.69999999999999,
         "confidence": 1.0,
         "word": "woman",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 211
     },
@@ -1912,7 +1700,6 @@
         "wordEnd": 74.82000000000001,
         "confidence": 1.0,
         "word": "is",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 212
     },
@@ -1921,7 +1708,6 @@
         "wordEnd": 75.14999999999999,
         "confidence": 1.0,
         "word": "actually",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 213
     },
@@ -1930,7 +1716,6 @@
         "wordEnd": 75.24000000000001,
         "confidence": 0.95,
         "word": "an",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 214
     },
@@ -1939,7 +1724,6 @@
         "wordEnd": 75.75,
         "confidence": 0.87,
         "word": "entirely",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 215
     },
@@ -1948,7 +1732,6 @@
         "wordEnd": 76.41,
         "confidence": 1.0,
         "word": "reality",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 216
     },
@@ -1957,7 +1740,6 @@
         "wordEnd": 76.67999999999999,
         "confidence": 1.0,
         "word": "or",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 217
     },
@@ -1966,7 +1748,6 @@
         "wordEnd": 77.49,
         "confidence": 1.0,
         "word": "something",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 218
     },
@@ -1975,7 +1756,6 @@
         "wordEnd": 77.88,
         "confidence": 0.99,
         "word": "that's",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 219
     },
@@ -1984,7 +1764,6 @@
         "wordEnd": 78.75,
         "confidence": 1.0,
         "word": "simply",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 220
     },
@@ -1993,7 +1772,6 @@
         "wordEnd": 79.08,
         "confidence": 1.0,
         "word": "true",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 221
     },
@@ -2002,7 +1780,6 @@
         "wordEnd": 79.44,
         "confidence": 1.0,
         "word": "about",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 222
     },
@@ -2011,7 +1788,6 @@
         "wordEnd": 79.67,
         "confidence": 1.0,
         "word": "Us",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 223
     },
@@ -2020,7 +1796,6 @@
         "wordEnd": 79.74,
         "confidence": 0.81,
         "word": "a",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 224
     },
@@ -2029,7 +1804,6 @@
         "wordEnd": 80.25,
         "confidence": 1.0,
         "word": "fact",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 225
     },
@@ -2038,7 +1812,6 @@
         "wordEnd": 80.61,
         "confidence": 1.0,
         "word": "about",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 226
     },
@@ -2047,7 +1820,6 @@
         "wordEnd": 80.91,
         "confidence": 1.0,
         "word": "us",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 227
     },
@@ -2056,7 +1828,6 @@
         "wordEnd": 81.11999999999999,
         "confidence": 0.71,
         "word": ".",
-        "space": "",
         "alwaysCapitalized": false,
         "index": 228
     },
@@ -2065,7 +1836,6 @@
         "wordEnd": 81.89999999999999,
         "confidence": 1.0,
         "word": "Actually",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 229
     },
@@ -2074,7 +1844,6 @@
         "wordEnd": 82.71,
         "confidence": 1.0,
         "word": "it's",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 230
     },
@@ -2083,7 +1852,6 @@
         "wordEnd": 82.98,
         "confidence": 1.0,
         "word": "a",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 231
     },
@@ -2092,7 +1860,6 @@
         "wordEnd": 83.7,
         "confidence": 1.0,
         "word": "phenomenon",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 232
     },
@@ -2101,7 +1868,6 @@
         "wordEnd": 83.94,
         "confidence": 0.98,
         "word": "that's",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 233
     },
@@ -2110,7 +1876,6 @@
         "wordEnd": 84.24,
         "confidence": 1.0,
         "word": "being",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 234
     },
@@ -2119,7 +1884,6 @@
         "wordEnd": 84.89999999999999,
         "confidence": 1.0,
         "word": "produced",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 235
     },
@@ -2128,7 +1892,6 @@
         "wordEnd": 84.99000000000001,
         "confidence": 1.0,
         "word": "all",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 236
     },
@@ -2137,7 +1900,6 @@
         "wordEnd": 85.11,
         "confidence": 1.0,
         "word": "the",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 237
     },
@@ -2146,7 +1908,6 @@
         "wordEnd": 85.5,
         "confidence": 1.0,
         "word": "time",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 238
     },
@@ -2155,7 +1916,6 @@
         "wordEnd": 85.62,
         "confidence": 1.0,
         "word": "and",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 239
     },
@@ -2164,7 +1924,6 @@
         "wordEnd": 86.37,
         "confidence": 1.0,
         "word": "reproduced",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 240
     },
@@ -2173,7 +1932,6 @@
         "wordEnd": 86.49000000000001,
         "confidence": 1.0,
         "word": "all",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 241
     },
@@ -2182,7 +1940,6 @@
         "wordEnd": 86.61,
         "confidence": 1.0,
         "word": "the",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 242
     },
@@ -2191,7 +1948,6 @@
         "wordEnd": 86.97,
         "confidence": 1.0,
         "word": "time",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 243
     },
@@ -2200,7 +1956,6 @@
         "wordEnd": 87.62,
         "confidence": 0.95,
         "word": ".",
-        "space": "",
         "alwaysCapitalized": false,
         "index": 244
     },
@@ -2209,7 +1964,6 @@
         "wordEnd": 87.81,
         "confidence": 1.0,
         "word": "So",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 245
     },
@@ -2218,7 +1972,6 @@
         "wordEnd": 87.93,
         "confidence": 0.98,
         "word": "to",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 246
     },
@@ -2227,7 +1980,6 @@
         "wordEnd": 88.14,
         "confidence": 1.0,
         "word": "say",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 247
     },
@@ -2236,7 +1988,6 @@
         "wordEnd": 88.5,
         "confidence": 1.0,
         "word": "gender",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 248
     },
@@ -2245,7 +1996,6 @@
         "wordEnd": 88.65,
         "confidence": 1.0,
         "word": "is",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 249
     },
@@ -2254,7 +2004,6 @@
         "wordEnd": 89.52000000000001,
         "confidence": 1.0,
         "word": "performative",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 250
     },
@@ -2263,7 +2012,6 @@
         "wordEnd": 89.67,
         "confidence": 1.0,
         "word": "is",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 251
     },
@@ -2272,7 +2020,6 @@
         "wordEnd": 89.82000000000001,
         "confidence": 1.0,
         "word": "to",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 252
     },
@@ -2281,7 +2028,6 @@
         "wordEnd": 90.21,
         "confidence": 1.0,
         "word": "say",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 253
     },
@@ -2290,7 +2036,6 @@
         "wordEnd": 90.63000000000001,
         "confidence": 1.0,
         "word": "that",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 254
     },
@@ -2299,7 +2044,6 @@
         "wordEnd": 91.02,
         "confidence": 1.0,
         "word": "nobody",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 255
     },
@@ -2308,7 +2052,6 @@
         "wordEnd": 91.38,
         "confidence": 1.0,
         "word": "really",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 256
     },
@@ -2317,7 +2060,6 @@
         "wordEnd": 91.64999999999999,
         "confidence": 1.0,
         "word": "is",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 257
     },
@@ -2326,7 +2068,6 @@
         "wordEnd": 91.71000000000001,
         "confidence": 0.64,
         "word": "a",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 258
     },
@@ -2335,7 +2076,6 @@
         "wordEnd": 92.27999999999999,
         "confidence": 0.64,
         "word": "gender",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 259
     },
@@ -2344,7 +2084,6 @@
         "wordEnd": 92.49,
         "confidence": 1.0,
         "word": "from",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 260
     },
@@ -2353,7 +2092,6 @@
         "wordEnd": 92.61,
         "confidence": 1.0,
         "word": "the",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 261
     },
@@ -2362,7 +2100,6 @@
         "wordEnd": 93.17999999999999,
         "confidence": 1.0,
         "word": "start",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 262
     },
@@ -2371,7 +2108,6 @@
         "wordEnd": 93.98,
         "confidence": 0.77,
         "word": ".",
-        "space": "",
         "alwaysCapitalized": false,
         "index": 263
     },
@@ -2380,7 +2116,6 @@
         "wordEnd": 94.29,
         "confidence": 0.99,
         "word": "I",
-        "space": " ",
         "alwaysCapitalized": true,
         "index": 264
     },
@@ -2389,7 +2124,6 @@
         "wordEnd": 94.47000000000001,
         "confidence": 1.0,
         "word": "know",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 265
     },
@@ -2398,7 +2132,6 @@
         "wordEnd": 94.59,
         "confidence": 1.0,
         "word": "it's",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 266
     },
@@ -2407,7 +2140,6 @@
         "wordEnd": 95.37,
         "confidence": 1.0,
         "word": "controversial",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 267
     },
@@ -2416,7 +2148,6 @@
         "wordEnd": 95.7,
         "confidence": 1.0,
         "word": "but",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 268
     },
@@ -2425,7 +2156,6 @@
         "wordEnd": 95.94,
         "confidence": 1.0,
         "word": "that's",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 269
     },
@@ -2434,7 +2164,6 @@
         "wordEnd": 96.12,
         "confidence": 1.0,
         "word": "my",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 270
     },
@@ -2443,7 +2172,6 @@
         "wordEnd": 96.54,
         "confidence": 1.0,
         "word": "claim",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 271
     },
@@ -2452,7 +2180,6 @@
         "wordEnd": 96.62,
         "confidence": 0.84,
         "word": ".",
-        "space": "",
         "alwaysCapitalized": false,
         "index": 272
     },
@@ -2461,7 +2188,6 @@
         "wordEnd": 100.96,
         "confidence": 1.0,
         "word": "Think",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 273
     },
@@ -2470,7 +2196,6 @@
         "wordEnd": 101.41,
         "confidence": 1.0,
         "word": "about",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 274
     },
@@ -2479,7 +2204,6 @@
         "wordEnd": 102.22,
         "confidence": 1.0,
         "word": "how",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 275
     },
@@ -2488,7 +2212,6 @@
         "wordEnd": 103.09,
         "confidence": 1.0,
         "word": "difficult",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 276
     },
@@ -2497,7 +2220,6 @@
         "wordEnd": 103.21000000000001,
         "confidence": 1.0,
         "word": "it",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 277
     },
@@ -2506,7 +2228,6 @@
         "wordEnd": 103.53999999999999,
         "confidence": 1.0,
         "word": "is",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 278
     },
@@ -2515,7 +2236,6 @@
         "wordEnd": 103.87,
         "confidence": 1.0,
         "word": "for",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 279
     },
@@ -2524,7 +2244,6 @@
         "wordEnd": 104.26,
         "confidence": 0.99,
         "word": "sissy",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 280
     },
@@ -2533,7 +2252,6 @@
         "wordEnd": 104.86,
         "confidence": 1.0,
         "word": "boys",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 281
     },
@@ -2542,7 +2260,6 @@
         "wordEnd": 105.64,
         "confidence": 1.0,
         "word": "or",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 282
     },
@@ -2551,7 +2268,6 @@
         "wordEnd": 105.79,
         "confidence": 1.0,
         "word": "how",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 283
     },
@@ -2560,7 +2276,6 @@
         "wordEnd": 106.39,
         "confidence": 1.0,
         "word": "difficult",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 284
     },
@@ -2569,7 +2284,6 @@
         "wordEnd": 106.60000000000001,
         "confidence": 1.0,
         "word": "it",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 285
     },
@@ -2578,7 +2292,6 @@
         "wordEnd": 106.96,
         "confidence": 1.0,
         "word": "is",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 286
     },
@@ -2587,7 +2300,6 @@
         "wordEnd": 107.38,
         "confidence": 1.0,
         "word": "for",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 287
     },
@@ -2596,7 +2308,6 @@
         "wordEnd": 108.34,
         "confidence": 1.0,
         "word": "tomboys",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 288
     },
@@ -2605,7 +2316,6 @@
         "wordEnd": 109.06,
         "confidence": 1.0,
         "word": "to",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 289
     },
@@ -2614,7 +2324,6 @@
         "wordEnd": 109.48,
         "confidence": 1.0,
         "word": "function",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 290
     },
@@ -2623,7 +2332,6 @@
         "wordEnd": 109.99000000000001,
         "confidence": 1.0,
         "word": "socially",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 291
     },
@@ -2632,7 +2340,6 @@
         "wordEnd": 110.35,
         "confidence": 1.0,
         "word": "without",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 292
     },
@@ -2641,7 +2348,6 @@
         "wordEnd": 110.61999999999999,
         "confidence": 1.0,
         "word": "being",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 293
     },
@@ -2650,7 +2356,6 @@
         "wordEnd": 111.10000000000001,
         "confidence": 1.0,
         "word": "bullied",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 294
     },
@@ -2659,7 +2364,6 @@
         "wordEnd": 111.22,
         "confidence": 1.0,
         "word": "or",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 295
     },
@@ -2668,7 +2372,6 @@
         "wordEnd": 111.67,
         "confidence": 1.0,
         "word": "without",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 296
     },
@@ -2677,7 +2380,6 @@
         "wordEnd": 112.0,
         "confidence": 1.0,
         "word": "being",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 297
     },
@@ -2686,7 +2388,6 @@
         "wordEnd": 112.57,
         "confidence": 1.0,
         "word": "teased",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 298
     },
@@ -2695,7 +2396,6 @@
         "wordEnd": 112.77999999999999,
         "confidence": 1.0,
         "word": "or",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 299
     },
@@ -2704,7 +2404,6 @@
         "wordEnd": 113.29,
         "confidence": 1.0,
         "word": "without",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 300
     },
@@ -2713,7 +2412,6 @@
         "wordEnd": 113.95,
         "confidence": 1.0,
         "word": "sometimes",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 301
     },
@@ -2722,7 +2420,6 @@
         "wordEnd": 114.67,
         "confidence": 1.0,
         "word": "suffering",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 302
     },
@@ -2731,7 +2428,6 @@
         "wordEnd": 115.09,
         "confidence": 1.0,
         "word": "threats",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 303
     },
@@ -2740,7 +2436,6 @@
         "wordEnd": 115.18,
         "confidence": 1.0,
         "word": "of",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 304
     },
@@ -2749,7 +2444,6 @@
         "wordEnd": 115.9,
         "confidence": 1.0,
         "word": "violence",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 305
     },
@@ -2758,7 +2452,6 @@
         "wordEnd": 117.52,
         "confidence": 1.0,
         "word": "or",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 306
     },
@@ -2767,7 +2460,6 @@
         "wordEnd": 117.88,
         "confidence": 1.0,
         "word": "without",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 307
     },
@@ -2776,7 +2468,6 @@
         "wordEnd": 118.0,
         "confidence": 1.0,
         "word": "their",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 308
     },
@@ -2785,7 +2476,6 @@
         "wordEnd": 118.48,
         "confidence": 1.0,
         "word": "parents",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 309
     },
@@ -2794,7 +2484,6 @@
         "wordEnd": 119.11,
         "confidence": 1.0,
         "word": "intervening",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 310
     },
@@ -2803,7 +2492,6 @@
         "wordEnd": 119.26,
         "confidence": 1.0,
         "word": "to",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 311
     },
@@ -2812,7 +2500,6 @@
         "wordEnd": 119.68,
         "confidence": 1.0,
         "word": "say",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 312
     },
@@ -2821,7 +2508,6 @@
         "wordEnd": 119.92,
         "confidence": 1.0,
         "word": "maybe",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 313
     },
@@ -2830,7 +2516,6 @@
         "wordEnd": 120.04,
         "confidence": 1.0,
         "word": "you",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 314
     },
@@ -2839,7 +2524,6 @@
         "wordEnd": 120.31,
         "confidence": 1.0,
         "word": "need",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 315
     },
@@ -2848,7 +2532,6 @@
         "wordEnd": 120.37,
         "confidence": 1.0,
         "word": "a",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 316
     },
@@ -2857,7 +2540,6 @@
         "wordEnd": 121.48,
         "confidence": 1.0,
         "word": "psychiatrist",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 317
     },
@@ -2866,7 +2548,6 @@
         "wordEnd": 121.78,
         "confidence": 1.0,
         "word": "or",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 318
     },
@@ -2875,7 +2556,6 @@
         "wordEnd": 122.17,
         "confidence": 1.0,
         "word": "why",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 319
     },
@@ -2884,7 +2564,6 @@
         "wordEnd": 122.44,
         "confidence": 1.0,
         "word": "can't",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 320
     },
@@ -2893,7 +2572,6 @@
         "wordEnd": 122.53,
         "confidence": 1.0,
         "word": "you",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 321
     },
@@ -2902,7 +2580,6 @@
         "wordEnd": 122.65,
         "confidence": 1.0,
         "word": "be",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 322
     },
@@ -2911,7 +2588,6 @@
         "wordEnd": 123.25,
         "confidence": 1.0,
         "word": "normal",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 323
     },
@@ -2920,7 +2596,6 @@
         "wordEnd": 123.28,
         "confidence": 0.9,
         "word": ".",
-        "space": "",
         "alwaysCapitalized": false,
         "index": 324
     },
@@ -2929,7 +2604,6 @@
         "wordEnd": 123.88000000000001,
         "confidence": 1.0,
         "word": "So",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 325
     },
@@ -2938,7 +2612,6 @@
         "wordEnd": 124.69,
         "confidence": 1.0,
         "word": "you",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 326
     },
@@ -2947,7 +2620,6 @@
         "wordEnd": 124.89999999999999,
         "confidence": 1.0,
         "word": "know",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 327
     },
@@ -2956,7 +2628,6 @@
         "wordEnd": 125.41000000000001,
         "confidence": 1.0,
         "word": "there",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 328
     },
@@ -2965,7 +2636,6 @@
         "wordEnd": 126.31,
         "confidence": 1.0,
         "word": "are",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 329
     },
@@ -2974,7 +2644,6 @@
         "wordEnd": 127.96,
         "confidence": 1.0,
         "word": "institutional",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 330
     },
@@ -2983,7 +2652,6 @@
         "wordEnd": 128.73999999999998,
         "confidence": 1.0,
         "word": "powers",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 331
     },
@@ -2992,7 +2660,6 @@
         "wordEnd": 129.1,
         "confidence": 1.0,
         "word": "like",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 332
     },
@@ -3001,7 +2668,6 @@
         "wordEnd": 129.76,
         "confidence": 1.0,
         "word": "psychiatric",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 333
     },
@@ -3010,7 +2676,6 @@
         "wordEnd": 130.78,
         "confidence": 0.76,
         "word": "normalization",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 334
     },
@@ -3019,7 +2684,6 @@
         "wordEnd": 131.62,
         "confidence": 1.0,
         "word": "and",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 335
     },
@@ -3028,7 +2692,6 @@
         "wordEnd": 131.89000000000001,
         "confidence": 1.0,
         "word": "there",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 336
     },
@@ -3037,7 +2700,6 @@
         "wordEnd": 132.60999999999999,
         "confidence": 1.0,
         "word": "are",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 337
     },
@@ -3046,7 +2708,6 @@
         "wordEnd": 134.85999999999999,
         "confidence": 1.0,
         "word": "informal",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 338
     },
@@ -3055,7 +2716,6 @@
         "wordEnd": 135.16000000000003,
         "confidence": 1.0,
         "word": "kinds",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 339
     },
@@ -3064,7 +2724,6 @@
         "wordEnd": 135.25,
         "confidence": 1.0,
         "word": "of",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 340
     },
@@ -3073,7 +2732,6 @@
         "wordEnd": 135.94,
         "confidence": 1.0,
         "word": "practices",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 341
     },
@@ -3082,7 +2740,6 @@
         "wordEnd": 136.15,
         "confidence": 1.0,
         "word": "like",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 342
     },
@@ -3091,7 +2748,6 @@
         "wordEnd": 136.72,
         "confidence": 1.0,
         "word": "bullying",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 343
     },
@@ -3100,7 +2756,6 @@
         "wordEnd": 137.05,
         "confidence": 1.0,
         "word": "which",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 344
     },
@@ -3109,7 +2764,6 @@
         "wordEnd": 137.41,
         "confidence": 0.99,
         "word": "try",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 345
     },
@@ -3118,7 +2772,6 @@
         "wordEnd": 137.53,
         "confidence": 1.0,
         "word": "to",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 346
     },
@@ -3127,7 +2780,6 @@
         "wordEnd": 137.89000000000001,
         "confidence": 1.0,
         "word": "keep",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 347
     },
@@ -3136,7 +2788,6 @@
         "wordEnd": 138.07,
         "confidence": 1.0,
         "word": "us",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 348
     },
@@ -3145,7 +2796,6 @@
         "wordEnd": 138.19,
         "confidence": 1.0,
         "word": "in",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 349
     },
@@ -3154,7 +2804,6 @@
         "wordEnd": 138.34,
         "confidence": 1.0,
         "word": "our",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 350
     },
@@ -3163,7 +2812,6 @@
         "wordEnd": 138.79,
         "confidence": 0.99,
         "word": "gendered",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 351
     },
@@ -3172,7 +2820,6 @@
         "wordEnd": 139.54,
         "confidence": 1.0,
         "word": "place",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 352
     },
@@ -3181,7 +2828,6 @@
         "wordEnd": 139.87,
         "confidence": 0.88,
         "word": ".",
-        "space": "",
         "alwaysCapitalized": false,
         "index": 353
     },
@@ -3190,7 +2836,6 @@
         "wordEnd": 140.07,
         "confidence": 0.89,
         "word": "There's",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 354
     },
@@ -3199,7 +2844,6 @@
         "wordEnd": 140.14000000000001,
         "confidence": 1.0,
         "word": "a",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 355
     },
@@ -3208,7 +2852,6 @@
         "wordEnd": 140.35,
         "confidence": 1.0,
         "word": "real",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 356
     },
@@ -3217,7 +2860,6 @@
         "wordEnd": 140.98,
         "confidence": 1.0,
         "word": "question",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 357
     },
@@ -3226,7 +2868,6 @@
         "wordEnd": 141.88,
         "confidence": 1.0,
         "word": "for",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 358
     },
@@ -3235,7 +2876,6 @@
         "wordEnd": 142.24,
         "confidence": 1.0,
         "word": "me",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 359
     },
@@ -3244,7 +2884,6 @@
         "wordEnd": 142.57000000000002,
         "confidence": 1.0,
         "word": "about",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 360
     },
@@ -3253,7 +2892,6 @@
         "wordEnd": 143.38,
         "confidence": 1.0,
         "word": "how",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 361
     },
@@ -3262,7 +2900,6 @@
         "wordEnd": 143.74,
         "confidence": 0.97,
         "word": "such",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 362
     },
@@ -3271,7 +2908,6 @@
         "wordEnd": 144.25,
         "confidence": 1.0,
         "word": "gender",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 363
     },
@@ -3280,7 +2916,6 @@
         "wordEnd": 144.61,
         "confidence": 1.0,
         "word": "norms",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 364
     },
@@ -3289,7 +2924,6 @@
         "wordEnd": 144.79000000000002,
         "confidence": 1.0,
         "word": "get",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 365
     },
@@ -3298,7 +2932,6 @@
         "wordEnd": 145.48,
         "confidence": 1.0,
         "word": "established",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 366
     },
@@ -3307,7 +2940,6 @@
         "wordEnd": 145.57,
         "confidence": 0.99,
         "word": "and",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 367
     },
@@ -3316,7 +2948,6 @@
         "wordEnd": 146.17,
         "confidence": 1.0,
         "word": "policed",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 368
     },
@@ -3325,7 +2956,6 @@
         "wordEnd": 146.98000000000002,
         "confidence": 1.0,
         "word": "and",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 369
     },
@@ -3334,7 +2964,6 @@
         "wordEnd": 147.16,
         "confidence": 0.98,
         "word": "what",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 370
     },
@@ -3343,7 +2972,6 @@
         "wordEnd": 147.28,
         "confidence": 1.0,
         "word": "the",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 371
     },
@@ -3352,7 +2980,6 @@
         "wordEnd": 147.58,
         "confidence": 1.0,
         "word": "best",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 372
     },
@@ -3361,7 +2988,6 @@
         "wordEnd": 147.79000000000002,
         "confidence": 1.0,
         "word": "way",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 373
     },
@@ -3370,7 +2996,6 @@
         "wordEnd": 148.0,
         "confidence": 1.0,
         "word": "is",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 374
     },
@@ -3379,7 +3004,6 @@
         "wordEnd": 148.18,
         "confidence": 1.0,
         "word": "to",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 375
     },
@@ -3388,7 +3012,6 @@
         "wordEnd": 148.78,
         "confidence": 1.0,
         "word": "disrupt",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 376
     },
@@ -3397,7 +3020,6 @@
         "wordEnd": 149.17,
         "confidence": 1.0,
         "word": "them",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 377
     },
@@ -3406,7 +3028,6 @@
         "wordEnd": 149.64999999999998,
         "confidence": 1.0,
         "word": "and",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 378
     },
@@ -3415,7 +3036,6 @@
         "wordEnd": 149.92000000000002,
         "confidence": 1.0,
         "word": "to",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 379
     },
@@ -3424,7 +3044,6 @@
         "wordEnd": 150.42999999999998,
         "confidence": 1.0,
         "word": "overcome",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 380
     },
@@ -3433,7 +3052,6 @@
         "wordEnd": 150.55,
         "confidence": 1.0,
         "word": "the",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 381
     },
@@ -3442,7 +3060,6 @@
         "wordEnd": 150.88000000000002,
         "confidence": 1.0,
         "word": "police",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 382
     },
@@ -3451,7 +3068,6 @@
         "wordEnd": 151.35999999999999,
         "confidence": 0.99,
         "word": "function",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 383
     },
@@ -3460,7 +3076,6 @@
         "wordEnd": 151.4,
         "confidence": 1.0,
         "word": ".",
-        "space": "",
         "alwaysCapitalized": false,
         "index": 384
     },
@@ -3469,7 +3084,6 @@
         "wordEnd": 151.99,
         "confidence": 0.98,
         "word": "It's",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 385
     },
@@ -3478,7 +3092,6 @@
         "wordEnd": 152.23000000000002,
         "confidence": 1.0,
         "word": "my",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 386
     },
@@ -3487,7 +3100,6 @@
         "wordEnd": 152.59,
         "confidence": 1.0,
         "word": "view",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 387
     },
@@ -3496,7 +3108,6 @@
         "wordEnd": 153.04,
         "confidence": 1.0,
         "word": "that",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 388
     },
@@ -3505,7 +3116,6 @@
         "wordEnd": 154.6,
         "confidence": 1.0,
         "word": "gender",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 389
     },
@@ -3514,7 +3124,6 @@
         "wordEnd": 154.84,
         "confidence": 1.0,
         "word": "is",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 390
     },
@@ -3523,7 +3132,6 @@
         "wordEnd": 155.96,
         "confidence": 0.59,
         "word": "is",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 391
     },
@@ -3532,7 +3140,6 @@
         "wordEnd": 157.20999999999998,
         "confidence": 1.0,
         "word": "culturally",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 392
     },
@@ -3541,7 +3148,6 @@
         "wordEnd": 157.75,
         "confidence": 1.0,
         "word": "formed",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 393
     },
@@ -3550,7 +3156,6 @@
         "wordEnd": 158.35,
         "confidence": 1.0,
         "word": "but",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 394
     },
@@ -3559,7 +3164,6 @@
         "wordEnd": 158.5,
         "confidence": 1.0,
         "word": "it's",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 395
     },
@@ -3568,7 +3172,6 @@
         "wordEnd": 159.19,
         "confidence": 1.0,
         "word": "also",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 396
     },
@@ -3577,7 +3180,6 @@
         "wordEnd": 159.34,
         "confidence": 1.0,
         "word": "a",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 397
     },
@@ -3586,7 +3188,6 @@
         "wordEnd": 159.97,
         "confidence": 1.0,
         "word": "domain",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 398
     },
@@ -3595,7 +3196,6 @@
         "wordEnd": 160.3,
         "confidence": 1.0,
         "word": "of",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 399
     },
@@ -3604,7 +3204,6 @@
         "wordEnd": 160.89999999999998,
         "confidence": 1.0,
         "word": "agency",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 400
     },
@@ -3613,7 +3212,6 @@
         "wordEnd": 161.02,
         "confidence": 0.99,
         "word": "or",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 401
     },
@@ -3622,7 +3220,6 @@
         "wordEnd": 161.56,
         "confidence": 1.0,
         "word": "freedom",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 402
     },
@@ -3631,7 +3228,6 @@
         "wordEnd": 161.59,
         "confidence": 0.82,
         "word": ".",
-        "space": "",
         "alwaysCapitalized": false,
         "index": 403
     },
@@ -3640,7 +3236,6 @@
         "wordEnd": 162.01000000000002,
         "confidence": 0.97,
         "word": "It's",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 404
     },
@@ -3649,7 +3244,6 @@
         "wordEnd": 162.34,
         "confidence": 1.0,
         "word": "most",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 405
     },
@@ -3658,7 +3252,6 @@
         "wordEnd": 163.0,
         "confidence": 1.0,
         "word": "important",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 406
     },
@@ -3667,7 +3260,6 @@
         "wordEnd": 163.57,
         "confidence": 1.0,
         "word": "to",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 407
     },
@@ -3676,7 +3268,6 @@
         "wordEnd": 164.10999999999999,
         "confidence": 1.0,
         "word": "resist",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 408
     },
@@ -3685,7 +3276,6 @@
         "wordEnd": 164.44,
         "confidence": 1.0,
         "word": "the",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 409
     },
@@ -3694,7 +3284,6 @@
         "wordEnd": 165.1,
         "confidence": 1.0,
         "word": "violence",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 410
     },
@@ -3703,7 +3292,6 @@
         "wordEnd": 165.61,
         "confidence": 1.0,
         "word": "that",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 411
     },
@@ -3712,7 +3300,6 @@
         "wordEnd": 165.94000000000003,
         "confidence": 1.0,
         "word": "is",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 412
     },
@@ -3721,7 +3308,6 @@
         "wordEnd": 167.44,
         "confidence": 0.99,
         "word": "imposed",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 413
     },
@@ -3730,7 +3316,6 @@
         "wordEnd": 167.62,
         "confidence": 1.0,
         "word": "by",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 414
     },
@@ -3739,7 +3324,6 @@
         "wordEnd": 167.95000000000002,
         "confidence": 1.0,
         "word": "ideal",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 415
     },
@@ -3748,7 +3332,6 @@
         "wordEnd": 168.28,
         "confidence": 1.0,
         "word": "gender",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 416
     },
@@ -3757,7 +3340,6 @@
         "wordEnd": 168.73,
         "confidence": 1.0,
         "word": "norms",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 417
     },
@@ -3766,7 +3348,6 @@
         "wordEnd": 169.69,
         "confidence": 1.0,
         "word": "especially",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 418
     },
@@ -3775,7 +3356,6 @@
         "wordEnd": 170.55999999999997,
         "confidence": 1.0,
         "word": "against",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 419
     },
@@ -3784,7 +3364,6 @@
         "wordEnd": 170.92000000000002,
         "confidence": 1.0,
         "word": "those",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 420
     },
@@ -3793,7 +3372,6 @@
         "wordEnd": 171.1,
         "confidence": 1.0,
         "word": "who",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 421
     },
@@ -3802,7 +3380,6 @@
         "wordEnd": 171.46,
         "confidence": 1.0,
         "word": "are",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 422
     },
@@ -3811,7 +3388,6 @@
         "wordEnd": 172.32999999999998,
         "confidence": 0.99,
         "word": "gender",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 423
     },
@@ -3820,7 +3396,6 @@
         "wordEnd": 172.81,
         "confidence": 1.0,
         "word": "different",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 424
     },
@@ -3829,7 +3404,6 @@
         "wordEnd": 173.08,
         "confidence": 1.0,
         "word": "who",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 425
     },
@@ -3838,7 +3412,6 @@
         "wordEnd": 173.23000000000002,
         "confidence": 1.0,
         "word": "are",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 426
     },
@@ -3847,7 +3420,6 @@
         "wordEnd": 173.47,
         "confidence": 0.98,
         "word": "not",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 427
     },
@@ -3856,7 +3428,6 @@
         "wordEnd": 174.46,
         "confidence": 1.0,
         "word": "nonconforming",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 428
     },
@@ -3865,7 +3436,6 @@
         "wordEnd": 174.73000000000002,
         "confidence": 0.96,
         "word": "in",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 429
     },
@@ -3874,7 +3444,6 @@
         "wordEnd": 174.98,
         "confidence": 0.96,
         "word": "their",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 430
     },
@@ -3883,7 +3452,6 @@
         "wordEnd": 175.21,
         "confidence": 0.68,
         "word": "in",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 431
     },
@@ -3892,7 +3460,6 @@
         "wordEnd": 175.37,
         "confidence": 1.0,
         "word": "their",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 432
     },
@@ -3901,7 +3468,6 @@
         "wordEnd": 175.69,
         "confidence": 1.0,
         "word": "gender",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 433
     },
@@ -3910,7 +3476,6 @@
         "wordEnd": 176.32,
         "confidence": 1.0,
         "word": "presentation",
-        "space": " ",
         "alwaysCapitalized": false,
         "index": 434
     },
@@ -3919,7 +3484,6 @@
         "wordEnd": null,
         "confidence": 1.0,
         "word": ".",
-        "space": "",
         "alwaysCapitalized": false,
         "index": 435
     }
