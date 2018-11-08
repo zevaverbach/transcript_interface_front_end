@@ -72,12 +72,16 @@ export const hhmmssToSeconds = hhmmss => {
 
 }
 
+const punc = ['.', '?', ',', ':', '"', '!']
+const puncEndSentence = ['.', '?', ':', '!']
+const puncDelimitsPhrases = puncEndSentence.concat(',', ';')
 
 export const isCapitalized = word => word === toTitleCase(word)
-export const isPunc = word => ['.', '?', ',', ':', '"', '!'].includes(word)
-export const endsSentence = word => ['.', '?', ':', '!'].includes(word)
+export const isPunc = word => punc.includes(word)
+export const endsSentence = word => puncEndSentence.includes(word)
 export const doesntHaveSpaceBefore = word => isPunc(word)
 export const doesntHaveSpaceAfter = word => ['"', '('].includes(word)
+export const isPhraseDelimiter = word => puncDelimitsPhrases.includes(word)
 
 export const alwaysCapitalized = word => {
     // TODO: call an endpoint for this (use code already in use in Python)

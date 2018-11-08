@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import MediaPlayer from './mediaPlayer';
 import Transcript from './transcript';
 import transcript from './transcript.json';
-import { isPunc, toTitleCase, isCapitalized, endsSentence, alwaysCapitalized } from './helpers'
+import { isPunc, isPhraseDelimiter, endsSentence, alwaysCapitalized } from './helpers'
 
 
 class InteractiveTranscript extends Component {
@@ -374,7 +374,7 @@ class InteractiveTranscript extends Component {
             iterateOn = transcript.slice(0, selectedWordIndices.start - 1).reverse()
         }
         for (let word of iterateOn) {
-            if (isPunc(word.word)) {
+            if (isPhraseDelimiter(word.word)) {
                 // prevent iterating past the beginning and back to the end when searching for previous
                 if (nextPrev === 'previous' && word.index > selectedWordIndices.start) return 0
                 return word.index
