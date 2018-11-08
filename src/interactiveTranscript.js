@@ -203,18 +203,9 @@ class InteractiveTranscript extends Component {
 
     }
 
-    insertQueueStep = (transcript, step, redo = false) => {
+    insertQueueStep = (transcript, step) => {
 
-        let prevInsertLength = 0, numWordsBetweenLastTwoInsertChunks = 0,
-            newSelectedWords, newSelectedWordIndex, secondToLastChunk = null
-
-        const firstChunk = step[0]
-        const lastChunk = step.slice(-1)[0]
-
-        if (redo && step.length >= 2) {
-            secondToLastChunk = step.slice(-2)[0]
-            numWordsBetweenLastTwoInsertChunks = lastChunk.slice(-1)[0].index - secondToLastChunk.slice(-1)[0].index - 1
-        }
+        let prevInsertLength = 0, newSelectedWords, newSelectedWordIndex
 
         step.forEach(insertChunk => {
 
@@ -235,29 +226,17 @@ class InteractiveTranscript extends Component {
                         key: word.index + numWords
                     })))
 
-            if (redo) {
+            let newSelectedWordsStartOffset = numWords - 1
 
-                newSelectedWordIndex = firstChunk.slice(-1)[0].index + 1
+            if (numWords === 1 && isPunc(insertChunk[0].word)) {
+                newSelectedWordsStartOffset = -1
+            }
 
-                newSelectedWords = {
-                    start: newSelectedWordIndex,
-                    offset: numWordsBetweenLastTwoInsertChunks || numWords - 1
-                }
+            newSelectedWordIndex = insertChunk.slice(-1)[0].index - newSelectedWordsStartOffset
 
-            } else {
-
-                let newSelectedWordsStartOffset = numWords - 1
-
-                if (numWords === 1 && isPunc(insertChunk[0].word)) {
-                    newSelectedWordsStartOffset = -1
-                }
-
-                newSelectedWordIndex = insertChunk.slice(-1)[0].index - newSelectedWordsStartOffset
-
-                newSelectedWords = {
-                    start: newSelectedWordIndex,
-                    offset: numWords - 1
-                }
+            newSelectedWords = {
+                start: newSelectedWordIndex,
+                offset: numWords - 1
             }
 
             prevInsertLength = numWords
@@ -268,7 +247,7 @@ class InteractiveTranscript extends Component {
 
     }
 
-    deleteQueueStep = (transcript, step, redo = false) => {
+    deleteQueueStep = (transcript, step) => {
 
         let prevDeleteLength = 0, newSelectedWords
         let lastIndexDeleted = step[0][0].index
@@ -290,11 +269,7 @@ class InteractiveTranscript extends Component {
             // only adjust indicesToRemove if the deletions are next to each other: to fix bug in surroundWithStuff
             if (indicesToRemove[0] - lastIndexDeleted === 1) prevDeleteLength = numWords
 
-            if (redo) {
-                newSelectedWords = { start: indicesToRemove[0], offset: 0 }
-            } else {
-                newSelectedWords = { start: indicesToRemove[0] - 1, offset: numWords - 1 }
-            }
+            newSelectedWords = { start: indicesToRemove[0] - 1, offset: numWords - 1 }
 
             lastIndexDeleted = indicesToRemove.slice(-1)[0]
         })
@@ -329,7 +304,7 @@ class InteractiveTranscript extends Component {
             if (whichOne === 'undo') {
                 [transcript, selectedWordIndices] = this.deleteQueueStep(transcript, step.insert)
             } else {
-                [transcript, selectedWordIndices] = this.insertQueueStep(transcript, step.insert, true)
+                [transcript, selectedWordIndices] = this.insertQueueStep(transcript, step.insert)
             }
         }
 
@@ -337,7 +312,7 @@ class InteractiveTranscript extends Component {
             if (whichOne === 'undo') {
                 [transcript, selectedWordIndices] = this.insertQueueStep(transcript, step.delete)
             } else {
-                [transcript, selectedWordIndices] = this.deleteQueueStep(transcript, step.delete, true)
+                [transcript, selectedWordIndices] = this.deleteQueueStep(transcript, step.delete)
             }
         }
 
