@@ -228,11 +228,11 @@ class InteractiveTranscript extends Component {
 
     }
 
-    deleteQueueStep = (transcript, step) => {
+    deleteQueueStep = (transcript, step, redo = false) => {
 
         let prevDeleteLength = 0
         let lastIndexDeleted = step[0][0].index
-        let newSelectedWordIndex
+        let newSelectedWords
 
         step.forEach(deleteChunk => {
             const numWords = deleteChunk.length
@@ -250,10 +250,14 @@ class InteractiveTranscript extends Component {
 
             // only adjust indicesToRemove if the deletions are next to each other: to fix bug in surroundWithStuff
             if (indicesToRemove[0] - lastIndexDeleted === 1) prevDeleteLength = numWords
-            newSelectedWordIndex = indicesToRemove[0]
+            if (redo) {
+                newSelectedWords = { start: indicesToRemove[0], offset: 0 }
+            } else {
+                newSelectedWords = { start: indicesToRemove[0], offset: numWords }
+            }
             lastIndexDeleted = indicesToRemove.slice(-1)[0]
         })
-        return [transcript, { start: newSelectedWordIndex, offset: 0 }]
+        return [transcript, newSelectedWords]
     }
 
     undoRedoEdit = (whichOne, edit = false) => {
@@ -288,12 +292,8 @@ class InteractiveTranscript extends Component {
             if (whichOne === 'undo') {
                 [transcript, selectedWordIndices] = this.insertQueueStep(transcript, step.delete)
             } else {
-                [transcript, selectedWordIndices] = this.deleteQueueStep(transcript, step.delete)
+                [transcript, selectedWordIndices] = this.deleteQueueStep(transcript, step.delete, true)
             }
-        }
-
-        if (step.edit) {
-            [transcript, selectedWordIndices] = this.editQueueStep(whichOne, transcript, step)
         }
 
         let queueState = {}
@@ -319,12 +319,6 @@ class InteractiveTranscript extends Component {
             selectedWordIndices
         })
 
-    }
-
-    editQueueStep = (undoRedoEdit, transcript, step) => {
-        step.forEach(editChunk => {
-
-        })
     }
 
     insertPuncAfterSelectedWords = punc => {
