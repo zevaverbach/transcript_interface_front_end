@@ -496,7 +496,7 @@ class InteractiveTranscript extends Component {
     //     }
     // }
 
-    goToNextWord = () => {
+    goToNextWord = (skipHighConfidenceWords = false) => {
         const { transcript, selectedWordIndices } = this.state
         let transcriptLength = transcript.length;
         let lastWordIndex;
@@ -511,7 +511,7 @@ class InteractiveTranscript extends Component {
             let selectedWord = this.wordAtIndex(selectedWordIndex)
             while (selectedWordIndex < transcriptLength - 1 &&
                 (selectedWord.wordStart === null
-                    || selectedWord.confidence > CONFIDENCE_THRESHOLD)) {
+                    || (skipHighConfidenceWords && selectedWord.confidence > CONFIDENCE_THRESHOLD))) {
                 selectedWordIndex++;
                 selectedWord = this.wordAtIndex(selectedWordIndex)
             }
@@ -527,7 +527,7 @@ class InteractiveTranscript extends Component {
         }
     }
 
-    goToPreviousWord = () => {
+    goToPreviousWord = (skipHighConfidenceWords = false) => {
         const { selectedWordIndices } = this.state
         let firstWordIndex;
         if (selectedWordIndices.offset < 0) {
@@ -542,7 +542,7 @@ class InteractiveTranscript extends Component {
         let selectedWord = this.wordAtIndex(selectedWordIndex)
         while (selectedWordIndex !== 0 &&
             (selectedWord.wordStart === null
-                || selectedWord.confidence > CONFIDENCE_THRESHOLD)) {
+                || (skipHighConfidenceWords && selectedWord.confidence > CONFIDENCE_THRESHOLD))) {
             selectedWordIndex--;
             selectedWord = this.wordAtIndex(selectedWordIndex)
         }
@@ -701,9 +701,9 @@ class InteractiveTranscript extends Component {
                 case 9: // tab
                     event.preventDefault()
                     if (event.shiftKey) {
-                        this.goToPreviousWord();
+                        this.goToPreviousWord(true);
                     } else {
-                        this.goToNextWord();
+                        this.goToNextWord(true);
                     }
                     break
                 case 222:
