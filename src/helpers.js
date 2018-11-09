@@ -45,7 +45,9 @@
 
 
 
-export const toTitleCase = word => word.split('').map((letter, index) => index === 0 ? letter.toUpperCase() : letter).join('');
+export const toTitleCase = word => (
+    word.split('')
+        .map((letter, index) => index === 0 ? letter.toUpperCase() : letter).join(''))
 
 export const hhmmssToSeconds = hhmmss => {
 
@@ -70,6 +72,12 @@ export const hhmmssToSeconds = hhmmss => {
 
     return totalSeconds
 
+}
+
+export const removeSelection = () => {
+    if (window.getSelection) {
+        window.getSelection().removeAllRanges();
+    }
 }
 
 const punc = ['.', '?', ',', ':', '"', '!']

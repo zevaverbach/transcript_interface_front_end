@@ -37,7 +37,9 @@ const Word = props => {
             {renderSpace()}
             <span
                 onClick={onClick}
-                style={style}>{word.word}</span>
+                className='word'
+                style={style}>{word.word}
+            </span>
 
         </Fragment>
     )

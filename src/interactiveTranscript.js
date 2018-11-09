@@ -2,10 +2,17 @@ import React, { Component } from 'react';
 import MediaPlayer from './mediaPlayer';
 import Transcript from './transcript';
 import transcript from './transcript.json';
-import { isPunc, isPhraseDelimiter, endsSentence, alwaysCapitalized } from './helpers'
+import { removeSelection, isPunc, isPhraseDelimiter } from './helpers'
+import { style } from './App.css'
+
 
 
 class InteractiveTranscript extends Component {
+
+    constructor() {
+        super()
+        this.editModal = React.createRef()
+    }
 
     state = {
         selectedWordIndices: {
@@ -18,7 +25,10 @@ class InteractiveTranscript extends Component {
         playPosition: 0,
         play: false,
         updatePlayer: false,
-        editModal: false,
+        showEditModal: false,
+        editingWords: [],
+        editModalEdited: false,
+        editModalStyle: { width: window.innerWidth },
     }
 
     componentDidMount() {
@@ -27,76 +37,56 @@ class InteractiveTranscript extends Component {
 
     wordAtIndex = index => this.state.transcript[index]
 
-    handleKeyDown = event => {
-        switch (event.keyCode) {
-            // case 13: // enter
-            //     this.setState({editModal: true})
-            //     break;
-            case 8:
-                this.deleteWords();
-                break;
-            case 39:
-                if (event.shiftKey) { // shift + left
-                    this.selectWords('increase');
-                } else {
-                    this.goToNextWord();
-                }
-                break;
-            case 37:
-                if (event.shiftKey) { // shift + left
-                    this.selectWords('decrease');
-                } else {
-                    this.goToPreviousWord();
-                }
-                break;
-            case 190: // period
-                this.insertPuncAfterSelectedWords('.')
-                break;
-            case 188: // comma
-                this.insertPuncAfterSelectedWords(',')
-                break
-            case 191: // question mark (or slash)
-                this.insertPuncAfterSelectedWords('?')
-                break
-            case 49: // exclamation point
-                if (event.shiftKey) {
-                    this.insertPuncAfterSelectedWords('!')
-                }
-                break
-            case 9: // tab
-                event.preventDefault()
-                if (event.shiftKey) {
-                    this.goToPreviousWord();
-                } else {
-                    this.goToNextWord()
-                }
-                break
-            case 222:
-                if (event.metaKey && event.ctrlKey) { // ctrl + meta + '
-                    this.goToPreviousPhrase();
-                } else if (!event.altKey) {
-                    this.surroundSelectionWithStuff('"');
-                }
-                break
-            case 186:
-                if (event.metaKey && event.ctrlKey) { // ctrl + meta + ;
-                    this.goToNextPhrase();
-                } else { // colon
-                    if (event.shiftKey) this.insertPuncAfterSelectedWords(':')
-                }
-                break
-            case 90:
-                if (event.metaKey && event.shiftKey) { // meta + shift + z
-                    event.preventDefault()
-                    this.redo()
-                } else if (event.metaKey) { // meta + z
-                    event.preventDefault()
-                    this.undo()
-                }
-                break
-            default:
-                return
+    // getOffsetsOfWordAtIndex = index => {
+    //     // TODO: support multiple indices, or make a separate method for that
+    //     const span = document.querySelectorAll('span.word')[index]
+    //     console.log(span)
+    //     return {
+    //         x: span.offsetLeft,
+    //         y: span.offsetTop,
+    //         width: span.offsetWidth,
+    //         height: span.offsetHeight,
+    //     }
+    // }
+
+    onInputModalChange = event => {
+        this.setState({
+            editModalEdited: true,
+            editingWords: event.target.value,
+            // editModalStyle: {
+            //     width: this.editModal.current.scrollWidth
+            // }
+        })
+    }
+
+    onInputModalKeyUp = event => {
+        if (event.keyCode === 13) {
+            this.setState({
+                editModalEdited: false
+            })
+            // this.undoRedoEdit
         }
+    }
+
+    renderEditModal() {
+        const { editingWords } = this.state
+        const words = this.selectedWords().map(word => word.word).join(' ')
+
+        return (
+            <div className='modal'>
+                <div className='modal-main'>
+                    <input
+                        ref={this.editModal}
+                        style={this.state.editModalStyle}
+                        onChange={this.onInputModalChange}
+                        onKeyUp={this.onInputModalKeyUp}
+                        autoFocus
+                        onFocus={(event) => { document.execCommand('selectall') }}
+                        value={editingWords}>
+                    </input>
+                </div>
+            </div>
+        )
     }
 
     redo = () => this.undoRedoEdit('redo')
@@ -371,8 +361,8 @@ class InteractiveTranscript extends Component {
         if (isPhraseDelimiter(nextWordObject.word)) {
             const { undoQueue } = this.state
             console.log(undoQueue)
-            const undoHead = undoQueue.slice(0, -1)
-            const lastUndo = undoQueue.slice(-1)[0]
+            // const undoHead = undoQueue.slice(0, -1)
+            // const lastUndo = undoQueue.slice(-1)[0]
 
 
             const newState = {
@@ -553,28 +543,143 @@ class InteractiveTranscript extends Component {
     })
 
     render() {
+        const { play, playPosition, updatePlayer,
+            transcript, selectedWordIndices, showEditModal } = this.state
+
         return (
             <React.Fragment>
                 <div>
                     <MediaPlayer
                         src={this.props.mediaSource}
                         onTimeUpdate={this.onTimeUpdate}
-                        updatePlayer={this.state.updatePlayer}
-                        playPosition={this.state.playPosition}
-                        play={this.state.play}
+                        updatePlayer={updatePlayer}
+                        playPosition={playPosition}
+                        play={play}
                     />
 
                 </div>
-                <div>
+                {showEditModal && this.renderEditModal()}
+                <div id='transcript'>
                     <Transcript
-                        transcript={this.state.transcript}
-                        selectedWordIndices={this.state.selectedWordIndices}
+                        transcript={transcript}
+                        selectedWordIndices={selectedWordIndices}
                         onClickWord={this.onClickWord}
                     />
                 </div>
             </React.Fragment >
         )
     }
+    handleKeyDown = event => {
+
+        const { showEditModal } = this.state
+
+        switch (event.keyCode) {
+            case 13: // enter
+                if (!showEditModal) this.setState({ showEditModal: true })
+                break;
+            case 32: // spacebar
+                if (!showEditModal) this.setState({ showEditModal: true })
+                break;
+
+            case 27: // escape
+                if (showEditModal) {
+                    this.setState({ showEditModal: false })
+                    if (window.getSelection) {
+                        window.getSelection().removeAllRanges();
+                    }
+                }
+                // TODO: else, select just the first word in multi-word selection
+                break;
+            case 8: // backspace
+                if (!showEditModal) this.deleteWords();
+                break;
+            case 39:
+                if (!showEditModal) {
+                    if (event.shiftKey) { // shift + left
+                        this.selectWords('increase');
+                    } else {
+                        this.goToNextWord();
+                    }
+                }
+                break;
+            case 37:
+                if (!showEditModal) {
+                    if (event.shiftKey) { // shift + left
+                        this.selectWords('decrease');
+                    } else {
+                        this.goToPreviousWord();
+                    }
+                }
+                break;
+            case 190: // period
+                if (!showEditModal) {
+                    this.insertPuncAfterSelectedWords('.')
+                }
+                break;
+            case 188: // comma
+                if (!showEditModal) {
+                    this.insertPuncAfterSelectedWords(',')
+                }
+                break
+            case 191: // question mark (or slash)
+                if (!showEditModal) {
+                    this.insertPuncAfterSelectedWords('?')
+                }
+                break
+            case 49: // exclamation point
+                if (!showEditModal) {
+                    if (event.shiftKey) {
+                        this.insertPuncAfterSelectedWords('!')
+                    }
+                }
+                break
+            case 9: // tab
+                event.preventDefault()
+                if (!showEditModal) {
+                    if (event.shiftKey) {
+                        this.goToPreviousWord();
+                    } else {
+                        this.goToNextWord()
+                    }
+                }
+                break
+            case 222:
+                if (!showEditModal) {
+                    if (event.metaKey && event.ctrlKey) { // ctrl + meta + '
+                        this.goToPreviousPhrase();
+                    } else if (!event.altKey) {
+                        this.surroundSelectionWithStuff('"');
+                    }
+                }
+                break
+            case 186:
+                if (!showEditModal) {
+                    if (event.metaKey && event.ctrlKey) { // ctrl + meta + ;
+                        this.goToNextPhrase();
+                    } else { // colon
+                        if (event.shiftKey) this.insertPuncAfterSelectedWords(':')
+                    }
+                }
+                break
+            case 90:
+                if (!showEditModal) {
+                    if (event.metaKey && event.shiftKey) { // meta + shift + z
+                        event.preventDefault()
+                        this.redo()
+                    } else if (event.metaKey) { // meta + z
+                        event.preventDefault()
+                        this.undo()
+                    }
+                } else {
+                    this.setState({ showEditModal: false })
+                    removeSelection();
+                }
+                break
+            default:
+                return
+        }
+    }
+
 }
 
 export default InteractiveTranscript;
