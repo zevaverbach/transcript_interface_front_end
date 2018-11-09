@@ -200,6 +200,24 @@ class InteractiveTranscript extends Component {
         )
     }
 
+    toggleCase = () => {
+        const edit = {
+            selectedWords: this.getSelectedWordsObject(),
+            change: [
+                this.selectedWords().map(word => (
+                    {
+                        ...word,
+                        word: isCapitalized(word.word) ? word.word.toLowerCase() : toTitleCase(word.word),
+                        prevState: {
+                            word: word.word
+                        }
+                    }
+                ))
+            ]
+        }
+        this.undoRedoEdit('edit', edit)
+    }
+
     changeQueueStep = (whichOne, transcript, step) => {
         step.forEach(changeChunk => {
             const wordMap = {}
@@ -692,6 +710,12 @@ class InteractiveTranscript extends Component {
                     break
                 case 191: // question mark (or slash)
                     this.insertPuncAfterSelectedWords('?')
+                    break
+                case 192: // tilde
+                    event.preventDefault()
+                    if (event.ctrlKey) {
+                        this.toggleCase()
+                    }
                     break
                 case 49: // exclamation point
                     if (event.shiftKey) {
