@@ -156,44 +156,12 @@ class InteractiveTranscript extends Component {
         )
     }
 
-    edit = (words, startIndex, replaceUpToIndex = false, selectedWords) => {
-
-        const { transcript } = this.state
-        const newWordsTemplate = this.wordAtIndex(startIndex)
-        const edits = {}
-
-        if (words.length > 0) {
-            if (!edits.insert) edits.insert = []
-            edits.insert.push(
-                words.map((word, index) => ({
-                    ...newWordsTemplate,
-                    confidence: 1.0,
-                    word,
-                    space: endsSentence(word) ? "" : " ",
-                    alwaysCapitalized: alwaysCapitalized(word),
-                    index: startIndex + index,
-                    key: startIndex + index,
-                }))
-            )
-        }
-
-        if (replaceUpToIndex) {
-            if (!edits.delete) edits.delete = []
-            edits.delete.push(transcript.slice(startIndex, replaceUpToIndex + 1))
-        }
-
-        edits.selectedWords = selectedWords
-
-        this.undoRedoEdit('edit', edits)
-
-    }
-
     insertQueueStep = (transcript, step) => {
 
-        let prevInsertLength = 0, newSelectedWords, newSelectedWordIndex
+        let prevInsertLength = 0,
+            newSelectedWords, newSelectedWordIndex
 
         step.forEach(insertChunk => {
-
             const numWords = insertChunk.length
 
             transcript = transcript
@@ -353,17 +321,77 @@ class InteractiveTranscript extends Component {
 
         const index = this.getSelectedWordIndex('last')
         let startIndex = index + 1
-        let replaceUpToIndex = false
-        let nextWordObject = this.wordAtIndex(startIndex)
-        if (nextWordObject) {
-            const nextWord = nextWordObject.word
-            if (nextWord === punc) return
-        } else {
-            // punctuation at end of selection, so replace it
-            startIndex = index
-            replaceUpToIndex = index
+
+        const nextWordObject = this.wordAtIndex(startIndex)
+
+        if (!nextWordObject) return
+        if (nextWordObject.word === punc) return
+
+        const lastSelectedWord = this.wordAtIndex(index)
+
+        if (isPhraseDelimiter(lastSelectedWord.word)) {
+            return
+            // this.setState({
+            //     selectedWordIndices: {
+            //         ...this.state.selectedWordIndices,
+            //         offset: this.state.selectedWordIndices.offset - 1
+            //     }
+            // })
+            // return this.insertPuncAfterSelectedWords(punc)
         }
-        this.edit([punc], startIndex, replaceUpToIndex, this.getSelectedWordsObject())
+
+        const edit = {
+            selectedWords: this.getSelectedWordsObject(),
+            insert: [
+                [
+                    {
+                        "wordStart": null,
+                        "wordEnd": null,
+                        "confidence": 1.0,
+                        "word": punc,
+                        "alwaysCapitalized": false,
+                        "index": startIndex
+                    }
+                ]
+            ],
+        }
+
+        if (isPhraseDelimiter(nextWordObject.word)) {
+            edit.insert[0][0].index++
+            edit.delete = [
+                [
+                    this.state.transcript[startIndex]
+                ]
+            ]
+
+        }
+
+        this.undoRedoEdit('edit', edit)
+
+        if (isPhraseDelimiter(nextWordObject.word)) {
+            const { undoQueue } = this.state
+            console.log(undoQueue)
+            const undoHead = undoQueue.slice(0, -1)
+            const lastUndo = undoQueue.slice(-1)[0]
+
+
+            const newState = {
+                undoQueue: Object.entries(undoQueue).forEach(([k, v]) => {
+
+                })
+
+            }
+            // undoQueue: undoHead.concat([{
+            //     ...lastUndo,
+            //     insert: [lastUndo.insert.concat({
+            //         ...lastUndo.insert[0][0],
+            //         index: lastUndo.insert[0][0].index - 1
+            //     })]
+            // }])
+
+            this.setState(newState)
+            console.log(undoQueue)
+        }
     }
 
     selectWords = whichOne => {
