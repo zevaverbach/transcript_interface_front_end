@@ -95,3 +95,15 @@ export const alwaysCapitalized = word => {
     // TODO: call an endpoint for this (use code already in use in Python)
     return word === 'I'
 }
+
+export const getOffsetsOfWordAtIndex = index => {
+    // TODO: support multiple indices, or make a separate method for that
+    const span = document.querySelectorAll('span.word')[index]
+    console.log(span)
+    return {
+        x: span.offsetLeft,
+        y: span.offsetTop,
+        width: span.offsetWidth,
+        height: span.offsetHeight,
+    }
+}

@@ -2,17 +2,12 @@ import React, { Component } from 'react';
 import MediaPlayer from './mediaPlayer';
 import Transcript from './transcript';
 import transcript from './transcript.json';
+import EditModal from './editModal';
 import { removeSelection, isPunc, isPhraseDelimiter } from './helpers'
-import { style } from './App.css'
 
 
 
 class InteractiveTranscript extends Component {
-
-    constructor() {
-        super()
-        this.editModal = React.createRef()
-    }
 
     state = {
         selectedWordIndices: {
@@ -28,7 +23,6 @@ class InteractiveTranscript extends Component {
         showEditModal: false,
         editingWords: [],
         editModalEdited: false,
-        editModalStyle: { width: window.innerWidth },
     }
 
     componentDidMount() {
@@ -37,34 +31,22 @@ class InteractiveTranscript extends Component {
 
     wordAtIndex = index => this.state.transcript[index]
 
-    // getOffsetsOfWordAtIndex = index => {
-    //     // TODO: support multiple indices, or make a separate method for that
-    //     const span = document.querySelectorAll('span.word')[index]
-    //     console.log(span)
-    //     return {
-    //         x: span.offsetLeft,
-    //         y: span.offsetTop,
-    //         width: span.offsetWidth,
-    //         height: span.offsetHeight,
-    //     }
-    // }
-
     onInputModalChange = event => {
         this.setState({
             editModalEdited: true,
             editingWords: event.target.value,
-            // editModalStyle: {
-            //     width: this.editModal.current.scrollWidth
-            // }
         })
     }
 
     onInputModalKeyUp = event => {
-        if (event.keyCode === 13) {
+        if (event.keyCode === 13) { // enter
             this.setState({
-                editModalEdited: false
+                editModalEdited: false,
+                showEditModal: false
             })
-            // this.undoRedoEdit
+            removeSelection()
+
+            // TODO: this.undoRedoEdit
         }
     }
 
@@ -73,20 +55,14 @@ class InteractiveTranscript extends Component {
         const words = this.selectedWords().map(word => word.word).join(' ')
 
         return (
-            <div className='modal'>
-                <div className='modal-main'>
-                    <input
-                        ref={this.editModal}
-                        style={this.state.editModalStyle}
-                        onChange={this.onInputModalChange}
-                        onKeyUp={this.onInputModalKeyUp}
-                        autoFocus
-                        onFocus={(event) => { document.execCommand('selectall') }}
-                        value={editingWords}>
-                    </input>
-                </div>
-            </div>
+            <EditModal
+                onChange={this.onInputModalChange}
+                onKeyUp={this.onInputModalKeyUp}
+                onFocus={(event) => { document.execCommand('selectall') }}
+                value={this.state.editModalEdited ? editingWords : words}
+            />
         )
+
     }
 
     redo = () => this.undoRedoEdit('redo')
