@@ -47,7 +47,9 @@ class InteractiveTranscript extends Component {
         if (event.keyCode === 13) { // enter
             this.setState({
                 editModalEdited: false,
-                showEditModal: false
+                showEditModal: false,
+                play: true,
+                updatePlayer: false
             })
             removeSelection()
 
@@ -673,6 +675,9 @@ class InteractiveTranscript extends Component {
                         removeSelection();
                     }
                     break;
+                case 9: // tab
+                    event.preventDefault()
+                    break
                 default:
                     return
             }
