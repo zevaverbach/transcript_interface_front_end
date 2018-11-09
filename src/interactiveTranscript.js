@@ -425,7 +425,7 @@ class InteractiveTranscript extends Component {
             }
         } else {
             const nextWord = this.wordAtIndex(index + 1)
-            if (isCapitalized(nextWord.word)) {
+            if (isCapitalized(nextWord.word) && !alwaysCapitalized(nextWord.word)) {
                 change = change.concat([[
                     {
                         ...nextWord,
@@ -510,9 +510,11 @@ class InteractiveTranscript extends Component {
         if (lastWordIndex + 1 < transcriptLength) {
             let selectedWordIndex = lastWordIndex + 1
             let selectedWord = this.wordAtIndex(selectedWordIndex)
-            while (selectedWordIndex < transcriptLength && selectedWord.wordStart === null) {
-                selectedWord = this.wordAtIndex(selectedWordIndex)
+            while (selectedWordIndex < transcriptLength - 1 &&
+                (selectedWord.wordStart === null
+                    || selectedWord.confidence >= .85)) {
                 selectedWordIndex++;
+                selectedWord = this.wordAtIndex(selectedWordIndex)
             }
 
             this.setState({
@@ -539,7 +541,9 @@ class InteractiveTranscript extends Component {
 
         let selectedWordIndex = firstWordIndex - 1
         let selectedWord = this.wordAtIndex(selectedWordIndex)
-        while (selectedWordIndex !== 0 && selectedWord.wordStart === null) {
+        while (selectedWordIndex !== 0 &&
+            (selectedWord.wordStart === null
+                || selectedWord.confidence >= .85)) {
             selectedWordIndex--;
             selectedWord = this.wordAtIndex(selectedWordIndex)
         }
