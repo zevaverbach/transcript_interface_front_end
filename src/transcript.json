@@ -5,7 +5,9 @@
         "confidence": 0.98,
         "word": "It's",
         "alwaysCapitalized": false,
-        "index": 0
+        "index": 0,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 1.41,
@@ -13,7 +15,9 @@
         "confidence": 1.0,
         "word": "one",
         "alwaysCapitalized": false,
-        "index": 1
+        "index": 1,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 1.56,
@@ -21,7 +25,9 @@
         "confidence": 1.0,
         "word": "thing",
         "alwaysCapitalized": false,
-        "index": 2
+        "index": 2,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 1.77,
@@ -29,7 +35,9 @@
         "confidence": 1.0,
         "word": "to",
         "alwaysCapitalized": false,
-        "index": 3
+        "index": 3,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 1.89,
@@ -37,7 +45,9 @@
         "confidence": 1.0,
         "word": "say",
         "alwaysCapitalized": false,
-        "index": 4
+        "index": 4,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 2.22,
@@ -45,7 +55,9 @@
         "confidence": 1.0,
         "word": "that",
         "alwaysCapitalized": false,
-        "index": 5
+        "index": 5,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 2.51,
@@ -53,7 +65,9 @@
         "confidence": 0.56,
         "word": "gender",
         "alwaysCapitalized": false,
-        "index": 6
+        "index": 6,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 2.71,
@@ -61,7 +75,9 @@
         "confidence": 0.48,
         "word": "is",
         "alwaysCapitalized": false,
-        "index": 7
+        "index": 7,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 2.97,
@@ -69,7 +85,9 @@
         "confidence": 1.0,
         "word": "performed",
         "alwaysCapitalized": false,
-        "index": 8
+        "index": 8,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 3.9,
@@ -77,7 +95,9 @@
         "confidence": 0.99,
         "word": "and",
         "alwaysCapitalized": false,
-        "index": 9
+        "index": 9,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 3.99,
@@ -85,7 +105,9 @@
         "confidence": 1.0,
         "word": "that's",
         "alwaysCapitalized": false,
-        "index": 10
+        "index": 10,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 4.17,
@@ -93,7 +115,9 @@
         "confidence": 1.0,
         "word": "a",
         "alwaysCapitalized": false,
-        "index": 11
+        "index": 11,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 4.23,
@@ -101,7 +125,9 @@
         "confidence": 1.0,
         "word": "little",
         "alwaysCapitalized": false,
-        "index": 12
+        "index": 12,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 4.41,
@@ -109,7 +135,9 @@
         "confidence": 1.0,
         "word": "different",
         "alwaysCapitalized": false,
-        "index": 13
+        "index": 13,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 4.74,
@@ -117,7 +145,9 @@
         "confidence": 1.0,
         "word": "from",
         "alwaysCapitalized": false,
-        "index": 14
+        "index": 14,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 4.92,
@@ -125,7 +155,9 @@
         "confidence": 0.89,
         "word": "saying",
         "alwaysCapitalized": false,
-        "index": 15
+        "index": 15,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 5.13,
@@ -133,7 +165,9 @@
         "confidence": 1.0,
         "word": "gender",
         "alwaysCapitalized": false,
-        "index": 16
+        "index": 16,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 5.43,
@@ -141,7 +175,9 @@
         "confidence": 0.81,
         "word": "is",
         "alwaysCapitalized": false,
-        "index": 17
+        "index": 17,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 5.58,
@@ -149,7 +185,9 @@
         "confidence": 1.0,
         "word": "performative",
         "alwaysCapitalized": false,
-        "index": 18
+        "index": 18,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 6.42,
@@ -157,7 +195,9 @@
         "confidence": 1.0,
         "word": "when",
         "alwaysCapitalized": false,
-        "index": 19
+        "index": 19,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 6.54,
@@ -165,7 +205,9 @@
         "confidence": 1.0,
         "word": "we",
         "alwaysCapitalized": false,
-        "index": 20
+        "index": 20,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 6.69,
@@ -173,7 +215,9 @@
         "confidence": 1.0,
         "word": "say",
         "alwaysCapitalized": false,
-        "index": 21
+        "index": 21,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 6.9,
@@ -181,7 +225,9 @@
         "confidence": 1.0,
         "word": "gender",
         "alwaysCapitalized": false,
-        "index": 22
+        "index": 22,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 7.23,
@@ -189,7 +235,9 @@
         "confidence": 0.95,
         "word": "is",
         "alwaysCapitalized": false,
-        "index": 23
+        "index": 23,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 7.35,
@@ -197,7 +245,9 @@
         "confidence": 1.0,
         "word": "performed",
         "alwaysCapitalized": false,
-        "index": 24
+        "index": 24,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 8.04,
@@ -205,7 +255,9 @@
         "confidence": 1.0,
         "word": "we",
         "alwaysCapitalized": false,
-        "index": 25
+        "index": 25,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 8.67,
@@ -213,7 +265,9 @@
         "confidence": 1.0,
         "word": "usually",
         "alwaysCapitalized": false,
-        "index": 26
+        "index": 26,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 9.12,
@@ -221,7 +275,9 @@
         "confidence": 1.0,
         "word": "mean",
         "alwaysCapitalized": false,
-        "index": 27
+        "index": 27,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 9.48,
@@ -229,7 +285,9 @@
         "confidence": 1.0,
         "word": "that",
         "alwaysCapitalized": false,
-        "index": 28
+        "index": 28,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 10.29,
@@ -237,7 +295,9 @@
         "confidence": 0.96,
         "word": "we've",
         "alwaysCapitalized": false,
-        "index": 29
+        "index": 29,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 10.44,
@@ -245,7 +305,9 @@
         "confidence": 1.0,
         "word": "taken",
         "alwaysCapitalized": false,
-        "index": 30
+        "index": 30,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 10.74,
@@ -253,7 +315,9 @@
         "confidence": 1.0,
         "word": "on",
         "alwaysCapitalized": false,
-        "index": 31
+        "index": 31,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 10.86,
@@ -261,7 +325,9 @@
         "confidence": 1.0,
         "word": "a",
         "alwaysCapitalized": false,
-        "index": 32
+        "index": 32,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 10.92,
@@ -269,15 +335,9 @@
         "confidence": 0.99,
         "word": "role",
         "alwaysCapitalized": false,
-        "index": 33
-    },
-    {
-        "wordStart": 11.49,
-        "wordEnd": 11.53,
-        "confidence": 0.59,
-        "word": ".",
-        "alwaysCapitalized": false,
-        "index": 34
+        "index": 33,
+        "puncAfter": ".",
+        "puncBefore": false
     },
     {
         "wordStart": 11.55,
@@ -285,7 +345,9 @@
         "confidence": 0.87,
         "word": "We're",
         "alwaysCapitalized": false,
-        "index": 35
+        "index": 34,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 11.82,
@@ -293,7 +355,9 @@
         "confidence": 1.0,
         "word": "acting",
         "alwaysCapitalized": false,
-        "index": 36
+        "index": 35,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 12.39,
@@ -301,7 +365,9 @@
         "confidence": 1.0,
         "word": "in",
         "alwaysCapitalized": false,
-        "index": 37
+        "index": 36,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 12.6,
@@ -309,7 +375,9 @@
         "confidence": 1.0,
         "word": "some",
         "alwaysCapitalized": false,
-        "index": 38
+        "index": 37,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 12.93,
@@ -317,7 +385,9 @@
         "confidence": 1.0,
         "word": "way",
         "alwaysCapitalized": false,
-        "index": 39
+        "index": 38,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 14.7,
@@ -325,7 +395,9 @@
         "confidence": 1.0,
         "word": "and",
         "alwaysCapitalized": false,
-        "index": 40
+        "index": 39,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 14.88,
@@ -333,7 +405,9 @@
         "confidence": 1.0,
         "word": "that",
         "alwaysCapitalized": false,
-        "index": 41
+        "index": 40,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 15.06,
@@ -341,7 +415,9 @@
         "confidence": 0.71,
         "word": "are",
         "alwaysCapitalized": false,
-        "index": 42
+        "index": 41,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 15.29,
@@ -349,7 +425,9 @@
         "confidence": 1.0,
         "word": "acting",
         "alwaysCapitalized": false,
-        "index": 43
+        "index": 42,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 15.81,
@@ -357,7 +435,9 @@
         "confidence": 1.0,
         "word": "or",
         "alwaysCapitalized": false,
-        "index": 44
+        "index": 43,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 15.99,
@@ -365,7 +445,9 @@
         "confidence": 0.43,
         "word": "a",
         "alwaysCapitalized": false,
-        "index": 45
+        "index": 44,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 16.05,
@@ -373,7 +455,9 @@
         "confidence": 0.98,
         "word": "role",
         "alwaysCapitalized": false,
-        "index": 46
+        "index": 45,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 16.37,
@@ -381,7 +465,9 @@
         "confidence": 0.98,
         "word": "playing",
         "alwaysCapitalized": false,
-        "index": 47
+        "index": 46,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 16.86,
@@ -389,7 +475,9 @@
         "confidence": 1.0,
         "word": "is",
         "alwaysCapitalized": false,
-        "index": 48
+        "index": 47,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 17.88,
@@ -397,7 +485,9 @@
         "confidence": 1.0,
         "word": "crucial",
         "alwaysCapitalized": false,
-        "index": 49
+        "index": 48,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 18.42,
@@ -405,7 +495,9 @@
         "confidence": 1.0,
         "word": "to",
         "alwaysCapitalized": false,
-        "index": 50
+        "index": 49,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 18.6,
@@ -413,7 +505,9 @@
         "confidence": 1.0,
         "word": "the",
         "alwaysCapitalized": false,
-        "index": 51
+        "index": 50,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 19.26,
@@ -421,7 +515,9 @@
         "confidence": 1.0,
         "word": "gender",
         "alwaysCapitalized": false,
-        "index": 52
+        "index": 51,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 19.8,
@@ -429,7 +525,9 @@
         "confidence": 1.0,
         "word": "that",
         "alwaysCapitalized": false,
-        "index": 53
+        "index": 52,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 19.92,
@@ -437,7 +535,9 @@
         "confidence": 1.0,
         "word": "we",
         "alwaysCapitalized": false,
-        "index": 54
+        "index": 53,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 20.1,
@@ -445,7 +545,9 @@
         "confidence": 1.0,
         "word": "are",
         "alwaysCapitalized": false,
-        "index": 55
+        "index": 54,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 20.55,
@@ -453,7 +555,9 @@
         "confidence": 0.9,
         "word": "and",
         "alwaysCapitalized": false,
-        "index": 56
+        "index": 55,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 20.85,
@@ -461,7 +565,9 @@
         "confidence": 1.0,
         "word": "the",
         "alwaysCapitalized": false,
-        "index": 57
+        "index": 56,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 21.03,
@@ -469,7 +575,9 @@
         "confidence": 1.0,
         "word": "gender",
         "alwaysCapitalized": false,
-        "index": 58
+        "index": 57,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 21.39,
@@ -477,7 +585,9 @@
         "confidence": 1.0,
         "word": "that",
         "alwaysCapitalized": false,
-        "index": 59
+        "index": 58,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 21.51,
@@ -485,7 +595,9 @@
         "confidence": 1.0,
         "word": "we",
         "alwaysCapitalized": false,
-        "index": 60
+        "index": 59,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 21.69,
@@ -493,7 +605,9 @@
         "confidence": 1.0,
         "word": "present",
         "alwaysCapitalized": false,
-        "index": 61
+        "index": 60,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 22.15,
@@ -501,7 +615,9 @@
         "confidence": 0.91,
         "word": "to",
         "alwaysCapitalized": false,
-        "index": 62
+        "index": 61,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 22.23,
@@ -509,7 +625,9 @@
         "confidence": 1.0,
         "word": "the",
         "alwaysCapitalized": false,
-        "index": 63
+        "index": 62,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 22.35,
@@ -517,7 +635,9 @@
         "confidence": 1.0,
         "word": "world",
         "alwaysCapitalized": false,
-        "index": 64
+        "index": 63,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 23.58,
@@ -525,7 +645,9 @@
         "confidence": 1.0,
         "word": "to",
         "alwaysCapitalized": false,
-        "index": 65
+        "index": 64,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 23.7,
@@ -533,7 +655,9 @@
         "confidence": 1.0,
         "word": "say",
         "alwaysCapitalized": false,
-        "index": 66
+        "index": 65,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 23.85,
@@ -541,7 +665,9 @@
         "confidence": 0.95,
         "word": "the",
         "alwaysCapitalized": false,
-        "index": 67
+        "index": 66,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 23.97,
@@ -549,7 +675,9 @@
         "confidence": 0.8,
         "word": "genders",
         "alwaysCapitalized": false,
-        "index": 68
+        "index": 67,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 24.33,
@@ -557,7 +685,9 @@
         "confidence": 1.0,
         "word": "performative",
         "alwaysCapitalized": false,
-        "index": 69
+        "index": 68,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 25.2,
@@ -565,7 +695,9 @@
         "confidence": 1.0,
         "word": "is",
         "alwaysCapitalized": false,
-        "index": 70
+        "index": 69,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 25.71,
@@ -573,7 +705,9 @@
         "confidence": 1.0,
         "word": "a",
         "alwaysCapitalized": false,
-        "index": 71
+        "index": 70,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 25.77,
@@ -581,7 +715,9 @@
         "confidence": 1.0,
         "word": "little",
         "alwaysCapitalized": false,
-        "index": 72
+        "index": 71,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 26.04,
@@ -589,7 +725,9 @@
         "confidence": 1.0,
         "word": "different",
         "alwaysCapitalized": false,
-        "index": 73
+        "index": 72,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 26.49,
@@ -597,7 +735,9 @@
         "confidence": 1.0,
         "word": "because",
         "alwaysCapitalized": false,
-        "index": 74
+        "index": 73,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 28.29,
@@ -605,7 +745,9 @@
         "confidence": 1.0,
         "word": "for",
         "alwaysCapitalized": false,
-        "index": 75
+        "index": 74,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 28.41,
@@ -613,7 +755,9 @@
         "confidence": 1.0,
         "word": "something",
         "alwaysCapitalized": false,
-        "index": 76
+        "index": 75,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 28.71,
@@ -621,7 +765,9 @@
         "confidence": 1.0,
         "word": "to",
         "alwaysCapitalized": false,
-        "index": 77
+        "index": 76,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 28.86,
@@ -629,7 +775,9 @@
         "confidence": 1.0,
         "word": "be",
         "alwaysCapitalized": false,
-        "index": 78
+        "index": 77,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 29.19,
@@ -637,7 +785,9 @@
         "confidence": 1.0,
         "word": "performative",
         "alwaysCapitalized": false,
-        "index": 79
+        "index": 78,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 30.0,
@@ -645,7 +795,9 @@
         "confidence": 1.0,
         "word": "means",
         "alwaysCapitalized": false,
-        "index": 80
+        "index": 79,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 30.24,
@@ -653,7 +805,9 @@
         "confidence": 1.0,
         "word": "that",
         "alwaysCapitalized": false,
-        "index": 81
+        "index": 80,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 30.36,
@@ -661,7 +815,9 @@
         "confidence": 0.99,
         "word": "it",
         "alwaysCapitalized": false,
-        "index": 82
+        "index": 81,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 30.75,
@@ -669,7 +825,9 @@
         "confidence": 1.0,
         "word": "produces",
         "alwaysCapitalized": false,
-        "index": 83
+        "index": 82,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 31.53,
@@ -677,7 +835,9 @@
         "confidence": 1.0,
         "word": "a",
         "alwaysCapitalized": false,
-        "index": 84
+        "index": 83,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 31.59,
@@ -685,7 +845,9 @@
         "confidence": 1.0,
         "word": "series",
         "alwaysCapitalized": false,
-        "index": 85
+        "index": 84,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 31.98,
@@ -693,7 +855,9 @@
         "confidence": 1.0,
         "word": "of",
         "alwaysCapitalized": false,
-        "index": 86
+        "index": 85,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 32.1,
@@ -701,7 +865,9 @@
         "confidence": 1.0,
         "word": "effects",
         "alwaysCapitalized": false,
-        "index": 87
+        "index": 86,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 33.54,
@@ -709,7 +875,9 @@
         "confidence": 1.0,
         "word": "we",
         "alwaysCapitalized": false,
-        "index": 88
+        "index": 87,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 33.78,
@@ -717,7 +885,9 @@
         "confidence": 0.95,
         "word": "act",
         "alwaysCapitalized": false,
-        "index": 89
+        "index": 88,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 34.11,
@@ -725,7 +895,9 @@
         "confidence": 1.0,
         "word": "and",
         "alwaysCapitalized": false,
-        "index": 90
+        "index": 89,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 34.56,
@@ -733,7 +905,9 @@
         "confidence": 1.0,
         "word": "walk",
         "alwaysCapitalized": false,
-        "index": 91
+        "index": 90,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 35.04,
@@ -741,7 +915,9 @@
         "confidence": 1.0,
         "word": "and",
         "alwaysCapitalized": false,
-        "index": 92
+        "index": 91,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 35.16,
@@ -749,7 +925,9 @@
         "confidence": 1.0,
         "word": "speak",
         "alwaysCapitalized": false,
-        "index": 93
+        "index": 92,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 35.64,
@@ -757,7 +935,9 @@
         "confidence": 1.0,
         "word": "and",
         "alwaysCapitalized": false,
-        "index": 94
+        "index": 93,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 35.91,
@@ -765,7 +945,9 @@
         "confidence": 1.0,
         "word": "talk",
         "alwaysCapitalized": false,
-        "index": 95
+        "index": 94,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 36.45,
@@ -773,7 +955,9 @@
         "confidence": 1.0,
         "word": "in",
         "alwaysCapitalized": false,
-        "index": 96
+        "index": 95,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 36.63,
@@ -781,7 +965,9 @@
         "confidence": 1.0,
         "word": "ways",
         "alwaysCapitalized": false,
-        "index": 97
+        "index": 96,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 37.05,
@@ -789,7 +975,9 @@
         "confidence": 1.0,
         "word": "that",
         "alwaysCapitalized": false,
-        "index": 98
+        "index": 97,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 38.82,
@@ -797,7 +985,9 @@
         "confidence": 0.99,
         "word": "consolidate",
         "alwaysCapitalized": false,
-        "index": 99
+        "index": 98,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 39.75,
@@ -805,7 +995,9 @@
         "confidence": 1.0,
         "word": "an",
         "alwaysCapitalized": false,
-        "index": 100
+        "index": 99,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 39.87,
@@ -813,7 +1005,9 @@
         "confidence": 1.0,
         "word": "impression",
         "alwaysCapitalized": false,
-        "index": 101
+        "index": 100,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 40.62,
@@ -821,7 +1015,9 @@
         "confidence": 1.0,
         "word": "of",
         "alwaysCapitalized": false,
-        "index": 102
+        "index": 101,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 41.07,
@@ -829,7 +1025,9 @@
         "confidence": 1.0,
         "word": "being",
         "alwaysCapitalized": false,
-        "index": 103
+        "index": 102,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 41.34,
@@ -837,7 +1035,9 @@
         "confidence": 0.93,
         "word": "a",
         "alwaysCapitalized": false,
-        "index": 104
+        "index": 103,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 41.37,
@@ -845,7 +1045,9 @@
         "confidence": 0.93,
         "word": "man",
         "alwaysCapitalized": false,
-        "index": 105
+        "index": 104,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 41.91,
@@ -853,7 +1055,9 @@
         "confidence": 1.0,
         "word": "or",
         "alwaysCapitalized": false,
-        "index": 106
+        "index": 105,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 42.21,
@@ -861,7 +1065,9 @@
         "confidence": 1.0,
         "word": "being",
         "alwaysCapitalized": false,
-        "index": 107
+        "index": 106,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 42.54,
@@ -869,7 +1075,9 @@
         "confidence": 1.0,
         "word": "a",
         "alwaysCapitalized": false,
-        "index": 108
+        "index": 107,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 42.6,
@@ -877,15 +1085,9 @@
         "confidence": 1.0,
         "word": "woman",
         "alwaysCapitalized": false,
-        "index": 109
-    },
-    {
-        "wordStart": 43.05,
-        "wordEnd": 43.519999999999996,
-        "confidence": 0.94,
-        "word": ".",
-        "alwaysCapitalized": false,
-        "index": 110
+        "index": 108,
+        "puncAfter": ".",
+        "puncBefore": false
     },
     {
         "wordStart": 43.55,
@@ -893,7 +1095,9 @@
         "confidence": 0.95,
         "word": "I",
         "alwaysCapitalized": true,
-        "index": 111
+        "index": 109,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 43.65,
@@ -901,7 +1105,9 @@
         "confidence": 1.0,
         "word": "was",
         "alwaysCapitalized": false,
-        "index": 112
+        "index": 110,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 43.8,
@@ -909,7 +1115,9 @@
         "confidence": 1.0,
         "word": "walking",
         "alwaysCapitalized": false,
-        "index": 113
+        "index": 111,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 44.13,
@@ -917,7 +1125,9 @@
         "confidence": 1.0,
         "word": "down",
         "alwaysCapitalized": false,
-        "index": 114
+        "index": 112,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 44.34,
@@ -925,7 +1135,9 @@
         "confidence": 1.0,
         "word": "the",
         "alwaysCapitalized": false,
-        "index": 115
+        "index": 113,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 44.43,
@@ -933,7 +1145,9 @@
         "confidence": 1.0,
         "word": "street",
         "alwaysCapitalized": false,
-        "index": 116
+        "index": 114,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 45.27,
@@ -941,7 +1155,9 @@
         "confidence": 1.0,
         "word": "in",
         "alwaysCapitalized": false,
-        "index": 117
+        "index": 115,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 45.39,
@@ -949,7 +1165,9 @@
         "confidence": 0.99,
         "word": "Berkeley",
         "alwaysCapitalized": true,
-        "index": 118
+        "index": 116,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 45.72,
@@ -957,7 +1175,9 @@
         "confidence": 1.0,
         "word": "when",
         "alwaysCapitalized": false,
-        "index": 119
+        "index": 117,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 45.84,
@@ -965,7 +1185,9 @@
         "confidence": 1.0,
         "word": "I",
         "alwaysCapitalized": true,
-        "index": 120
+        "index": 118,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 45.96,
@@ -973,7 +1195,9 @@
         "confidence": 1.0,
         "word": "first",
         "alwaysCapitalized": false,
-        "index": 121
+        "index": 119,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 46.29,
@@ -981,7 +1205,9 @@
         "confidence": 1.0,
         "word": "arrived",
         "alwaysCapitalized": false,
-        "index": 122
+        "index": 120,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 46.95,
@@ -989,7 +1215,9 @@
         "confidence": 1.0,
         "word": "several",
         "alwaysCapitalized": false,
-        "index": 123
+        "index": 121,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 47.28,
@@ -997,7 +1225,9 @@
         "confidence": 1.0,
         "word": "years",
         "alwaysCapitalized": false,
-        "index": 124
+        "index": 122,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 47.52,
@@ -1005,7 +1235,9 @@
         "confidence": 1.0,
         "word": "ago",
         "alwaysCapitalized": false,
-        "index": 125
+        "index": 123,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 48.06,
@@ -1013,7 +1245,9 @@
         "confidence": 1.0,
         "word": "and",
         "alwaysCapitalized": false,
-        "index": 126
+        "index": 124,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 48.87,
@@ -1021,7 +1255,9 @@
         "confidence": 1.0,
         "word": "a",
         "alwaysCapitalized": false,
-        "index": 127
+        "index": 125,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 48.93,
@@ -1029,7 +1265,9 @@
         "confidence": 1.0,
         "word": "young",
         "alwaysCapitalized": false,
-        "index": 128
+        "index": 126,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 49.17,
@@ -1037,7 +1275,9 @@
         "confidence": 1.0,
         "word": "woman",
         "alwaysCapitalized": false,
-        "index": 129
+        "index": 127,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 49.7,
@@ -1045,7 +1285,9 @@
         "confidence": 0.92,
         "word": "who",
         "alwaysCapitalized": false,
-        "index": 130
+        "index": 128,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 49.89,
@@ -1053,7 +1295,9 @@
         "confidence": 0.57,
         "word": "is",
         "alwaysCapitalized": false,
-        "index": 131
+        "index": 129,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 50.07,
@@ -1061,7 +1305,9 @@
         "confidence": 1.0,
         "word": "I",
         "alwaysCapitalized": true,
-        "index": 132
+        "index": 130,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 50.13,
@@ -1069,7 +1315,9 @@
         "confidence": 1.0,
         "word": "think",
         "alwaysCapitalized": false,
-        "index": 133
+        "index": 131,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 50.34,
@@ -1077,7 +1325,9 @@
         "confidence": 1.0,
         "word": "in",
         "alwaysCapitalized": false,
-        "index": 134
+        "index": 132,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 50.46,
@@ -1085,7 +1335,9 @@
         "confidence": 1.0,
         "word": "high",
         "alwaysCapitalized": false,
-        "index": 135
+        "index": 133,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 50.64,
@@ -1093,7 +1345,9 @@
         "confidence": 1.0,
         "word": "school",
         "alwaysCapitalized": false,
-        "index": 136
+        "index": 134,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 51.42,
@@ -1101,7 +1355,9 @@
         "confidence": 1.0,
         "word": "leaned",
         "alwaysCapitalized": false,
-        "index": 137
+        "index": 135,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 51.72,
@@ -1109,7 +1365,9 @@
         "confidence": 1.0,
         "word": "out",
         "alwaysCapitalized": false,
-        "index": 138
+        "index": 136,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 51.81,
@@ -1117,7 +1375,9 @@
         "confidence": 1.0,
         "word": "of",
         "alwaysCapitalized": false,
-        "index": 139
+        "index": 137,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 51.9,
@@ -1125,7 +1385,9 @@
         "confidence": 1.0,
         "word": "her",
         "alwaysCapitalized": false,
-        "index": 140
+        "index": 138,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 51.99,
@@ -1133,7 +1395,9 @@
         "confidence": 1.0,
         "word": "window",
         "alwaysCapitalized": false,
-        "index": 141
+        "index": 139,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 52.5,
@@ -1141,7 +1405,9 @@
         "confidence": 1.0,
         "word": "and",
         "alwaysCapitalized": false,
-        "index": 142
+        "index": 140,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 52.68,
@@ -1149,7 +1415,9 @@
         "confidence": 1.0,
         "word": "she",
         "alwaysCapitalized": false,
-        "index": 143
+        "index": 141,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 52.89,
@@ -1157,7 +1425,9 @@
         "confidence": 1.0,
         "word": "yelled",
         "alwaysCapitalized": false,
-        "index": 144
+        "index": 142,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 53.52,
@@ -1165,7 +1435,9 @@
         "confidence": 1.0,
         "word": "Are",
         "alwaysCapitalized": false,
-        "index": 145
+        "index": 143,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 53.64,
@@ -1173,7 +1445,9 @@
         "confidence": 1.0,
         "word": "you",
         "alwaysCapitalized": false,
-        "index": 146
+        "index": 144,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 53.79,
@@ -1181,7 +1455,9 @@
         "confidence": 1.0,
         "word": "a",
         "alwaysCapitalized": false,
-        "index": 147
+        "index": 145,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 53.85,
@@ -1189,15 +1465,9 @@
         "confidence": 1.0,
         "word": "lesbian",
         "alwaysCapitalized": false,
-        "index": 148
-    },
-    {
-        "wordStart": 54.54,
-        "wordEnd": 55.47,
-        "confidence": 0.94,
-        "word": ".",
-        "alwaysCapitalized": false,
-        "index": 149
+        "index": 146,
+        "puncAfter": ".",
+        "puncBefore": false
     },
     {
         "wordStart": 56.97,
@@ -1205,7 +1475,9 @@
         "confidence": 1.0,
         "word": "And",
         "alwaysCapitalized": false,
-        "index": 150
+        "index": 147,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 57.81,
@@ -1213,7 +1485,9 @@
         "confidence": 1.0,
         "word": "she",
         "alwaysCapitalized": false,
-        "index": 151
+        "index": 148,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 57.99,
@@ -1221,7 +1495,9 @@
         "confidence": 0.99,
         "word": "was",
         "alwaysCapitalized": false,
-        "index": 152
+        "index": 149,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 58.11,
@@ -1229,7 +1505,9 @@
         "confidence": 1.0,
         "word": "looking",
         "alwaysCapitalized": false,
-        "index": 153
+        "index": 150,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 58.41,
@@ -1237,7 +1515,9 @@
         "confidence": 1.0,
         "word": "to",
         "alwaysCapitalized": false,
-        "index": 154
+        "index": 151,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 58.53,
@@ -1245,7 +1525,9 @@
         "confidence": 1.0,
         "word": "harass",
         "alwaysCapitalized": false,
-        "index": 155
+        "index": 152,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 59.01,
@@ -1253,7 +1535,9 @@
         "confidence": 1.0,
         "word": "me",
         "alwaysCapitalized": false,
-        "index": 156
+        "index": 153,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 59.58,
@@ -1261,7 +1545,9 @@
         "confidence": 1.0,
         "word": "or",
         "alwaysCapitalized": false,
-        "index": 157
+        "index": 154,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 60.12,
@@ -1269,7 +1555,9 @@
         "confidence": 1.0,
         "word": "maybe",
         "alwaysCapitalized": false,
-        "index": 158
+        "index": 155,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 60.45,
@@ -1277,7 +1565,9 @@
         "confidence": 1.0,
         "word": "she",
         "alwaysCapitalized": false,
-        "index": 159
+        "index": 156,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 60.63,
@@ -1285,7 +1575,9 @@
         "confidence": 1.0,
         "word": "was",
         "alwaysCapitalized": false,
-        "index": 160
+        "index": 157,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 60.81,
@@ -1293,7 +1585,9 @@
         "confidence": 1.0,
         "word": "just",
         "alwaysCapitalized": false,
-        "index": 161
+        "index": 158,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 61.32,
@@ -1301,7 +1595,9 @@
         "confidence": 1.0,
         "word": "freaked",
         "alwaysCapitalized": false,
-        "index": 162
+        "index": 159,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 61.71,
@@ -1309,7 +1605,9 @@
         "confidence": 1.0,
         "word": "out",
         "alwaysCapitalized": false,
-        "index": 163
+        "index": 160,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 61.98,
@@ -1317,7 +1615,9 @@
         "confidence": 1.0,
         "word": "or",
         "alwaysCapitalized": false,
-        "index": 164
+        "index": 161,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 62.19,
@@ -1325,7 +1625,9 @@
         "confidence": 1.0,
         "word": "she",
         "alwaysCapitalized": false,
-        "index": 165
+        "index": 162,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 62.37,
@@ -1333,7 +1635,9 @@
         "confidence": 1.0,
         "word": "thought",
         "alwaysCapitalized": false,
-        "index": 166
+        "index": 163,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 62.55,
@@ -1341,7 +1645,9 @@
         "confidence": 1.0,
         "word": "I",
         "alwaysCapitalized": true,
-        "index": 167
+        "index": 164,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 62.64,
@@ -1349,7 +1655,9 @@
         "confidence": 1.0,
         "word": "looked",
         "alwaysCapitalized": false,
-        "index": 168
+        "index": 165,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 62.94,
@@ -1357,7 +1665,9 @@
         "confidence": 1.0,
         "word": "like",
         "alwaysCapitalized": false,
-        "index": 169
+        "index": 166,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 63.12,
@@ -1365,7 +1675,9 @@
         "confidence": 0.96,
         "word": "I",
         "alwaysCapitalized": true,
-        "index": 170
+        "index": 167,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 63.21,
@@ -1373,7 +1685,9 @@
         "confidence": 1.0,
         "word": "probably",
         "alwaysCapitalized": false,
-        "index": 171
+        "index": 168,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 63.57,
@@ -1381,7 +1695,9 @@
         "confidence": 1.0,
         "word": "was",
         "alwaysCapitalized": false,
-        "index": 172
+        "index": 169,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 63.81,
@@ -1389,7 +1705,9 @@
         "confidence": 0.96,
         "word": "one",
         "alwaysCapitalized": false,
-        "index": 173
+        "index": 170,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 63.99,
@@ -1397,7 +1715,9 @@
         "confidence": 0.7,
         "word": "who",
         "alwaysCapitalized": false,
-        "index": 174
+        "index": 171,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 64.08,
@@ -1405,7 +1725,9 @@
         "confidence": 1.0,
         "word": "wanted",
         "alwaysCapitalized": false,
-        "index": 175
+        "index": 172,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 64.35,
@@ -1413,7 +1735,9 @@
         "confidence": 1.0,
         "word": "to",
         "alwaysCapitalized": false,
-        "index": 176
+        "index": 173,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 64.5,
@@ -1421,15 +1745,9 @@
         "confidence": 1.0,
         "word": "know",
         "alwaysCapitalized": false,
-        "index": 177
-    },
-    {
-        "wordStart": 65.03,
-        "wordEnd": 65.07000000000001,
-        "confidence": 0.67,
-        "word": ".",
-        "alwaysCapitalized": false,
-        "index": 178
+        "index": 174,
+        "puncAfter": ".",
+        "puncBefore": false
     },
     {
         "wordStart": 65.48,
@@ -1437,7 +1755,9 @@
         "confidence": 0.85,
         "word": "But",
         "alwaysCapitalized": false,
-        "index": 179
+        "index": 175,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 65.86,
@@ -1445,7 +1765,9 @@
         "confidence": 1.0,
         "word": "I",
         "alwaysCapitalized": true,
-        "index": 180
+        "index": 176,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 65.97,
@@ -1453,7 +1775,9 @@
         "confidence": 1.0,
         "word": "just",
         "alwaysCapitalized": false,
-        "index": 181
+        "index": 177,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 66.15,
@@ -1461,7 +1785,9 @@
         "confidence": 1.0,
         "word": "turned",
         "alwaysCapitalized": false,
-        "index": 182
+        "index": 178,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 66.42,
@@ -1469,7 +1795,9 @@
         "confidence": 1.0,
         "word": "around",
         "alwaysCapitalized": false,
-        "index": 183
+        "index": 179,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 66.72,
@@ -1477,7 +1805,9 @@
         "confidence": 1.0,
         "word": "and",
         "alwaysCapitalized": false,
-        "index": 184
+        "index": 180,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 66.84,
@@ -1485,7 +1815,9 @@
         "confidence": 0.93,
         "word": "I",
         "alwaysCapitalized": true,
-        "index": 185
+        "index": 181,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 66.9,
@@ -1493,7 +1825,9 @@
         "confidence": 1.0,
         "word": "said",
         "alwaysCapitalized": false,
-        "index": 186
+        "index": 182,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 67.11,
@@ -1501,7 +1835,9 @@
         "confidence": 1.0,
         "word": "Yes",
         "alwaysCapitalized": false,
-        "index": 187
+        "index": 183,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 67.53,
@@ -1509,7 +1845,9 @@
         "confidence": 1.0,
         "word": "I",
         "alwaysCapitalized": true,
-        "index": 188
+        "index": 184,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 67.71,
@@ -1517,15 +1855,9 @@
         "confidence": 1.0,
         "word": "am",
         "alwaysCapitalized": false,
-        "index": 189
-    },
-    {
-        "wordStart": 68.04,
-        "wordEnd": 68.63000000000001,
-        "confidence": 0.78,
-        "word": ".",
-        "alwaysCapitalized": false,
-        "index": 190
+        "index": 185,
+        "puncAfter": ".",
+        "puncBefore": false
     },
     {
         "wordStart": 69.12,
@@ -1533,7 +1865,9 @@
         "confidence": 1.0,
         "word": "And",
         "alwaysCapitalized": false,
-        "index": 191
+        "index": 186,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 69.3,
@@ -1541,7 +1875,9 @@
         "confidence": 1.0,
         "word": "that",
         "alwaysCapitalized": false,
-        "index": 192
+        "index": 187,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 69.51,
@@ -1549,7 +1885,9 @@
         "confidence": 1.0,
         "word": "really",
         "alwaysCapitalized": false,
-        "index": 193
+        "index": 188,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 69.75,
@@ -1557,7 +1895,9 @@
         "confidence": 1.0,
         "word": "shocked",
         "alwaysCapitalized": false,
-        "index": 194
+        "index": 189,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 70.17,
@@ -1565,15 +1905,9 @@
         "confidence": 1.0,
         "word": "her",
         "alwaysCapitalized": false,
-        "index": 195
-    },
-    {
-        "wordStart": 70.41,
-        "wordEnd": 71.02,
-        "confidence": 0.93,
-        "word": ".",
-        "alwaysCapitalized": false,
-        "index": 196
+        "index": 190,
+        "puncAfter": ".",
+        "puncBefore": false
     },
     {
         "wordStart": 71.07,
@@ -1581,7 +1915,9 @@
         "confidence": 1.0,
         "word": "We",
         "alwaysCapitalized": false,
-        "index": 197
+        "index": 191,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 71.34,
@@ -1589,7 +1925,9 @@
         "confidence": 1.0,
         "word": "act",
         "alwaysCapitalized": false,
-        "index": 198
+        "index": 192,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 71.7,
@@ -1597,7 +1935,9 @@
         "confidence": 1.0,
         "word": "as",
         "alwaysCapitalized": false,
-        "index": 199
+        "index": 193,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 71.94,
@@ -1605,7 +1945,9 @@
         "confidence": 1.0,
         "word": "if",
         "alwaysCapitalized": false,
-        "index": 200
+        "index": 194,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 72.56,
@@ -1613,7 +1955,9 @@
         "confidence": 0.96,
         "word": "that",
         "alwaysCapitalized": false,
-        "index": 201
+        "index": 195,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 72.78,
@@ -1621,7 +1965,9 @@
         "confidence": 1.0,
         "word": "being",
         "alwaysCapitalized": false,
-        "index": 202
+        "index": 196,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 73.14,
@@ -1629,7 +1975,9 @@
         "confidence": 0.95,
         "word": "of",
         "alwaysCapitalized": false,
-        "index": 203
+        "index": 197,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 73.26,
@@ -1637,7 +1985,9 @@
         "confidence": 1.0,
         "word": "a",
         "alwaysCapitalized": false,
-        "index": 204
+        "index": 198,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 73.32,
@@ -1645,7 +1995,9 @@
         "confidence": 1.0,
         "word": "man",
         "alwaysCapitalized": false,
-        "index": 205
+        "index": 199,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 73.65,
@@ -1653,7 +2005,9 @@
         "confidence": 1.0,
         "word": "or",
         "alwaysCapitalized": false,
-        "index": 206
+        "index": 200,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 73.8,
@@ -1661,7 +2015,9 @@
         "confidence": 1.0,
         "word": "that",
         "alwaysCapitalized": false,
-        "index": 207
+        "index": 201,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 73.98,
@@ -1669,7 +2025,9 @@
         "confidence": 1.0,
         "word": "being",
         "alwaysCapitalized": false,
-        "index": 208
+        "index": 202,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 74.28,
@@ -1677,7 +2035,9 @@
         "confidence": 1.0,
         "word": "of",
         "alwaysCapitalized": false,
-        "index": 209
+        "index": 203,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 74.4,
@@ -1685,7 +2045,9 @@
         "confidence": 1.0,
         "word": "a",
         "alwaysCapitalized": false,
-        "index": 210
+        "index": 204,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 74.46,
@@ -1693,7 +2055,9 @@
         "confidence": 1.0,
         "word": "woman",
         "alwaysCapitalized": false,
-        "index": 211
+        "index": 205,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 74.7,
@@ -1701,7 +2065,9 @@
         "confidence": 1.0,
         "word": "is",
         "alwaysCapitalized": false,
-        "index": 212
+        "index": 206,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 74.82,
@@ -1709,7 +2075,9 @@
         "confidence": 1.0,
         "word": "actually",
         "alwaysCapitalized": false,
-        "index": 213
+        "index": 207,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 75.15,
@@ -1717,7 +2085,9 @@
         "confidence": 0.95,
         "word": "an",
         "alwaysCapitalized": false,
-        "index": 214
+        "index": 208,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 75.24,
@@ -1725,7 +2095,9 @@
         "confidence": 0.87,
         "word": "entirely",
         "alwaysCapitalized": false,
-        "index": 215
+        "index": 209,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 75.75,
@@ -1733,7 +2105,9 @@
         "confidence": 1.0,
         "word": "reality",
         "alwaysCapitalized": false,
-        "index": 216
+        "index": 210,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 76.41,
@@ -1741,7 +2115,9 @@
         "confidence": 1.0,
         "word": "or",
         "alwaysCapitalized": false,
-        "index": 217
+        "index": 211,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 77.1,
@@ -1749,7 +2125,9 @@
         "confidence": 1.0,
         "word": "something",
         "alwaysCapitalized": false,
-        "index": 218
+        "index": 212,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 77.49,
@@ -1757,7 +2135,9 @@
         "confidence": 0.99,
         "word": "that's",
         "alwaysCapitalized": false,
-        "index": 219
+        "index": 213,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 78.27,
@@ -1765,7 +2145,9 @@
         "confidence": 1.0,
         "word": "simply",
         "alwaysCapitalized": false,
-        "index": 220
+        "index": 214,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 78.75,
@@ -1773,7 +2155,9 @@
         "confidence": 1.0,
         "word": "true",
         "alwaysCapitalized": false,
-        "index": 221
+        "index": 215,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 79.08,
@@ -1781,7 +2165,9 @@
         "confidence": 1.0,
         "word": "about",
         "alwaysCapitalized": false,
-        "index": 222
+        "index": 216,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 79.44,
@@ -1789,7 +2175,9 @@
         "confidence": 1.0,
         "word": "Us",
         "alwaysCapitalized": false,
-        "index": 223
+        "index": 217,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 79.67,
@@ -1797,7 +2185,9 @@
         "confidence": 0.81,
         "word": "a",
         "alwaysCapitalized": false,
-        "index": 224
+        "index": 218,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 79.74,
@@ -1805,7 +2195,9 @@
         "confidence": 1.0,
         "word": "fact",
         "alwaysCapitalized": false,
-        "index": 225
+        "index": 219,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 80.31,
@@ -1813,7 +2205,9 @@
         "confidence": 1.0,
         "word": "about",
         "alwaysCapitalized": false,
-        "index": 226
+        "index": 220,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 80.61,
@@ -1821,15 +2215,9 @@
         "confidence": 1.0,
         "word": "us",
         "alwaysCapitalized": false,
-        "index": 227
-    },
-    {
-        "wordStart": 80.91,
-        "wordEnd": 81.11999999999999,
-        "confidence": 0.71,
-        "word": ".",
-        "alwaysCapitalized": false,
-        "index": 228
+        "index": 221,
+        "puncAfter": ".",
+        "puncBefore": false
     },
     {
         "wordStart": 81.21,
@@ -1837,7 +2225,9 @@
         "confidence": 1.0,
         "word": "Actually",
         "alwaysCapitalized": false,
-        "index": 229
+        "index": 222,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 82.35,
@@ -1845,7 +2235,9 @@
         "confidence": 1.0,
         "word": "it's",
         "alwaysCapitalized": false,
-        "index": 230
+        "index": 223,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 82.92,
@@ -1853,7 +2245,9 @@
         "confidence": 1.0,
         "word": "a",
         "alwaysCapitalized": false,
-        "index": 231
+        "index": 224,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 82.98,
@@ -1861,7 +2255,9 @@
         "confidence": 1.0,
         "word": "phenomenon",
         "alwaysCapitalized": false,
-        "index": 232
+        "index": 225,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 83.73,
@@ -1869,7 +2265,9 @@
         "confidence": 0.98,
         "word": "that's",
         "alwaysCapitalized": false,
-        "index": 233
+        "index": 226,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 83.94,
@@ -1877,7 +2275,9 @@
         "confidence": 1.0,
         "word": "being",
         "alwaysCapitalized": false,
-        "index": 234
+        "index": 227,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 84.24,
@@ -1885,7 +2285,9 @@
         "confidence": 1.0,
         "word": "produced",
         "alwaysCapitalized": false,
-        "index": 235
+        "index": 228,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 84.9,
@@ -1893,7 +2295,9 @@
         "confidence": 1.0,
         "word": "all",
         "alwaysCapitalized": false,
-        "index": 236
+        "index": 229,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 84.99,
@@ -1901,7 +2305,9 @@
         "confidence": 1.0,
         "word": "the",
         "alwaysCapitalized": false,
-        "index": 237
+        "index": 230,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 85.11,
@@ -1909,7 +2315,9 @@
         "confidence": 1.0,
         "word": "time",
         "alwaysCapitalized": false,
-        "index": 238
+        "index": 231,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 85.5,
@@ -1917,7 +2325,9 @@
         "confidence": 1.0,
         "word": "and",
         "alwaysCapitalized": false,
-        "index": 239
+        "index": 232,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 85.62,
@@ -1925,7 +2335,9 @@
         "confidence": 1.0,
         "word": "reproduced",
         "alwaysCapitalized": false,
-        "index": 240
+        "index": 233,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 86.37,
@@ -1933,7 +2345,9 @@
         "confidence": 1.0,
         "word": "all",
         "alwaysCapitalized": false,
-        "index": 241
+        "index": 234,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 86.49,
@@ -1941,7 +2355,9 @@
         "confidence": 1.0,
         "word": "the",
         "alwaysCapitalized": false,
-        "index": 242
+        "index": 235,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 86.61,
@@ -1949,15 +2365,9 @@
         "confidence": 1.0,
         "word": "time",
         "alwaysCapitalized": false,
-        "index": 243
-    },
-    {
-        "wordStart": 86.97,
-        "wordEnd": 87.62,
-        "confidence": 0.95,
-        "word": ".",
-        "alwaysCapitalized": false,
-        "index": 244
+        "index": 236,
+        "puncAfter": ".",
+        "puncBefore": false
     },
     {
         "wordStart": 87.66,
@@ -1965,7 +2375,9 @@
         "confidence": 1.0,
         "word": "So",
         "alwaysCapitalized": false,
-        "index": 245
+        "index": 237,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 87.81,
@@ -1973,7 +2385,9 @@
         "confidence": 0.98,
         "word": "to",
         "alwaysCapitalized": false,
-        "index": 246
+        "index": 238,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 87.93,
@@ -1981,7 +2395,9 @@
         "confidence": 1.0,
         "word": "say",
         "alwaysCapitalized": false,
-        "index": 247
+        "index": 239,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 88.14,
@@ -1989,7 +2405,9 @@
         "confidence": 1.0,
         "word": "gender",
         "alwaysCapitalized": false,
-        "index": 248
+        "index": 240,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 88.5,
@@ -1997,7 +2415,9 @@
         "confidence": 1.0,
         "word": "is",
         "alwaysCapitalized": false,
-        "index": 249
+        "index": 241,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 88.65,
@@ -2005,7 +2425,9 @@
         "confidence": 1.0,
         "word": "performative",
         "alwaysCapitalized": false,
-        "index": 250
+        "index": 242,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 89.52,
@@ -2013,7 +2435,9 @@
         "confidence": 1.0,
         "word": "is",
         "alwaysCapitalized": false,
-        "index": 251
+        "index": 243,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 89.67,
@@ -2021,7 +2445,9 @@
         "confidence": 1.0,
         "word": "to",
         "alwaysCapitalized": false,
-        "index": 252
+        "index": 244,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 89.82,
@@ -2029,7 +2455,9 @@
         "confidence": 1.0,
         "word": "say",
         "alwaysCapitalized": false,
-        "index": 253
+        "index": 245,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 90.48,
@@ -2037,7 +2465,9 @@
         "confidence": 1.0,
         "word": "that",
         "alwaysCapitalized": false,
-        "index": 254
+        "index": 246,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 90.63,
@@ -2045,7 +2475,9 @@
         "confidence": 1.0,
         "word": "nobody",
         "alwaysCapitalized": false,
-        "index": 255
+        "index": 247,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 91.02,
@@ -2053,7 +2485,9 @@
         "confidence": 1.0,
         "word": "really",
         "alwaysCapitalized": false,
-        "index": 256
+        "index": 248,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 91.38,
@@ -2061,7 +2495,9 @@
         "confidence": 1.0,
         "word": "is",
         "alwaysCapitalized": false,
-        "index": 257
+        "index": 249,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 91.65,
@@ -2069,7 +2505,9 @@
         "confidence": 0.64,
         "word": "a",
         "alwaysCapitalized": false,
-        "index": 258
+        "index": 250,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 91.71,
@@ -2077,7 +2515,9 @@
         "confidence": 0.64,
         "word": "gender",
         "alwaysCapitalized": false,
-        "index": 259
+        "index": 251,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 92.28,
@@ -2085,7 +2525,9 @@
         "confidence": 1.0,
         "word": "from",
         "alwaysCapitalized": false,
-        "index": 260
+        "index": 252,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 92.49,
@@ -2093,7 +2535,9 @@
         "confidence": 1.0,
         "word": "the",
         "alwaysCapitalized": false,
-        "index": 261
+        "index": 253,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 92.61,
@@ -2101,15 +2545,9 @@
         "confidence": 1.0,
         "word": "start",
         "alwaysCapitalized": false,
-        "index": 262
-    },
-    {
-        "wordStart": 93.18,
-        "wordEnd": 93.98,
-        "confidence": 0.77,
-        "word": ".",
-        "alwaysCapitalized": false,
-        "index": 263
+        "index": 254,
+        "puncAfter": ".",
+        "puncBefore": false
     },
     {
         "wordStart": 94.23,
@@ -2117,7 +2555,9 @@
         "confidence": 0.99,
         "word": "I",
         "alwaysCapitalized": true,
-        "index": 264
+        "index": 255,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 94.29,
@@ -2125,7 +2565,9 @@
         "confidence": 1.0,
         "word": "know",
         "alwaysCapitalized": false,
-        "index": 265
+        "index": 256,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 94.47,
@@ -2133,7 +2575,9 @@
         "confidence": 1.0,
         "word": "it's",
         "alwaysCapitalized": false,
-        "index": 266
+        "index": 257,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 94.59,
@@ -2141,7 +2585,9 @@
         "confidence": 1.0,
         "word": "controversial",
         "alwaysCapitalized": false,
-        "index": 267
+        "index": 258,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 95.55,
@@ -2149,7 +2595,9 @@
         "confidence": 1.0,
         "word": "but",
         "alwaysCapitalized": false,
-        "index": 268
+        "index": 259,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 95.7,
@@ -2157,7 +2605,9 @@
         "confidence": 1.0,
         "word": "that's",
         "alwaysCapitalized": false,
-        "index": 269
+        "index": 260,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 95.94,
@@ -2165,7 +2615,9 @@
         "confidence": 1.0,
         "word": "my",
         "alwaysCapitalized": false,
-        "index": 270
+        "index": 261,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 96.12,
@@ -2173,15 +2625,9 @@
         "confidence": 1.0,
         "word": "claim",
         "alwaysCapitalized": false,
-        "index": 271
-    },
-    {
-        "wordStart": 96.54,
-        "wordEnd": 96.62,
-        "confidence": 0.84,
-        "word": ".",
-        "alwaysCapitalized": false,
-        "index": 272
+        "index": 262,
+        "puncAfter": ".",
+        "puncBefore": false
     },
     {
         "wordStart": 100.69,
@@ -2189,7 +2635,9 @@
         "confidence": 1.0,
         "word": "Think",
         "alwaysCapitalized": false,
-        "index": 273
+        "index": 263,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 100.96,
@@ -2197,7 +2645,9 @@
         "confidence": 1.0,
         "word": "about",
         "alwaysCapitalized": false,
-        "index": 274
+        "index": 264,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 101.65,
@@ -2205,7 +2655,9 @@
         "confidence": 1.0,
         "word": "how",
         "alwaysCapitalized": false,
-        "index": 275
+        "index": 265,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 102.31,
@@ -2213,7 +2665,9 @@
         "confidence": 1.0,
         "word": "difficult",
         "alwaysCapitalized": false,
-        "index": 276
+        "index": 266,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 103.09,
@@ -2221,7 +2675,9 @@
         "confidence": 1.0,
         "word": "it",
         "alwaysCapitalized": false,
-        "index": 277
+        "index": 267,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 103.21,
@@ -2229,7 +2685,9 @@
         "confidence": 1.0,
         "word": "is",
         "alwaysCapitalized": false,
-        "index": 278
+        "index": 268,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 103.54,
@@ -2237,7 +2695,9 @@
         "confidence": 1.0,
         "word": "for",
         "alwaysCapitalized": false,
-        "index": 279
+        "index": 269,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 103.87,
@@ -2245,7 +2705,9 @@
         "confidence": 0.99,
         "word": "sissy",
         "alwaysCapitalized": false,
-        "index": 280
+        "index": 270,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 104.26,
@@ -2253,7 +2715,9 @@
         "confidence": 1.0,
         "word": "boys",
         "alwaysCapitalized": false,
-        "index": 281
+        "index": 271,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 105.4,
@@ -2261,7 +2725,9 @@
         "confidence": 1.0,
         "word": "or",
         "alwaysCapitalized": false,
-        "index": 282
+        "index": 272,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 105.64,
@@ -2269,7 +2735,9 @@
         "confidence": 1.0,
         "word": "how",
         "alwaysCapitalized": false,
-        "index": 283
+        "index": 273,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 105.79,
@@ -2277,7 +2745,9 @@
         "confidence": 1.0,
         "word": "difficult",
         "alwaysCapitalized": false,
-        "index": 284
+        "index": 274,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 106.42,
@@ -2285,7 +2755,9 @@
         "confidence": 1.0,
         "word": "it",
         "alwaysCapitalized": false,
-        "index": 285
+        "index": 275,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 106.6,
@@ -2293,7 +2765,9 @@
         "confidence": 1.0,
         "word": "is",
         "alwaysCapitalized": false,
-        "index": 286
+        "index": 276,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 106.96,
@@ -2301,7 +2775,9 @@
         "confidence": 1.0,
         "word": "for",
         "alwaysCapitalized": false,
-        "index": 287
+        "index": 277,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 107.41,
@@ -2309,7 +2785,9 @@
         "confidence": 1.0,
         "word": "tomboys",
         "alwaysCapitalized": false,
-        "index": 288
+        "index": 278,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 108.94,
@@ -2317,7 +2795,9 @@
         "confidence": 1.0,
         "word": "to",
         "alwaysCapitalized": false,
-        "index": 289
+        "index": 279,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 109.06,
@@ -2325,7 +2805,9 @@
         "confidence": 1.0,
         "word": "function",
         "alwaysCapitalized": false,
-        "index": 290
+        "index": 280,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 109.48,
@@ -2333,7 +2815,9 @@
         "confidence": 1.0,
         "word": "socially",
         "alwaysCapitalized": false,
-        "index": 291
+        "index": 281,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 109.99,
@@ -2341,7 +2825,9 @@
         "confidence": 1.0,
         "word": "without",
         "alwaysCapitalized": false,
-        "index": 292
+        "index": 282,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 110.35,
@@ -2349,7 +2835,9 @@
         "confidence": 1.0,
         "word": "being",
         "alwaysCapitalized": false,
-        "index": 293
+        "index": 283,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 110.62,
@@ -2357,7 +2845,9 @@
         "confidence": 1.0,
         "word": "bullied",
         "alwaysCapitalized": false,
-        "index": 294
+        "index": 284,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 111.1,
@@ -2365,7 +2855,9 @@
         "confidence": 1.0,
         "word": "or",
         "alwaysCapitalized": false,
-        "index": 295
+        "index": 285,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 111.22,
@@ -2373,7 +2865,9 @@
         "confidence": 1.0,
         "word": "without",
         "alwaysCapitalized": false,
-        "index": 296
+        "index": 286,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 111.67,
@@ -2381,7 +2875,9 @@
         "confidence": 1.0,
         "word": "being",
         "alwaysCapitalized": false,
-        "index": 297
+        "index": 287,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 112.0,
@@ -2389,7 +2885,9 @@
         "confidence": 1.0,
         "word": "teased",
         "alwaysCapitalized": false,
-        "index": 298
+        "index": 288,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 112.57,
@@ -2397,7 +2895,9 @@
         "confidence": 1.0,
         "word": "or",
         "alwaysCapitalized": false,
-        "index": 299
+        "index": 289,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 112.78,
@@ -2405,7 +2905,9 @@
         "confidence": 1.0,
         "word": "without",
         "alwaysCapitalized": false,
-        "index": 300
+        "index": 290,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 113.29,
@@ -2413,7 +2915,9 @@
         "confidence": 1.0,
         "word": "sometimes",
         "alwaysCapitalized": false,
-        "index": 301
+        "index": 291,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 114.22,
@@ -2421,7 +2925,9 @@
         "confidence": 1.0,
         "word": "suffering",
         "alwaysCapitalized": false,
-        "index": 302
+        "index": 292,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 114.67,
@@ -2429,7 +2935,9 @@
         "confidence": 1.0,
         "word": "threats",
         "alwaysCapitalized": false,
-        "index": 303
+        "index": 293,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 115.09,
@@ -2437,7 +2945,9 @@
         "confidence": 1.0,
         "word": "of",
         "alwaysCapitalized": false,
-        "index": 304
+        "index": 294,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 115.18,
@@ -2445,7 +2955,9 @@
         "confidence": 1.0,
         "word": "violence",
         "alwaysCapitalized": false,
-        "index": 305
+        "index": 295,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 117.28,
@@ -2453,7 +2965,9 @@
         "confidence": 1.0,
         "word": "or",
         "alwaysCapitalized": false,
-        "index": 306
+        "index": 296,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 117.52,
@@ -2461,7 +2975,9 @@
         "confidence": 1.0,
         "word": "without",
         "alwaysCapitalized": false,
-        "index": 307
+        "index": 297,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 117.88,
@@ -2469,7 +2985,9 @@
         "confidence": 1.0,
         "word": "their",
         "alwaysCapitalized": false,
-        "index": 308
+        "index": 298,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 118.0,
@@ -2477,7 +2995,9 @@
         "confidence": 1.0,
         "word": "parents",
         "alwaysCapitalized": false,
-        "index": 309
+        "index": 299,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 118.48,
@@ -2485,7 +3005,9 @@
         "confidence": 1.0,
         "word": "intervening",
         "alwaysCapitalized": false,
-        "index": 310
+        "index": 300,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 119.11,
@@ -2493,7 +3015,9 @@
         "confidence": 1.0,
         "word": "to",
         "alwaysCapitalized": false,
-        "index": 311
+        "index": 301,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 119.26,
@@ -2501,7 +3025,9 @@
         "confidence": 1.0,
         "word": "say",
         "alwaysCapitalized": false,
-        "index": 312
+        "index": 302,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 119.68,
@@ -2509,7 +3035,9 @@
         "confidence": 1.0,
         "word": "maybe",
         "alwaysCapitalized": false,
-        "index": 313
+        "index": 303,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 119.92,
@@ -2517,7 +3045,9 @@
         "confidence": 1.0,
         "word": "you",
         "alwaysCapitalized": false,
-        "index": 314
+        "index": 304,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 120.04,
@@ -2525,7 +3055,9 @@
         "confidence": 1.0,
         "word": "need",
         "alwaysCapitalized": false,
-        "index": 315
+        "index": 305,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 120.31,
@@ -2533,7 +3065,9 @@
         "confidence": 1.0,
         "word": "a",
         "alwaysCapitalized": false,
-        "index": 316
+        "index": 306,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 120.37,
@@ -2541,7 +3075,9 @@
         "confidence": 1.0,
         "word": "psychiatrist",
         "alwaysCapitalized": false,
-        "index": 317
+        "index": 307,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 121.48,
@@ -2549,7 +3085,9 @@
         "confidence": 1.0,
         "word": "or",
         "alwaysCapitalized": false,
-        "index": 318
+        "index": 308,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 121.99,
@@ -2557,7 +3095,9 @@
         "confidence": 1.0,
         "word": "why",
         "alwaysCapitalized": false,
-        "index": 319
+        "index": 309,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 122.17,
@@ -2565,7 +3105,9 @@
         "confidence": 1.0,
         "word": "can't",
         "alwaysCapitalized": false,
-        "index": 320
+        "index": 310,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 122.44,
@@ -2573,7 +3115,9 @@
         "confidence": 1.0,
         "word": "you",
         "alwaysCapitalized": false,
-        "index": 321
+        "index": 311,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 122.53,
@@ -2581,7 +3125,9 @@
         "confidence": 1.0,
         "word": "be",
         "alwaysCapitalized": false,
-        "index": 322
+        "index": 312,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 122.65,
@@ -2589,15 +3135,9 @@
         "confidence": 1.0,
         "word": "normal",
         "alwaysCapitalized": false,
-        "index": 323
-    },
-    {
-        "wordStart": 123.25,
-        "wordEnd": 123.28,
-        "confidence": 0.9,
-        "word": ".",
-        "alwaysCapitalized": false,
-        "index": 324
+        "index": 313,
+        "puncAfter": ".",
+        "puncBefore": false
     },
     {
         "wordStart": 123.43,
@@ -2605,7 +3145,9 @@
         "confidence": 1.0,
         "word": "So",
         "alwaysCapitalized": false,
-        "index": 325
+        "index": 314,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 124.6,
@@ -2613,7 +3155,9 @@
         "confidence": 1.0,
         "word": "you",
         "alwaysCapitalized": false,
-        "index": 326
+        "index": 315,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 124.69,
@@ -2621,7 +3165,9 @@
         "confidence": 1.0,
         "word": "know",
         "alwaysCapitalized": false,
-        "index": 327
+        "index": 316,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 124.9,
@@ -2629,7 +3175,9 @@
         "confidence": 1.0,
         "word": "there",
         "alwaysCapitalized": false,
-        "index": 328
+        "index": 317,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 125.65,
@@ -2637,7 +3185,9 @@
         "confidence": 1.0,
         "word": "are",
         "alwaysCapitalized": false,
-        "index": 329
+        "index": 318,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 127.21,
@@ -2645,7 +3195,9 @@
         "confidence": 1.0,
         "word": "institutional",
         "alwaysCapitalized": false,
-        "index": 330
+        "index": 319,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 127.96,
@@ -2653,7 +3205,9 @@
         "confidence": 1.0,
         "word": "powers",
         "alwaysCapitalized": false,
-        "index": 331
+        "index": 320,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 128.89,
@@ -2661,7 +3215,9 @@
         "confidence": 1.0,
         "word": "like",
         "alwaysCapitalized": false,
-        "index": 332
+        "index": 321,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 129.1,
@@ -2669,7 +3225,9 @@
         "confidence": 1.0,
         "word": "psychiatric",
         "alwaysCapitalized": false,
-        "index": 333
+        "index": 322,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 129.76,
@@ -2677,7 +3235,9 @@
         "confidence": 0.76,
         "word": "normalization",
         "alwaysCapitalized": false,
-        "index": 334
+        "index": 323,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 131.44,
@@ -2685,7 +3245,9 @@
         "confidence": 1.0,
         "word": "and",
         "alwaysCapitalized": false,
-        "index": 335
+        "index": 324,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 131.62,
@@ -2693,7 +3255,9 @@
         "confidence": 1.0,
         "word": "there",
         "alwaysCapitalized": false,
-        "index": 336
+        "index": 325,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 131.95,
@@ -2701,7 +3265,9 @@
         "confidence": 1.0,
         "word": "are",
         "alwaysCapitalized": false,
-        "index": 337
+        "index": 326,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 134.38,
@@ -2709,7 +3275,9 @@
         "confidence": 1.0,
         "word": "informal",
         "alwaysCapitalized": false,
-        "index": 338
+        "index": 327,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 134.86,
@@ -2717,7 +3285,9 @@
         "confidence": 1.0,
         "word": "kinds",
         "alwaysCapitalized": false,
-        "index": 339
+        "index": 328,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 135.16,
@@ -2725,7 +3295,9 @@
         "confidence": 1.0,
         "word": "of",
         "alwaysCapitalized": false,
-        "index": 340
+        "index": 329,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 135.25,
@@ -2733,7 +3305,9 @@
         "confidence": 1.0,
         "word": "practices",
         "alwaysCapitalized": false,
-        "index": 341
+        "index": 330,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 135.94,
@@ -2741,7 +3315,9 @@
         "confidence": 1.0,
         "word": "like",
         "alwaysCapitalized": false,
-        "index": 342
+        "index": 331,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 136.15,
@@ -2749,7 +3325,9 @@
         "confidence": 1.0,
         "word": "bullying",
         "alwaysCapitalized": false,
-        "index": 343
+        "index": 332,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 136.75,
@@ -2757,7 +3335,9 @@
         "confidence": 1.0,
         "word": "which",
         "alwaysCapitalized": false,
-        "index": 344
+        "index": 333,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 137.26,
@@ -2765,7 +3345,9 @@
         "confidence": 0.99,
         "word": "try",
         "alwaysCapitalized": false,
-        "index": 345
+        "index": 334,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 137.41,
@@ -2773,7 +3355,9 @@
         "confidence": 1.0,
         "word": "to",
         "alwaysCapitalized": false,
-        "index": 346
+        "index": 335,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 137.53,
@@ -2781,7 +3365,9 @@
         "confidence": 1.0,
         "word": "keep",
         "alwaysCapitalized": false,
-        "index": 347
+        "index": 336,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 137.89,
@@ -2789,7 +3375,9 @@
         "confidence": 1.0,
         "word": "us",
         "alwaysCapitalized": false,
-        "index": 348
+        "index": 337,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 138.07,
@@ -2797,7 +3385,9 @@
         "confidence": 1.0,
         "word": "in",
         "alwaysCapitalized": false,
-        "index": 349
+        "index": 338,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 138.19,
@@ -2805,7 +3395,9 @@
         "confidence": 1.0,
         "word": "our",
         "alwaysCapitalized": false,
-        "index": 350
+        "index": 339,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 138.34,
@@ -2813,7 +3405,9 @@
         "confidence": 0.99,
         "word": "gendered",
         "alwaysCapitalized": false,
-        "index": 351
+        "index": 340,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 138.79,
@@ -2821,15 +3415,9 @@
         "confidence": 1.0,
         "word": "place",
         "alwaysCapitalized": false,
-        "index": 352
-    },
-    {
-        "wordStart": 139.54,
-        "wordEnd": 139.87,
-        "confidence": 0.88,
-        "word": ".",
-        "alwaysCapitalized": false,
-        "index": 353
+        "index": 341,
+        "puncAfter": ".",
+        "puncBefore": false
     },
     {
         "wordStart": 139.87,
@@ -2837,7 +3425,9 @@
         "confidence": 0.89,
         "word": "There's",
         "alwaysCapitalized": false,
-        "index": 354
+        "index": 342,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 140.08,
@@ -2845,7 +3435,9 @@
         "confidence": 1.0,
         "word": "a",
         "alwaysCapitalized": false,
-        "index": 355
+        "index": 343,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 140.14,
@@ -2853,7 +3445,9 @@
         "confidence": 1.0,
         "word": "real",
         "alwaysCapitalized": false,
-        "index": 356
+        "index": 344,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 140.35,
@@ -2861,7 +3455,9 @@
         "confidence": 1.0,
         "word": "question",
         "alwaysCapitalized": false,
-        "index": 357
+        "index": 345,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 141.67,
@@ -2869,7 +3465,9 @@
         "confidence": 1.0,
         "word": "for",
         "alwaysCapitalized": false,
-        "index": 358
+        "index": 346,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 141.88,
@@ -2877,7 +3475,9 @@
         "confidence": 1.0,
         "word": "me",
         "alwaysCapitalized": false,
-        "index": 359
+        "index": 347,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 142.24,
@@ -2885,7 +3485,9 @@
         "confidence": 1.0,
         "word": "about",
         "alwaysCapitalized": false,
-        "index": 360
+        "index": 348,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 143.14,
@@ -2893,7 +3495,9 @@
         "confidence": 1.0,
         "word": "how",
         "alwaysCapitalized": false,
-        "index": 361
+        "index": 349,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 143.38,
@@ -2901,7 +3505,9 @@
         "confidence": 0.97,
         "word": "such",
         "alwaysCapitalized": false,
-        "index": 362
+        "index": 350,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 143.86,
@@ -2909,7 +3515,9 @@
         "confidence": 1.0,
         "word": "gender",
         "alwaysCapitalized": false,
-        "index": 363
+        "index": 351,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 144.25,
@@ -2917,7 +3525,9 @@
         "confidence": 1.0,
         "word": "norms",
         "alwaysCapitalized": false,
-        "index": 364
+        "index": 352,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 144.61,
@@ -2925,7 +3535,9 @@
         "confidence": 1.0,
         "word": "get",
         "alwaysCapitalized": false,
-        "index": 365
+        "index": 353,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 144.79,
@@ -2933,7 +3545,9 @@
         "confidence": 1.0,
         "word": "established",
         "alwaysCapitalized": false,
-        "index": 366
+        "index": 354,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 145.48,
@@ -2941,7 +3555,9 @@
         "confidence": 0.99,
         "word": "and",
         "alwaysCapitalized": false,
-        "index": 367
+        "index": 355,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 145.57,
@@ -2949,7 +3565,9 @@
         "confidence": 1.0,
         "word": "policed",
         "alwaysCapitalized": false,
-        "index": 368
+        "index": 356,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 146.65,
@@ -2957,7 +3575,9 @@
         "confidence": 1.0,
         "word": "and",
         "alwaysCapitalized": false,
-        "index": 369
+        "index": 357,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 146.98,
@@ -2965,7 +3585,9 @@
         "confidence": 0.98,
         "word": "what",
         "alwaysCapitalized": false,
-        "index": 370
+        "index": 358,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 147.16,
@@ -2973,7 +3595,9 @@
         "confidence": 1.0,
         "word": "the",
         "alwaysCapitalized": false,
-        "index": 371
+        "index": 359,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 147.28,
@@ -2981,7 +3605,9 @@
         "confidence": 1.0,
         "word": "best",
         "alwaysCapitalized": false,
-        "index": 372
+        "index": 360,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 147.58,
@@ -2989,7 +3615,9 @@
         "confidence": 1.0,
         "word": "way",
         "alwaysCapitalized": false,
-        "index": 373
+        "index": 361,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 147.79,
@@ -2997,7 +3625,9 @@
         "confidence": 1.0,
         "word": "is",
         "alwaysCapitalized": false,
-        "index": 374
+        "index": 362,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 148.0,
@@ -3005,7 +3635,9 @@
         "confidence": 1.0,
         "word": "to",
         "alwaysCapitalized": false,
-        "index": 375
+        "index": 363,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 148.18,
@@ -3013,7 +3645,9 @@
         "confidence": 1.0,
         "word": "disrupt",
         "alwaysCapitalized": false,
-        "index": 376
+        "index": 364,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 148.78,
@@ -3021,7 +3655,9 @@
         "confidence": 1.0,
         "word": "them",
         "alwaysCapitalized": false,
-        "index": 377
+        "index": 365,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 149.26,
@@ -3029,7 +3665,9 @@
         "confidence": 1.0,
         "word": "and",
         "alwaysCapitalized": false,
-        "index": 378
+        "index": 366,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 149.65,
@@ -3037,7 +3675,9 @@
         "confidence": 1.0,
         "word": "to",
         "alwaysCapitalized": false,
-        "index": 379
+        "index": 367,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 149.92,
@@ -3045,7 +3685,9 @@
         "confidence": 1.0,
         "word": "overcome",
         "alwaysCapitalized": false,
-        "index": 380
+        "index": 368,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 150.43,
@@ -3053,7 +3695,9 @@
         "confidence": 1.0,
         "word": "the",
         "alwaysCapitalized": false,
-        "index": 381
+        "index": 369,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 150.55,
@@ -3061,7 +3705,9 @@
         "confidence": 1.0,
         "word": "police",
         "alwaysCapitalized": false,
-        "index": 382
+        "index": 370,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 150.88,
@@ -3069,15 +3715,9 @@
         "confidence": 0.99,
         "word": "function",
         "alwaysCapitalized": false,
-        "index": 383
-    },
-    {
-        "wordStart": 151.36,
-        "wordEnd": 151.4,
-        "confidence": 1.0,
-        "word": ".",
-        "alwaysCapitalized": false,
-        "index": 384
+        "index": 371,
+        "puncAfter": ".",
+        "puncBefore": false
     },
     {
         "wordStart": 151.81,
@@ -3085,7 +3725,9 @@
         "confidence": 0.98,
         "word": "It's",
         "alwaysCapitalized": false,
-        "index": 385
+        "index": 372,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 151.99,
@@ -3093,7 +3735,9 @@
         "confidence": 1.0,
         "word": "my",
         "alwaysCapitalized": false,
-        "index": 386
+        "index": 373,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 152.23,
@@ -3101,7 +3745,9 @@
         "confidence": 1.0,
         "word": "view",
         "alwaysCapitalized": false,
-        "index": 387
+        "index": 374,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 152.59,
@@ -3109,7 +3755,9 @@
         "confidence": 1.0,
         "word": "that",
         "alwaysCapitalized": false,
-        "index": 388
+        "index": 375,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 154.21,
@@ -3117,7 +3765,9 @@
         "confidence": 1.0,
         "word": "gender",
         "alwaysCapitalized": false,
-        "index": 389
+        "index": 376,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 154.6,
@@ -3125,7 +3775,9 @@
         "confidence": 1.0,
         "word": "is",
         "alwaysCapitalized": false,
-        "index": 390
+        "index": 377,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 155.83,
@@ -3133,7 +3785,9 @@
         "confidence": 0.59,
         "word": "is",
         "alwaysCapitalized": false,
-        "index": 391
+        "index": 378,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 156.73,
@@ -3141,7 +3795,9 @@
         "confidence": 1.0,
         "word": "culturally",
         "alwaysCapitalized": false,
-        "index": 392
+        "index": 379,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 157.21,
@@ -3149,7 +3805,9 @@
         "confidence": 1.0,
         "word": "formed",
         "alwaysCapitalized": false,
-        "index": 393
+        "index": 380,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 158.17,
@@ -3157,7 +3815,9 @@
         "confidence": 1.0,
         "word": "but",
         "alwaysCapitalized": false,
-        "index": 394
+        "index": 381,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 158.35,
@@ -3165,7 +3825,9 @@
         "confidence": 1.0,
         "word": "it's",
         "alwaysCapitalized": false,
-        "index": 395
+        "index": 382,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 158.5,
@@ -3173,7 +3835,9 @@
         "confidence": 1.0,
         "word": "also",
         "alwaysCapitalized": false,
-        "index": 396
+        "index": 383,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 159.28,
@@ -3181,7 +3845,9 @@
         "confidence": 1.0,
         "word": "a",
         "alwaysCapitalized": false,
-        "index": 397
+        "index": 384,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 159.34,
@@ -3189,7 +3855,9 @@
         "confidence": 1.0,
         "word": "domain",
         "alwaysCapitalized": false,
-        "index": 398
+        "index": 385,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 160.0,
@@ -3197,7 +3865,9 @@
         "confidence": 1.0,
         "word": "of",
         "alwaysCapitalized": false,
-        "index": 399
+        "index": 386,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 160.42,
@@ -3205,7 +3875,9 @@
         "confidence": 1.0,
         "word": "agency",
         "alwaysCapitalized": false,
-        "index": 400
+        "index": 387,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 160.9,
@@ -3213,7 +3885,9 @@
         "confidence": 0.99,
         "word": "or",
         "alwaysCapitalized": false,
-        "index": 401
+        "index": 388,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 161.02,
@@ -3221,15 +3895,9 @@
         "confidence": 1.0,
         "word": "freedom",
         "alwaysCapitalized": false,
-        "index": 402
-    },
-    {
-        "wordStart": 161.56,
-        "wordEnd": 161.59,
-        "confidence": 0.82,
-        "word": ".",
-        "alwaysCapitalized": false,
-        "index": 403
+        "index": 389,
+        "puncAfter": ".",
+        "puncBefore": false
     },
     {
         "wordStart": 161.83,
@@ -3237,7 +3905,9 @@
         "confidence": 0.97,
         "word": "It's",
         "alwaysCapitalized": false,
-        "index": 404
+        "index": 390,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 162.01,
@@ -3245,7 +3915,9 @@
         "confidence": 1.0,
         "word": "most",
         "alwaysCapitalized": false,
-        "index": 405
+        "index": 391,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 162.34,
@@ -3253,7 +3925,9 @@
         "confidence": 1.0,
         "word": "important",
         "alwaysCapitalized": false,
-        "index": 406
+        "index": 392,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 163.0,
@@ -3261,7 +3935,9 @@
         "confidence": 1.0,
         "word": "to",
         "alwaysCapitalized": false,
-        "index": 407
+        "index": 393,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 163.66,
@@ -3269,7 +3945,9 @@
         "confidence": 1.0,
         "word": "resist",
         "alwaysCapitalized": false,
-        "index": 408
+        "index": 394,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 164.26,
@@ -3277,7 +3955,9 @@
         "confidence": 1.0,
         "word": "the",
         "alwaysCapitalized": false,
-        "index": 409
+        "index": 395,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 164.44,
@@ -3285,7 +3965,9 @@
         "confidence": 1.0,
         "word": "violence",
         "alwaysCapitalized": false,
-        "index": 410
+        "index": 396,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 165.34,
@@ -3293,7 +3975,9 @@
         "confidence": 1.0,
         "word": "that",
         "alwaysCapitalized": false,
-        "index": 411
+        "index": 397,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 165.61,
@@ -3301,7 +3985,9 @@
         "confidence": 1.0,
         "word": "is",
         "alwaysCapitalized": false,
-        "index": 412
+        "index": 398,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 166.66,
@@ -3309,7 +3995,9 @@
         "confidence": 0.99,
         "word": "imposed",
         "alwaysCapitalized": false,
-        "index": 413
+        "index": 399,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 167.44,
@@ -3317,7 +4005,9 @@
         "confidence": 1.0,
         "word": "by",
         "alwaysCapitalized": false,
-        "index": 414
+        "index": 400,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 167.62,
@@ -3325,7 +4015,9 @@
         "confidence": 1.0,
         "word": "ideal",
         "alwaysCapitalized": false,
-        "index": 415
+        "index": 401,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 167.95,
@@ -3333,7 +4025,9 @@
         "confidence": 1.0,
         "word": "gender",
         "alwaysCapitalized": false,
-        "index": 416
+        "index": 402,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 168.28,
@@ -3341,7 +4035,9 @@
         "confidence": 1.0,
         "word": "norms",
         "alwaysCapitalized": false,
-        "index": 417
+        "index": 403,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 168.94,
@@ -3349,7 +4045,9 @@
         "confidence": 1.0,
         "word": "especially",
         "alwaysCapitalized": false,
-        "index": 418
+        "index": 404,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 170.17,
@@ -3357,7 +4055,9 @@
         "confidence": 1.0,
         "word": "against",
         "alwaysCapitalized": false,
-        "index": 419
+        "index": 405,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 170.56,
@@ -3365,7 +4065,9 @@
         "confidence": 1.0,
         "word": "those",
         "alwaysCapitalized": false,
-        "index": 420
+        "index": 406,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 170.92,
@@ -3373,7 +4075,9 @@
         "confidence": 1.0,
         "word": "who",
         "alwaysCapitalized": false,
-        "index": 421
+        "index": 407,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 171.1,
@@ -3381,7 +4085,9 @@
         "confidence": 1.0,
         "word": "are",
         "alwaysCapitalized": false,
-        "index": 422
+        "index": 408,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 171.79,
@@ -3389,7 +4095,9 @@
         "confidence": 0.99,
         "word": "gender",
         "alwaysCapitalized": false,
-        "index": 423
+        "index": 409,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 172.33,
@@ -3397,7 +4105,9 @@
         "confidence": 1.0,
         "word": "different",
         "alwaysCapitalized": false,
-        "index": 424
+        "index": 410,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 172.9,
@@ -3405,7 +4115,9 @@
         "confidence": 1.0,
         "word": "who",
         "alwaysCapitalized": false,
-        "index": 425
+        "index": 411,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 173.08,
@@ -3413,7 +4125,9 @@
         "confidence": 1.0,
         "word": "are",
         "alwaysCapitalized": false,
-        "index": 426
+        "index": 412,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 173.23,
@@ -3421,7 +4135,9 @@
         "confidence": 0.98,
         "word": "not",
         "alwaysCapitalized": false,
-        "index": 427
+        "index": 413,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 173.56,
@@ -3429,7 +4145,9 @@
         "confidence": 1.0,
         "word": "nonconforming",
         "alwaysCapitalized": false,
-        "index": 428
+        "index": 414,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 174.55,
@@ -3437,7 +4155,9 @@
         "confidence": 0.96,
         "word": "in",
         "alwaysCapitalized": false,
-        "index": 429
+        "index": 415,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 174.72,
@@ -3445,7 +4165,9 @@
         "confidence": 0.96,
         "word": "their",
         "alwaysCapitalized": false,
-        "index": 430
+        "index": 416,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 175.09,
@@ -3453,7 +4175,9 @@
         "confidence": 0.68,
         "word": "in",
         "alwaysCapitalized": false,
-        "index": 431
+        "index": 417,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 175.22,
@@ -3461,7 +4185,9 @@
         "confidence": 1.0,
         "word": "their",
         "alwaysCapitalized": false,
-        "index": 432
+        "index": 418,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 175.39,
@@ -3469,7 +4195,9 @@
         "confidence": 1.0,
         "word": "gender",
         "alwaysCapitalized": false,
-        "index": 433
+        "index": 419,
+        "puncAfter": false,
+        "puncBefore": false
     },
     {
         "wordStart": 175.69,
@@ -3477,14 +4205,8 @@
         "confidence": 1.0,
         "word": "presentation",
         "alwaysCapitalized": false,
-        "index": 434
-    },
-    {
-        "wordStart": null,
-        "wordEnd": null,
-        "confidence": 1.0,
-        "word": ".",
-        "alwaysCapitalized": false,
-        "index": 435
+        "index": 420,
+        "puncAfter": ".",
+        "puncBefore": false
     }
 ]

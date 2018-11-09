@@ -1,34 +1,27 @@
 import React, { Fragment } from 'react';
-import { isPunc } from './helpers'
-
 
 
 const Word = props => {
 
     let { word, selected, offset, firstSelectedWordIndex } = props
-    let space = word.space
-
-    const onClick = () => {
-        if (!isPunc(word.word)) props.onClick(word)
-    }
 
     let style = {};
-    if (selected && !isPunc(word.word)) {
+    if (selected) {
         style = { color: 'blue', fontStyle: 'bold', backgroundColor: 'gray' }
     }
 
-    if (selected && offset) {
-        style = { color: 'blue', fontStyle: 'bold', backgroundColor: 'gray' }
-    }
+    const space = " "
+
+    const onClick = () => props.onClick(word)
 
     const renderSpace = () => {
 
         if (offset === 0
             || (offset !== 0
                 && word.index === firstSelectedWordIndex)) {
-            return <span onClick={onClick}>{space}</span>
+            return <span onClick={props.onClick}>{space}</span>
         } else {
-            return <span onClick={onClick} style={style}>{space}</span>
+            return <span onClick={props.onClick} style={style}>{space}</span>
         }
     }
 
@@ -38,7 +31,7 @@ const Word = props => {
             <span
                 onClick={onClick}
                 className='word'
-                style={style}>{word.word}
+                style={style}>{word.puncBefore ? word.puncBefore : ''}{word.word}{word.puncAfter ? word.puncAfter : ''}
             </span>
 
         </Fragment>

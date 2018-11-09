@@ -3,7 +3,10 @@ import MediaPlayer from './mediaPlayer';
 import Transcript from './transcript';
 import transcript from './transcript.json';
 import EditModal from './editModal';
-import { removeSelection, isPunc, isPhraseDelimiter } from './helpers'
+import {
+    removeSelection, endsSentence, removePunc,
+    isCapitalized, toTitleCase, hasPuncAfter, hasPuncBefore, alwaysCapitalized
+} from './helpers'
 
 
 
@@ -31,6 +34,18 @@ class InteractiveTranscript extends Component {
 
     wordAtIndex = index => this.state.transcript[index]
 
+    // getOffsetsOfWordAtIndex = index => {
+    //     // TODO: support multiple indices, or make a separate method for that
+    //     const span = document.querySelectorAll('span.word')[index]
+    //     console.log(span)
+    //     return {
+    //         x: span.offsetLeft,
+    //         y: span.offsetTop,
+    //         width: span.offsetWidth,
+    //         height: span.offsetHeight,
+    //     }
+    // }
+
     onInputModalChange = event => {
         this.setState({
             editModalEdited: true,
@@ -46,7 +61,59 @@ class InteractiveTranscript extends Component {
             })
             removeSelection()
 
-            // TODO: this.undoRedoEdit
+            let { editingWords } = this.state
+
+            const selectedWordsObject = this.getSelectedWordsObject()
+            const selectedWords = this.selectedWords()
+
+            const edit = {
+                selectedWords: {
+                    ...selectedWordsObject,
+                    offset: 0
+                }
+            }
+
+            editingWords = editingWords.split(' ')
+            const newWordsSurplus = editingWords.length - selectedWordsObject.offset - 1
+
+            edit.change = [
+                editingWords.slice(0, -newWordsSurplus).map((word, index) => (
+                    // editingWords.map((word, index) => (
+                    {
+                        ...selectedWords[index],
+                        confidence: 1,
+                        alwaysCapitalized: alwaysCapitalized(word),
+                        word: removePunc(word),
+                        puncAfter: hasPuncAfter(word),
+                        puncBefore: hasPuncBefore(word),
+                        prevState: selectedWords[index]
+                    })
+                )
+            ]
+
+            if (newWordsSurplus < 0) {
+                edit.delete = [selectedWords.slice(newWordsSurplus)]
+
+
+            } else if (newWordsSurplus > 0) {
+                const lastOverlappingWord = selectedWords.slice(-1)[0]
+                const lastChangeIndex = edit.change[0].slice(-1)[0].index
+                edit.insert = [
+                    editingWords.slice(-newWordsSurplus).map((word, index) => (
+                        {
+                            ...lastOverlappingWord,
+                            confidence: 1,
+                            alwaysCapitalized: alwaysCapitalized(word),
+                            word: removePunc(word),
+                            puncAfter: hasPuncAfter(word),
+                            puncBefore: hasPuncBefore(word),
+                            index: lastChangeIndex + index + 1,
+                        }))
+                ]
+            }
+
+            console.log(edit)
+            this.undoRedoEdit('edit', edit)
         }
     }
 
@@ -83,31 +150,48 @@ class InteractiveTranscript extends Component {
 
     surroundSelectionWithStuff = stuff => {
 
+        let change
+
+        if (this.getSelectedWordsObject.offset === 0) {
+            change = [
+                [
+                    {
+                        ...this.selectedWords()[0],
+                        puncBefore: '"',
+                        puncAfter: '"',
+                        prevState: {
+                            puncBefore: false,
+                            puncAfter: false,
+                        }
+                    }
+                ]
+            ]
+        } else {
+            change = [
+                [
+                    {
+                        ...this.selectedWords()[0],
+                        puncBefore: '"',
+                        prevState: {
+                            puncBefore: false,
+                        }
+                    }
+                ],
+                [
+                    {
+                        ...this.selectedWords().slice(-1)[0],
+                        puncAfter: '"',
+                        prevState: {
+                            puncAfter: false,
+                        }
+                    }
+                ]
+            ]
+        }
+
         this.undoRedoEdit('edit',
             {
-                selectedWords: this.getSelectedWordsObject(1),
-                insert: [
-                    [
-                        {
-                            "wordStart": null,
-                            "wordEnd": null,
-                            "confidence": 1.0,
-                            "word": stuff,
-                            "alwaysCapitalized": false,
-                            "index": this.getSelectedWordIndex('first'),
-                        }
-                    ],
-                    [
-                        {
-                            "wordStart": null,
-                            "wordEnd": null,
-                            "confidence": 1.0,
-                            "word": stuff,
-                            "alwaysCapitalized": false,
-                            "index": this.getSelectedWordIndex('last') + 1,
-                        },
-                    ],
-                ],
+                selectedWords: this.getSelectedWordsObject(), change,
             }
         )
     }
@@ -120,6 +204,32 @@ class InteractiveTranscript extends Component {
                 delete: [this.selectedWords()]
             },
         )
+    }
+
+    changeQueueStep = (whichOne, transcript, step) => {
+        step.forEach(changeChunk => {
+            const wordMap = {}
+            changeChunk.forEach(word => wordMap[word.index] = word)
+
+            transcript = transcript
+                .map((word, index) => {
+                    let changedWord = wordMap[index]
+                    if (changedWord) {
+                        if (whichOne === 'undo') {
+                            changedWord = {
+                                ...changedWord,
+                                ...changedWord.prevState
+                            }
+                            delete changedWord.prevState
+                        }
+                        return changedWord
+                    }
+                    return word
+                })
+
+        })
+
+        return transcript
     }
 
     insertQueueStep = (transcript, step) => {
@@ -146,10 +256,6 @@ class InteractiveTranscript extends Component {
                     })))
 
             let newSelectedWordsStartOffset = numWords - 1
-
-            if (numWords === 1 && isPunc(insertChunk[0].word)) {
-                newSelectedWordsStartOffset = -1
-            }
 
             newSelectedWordIndex = insertChunk.slice(-1)[0].index - newSelectedWordsStartOffset
 
@@ -219,6 +325,11 @@ class InteractiveTranscript extends Component {
             step = queue.slice(-1)[0]
         }
 
+        if (step.change) {
+            transcript = this.changeQueueStep(whichOne, transcript, step.change)
+        }
+
+
         if (step.insert) {
             if (whichOne === 'undo') {
                 [transcript, selectedWordIndices] = this.deleteQueueStep(transcript, step.insert)
@@ -273,9 +384,9 @@ class InteractiveTranscript extends Component {
 
     }
 
-    getSelectedWordsObject = (increment = 0) => {
-        const firstWordIndex = this.getSelectedWordIndex('first') + increment
-        const lastWordIndex = this.getSelectedWordIndex('last') + increment
+    getSelectedWordsObject = () => {
+        const firstWordIndex = this.getSelectedWordIndex('first')
+        const lastWordIndex = this.getSelectedWordIndex('last')
 
         return {
             start: firstWordIndex,
@@ -286,78 +397,60 @@ class InteractiveTranscript extends Component {
     insertPuncAfterSelectedWords = punc => {
 
         const index = this.getSelectedWordIndex('last')
-        let startIndex = index + 1
+        const word = this.wordAtIndex(index)
+        if (word.puncAfter === punc) return
 
-        const nextWordObject = this.wordAtIndex(startIndex)
+        let change
 
-        if (!nextWordObject) return
-        if (nextWordObject.word === punc) return
 
-        const lastSelectedWord = this.wordAtIndex(index)
+        change = [
+            [
+                {
+                    ...word,
+                    puncAfter: punc,
+                    prevState: {
+                        puncAfter: word.puncAfter
+                    }
+                }
+            ]
+        ]
 
-        if (isPhraseDelimiter(lastSelectedWord.word)) {
-            return
-            // this.setState({
-            //     selectedWordIndices: {
-            //         ...this.state.selectedWordIndices,
-            //         offset: this.state.selectedWordIndices.offset - 1
-            //     }
-            // })
-            // return this.insertPuncAfterSelectedWords(punc)
+        if (endsSentence(punc)) {
+            const nextWord = this.wordAtIndex(index + 1)
+            if (!isCapitalized(nextWord.word)) {
+                change = change.concat([[
+                    {
+                        ...nextWord,
+                        word: toTitleCase(nextWord.word),
+                        prevState: {
+                            word: nextWord.word
+                        }
+                    }
+                ]])
+            }
+        } else {
+            const nextWord = this.wordAtIndex(index + 1)
+            if (isCapitalized(nextWord.word)) {
+                change = change.concat([[
+                    {
+                        ...nextWord,
+                        word: nextWord.word.toLowerCase(),
+                        prevState: {
+                            word: nextWord.word
+                        }
+                    }
+                ]])
+            }
+
         }
 
         const edit = {
             selectedWords: this.getSelectedWordsObject(),
-            insert: [
-                [
-                    {
-                        "wordStart": null,
-                        "wordEnd": null,
-                        "confidence": 1.0,
-                        "word": punc,
-                        "alwaysCapitalized": false,
-                        "index": startIndex
-                    }
-                ]
-            ],
-        }
-
-        if (isPhraseDelimiter(nextWordObject.word)) {
-            edit.insert[0][0].index++
-            edit.delete = [
-                [
-                    this.state.transcript[startIndex]
-                ]
-            ]
-
+            change
         }
 
         this.undoRedoEdit('edit', edit)
 
-        if (isPhraseDelimiter(nextWordObject.word)) {
-            const { undoQueue } = this.state
-            console.log(undoQueue)
-            // const undoHead = undoQueue.slice(0, -1)
-            // const lastUndo = undoQueue.slice(-1)[0]
-
-
-            const newState = {
-                undoQueue: Object.entries(undoQueue).forEach(([k, v]) => {
-
-                })
-
-            }
-            // undoQueue: undoHead.concat([{
-            //     ...lastUndo,
-            //     insert: [lastUndo.insert.concat({
-            //         ...lastUndo.insert[0][0],
-            //         index: lastUndo.insert[0][0].index - 1
-            //     })]
-            // }])
-
-            this.setState(newState)
-            console.log(undoQueue)
-        }
     }
 
     selectWords = whichOne => {
@@ -378,62 +471,40 @@ class InteractiveTranscript extends Component {
 
     }
 
-    findClosestPunctuation = nextPrev => {
+    // goToNextPhrase = () => {
+    //     const { transcript } = this.state
+    //     const nextPunctuationIndex = this.findClosestPunctuation('next')
+    //     if (nextPunctuationIndex !== null && nextPunctuationIndex < transcript.length - 1) {
+    //         this.setState({
+    //             selectedWordIndices: {
+    //                 start: nextPunctuationIndex + 1,
+    //                 offset: 0,
+    //             },
+    //             playPosition: this.wordAtIndex(nextPunctuationIndex + 1).wordStart,
+    //             updatePlayer: true
+    //         })
+    //     }
+    // }
 
-        const { transcript, selectedWordIndices } = this.state
-
-        let iterateOn = []
-
-        if (nextPrev === 'next') {
-            iterateOn = transcript.slice(selectedWordIndices.start + selectedWordIndices.offset + 1)
-        } else {
-            iterateOn = transcript.slice(0, selectedWordIndices.start - 1).reverse()
-        }
-        for (let word of iterateOn) {
-            if (isPhraseDelimiter(word.word)) {
-                // prevent iterating past the beginning and back to the end when searching for previous
-                if (nextPrev === 'previous' && word.index > selectedWordIndices.start) return 0
-                return word.index
-            }
-        }
-        if (nextPrev === 'previous') return 0; // hack to get back to the beginning when searching for previous
-    }
-
-    goToNextPhrase = () => {
-        const { transcript } = this.state
-        const nextPunctuationIndex = this.findClosestPunctuation('next')
-        if (nextPunctuationIndex !== null && nextPunctuationIndex < transcript.length - 1) {
-            this.setState({
-                selectedWordIndices: {
-                    start: nextPunctuationIndex + 1,
-                    offset: 0,
-                },
-                playPosition: this.wordAtIndex(nextPunctuationIndex + 1).wordStart,
-                updatePlayer: true
-            })
-        }
-    }
-
-    goToPreviousPhrase = () => {
-        let previousPunctuationIndex = this.findClosestPunctuation('previous')
-        if (previousPunctuationIndex === 0) previousPunctuationIndex = -1
-        if (previousPunctuationIndex) {
-            const playPosition = this.wordAtIndex(previousPunctuationIndex + 1).wordStart
-            this.setState({
-                selectedWordIndices: {
-                    start: previousPunctuationIndex + 1,
-                    offset: 0,
-                },
-                playPosition: playPosition - (Math.random() * .1),
-                updatePlayer: true
-            })
-        }
-    }
+    // goToPreviousPhrase = () => {
+    //     let previousPunctuationIndex = this.findClosestPunctuation('previous')
+    //     if (previousPunctuationIndex === 0) previousPunctuationIndex = -1
+    //     if (previousPunctuationIndex) {
+    //         const playPosition = this.wordAtIndex(previousPunctuationIndex + 1).wordStart
+    //         this.setState({
+    //             selectedWordIndices: {
+    //                 start: previousPunctuationIndex + 1,
+    //                 offset: 0,
+    //             },
+    //             playPosition: playPosition - (Math.random() * .1),
+    //             updatePlayer: true
+    //         })
+    //     }
+    // }
 
     goToNextWord = () => {
         const { transcript, selectedWordIndices } = this.state
         let transcriptLength = transcript.length;
-        if (isPunc(this.wordAtIndex(transcriptLength - 1).word)) transcriptLength--;
         let lastWordIndex;
         if (selectedWordIndices.offset > 1) {
             lastWordIndex = selectedWordIndices.start + selectedWordIndices.offset
@@ -509,14 +580,16 @@ class InteractiveTranscript extends Component {
         }
     }
 
-    onClickWord = word => this.setState({
-        playPosition: word.wordStart + Math.random() * .1,
-        selectedWordIndices: {
-            start: word.index,
-            offset: 0,
-        },
-        updatePlayer: true,
-    })
+    onClickWord = word => {
+        this.setState({
+            playPosition: word.wordStart + Math.random() * .1,
+            selectedWordIndices: {
+                start: word.index,
+                offset: 0,
+            },
+            updatePlayer: true,
+        })
+    }
 
     render() {
         const { play, playPosition, updatePlayer,
@@ -549,96 +622,87 @@ class InteractiveTranscript extends Component {
 
         const { showEditModal } = this.state
 
-        switch (event.keyCode) {
-            case 13: // enter
-                if (!showEditModal) this.setState({ showEditModal: true })
-                break;
-            case 32: // spacebar
-                if (!showEditModal) this.setState({ showEditModal: true })
-                break;
-
-            case 27: // escape
-                if (showEditModal) {
+        if (showEditModal) {
+            switch (event.keyCode) {
+                case 27: // escape
                     this.setState({ showEditModal: false })
                     if (window.getSelection) {
                         window.getSelection().removeAllRanges();
                     }
-                }
-                // TODO: else, select just the first word in multi-word selection
-                break;
-            case 8: // backspace
-                if (!showEditModal) this.deleteWords();
-                break;
-            case 39:
-                if (!showEditModal) {
+                    break;
+                case 90: // ctrl-z
+                    if (event.metaKey) { // meta + z
+                        this.setState({ showEditModal: false })
+                        removeSelection();
+                    }
+                    break;
+                default:
+                    return
+            }
+        } else {
+
+            switch (event.keyCode) {
+                case 13: // enter
+                    this.setState({ showEditModal: true })
+                    break;
+                case 32: // spacebar
+                    this.setState({ showEditModal: true })
+                    break;
+
+                case 8: // backspace
+                    this.deleteWords();
+                    break;
+                case 39:
                     if (event.shiftKey) { // shift + left
                         this.selectWords('increase');
                     } else {
                         this.goToNextWord();
                     }
-                }
-                break;
-            case 37:
-                if (!showEditModal) {
+                    break;
+                case 37:
                     if (event.shiftKey) { // shift + left
                         this.selectWords('decrease');
                     } else {
                         this.goToPreviousWord();
                     }
-                }
-                break;
-            case 190: // period
-                if (!showEditModal) {
+                    break;
+                case 190: // period
                     this.insertPuncAfterSelectedWords('.')
-                }
-                break;
-            case 188: // comma
-                if (!showEditModal) {
+                    break;
+                case 188: // comma
                     this.insertPuncAfterSelectedWords(',')
-                }
-                break
-            case 191: // question mark (or slash)
-                if (!showEditModal) {
+                    break
+                case 191: // question mark (or slash)
                     this.insertPuncAfterSelectedWords('?')
-                }
-                break
-            case 49: // exclamation point
-                if (!showEditModal) {
+                    break
+                case 49: // exclamation point
                     if (event.shiftKey) {
                         this.insertPuncAfterSelectedWords('!')
                     }
-                }
-                break
-            case 9: // tab
-                event.preventDefault()
-                if (!showEditModal) {
+                    break
+                case 9: // tab
+                    event.preventDefault()
                     if (event.shiftKey) {
                         this.goToPreviousWord();
                     } else {
-                        this.goToNextWord()
+                        this.goToNextWord();
                     }
-                }
-                break
-            case 222:
-                if (!showEditModal) {
+                    break
+                case 222:
                     if (event.metaKey && event.ctrlKey) { // ctrl + meta + '
                         this.goToPreviousPhrase();
                     } else if (!event.altKey) {
                         this.surroundSelectionWithStuff('"');
                     }
-                }
-                break
-            case 186:
-                if (!showEditModal) {
+                    break
+                case 186:
                     if (event.metaKey && event.ctrlKey) { // ctrl + meta + ;
                         this.goToNextPhrase();
                     } else { // colon
                         if (event.shiftKey) this.insertPuncAfterSelectedWords(':')
                     }
-                }
-                break
-            case 90:
-                if (!showEditModal) {
+                    break
+                case 90:
                     if (event.metaKey && event.shiftKey) { // meta + shift + z
                         event.preventDefault()
                         this.redo()
@@ -646,13 +710,10 @@ class InteractiveTranscript extends Component {
                         event.preventDefault()
                         this.undo()
                     }
-                } else {
-                    this.setState({ showEditModal: false })
-                    removeSelection();
-                }
-                break
-            default:
-                return
+                    break
+                default:
+                    return
+            }
         }
     }
 

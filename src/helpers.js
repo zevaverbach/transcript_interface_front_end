@@ -91,6 +91,18 @@ export const doesntHaveSpaceBefore = word => isPunc(word)
 export const doesntHaveSpaceAfter = word => ['"', '('].includes(word)
 export const isPhraseDelimiter = word => puncDelimitsPhrases.includes(word)
 
+export const removePunc = word => {
+    for (let p of punc) {
+        if (word.includes(p)) {
+            word = word.replace(p, '')
+        }
+    }
+    return word
+}
+
+export const hasPuncAfter = word => punc.includes(word.slice(-1)[0]) ? word.slice(-1)[0] : false
+export const hasPuncBefore = word => punc.includes(word[0]) ? word[0] : false
+
 export const alwaysCapitalized = word => {
     // TODO: call an endpoint for this (use code already in use in Python)
     return word === 'I'
