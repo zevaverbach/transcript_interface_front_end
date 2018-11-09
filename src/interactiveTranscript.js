@@ -53,6 +53,8 @@ class InteractiveTranscript extends Component {
 
             let { editingWords } = this.state
 
+            if (editingWords.length === 0) return
+
             const selectedWordsObject = this.getSelectedWordsObject()
             const selectedWords = this.selectedWords()
 
@@ -678,13 +680,12 @@ class InteractiveTranscript extends Component {
 
             switch (event.keyCode) {
                 case 13: // enter
-                    this.setState({ showEditModal: true })
+                    this.setState({ showEditModal: true, play: false, updatePlayer: true })
                     break;
                 case 32: // spacebar
                     event.preventDefault()
                     this.markSelectionConfident()
                     break;
-
                 case 8: // backspace
                     this.deleteWords();
                     break;
@@ -712,8 +713,8 @@ class InteractiveTranscript extends Component {
                     this.insertPuncAfterSelectedWords('?')
                     break
                 case 192: // tilde
-                    event.preventDefault()
                     if (event.ctrlKey) {
+                        event.preventDefault()
                         this.toggleCase()
                     }
                     break

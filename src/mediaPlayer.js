@@ -59,27 +59,25 @@ class MediaPlayer extends Component {
     }
 
     componentWillReceiveProps(nextProps) {
-        if (this.props.updatePlayer
-            && this.state.player
-            && this.state.playPosition !== nextProps.playPosition
-        ) {
+        const { player, playPosition } = this.state
+        const { play, updatePlayer } = this.props
 
-            this.state.player.currentTime = nextProps.playPosition;
-            this.setState({ playPosition: nextProps.playPosition })
+        if (updatePlayer && player) {
 
-        } else {
+            if (playPosition !== nextProps.playPosition) {
+                player.currentTime = nextProps.playPosition;
+                this.setState({ playPosition: nextProps.playPosition })
 
-            if (this.props.updatePlayer
-                && this.state.player
-                && this.props.play) {
-
-                if (this.state.player.paused) {
-                    this.state.player.play()
+            } else if (play) {
+                if (player.paused) {
+                    player.play()
                 } else {
-                    this.state.player.currentTime = this.state.player.currentTime - 1.65
-                    this.setState({ currentTime: this.state.player.currentTime })
+                    player.currentTime = player.currentTime - 1.65
+                    this.setState({ currentTime: player.currentTime })
                 }
 
+            } else if (!play) {
+                player.pause()
             }
         }
     }
