@@ -10,6 +10,13 @@ const Word = props => {
         style = { color: 'blue', fontStyle: 'bold', backgroundColor: 'gray' }
     }
 
+    if (word.confidence <= .85) {
+        style = {
+            ...style,
+            textDecoration: 'underline'
+        }
+    }
+
     const space = " "
 
     const onClick = () => props.onClick(word)

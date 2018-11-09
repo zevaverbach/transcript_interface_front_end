@@ -34,18 +34,6 @@ class InteractiveTranscript extends Component {
 
     wordAtIndex = index => this.state.transcript[index]
 
-    // getOffsetsOfWordAtIndex = index => {
-    //     // TODO: support multiple indices, or make a separate method for that
-    //     const span = document.querySelectorAll('span.word')[index]
-    //     console.log(span)
-    //     return {
-    //         x: span.offsetLeft,
-    //         y: span.offsetTop,
-    //         width: span.offsetWidth,
-    //         height: span.offsetHeight,
-    //     }
-    // }
-
     onInputModalChange = event => {
         this.setState({
             editModalEdited: true,
@@ -74,11 +62,16 @@ class InteractiveTranscript extends Component {
             }
 
             editingWords = editingWords.split(' ')
-            const newWordsSurplus = editingWords.length - selectedWordsObject.offset - 1
+            let newWordsSurplus = editingWords.length - selectedWordsObject.offset - 1
+            let changeArray
+            if (newWordsSurplus) {
+                changeArray = editingWords.slice(0, -newWordsSurplus)
+            } else {
+                changeArray = editingWords
+            }
 
             edit.change = [
-                editingWords.slice(0, -newWordsSurplus).map((word, index) => (
-                    // editingWords.map((word, index) => (
+                changeArray.map((word, index) => (
                     {
                         ...selectedWords[index],
                         confidence: 1,
@@ -92,10 +85,12 @@ class InteractiveTranscript extends Component {
             ]
 
             if (newWordsSurplus < 0) {
+                console.log('deficit')
                 edit.delete = [selectedWords.slice(newWordsSurplus)]
 
 
             } else if (newWordsSurplus > 0) {
+                console.log('surplus')
                 const lastOverlappingWord = selectedWords.slice(-1)[0]
                 const lastChangeIndex = edit.change[0].slice(-1)[0].index
                 edit.insert = [
