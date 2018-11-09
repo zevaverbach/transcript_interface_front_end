@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import { CONFIDENCE_THRESHOLD } from './helpers';
 
 
 const Word = props => {
@@ -10,7 +11,7 @@ const Word = props => {
         style = { color: 'blue', fontStyle: 'bold', backgroundColor: 'gray' }
     }
 
-    if (word.confidence <= .85) {
+    if (word.confidence <= CONFIDENCE_THRESHOLD) {
         style = {
             ...style,
             textDecoration: 'underline'

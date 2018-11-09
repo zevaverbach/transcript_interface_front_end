@@ -119,3 +119,5 @@ export const getOffsetsOfWordAtIndex = index => {
         height: span.offsetHeight,
     }
 }
+
+export const CONFIDENCE_THRESHOLD = .87

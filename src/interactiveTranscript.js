@@ -4,9 +4,11 @@ import Transcript from './transcript';
 import transcript from './transcript.json';
 import EditModal from './editModal';
 import {
-    removeSelection, endsSentence, removePunc,
+    removeSelection, endsSentence, removePunc, CONFIDENCE_THRESHOLD,
     isCapitalized, toTitleCase, hasPuncAfter, hasPuncBefore, alwaysCapitalized
 } from './helpers'
+
+
 
 
 
@@ -85,12 +87,10 @@ class InteractiveTranscript extends Component {
             ]
 
             if (newWordsSurplus < 0) {
-                console.log('deficit')
                 edit.delete = [selectedWords.slice(newWordsSurplus)]
 
 
             } else if (newWordsSurplus > 0) {
-                console.log('surplus')
                 const lastOverlappingWord = selectedWords.slice(-1)[0]
                 const lastChangeIndex = edit.change[0].slice(-1)[0].index
                 edit.insert = [
@@ -107,7 +107,6 @@ class InteractiveTranscript extends Component {
                 ]
             }
 
-            console.log(edit)
             this.undoRedoEdit('edit', edit)
         }
     }
@@ -512,7 +511,7 @@ class InteractiveTranscript extends Component {
             let selectedWord = this.wordAtIndex(selectedWordIndex)
             while (selectedWordIndex < transcriptLength - 1 &&
                 (selectedWord.wordStart === null
-                    || selectedWord.confidence >= .85)) {
+                    || selectedWord.confidence > CONFIDENCE_THRESHOLD)) {
                 selectedWordIndex++;
                 selectedWord = this.wordAtIndex(selectedWordIndex)
             }
@@ -543,7 +542,7 @@ class InteractiveTranscript extends Component {
         let selectedWord = this.wordAtIndex(selectedWordIndex)
         while (selectedWordIndex !== 0 &&
             (selectedWord.wordStart === null
-                || selectedWord.confidence >= .85)) {
+                || selectedWord.confidence > CONFIDENCE_THRESHOLD)) {
             selectedWordIndex--;
             selectedWord = this.wordAtIndex(selectedWordIndex)
         }
@@ -617,6 +616,25 @@ class InteractiveTranscript extends Component {
             </React.Fragment >
         )
     }
+
+    markSelectionConfident = () => {
+        const edit = {
+            selectedWords: this.getSelectedWordsObject(),
+            change: [
+                this.selectedWords().map(word => (
+                    {
+                        ...word,
+                        confidence: 1,
+                        prevState: {
+                            confidence: word.confidence
+                        }
+                    }
+                ))
+            ]
+        }
+        this.undoRedoEdit('edit', edit)
+    }
+
     handleKeyDown = event => {
 
         const { showEditModal } = this.state
@@ -645,7 +663,8 @@ class InteractiveTranscript extends Component {
                     this.setState({ showEditModal: true })
                     break;
                 case 32: // spacebar
-                    this.setState({ showEditModal: true })
+                    event.preventDefault()
+                    this.markSelectionConfident()
                     break;
 
                 case 8: // backspace
