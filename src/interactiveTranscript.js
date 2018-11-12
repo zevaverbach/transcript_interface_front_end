@@ -50,6 +50,7 @@ class InteractiveTranscript extends Component {
         const player = this.mediaPlayer.current.player.current
         let { wasPlaying, editingWords } = this.state
         let changeArray
+        event.preventDefault()
 
         if (event.keyCode === 13) { // enter
             this.setState({
@@ -517,8 +518,8 @@ class InteractiveTranscript extends Component {
                 selectedWord = this.wordAtIndex(selectedWordIndex)
             }
 
-            if (!player.paused && selectedWordIndex > selectedWordIndices.start + 3) {
-                selectedWordIndex -= 3
+            if (!player.paused && selectedWordIndex > selectedWordIndices.start + 2) {
+                selectedWordIndex -= 2
                 selectedWord = this.wordAtIndex(selectedWordIndex)
             }
 
@@ -553,15 +554,15 @@ class InteractiveTranscript extends Component {
             selectedWord = this.wordAtIndex(selectedWordIndex)
         }
 
-        if (!player.paused && selectedWordIndex > selectedWordIndices.start + 3) {
-            selectedWordIndex -= 3
+        if (!player.paused && selectedWordIndex > selectedWordIndices.start + 2) {
+            selectedWordIndex -= 2
             selectedWord = this.wordAtIndex(selectedWordIndex)
         }
 
         if (!player.paused && selectedWordIndex === selectedWordIndices.start) {
             this.setState({
                 selectedWordIndices: {
-                    start: selectedWordIndices.start - 3,
+                    start: selectedWordIndices.start - 2,
                     offset: 0,
                 }
             })
@@ -631,108 +632,109 @@ class InteractiveTranscript extends Component {
         const { showEditModal } = this.state
         const player = this.mediaPlayer.current.player.current
 
-        if (showEditModal) {
-            switch (event.keyCode) {
-                case 27: // escape
-                    this.setState({ showEditModal: false })
-                    if (window.getSelection) {
-                        window.getSelection().removeAllRanges();
+        switch (event.keyCode) {
+            case 9: // tab
+                event.preventDefault()
+                if (event.shiftKey) {
+                    this.goToPreviousWord(true);
+                } else {
+                    this.goToNextWord(true);
+                }
+                break;
+            case 39:
+                if (event.shiftKey) { // shift + right
+                    this.selectWords('increase');
+                } else {
+                    this.goToNextWord();
+                }
+                break;
+            case 37:
+                if (event.shiftKey) { // shift + left
+                    this.selectWords('decrease');
+                } else {
+                    this.goToPreviousWord();
+                }
+                break;
+            default:
+                if (!showEditModal) {
+                    switch (event.keyCode) {
+                        case 13: // enter
+                            this.setState({ showEditModal: true, wasPlaying: !player.paused })
+                            player.pause()
+                            break;
+                        case 32: // spacebar
+                            event.preventDefault()
+                            this.markSelectionConfident()
+                            break;
+                        case 8: // backspace
+                            this.deleteWords();
+                            break;
+                        case 190: // period
+                            this.insertPuncAfterSelectedWords('.')
+                            break;
+                        case 188: // comma
+                            this.insertPuncAfterSelectedWords(',')
+                            break
+                        case 191: // question mark (or slash)
+                            this.insertPuncAfterSelectedWords('?')
+                            break
+                        case 192: // tilde
+                            if (event.ctrlKey) {
+                                event.preventDefault()
+                                this.toggleCase()
+                            }
+                            break
+                        case 49: // exclamation point
+                            if (event.shiftKey) {
+                                this.insertPuncAfterSelectedWords('!')
+                            }
+                            break
+                        case 222:
+                            if (event.metaKey && event.ctrlKey) { // ctrl + meta + '
+                                this.goToPreviousPhrase();
+                            } else if (!event.altKey) {
+                                this.surroundSelectionWithStuff('"');
+                            }
+                            break
+                        case 186:
+                            if (event.metaKey && event.ctrlKey) { // ctrl + meta + ;
+                                this.goToNextPhrase();
+                            } else { // colon
+                                if (event.shiftKey) this.insertPuncAfterSelectedWords(':')
+                            }
+                            break
+                        case 90:
+                            if (event.metaKey && event.shiftKey) { // meta + shift + z
+                                event.preventDefault()
+                                this.redo()
+                            } else if (event.metaKey) { // meta + z
+                                event.preventDefault()
+                                this.undo()
+                            }
+                            break
+                        default:
+                            return
                     }
-                    break;
-                case 90: // ctrl-z
-                    if (event.metaKey) { // meta + z
-                        this.setState({ showEditModal: false })
-                        removeSelection();
-                    }
-                    break;
-                case 9: // tab
-                    event.preventDefault()
-                    break
-                default:
                     return
-            }
-        } else {
 
-            switch (event.keyCode) {
-                case 13: // enter
-                    this.setState({ showEditModal: true, wasPlaying: !player.paused })
-                    player.pause()
-                    break;
-                case 32: // spacebar
-                    event.preventDefault()
-                    this.markSelectionConfident()
-                    break;
-                case 8: // backspace
-                    this.deleteWords();
-                    break;
-                case 39:
-                    if (event.shiftKey) { // shift + left
-                        this.selectWords('increase');
-                    } else {
-                        this.goToNextWord();
+                } else if (showEditModal) {
+                    switch (event.keyCode) {
+                        case 27: // escape
+                            this.setState({ showEditModal: false, editingWords: this.selectedWords().map(word => word.word).join(' ') })
+                            if (window.getSelection) {
+                                window.getSelection().removeAllRanges();
+                            }
+                            break;
+                        case 90: // ctrl-z
+                            if (event.metaKey) { // meta + z
+                                this.setState({ showEditModal: false })
+                                removeSelection();
+                            }
+                            break;
+                        default:
+                            return
                     }
-                    break;
-                case 37:
-                    if (event.shiftKey) { // shift + left
-                        this.selectWords('decrease');
-                    } else {
-                        this.goToPreviousWord();
-                    }
-                    break;
-                case 190: // period
-                    this.insertPuncAfterSelectedWords('.')
-                    break;
-                case 188: // comma
-                    this.insertPuncAfterSelectedWords(',')
-                    break
-                case 191: // question mark (or slash)
-                    this.insertPuncAfterSelectedWords('?')
-                    break
-                case 192: // tilde
-                    if (event.ctrlKey) {
-                        event.preventDefault()
-                        this.toggleCase()
-                    }
-                    break
-                case 49: // exclamation point
-                    if (event.shiftKey) {
-                        this.insertPuncAfterSelectedWords('!')
-                    }
-                    break
-                case 9: // tab
-                    event.preventDefault()
-                    if (event.shiftKey) {
-                        this.goToPreviousWord(true);
-                    } else {
-                        this.goToNextWord(true);
-                    }
-                    break
-                case 222:
-                    if (event.metaKey && event.ctrlKey) { // ctrl + meta + '
-                        this.goToPreviousPhrase();
-                    } else if (!event.altKey) {
-                        this.surroundSelectionWithStuff('"');
-                    }
-                    break
-                case 186:
-                    if (event.metaKey && event.ctrlKey) { // ctrl + meta + ;
-                        this.goToNextPhrase();
-                    } else { // colon
-                        if (event.shiftKey) this.insertPuncAfterSelectedWords(':')
-                    }
-                    break
-                case 90:
-                    if (event.metaKey && event.shiftKey) { // meta + shift + z
-                        event.preventDefault()
-                        this.redo()
-                    } else if (event.metaKey) { // meta + z
-                        event.preventDefault()
-                        this.undo()
-                    }
-                    break
-                default:
-                    return
-            }
+                }
         }
     }
 
