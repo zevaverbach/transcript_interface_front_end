@@ -29,6 +29,7 @@ class InteractiveTranscript extends Component {
             showEditModal: false,
             editingWords: [],
             editModalEdited: false,
+            wasPlaying: false,
         }
     }
 
@@ -47,15 +48,20 @@ class InteractiveTranscript extends Component {
 
     onInputModalKeyUp = event => {
         const player = this.mediaPlayer.current.player.current
+        let { wasPlaying, editingWords } = this.state
+        let changeArray
+
         if (event.keyCode === 13) { // enter
             this.setState({
                 editModalEdited: false,
                 showEditModal: false,
             })
-            player.play()
-            removeSelection()
+            if (wasPlaying) {
+                player.play()
+                this.setState({ wasPlaying: false })
+            }
 
-            let { editingWords } = this.state
+            removeSelection()
 
             if (editingWords.length === 0) return
 
@@ -71,7 +77,7 @@ class InteractiveTranscript extends Component {
 
             editingWords = editingWords.split(' ')
             let newWordsSurplus = editingWords.length - selectedWordsObject.offset - 1
-            let changeArray
+
             if (newWordsSurplus) {
                 changeArray = editingWords.slice(0, -newWordsSurplus)
             } else {
@@ -685,7 +691,7 @@ class InteractiveTranscript extends Component {
 
             switch (event.keyCode) {
                 case 13: // enter
-                    this.setState({ showEditModal: true })
+                    this.setState({ showEditModal: true, wasPlaying: !player.paused })
                     player.pause()
                     break;
                 case 32: // spacebar
