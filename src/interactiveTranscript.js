@@ -14,20 +14,22 @@ import {
 
 class InteractiveTranscript extends Component {
 
-    state = {
-        selectedWordIndices: {
-            start: 0,
-            offset: 0
-        },
-        transcript: transcript,
-        undoQueue: [],
-        redoQueue: [],
-        playPosition: 0,
-        play: false,
-        updatePlayer: false,
-        showEditModal: false,
-        editingWords: [],
-        editModalEdited: false,
+    constructor(props) {
+        super(props)
+        this.mediaPlayer = React.createRef()
+        this.state = {
+            selectedWordIndices: {
+                start: 0,
+                offset: 0
+            },
+            transcript: transcript,
+            undoQueue: [],
+            redoQueue: [],
+            // play: false,
+            showEditModal: false,
+            editingWords: [],
+            editModalEdited: false,
+        }
     }
 
     componentDidMount() {
@@ -44,13 +46,13 @@ class InteractiveTranscript extends Component {
     }
 
     onInputModalKeyUp = event => {
+        const player = this.mediaPlayer.current.player.current
         if (event.keyCode === 13) { // enter
             this.setState({
                 editModalEdited: false,
                 showEditModal: false,
-                play: true,
-                updatePlayer: false
             })
+            player.play()
             removeSelection()
 
             let { editingWords } = this.state
@@ -520,20 +522,22 @@ class InteractiveTranscript extends Component {
 
     goToNextWord = (skipHighConfidenceWords = false) => {
         const { transcript, selectedWordIndices } = this.state
+        const player = this.mediaPlayer.current.player.current
+
         let transcriptLength = transcript.length;
-        let lastWordIndex;
-        if (selectedWordIndices.offset > 1) {
-            lastWordIndex = selectedWordIndices.start + selectedWordIndices.offset
-        } else {
-            lastWordIndex = selectedWordIndices.start
-        }
+
+        let lastWordIndex = selectedWordIndices.offset > 1 ? selectedWordIndices.start + selectedWordIndices.offset : selectedWordIndices.start
+
+        let selectedWordIndex, selectedWord
 
         if (lastWordIndex + 1 < transcriptLength) {
-            let selectedWordIndex = lastWordIndex + 1
-            let selectedWord = this.wordAtIndex(selectedWordIndex)
-            while (selectedWordIndex < transcriptLength - 1 &&
-                (selectedWord.wordStart === null
-                    || (skipHighConfidenceWords && selectedWord.confidence > CONFIDENCE_THRESHOLD))) {
+            selectedWordIndex = lastWordIndex + 1
+            selectedWord = this.wordAtIndex(selectedWordIndex)
+
+            while (selectedWordIndex < transcriptLength - 1 && (
+                selectedWord.wordStart === null
+                || (skipHighConfidenceWords && selectedWord.confidence > CONFIDENCE_THRESHOLD)
+            )) {
                 selectedWordIndex++;
                 selectedWord = this.wordAtIndex(selectedWordIndex)
             }
@@ -543,14 +547,14 @@ class InteractiveTranscript extends Component {
                     start: selectedWordIndex,
                     offset: 0,
                 },
-                playPosition: selectedWord.wordStart,
-                updatePlayer: true,
             })
+            player.currentTime = selectedWord.wordStart + Math.random() * .1
         }
     }
 
     goToPreviousWord = (skipHighConfidenceWords = false) => {
         const { selectedWordIndices } = this.state
+        const player = this.mediaPlayer.current.player.current
         let firstWordIndex;
         if (selectedWordIndices.offset < 0) {
             firstWordIndex = selectedWordIndices.start + selectedWordIndices.offset
@@ -574,9 +578,8 @@ class InteractiveTranscript extends Component {
                 start: selectedWordIndex,
                 offset: 0,
             },
-            playPosition: selectedWord.wordStart,
-            updatePlayer: true,
         })
+        player.currentTime = selectedWord.wordStart
     }
 
     getNewWordIndex = newPosition => {
@@ -588,7 +591,6 @@ class InteractiveTranscript extends Component {
     }
 
     onTimeUpdate = newPosition => {
-        if (newPosition === this.state.playPosition) return
         const newWordIndex = this.getNewWordIndex(newPosition)
         if (newWordIndex) {
             this.setState({
@@ -601,29 +603,26 @@ class InteractiveTranscript extends Component {
     }
 
     onClickWord = word => {
+        const player = this.mediaPlayer.current.player.current
         this.setState({
-            playPosition: word.wordStart + Math.random() * .1,
             selectedWordIndices: {
                 start: word.index,
                 offset: 0,
             },
-            updatePlayer: true,
         })
+        player.currentTime = word.wordStart + Math.random() * .1
     }
 
     render() {
-        const { play, playPosition, updatePlayer,
-            transcript, selectedWordIndices, showEditModal } = this.state
+        const { transcript, selectedWordIndices, showEditModal } = this.state
 
         return (
             <React.Fragment>
                 <div>
                     <MediaPlayer
+                        ref={this.mediaPlayer}
                         src={this.props.mediaSource}
                         onTimeUpdate={this.onTimeUpdate}
-                        updatePlayer={updatePlayer}
-                        playPosition={playPosition}
-                        play={play}
                     />
 
                 </div>
@@ -660,6 +659,7 @@ class InteractiveTranscript extends Component {
     handleKeyDown = event => {
 
         const { showEditModal } = this.state
+        const player = this.mediaPlayer.current.player.current
 
         if (showEditModal) {
             switch (event.keyCode) {
@@ -685,7 +685,8 @@ class InteractiveTranscript extends Component {
 
             switch (event.keyCode) {
                 case 13: // enter
-                    this.setState({ showEditModal: true, play: false, updatePlayer: true })
+                    this.setState({ showEditModal: true })
+                    player.pause()
                     break;
                 case 32: // spacebar
                     event.preventDefault()
