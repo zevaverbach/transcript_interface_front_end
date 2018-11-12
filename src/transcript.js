@@ -17,7 +17,8 @@ const Transcript = props => {
                     onClickWord={props.onClickWord}
                     key={wordObject.index}
                     words={paragraph}
-                    selectedWordIndices={props.selectedWordIndices} />)
+                    selectedWordIndices={props.selectedWordIndices}
+                />)
             paragraph = [];
         }
     }

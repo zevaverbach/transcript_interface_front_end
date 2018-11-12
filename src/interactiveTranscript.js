@@ -495,37 +495,6 @@ class InteractiveTranscript extends Component {
 
     }
 
-    // goToNextPhrase = () => {
-    //     const { transcript } = this.state
-    //     const nextPunctuationIndex = this.findClosestPunctuation('next')
-    //     if (nextPunctuationIndex !== null && nextPunctuationIndex < transcript.length - 1) {
-    //         this.setState({
-    //             selectedWordIndices: {
-    //                 start: nextPunctuationIndex + 1,
-    //                 offset: 0,
-    //             },
-    //             playPosition: this.wordAtIndex(nextPunctuationIndex + 1).wordStart,
-    //             updatePlayer: true
-    //         })
-    //     }
-    // }
-
-    // goToPreviousPhrase = () => {
-    //     let previousPunctuationIndex = this.findClosestPunctuation('previous')
-    //     if (previousPunctuationIndex === 0) previousPunctuationIndex = -1
-    //     if (previousPunctuationIndex) {
-    //         const playPosition = this.wordAtIndex(previousPunctuationIndex + 1).wordStart
-    //         this.setState({
-    //             selectedWordIndices: {
-    //                 start: previousPunctuationIndex + 1,
-    //                 offset: 0,
-    //             },
-    //             playPosition: playPosition - (Math.random() * .1),
-    //             updatePlayer: true
-    //         })
-    //     }
-    // }
-
     goToNextWord = (skipHighConfidenceWords = false) => {
         const { transcript, selectedWordIndices } = this.state
         const player = this.mediaPlayer.current.player.current
