@@ -6,7 +6,6 @@ export default class editModal extends Component {
 
     state = {
         enterPressed: false,
-        editModalStyle: { width: window.innerWidth }
     }
 
     onKeyUp = event => {
@@ -23,7 +22,6 @@ export default class editModal extends Component {
                 <div className='modal-main'>
                     <input
                         autoFocus
-                        style={this.state.editModalStyle}
                         onChange={this.props.onChange}
                         onKeyUp={this.onKeyUp}
                         onFocus={(event) => { document.execCommand('selectall') }}
