@@ -71,23 +71,28 @@ class MediaPlayer extends Component {
     render() {
         if (this.state.mediaType === 'audio') {
             return (
-                <audio
-                    src={this.props.src}
-                    ref={this.player}
-                    onTimeUpdate={this.onTimeUpdate}
-                    controls>
-                </audio>
+                <React.Fragment>
+                    <audio
+                        src={this.props.src}
+                        ref={this.player}
+                        onTimeUpdate={this.onTimeUpdate}
+                        controlsList="nodownload"
+                        controls
+                    >
+                    </audio>
+                </React.Fragment>
             )
         }
         return (
-            <video
-                src={this.props.src}
-                ref={this.player}
-                onTimeUpdate={this.onTimeUpdate}
-                height='180'
-                width='240'
-                controls>
-            </video>
+            <React.Fragment>
+                <video
+                    src={this.props.src}
+                    ref={this.player}
+                    onTimeUpdate={this.onTimeUpdate}
+                    controlsList={"nodownload nofullscreen"}
+                >
+                </video>
+            </React.Fragment>
         )
     }
 }

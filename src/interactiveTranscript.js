@@ -588,31 +588,6 @@ class InteractiveTranscript extends Component {
         player.currentTime = word.wordStart + Math.random() * .1
     }
 
-    render() {
-        const { transcript, selectedWordIndices, showEditModal } = this.state
-
-        return (
-            <React.Fragment>
-                <div>
-                    <MediaPlayer
-                        ref={this.mediaPlayer}
-                        src={this.props.mediaSource}
-                        onTimeUpdate={this.onTimeUpdate}
-                    />
-
-                </div>
-                {showEditModal && this.renderEditModal()}
-                <div id='transcript'>
-                    <Transcript
-                        transcript={transcript}
-                        selectedWordIndices={selectedWordIndices}
-                        onClickWord={this.onClickWord}
-                    />
-                </div>
-            </React.Fragment >
-        )
-    }
-
     markSelectionConfident = () => {
         const edit = {
             selectedWords: this.getSelectedWordsObject(),
@@ -740,6 +715,33 @@ class InteractiveTranscript extends Component {
             }
         }
     }
+
+    render() {
+        const { transcript, selectedWordIndices, showEditModal } = this.state
+
+        return (
+            <React.Fragment>
+                <div id='media-container'>
+                    <MediaPlayer
+                        ref={this.mediaPlayer}
+                        src={this.props.mediaSource}
+                        onTimeUpdate={this.onTimeUpdate}
+                    />
+                    <div id="media-label">{this.props.mediaSource}</div>
+
+                </div>
+                {showEditModal && this.renderEditModal()}
+                <span id='transcript'>
+                    <Transcript
+                        transcript={transcript}
+                        selectedWordIndices={selectedWordIndices}
+                        onClickWord={this.onClickWord}
+                    />
+                </span>
+            </React.Fragment >
+        )
+    }
+
 
 }
 

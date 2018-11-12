@@ -1,10 +1,18 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+body {
+  font-size: 26px;
+  font-family: 'Open Sans', sans-serif;
+  color: #444
+}
+
 .modal {
   position: fixed;
-  top: 0;
   left: 0;
   width:100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.6);
+  top: 0;
 }
 
 .modal-main {
@@ -20,7 +28,43 @@
 
 .modal-main input {
   outline: none;
-  font-size: 2em;
   text-align: center;
   overflow: auto;
+  font-size: 1.5em;
+  font-family: inherit;
+}
+
+#media-container {
+  position: fixed;
+}
+
+video, audio {
+  width: 480px !important;
+}
+
+video {
+  height: auto;
+  border: 1px #CCC solid
+}
+
+audio {
+  height: 55px;
+}
+
+#media-label {
+  position: fixed;
+  font-size: .5em;
+  padding-left: .5em;
+}
+
+p {
+  margin-left: 480px;
+  padding: 0 20px;
+}
+
+.thin-underline
+{
+    display: inline-block;
+    border-bottom: 1px dashed #444;
+    padding-bottom: 0;
 }
