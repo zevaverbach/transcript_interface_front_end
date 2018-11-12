@@ -517,6 +517,11 @@ class InteractiveTranscript extends Component {
                 selectedWord = this.wordAtIndex(selectedWordIndex)
             }
 
+            if (!player.paused && selectedWordIndex > selectedWordIndices.start + 3) {
+                selectedWordIndex -= 3
+                selectedWord = this.wordAtIndex(selectedWordIndex)
+            }
+
             this.setState({
                 selectedWordIndices: {
                     start: selectedWordIndex,
@@ -546,6 +551,21 @@ class InteractiveTranscript extends Component {
                 || (skipHighConfidenceWords && selectedWord.confidence > CONFIDENCE_THRESHOLD))) {
             selectedWordIndex--;
             selectedWord = this.wordAtIndex(selectedWordIndex)
+        }
+
+        if (!player.paused && selectedWordIndex > selectedWordIndices.start + 3) {
+            selectedWordIndex -= 3
+            selectedWord = this.wordAtIndex(selectedWordIndex)
+        }
+
+        if (!player.paused && selectedWordIndex === selectedWordIndices.start) {
+            this.setState({
+                selectedWordIndices: {
+                    start: selectedWordIndices.start - 3,
+                    offset: 0,
+                }
+            })
+            return this.goToPreviousWord()
         }
 
         this.setState({
