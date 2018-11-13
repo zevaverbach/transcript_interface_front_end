@@ -609,14 +609,14 @@ class InteractiveTranscript extends Component {
         player.currentTime = word.wordStart + Math.random() * .1
     }
 
-    markSelectionConfident = () => {
+    toggleSelectionConfident = () => {
         const edit = {
             selectedWords: this.getSelectedWordsObject(),
             change: [
                 this.selectedWords().map(word => (
                     {
                         ...word,
-                        confidence: 1,
+                        confidence: word.confidence < CONFIDENCE_THRESHOLD ? 1 : 0,
                         prevState: {
                             confidence: word.confidence
                         }
@@ -664,7 +664,7 @@ class InteractiveTranscript extends Component {
                             break;
                         case 32: // spacebar
                             event.preventDefault()
-                            this.markSelectionConfident()
+                            this.toggleSelectionConfident()
                             break;
                         case 8: // backspace
                             this.deleteWords();

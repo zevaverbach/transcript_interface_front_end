@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { style } from './App.css'
+import './App.css';
 
 
 export default class editModal extends Component {
