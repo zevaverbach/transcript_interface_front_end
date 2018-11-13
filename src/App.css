@@ -62,9 +62,6 @@ p {
   padding: 0 20px;
 }
 
-.thin-underline
-{
-    display: inline-block;
-    border-bottom: 1px dashed #444;
-    padding-bottom: 0;
+.thin-underline {
+    border-bottom: 3px solid red;
 }
