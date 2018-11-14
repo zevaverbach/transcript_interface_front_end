@@ -32,7 +32,7 @@ const Word = props => {
                 && word.index === firstSelectedWordIndex)) {
             return <span onClick={onClick}>{space}</span>
         } else {
-            return <span onClick={onClick} style={style}>{space}</span>
+            return <span onClick={onClick} onMouseOver={props.onMouseOver} style={style}>{space}</span>
         }
     }
 

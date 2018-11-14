@@ -41,6 +41,7 @@ const Paragraph = props => {
                         selected={selected}
                         offset={offset}
                         firstSelectedWordIndex={firstSelectedWordIndex}
+                        onMouseOver={props.onMouseOver}
                     />
                 )
             })}

@@ -18,6 +18,7 @@ const Transcript = props => {
                     key={wordObject.index}
                     words={paragraph}
                     selectedWordIndices={props.selectedWordIndices}
+                    onMouseOver={props.onMouseOver}
                 />)
             paragraph = [];
         }

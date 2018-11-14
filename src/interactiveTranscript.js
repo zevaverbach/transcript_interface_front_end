@@ -738,6 +738,10 @@ class InteractiveTranscript extends Component {
         }
     }
 
+    onMouseOverWord = event => {
+
+    }
+
     render() {
         const { transcript, selectedWordIndices, showEditModal } = this.state
 
@@ -758,6 +762,7 @@ class InteractiveTranscript extends Component {
                         transcript={transcript}
                         selectedWordIndices={selectedWordIndices}
                         onClickWord={this.onClickWord}
+                        onMouseOver={this.onMouseOverWord}
                     />
                 </span>
             </React.Fragment >
