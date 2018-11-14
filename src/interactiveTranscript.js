@@ -25,7 +25,6 @@ class InteractiveTranscript extends Component {
             transcript: transcript,
             undoQueue: [],
             redoQueue: [],
-            // play: false,
             showEditModal: false,
             editingWords: [],
             editModalEdited: false,
@@ -101,7 +100,6 @@ class InteractiveTranscript extends Component {
 
             if (newWordsSurplus < 0) {
                 edit.delete = [selectedWords.slice(newWordsSurplus)]
-
 
             } else if (newWordsSurplus > 0) {
                 const lastOverlappingWord = selectedWords.slice(-1)[0]
@@ -243,6 +241,7 @@ class InteractiveTranscript extends Component {
                 .map((word, index) => {
                     let changedWord = wordMap[index]
                     if (changedWord) {
+                        changedWord.justChanged = true
                         if (whichOne === 'undo') {
                             changedWord = {
                                 ...changedWord,
@@ -251,6 +250,8 @@ class InteractiveTranscript extends Component {
                             delete changedWord.prevState
                         }
                         return changedWord
+                    } else {
+                        if (word.justChanged) delete word.justChanged
                     }
                     return word
                 })
@@ -269,18 +270,20 @@ class InteractiveTranscript extends Component {
             const numWords = insertChunk.length
 
             transcript = transcript
-                .slice(0, insertChunk[0].index + prevInsertLength)
+                .slice(0, insertChunk[0].index + prevInsertLength).map(word => ({ ...word, justChanged: false }))
                 .concat(insertChunk
                     .map(word => ({
                         ...word,
                         index: word.index + prevInsertLength,
-                        key: word.index + prevInsertLength
+                        key: word.index + prevInsertLength,
+                        justChanged: true
                     })))
                 .concat(transcript.slice(insertChunk[0].index + prevInsertLength)
                     .map(word => ({
                         ...word,
                         index: word.index + numWords,
-                        key: word.index + numWords
+                        key: word.index + numWords,
+                        justChanged: false,
                     })))
 
             let newSelectedWordsStartOffset = numWords - 1
@@ -331,21 +334,16 @@ class InteractiveTranscript extends Component {
 
     undoRedoEdit = (whichOne, edit = false) => {
 
-        // 'edit' value for whichOne is handled in the same places as 'redo'
         if (!['edit', 'undo', 'redo'].includes(whichOne)) throw Error('invalid argument for `whichOne`.')
 
         let { redoQueue, undoQueue, transcript } = this.state
         let queue, step, selectedWordIndices
 
+        queue = whichOne === 'undo' ? undoQueue : redoQueue
+
         if (edit) {
             queue = null
             step = edit
-        }
-
-        if (whichOne === 'undo') {
-            queue = undoQueue
-        } else if (whichOne === 'redo') {
-            queue = redoQueue
         }
 
         if (queue) {
@@ -356,7 +354,6 @@ class InteractiveTranscript extends Component {
         if (step.change) {
             transcript = this.changeQueueStep(whichOne, transcript, step.change)
         }
-
 
         if (step.insert) {
             if (whichOne === 'undo') {
@@ -766,8 +763,6 @@ class InteractiveTranscript extends Component {
             </React.Fragment >
         )
     }
-
-
 }
 
 export default InteractiveTranscript;

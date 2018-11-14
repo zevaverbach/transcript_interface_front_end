@@ -13,6 +13,10 @@ const Word = props => {
         style = { color: 'blue', fontStyle: 'bold', backgroundColor: 'gray' }
     }
 
+    if (word.justChanged) {
+        style = { backgroundColor: 'teal' }
+    }
+
     if (word.confidence <= CONFIDENCE_THRESHOLD) {
         className += ' thin-underline'
     }
