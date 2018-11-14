@@ -207,7 +207,10 @@ class InteractiveTranscript extends Component {
 
         this.undoRedoEdit('edit',
             {
-                selectedWords: this.getSelectedWordsObject(),
+                selectedWords: {
+                    ...this.getSelectedWordsObject(),
+                    offset: 0
+                },
                 delete: [this.selectedWords()]
             },
         )
