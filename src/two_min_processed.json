@@ -1,0 +1,3332 @@
+[
+    {
+        "wordStart": 2.81,
+        "wordEnd": 2.83,
+        "confidence": 0.76,
+        "word": "I",
+        "alwaysCapitalized": true,
+        "index": 0,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 2.96,
+        "wordEnd": 3.59,
+        "confidence": 1.0,
+        "word": "understand",
+        "alwaysCapitalized": false,
+        "index": 1,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 3.59,
+        "wordEnd": 3.86,
+        "confidence": 1.0,
+        "word": "from",
+        "alwaysCapitalized": false,
+        "index": 2,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 3.86,
+        "wordEnd": 4.01,
+        "confidence": 1.0,
+        "word": "my",
+        "alwaysCapitalized": false,
+        "index": 3,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 4.01,
+        "wordEnd": 4.58,
+        "confidence": 1.0,
+        "word": "colleagues",
+        "alwaysCapitalized": false,
+        "index": 4,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 4.58,
+        "wordEnd": 4.73,
+        "confidence": 1.0,
+        "word": "up",
+        "alwaysCapitalized": false,
+        "index": 5,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 4.73,
+        "wordEnd": 5.24,
+        "confidence": 1.0,
+        "word": "north",
+        "alwaysCapitalized": false,
+        "index": 6,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 5.33,
+        "wordEnd": 5.57,
+        "confidence": 1.0,
+        "word": "that",
+        "alwaysCapitalized": false,
+        "index": 7,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 5.63,
+        "wordEnd": 5.84,
+        "confidence": 0.95,
+        "word": "your",
+        "alwaysCapitalized": false,
+        "index": 8,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 5.84,
+        "wordEnd": 6.17,
+        "confidence": 1.0,
+        "word": "cold",
+        "alwaysCapitalized": false,
+        "index": 9,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 6.17,
+        "wordEnd": 6.5,
+        "confidence": 1.0,
+        "word": "weather",
+        "alwaysCapitalized": false,
+        "index": 10,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 6.5,
+        "wordEnd": 6.68,
+        "confidence": 1.0,
+        "word": "has",
+        "alwaysCapitalized": false,
+        "index": 11,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 6.68,
+        "wordEnd": 7.01,
+        "confidence": 1.0,
+        "word": "moved",
+        "alwaysCapitalized": false,
+        "index": 12,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 7.01,
+        "wordEnd": 7.34,
+        "confidence": 1.0,
+        "word": "in",
+        "alwaysCapitalized": false,
+        "index": 13,
+        "puncAfter": ".",
+        "puncBefore": false
+    },
+    {
+        "wordStart": 7.85,
+        "wordEnd": 8.29,
+        "confidence": 0.98,
+        "word": "Kendra",
+        "alwaysCapitalized": true,
+        "index": 14,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 8.33,
+        "wordEnd": 8.540000000000001,
+        "confidence": 1.0,
+        "word": "just",
+        "alwaysCapitalized": false,
+        "index": 15,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 8.54,
+        "wordEnd": 8.959999999999999,
+        "confidence": 1.0,
+        "word": "texted",
+        "alwaysCapitalized": false,
+        "index": 16,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 8.96,
+        "wordEnd": 9.08,
+        "confidence": 1.0,
+        "word": "me",
+        "alwaysCapitalized": false,
+        "index": 17,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 9.08,
+        "wordEnd": 9.26,
+        "confidence": 1.0,
+        "word": "this",
+        "alwaysCapitalized": false,
+        "index": 18,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 9.26,
+        "wordEnd": 9.62,
+        "confidence": 1.0,
+        "word": "morning",
+        "alwaysCapitalized": false,
+        "index": 19,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 9.62,
+        "wordEnd": 9.739999999999998,
+        "confidence": 1.0,
+        "word": "and",
+        "alwaysCapitalized": false,
+        "index": 20,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 9.74,
+        "wordEnd": 10.040000000000001,
+        "confidence": 1.0,
+        "word": "said",
+        "alwaysCapitalized": false,
+        "index": 21,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 10.49,
+        "wordEnd": 11.120000000000001,
+        "confidence": 1.0,
+        "word": "Chicago",
+        "alwaysCapitalized": true,
+        "index": 22,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 11.15,
+        "wordEnd": 11.42,
+        "confidence": 1.0,
+        "word": "woke",
+        "alwaysCapitalized": false,
+        "index": 23,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 11.42,
+        "wordEnd": 11.57,
+        "confidence": 1.0,
+        "word": "up",
+        "alwaysCapitalized": false,
+        "index": 24,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 11.57,
+        "wordEnd": 11.75,
+        "confidence": 1.0,
+        "word": "to",
+        "alwaysCapitalized": false,
+        "index": 25,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 11.75,
+        "wordEnd": 11.81,
+        "confidence": 1.0,
+        "word": "a",
+        "alwaysCapitalized": false,
+        "index": 26,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 11.81,
+        "wordEnd": 12.26,
+        "confidence": 1.0,
+        "word": "balmy",
+        "alwaysCapitalized": false,
+        "index": 27,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 12.26,
+        "wordEnd": 12.89,
+        "confidence": 1.0,
+        "word": "19",
+        "alwaysCapitalized": false,
+        "index": 28,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 12.89,
+        "wordEnd": 13.520000000000001,
+        "confidence": 1.0,
+        "word": "degrees",
+        "alwaysCapitalized": false,
+        "index": 29,
+        "puncAfter": ".",
+        "puncBefore": false
+    },
+    {
+        "wordStart": 16.04,
+        "wordEnd": 16.34,
+        "confidence": 0.92,
+        "word": "We",
+        "alwaysCapitalized": false,
+        "index": 30,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 16.34,
+        "wordEnd": 16.53,
+        "confidence": 0.92,
+        "word": "have",
+        "alwaysCapitalized": false,
+        "index": 31,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 16.62,
+        "wordEnd": 16.720000000000002,
+        "confidence": 0.45,
+        "word": "her",
+        "alwaysCapitalized": false,
+        "index": 32,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 16.73,
+        "wordEnd": 16.91,
+        "confidence": 0.99,
+        "word": "here",
+        "alwaysCapitalized": false,
+        "index": 33,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 16.91,
+        "wordEnd": 17.18,
+        "confidence": 0.99,
+        "word": "based",
+        "alwaysCapitalized": false,
+        "index": 34,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 17.18,
+        "wordEnd": 17.27,
+        "confidence": 0.97,
+        "word": "in",
+        "alwaysCapitalized": false,
+        "index": 35,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 17.27,
+        "wordEnd": 17.66,
+        "confidence": 1.0,
+        "word": "Tampa",
+        "alwaysCapitalized": true,
+        "index": 36,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 17.69,
+        "wordEnd": 17.810000000000002,
+        "confidence": 1.0,
+        "word": "are",
+        "alwaysCapitalized": false,
+        "index": 37,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 17.81,
+        "wordEnd": 18.11,
+        "confidence": 1.0,
+        "word": "still",
+        "alwaysCapitalized": false,
+        "index": 38,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 18.11,
+        "wordEnd": 18.47,
+        "confidence": 1.0,
+        "word": "using",
+        "alwaysCapitalized": false,
+        "index": 39,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 18.47,
+        "wordEnd": 18.56,
+        "confidence": 1.0,
+        "word": "our",
+        "alwaysCapitalized": false,
+        "index": 40,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 18.56,
+        "wordEnd": 18.77,
+        "confidence": 1.0,
+        "word": "air",
+        "alwaysCapitalized": false,
+        "index": 41,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 18.77,
+        "wordEnd": 19.52,
+        "confidence": 1.0,
+        "word": "conditioners",
+        "alwaysCapitalized": false,
+        "index": 42,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 19.99,
+        "wordEnd": 20.4,
+        "confidence": 0.75,
+        "word": "so",
+        "alwaysCapitalized": false,
+        "index": 43,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 20.45,
+        "wordEnd": 20.63,
+        "confidence": 1.0,
+        "word": "we're",
+        "alwaysCapitalized": false,
+        "index": 44,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 20.63,
+        "wordEnd": 21.14,
+        "confidence": 1.0,
+        "word": "expecting",
+        "alwaysCapitalized": false,
+        "index": 45,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 21.17,
+        "wordEnd": 21.44,
+        "confidence": 0.52,
+        "word": "84",
+        "alwaysCapitalized": false,
+        "index": 46,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 21.53,
+        "wordEnd": 21.89,
+        "confidence": 1.0,
+        "word": "degrees",
+        "alwaysCapitalized": false,
+        "index": 47,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 21.89,
+        "wordEnd": 22.01,
+        "confidence": 1.0,
+        "word": "and",
+        "alwaysCapitalized": false,
+        "index": 48,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 22.01,
+        "wordEnd": 22.28,
+        "confidence": 1.0,
+        "word": "sunny",
+        "alwaysCapitalized": false,
+        "index": 49,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 22.28,
+        "wordEnd": 22.580000000000002,
+        "confidence": 1.0,
+        "word": "weather",
+        "alwaysCapitalized": false,
+        "index": 50,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 22.58,
+        "wordEnd": 23.09,
+        "confidence": 1.0,
+        "word": "today",
+        "alwaysCapitalized": false,
+        "index": 51,
+        "puncAfter": ".",
+        "puncBefore": false
+    },
+    {
+        "wordStart": 23.3,
+        "wordEnd": 23.69,
+        "confidence": 1.0,
+        "word": "So",
+        "alwaysCapitalized": false,
+        "index": 52,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 23.69,
+        "wordEnd": 23.84,
+        "confidence": 1.0,
+        "word": "for",
+        "alwaysCapitalized": false,
+        "index": 53,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 23.84,
+        "wordEnd": 24.11,
+        "confidence": 1.0,
+        "word": "those",
+        "alwaysCapitalized": false,
+        "index": 54,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 24.11,
+        "wordEnd": 24.2,
+        "confidence": 1.0,
+        "word": "of",
+        "alwaysCapitalized": false,
+        "index": 55,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 24.2,
+        "wordEnd": 24.32,
+        "confidence": 1.0,
+        "word": "you",
+        "alwaysCapitalized": false,
+        "index": 56,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 24.32,
+        "wordEnd": 24.5,
+        "confidence": 1.0,
+        "word": "who",
+        "alwaysCapitalized": false,
+        "index": 57,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 24.5,
+        "wordEnd": 24.83,
+        "confidence": 1.0,
+        "word": "like",
+        "alwaysCapitalized": false,
+        "index": 58,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 24.83,
+        "wordEnd": 25.069999999999997,
+        "confidence": 1.0,
+        "word": "warm",
+        "alwaysCapitalized": false,
+        "index": 59,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 25.07,
+        "wordEnd": 25.55,
+        "confidence": 1.0,
+        "word": "weather",
+        "alwaysCapitalized": false,
+        "index": 60,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 25.94,
+        "wordEnd": 26.060000000000002,
+        "confidence": 0.97,
+        "word": "I",
+        "alwaysCapitalized": true,
+        "index": 61,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 26.06,
+        "wordEnd": 26.24,
+        "confidence": 1.0,
+        "word": "wish",
+        "alwaysCapitalized": false,
+        "index": 62,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 26.24,
+        "wordEnd": 26.299999999999997,
+        "confidence": 1.0,
+        "word": "you",
+        "alwaysCapitalized": false,
+        "index": 63,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 26.3,
+        "wordEnd": 26.45,
+        "confidence": 1.0,
+        "word": "could",
+        "alwaysCapitalized": false,
+        "index": 64,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 26.45,
+        "wordEnd": 26.54,
+        "confidence": 1.0,
+        "word": "be",
+        "alwaysCapitalized": false,
+        "index": 65,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 26.54,
+        "wordEnd": 26.689999999999998,
+        "confidence": 1.0,
+        "word": "here",
+        "alwaysCapitalized": false,
+        "index": 66,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 26.69,
+        "wordEnd": 26.93,
+        "confidence": 1.0,
+        "word": "with",
+        "alwaysCapitalized": false,
+        "index": 67,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 26.93,
+        "wordEnd": 27.23,
+        "confidence": 1.0,
+        "word": "us",
+        "alwaysCapitalized": false,
+        "index": 68,
+        "puncAfter": ".",
+        "puncBefore": false
+    },
+    {
+        "wordStart": 27.99,
+        "wordEnd": 28.299999999999997,
+        "confidence": 0.73,
+        "word": "That",
+        "alwaysCapitalized": false,
+        "index": 69,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 28.5,
+        "wordEnd": 28.85,
+        "confidence": 0.89,
+        "word": "said",
+        "alwaysCapitalized": false,
+        "index": 70,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 28.85,
+        "wordEnd": 29.330000000000002,
+        "confidence": 1.0,
+        "word": "aside",
+        "alwaysCapitalized": false,
+        "index": 71,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 29.33,
+        "wordEnd": 29.72,
+        "confidence": 1.0,
+        "word": "from",
+        "alwaysCapitalized": false,
+        "index": 72,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 30.14,
+        "wordEnd": 30.29,
+        "confidence": 1.0,
+        "word": "the",
+        "alwaysCapitalized": false,
+        "index": 73,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 30.29,
+        "wordEnd": 30.65,
+        "confidence": 1.0,
+        "word": "team",
+        "alwaysCapitalized": false,
+        "index": 74,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 30.65,
+        "wordEnd": 31.07,
+        "confidence": 0.99,
+        "word": "assigning",
+        "alwaysCapitalized": false,
+        "index": 75,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 31.07,
+        "wordEnd": 31.25,
+        "confidence": 1.0,
+        "word": "me",
+        "alwaysCapitalized": false,
+        "index": 76,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 31.25,
+        "wordEnd": 31.42,
+        "confidence": 0.8,
+        "word": "with",
+        "alwaysCapitalized": false,
+        "index": 77,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 31.42,
+        "wordEnd": 31.55,
+        "confidence": 1.0,
+        "word": "the",
+        "alwaysCapitalized": false,
+        "index": 78,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 31.55,
+        "wordEnd": 31.91,
+        "confidence": 1.0,
+        "word": "official",
+        "alwaysCapitalized": false,
+        "index": 79,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 31.91,
+        "wordEnd": 32.21,
+        "confidence": 1.0,
+        "word": "weather",
+        "alwaysCapitalized": false,
+        "index": 80,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 32.21,
+        "wordEnd": 32.660000000000004,
+        "confidence": 1.0,
+        "word": "report",
+        "alwaysCapitalized": false,
+        "index": 81,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 32.66,
+        "wordEnd": 32.839999999999996,
+        "confidence": 0.99,
+        "word": "for",
+        "alwaysCapitalized": false,
+        "index": 82,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 32.84,
+        "wordEnd": 32.93000000000001,
+        "confidence": 1.0,
+        "word": "the",
+        "alwaysCapitalized": false,
+        "index": 83,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 32.93,
+        "wordEnd": 33.41,
+        "confidence": 0.72,
+        "word": "tap",
+        "alwaysCapitalized": false,
+        "index": 84,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 33.74,
+        "wordEnd": 34.07,
+        "confidence": 1.0,
+        "word": "I",
+        "alwaysCapitalized": true,
+        "index": 85,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 34.07,
+        "wordEnd": 34.25,
+        "confidence": 1.0,
+        "word": "do",
+        "alwaysCapitalized": false,
+        "index": 86,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 34.25,
+        "wordEnd": 34.55,
+        "confidence": 1.0,
+        "word": "actually",
+        "alwaysCapitalized": false,
+        "index": 87,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 34.55,
+        "wordEnd": 34.669999999999995,
+        "confidence": 1.0,
+        "word": "have",
+        "alwaysCapitalized": false,
+        "index": 88,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 34.67,
+        "wordEnd": 34.730000000000004,
+        "confidence": 1.0,
+        "word": "a",
+        "alwaysCapitalized": false,
+        "index": 89,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 34.73,
+        "wordEnd": 34.94,
+        "confidence": 1.0,
+        "word": "few",
+        "alwaysCapitalized": false,
+        "index": 90,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 34.94,
+        "wordEnd": 35.3,
+        "confidence": 1.0,
+        "word": "important",
+        "alwaysCapitalized": false,
+        "index": 91,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 35.3,
+        "wordEnd": 35.599999999999994,
+        "confidence": 1.0,
+        "word": "items",
+        "alwaysCapitalized": false,
+        "index": 92,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 35.6,
+        "wordEnd": 35.72,
+        "confidence": 1.0,
+        "word": "to",
+        "alwaysCapitalized": false,
+        "index": 93,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 35.72,
+        "wordEnd": 36.019999999999996,
+        "confidence": 1.0,
+        "word": "cover",
+        "alwaysCapitalized": false,
+        "index": 94,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 36.02,
+        "wordEnd": 36.2,
+        "confidence": 1.0,
+        "word": "with",
+        "alwaysCapitalized": false,
+        "index": 95,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 36.2,
+        "wordEnd": 36.32,
+        "confidence": 1.0,
+        "word": "you",
+        "alwaysCapitalized": false,
+        "index": 96,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 36.32,
+        "wordEnd": 36.74,
+        "confidence": 1.0,
+        "word": "concerning",
+        "alwaysCapitalized": false,
+        "index": 97,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 36.74,
+        "wordEnd": 36.800000000000004,
+        "confidence": 1.0,
+        "word": "the",
+        "alwaysCapitalized": false,
+        "index": 98,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 36.8,
+        "wordEnd": 37.25,
+        "confidence": 1.0,
+        "word": "webinar",
+        "alwaysCapitalized": false,
+        "index": 99,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 37.25,
+        "wordEnd": 37.34,
+        "confidence": 0.8,
+        "word": "and",
+        "alwaysCapitalized": false,
+        "index": 100,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 37.34,
+        "wordEnd": 38.27,
+        "confidence": 1.0,
+        "word": "technology",
+        "alwaysCapitalized": false,
+        "index": 101,
+        "puncAfter": ".",
+        "puncBefore": false
+    },
+    {
+        "wordStart": 38.63,
+        "wordEnd": 38.720000000000006,
+        "confidence": 0.99,
+        "word": "We'll",
+        "alwaysCapitalized": false,
+        "index": 102,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 38.72,
+        "wordEnd": 38.81,
+        "confidence": 0.98,
+        "word": "go",
+        "alwaysCapitalized": false,
+        "index": 103,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 38.81,
+        "wordEnd": 38.96,
+        "confidence": 0.98,
+        "word": "over",
+        "alwaysCapitalized": false,
+        "index": 104,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 38.96,
+        "wordEnd": 39.17,
+        "confidence": 1.0,
+        "word": "those",
+        "alwaysCapitalized": false,
+        "index": 105,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 39.17,
+        "wordEnd": 39.53,
+        "confidence": 1.0,
+        "word": "now",
+        "alwaysCapitalized": false,
+        "index": 106,
+        "puncAfter": ".",
+        "puncBefore": false
+    },
+    {
+        "wordStart": 40.19,
+        "wordEnd": 40.57,
+        "confidence": 0.96,
+        "word": "So",
+        "alwaysCapitalized": false,
+        "index": 107,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 40.58,
+        "wordEnd": 40.91,
+        "confidence": 1.0,
+        "word": "first",
+        "alwaysCapitalized": false,
+        "index": 108,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 40.91,
+        "wordEnd": 41.0,
+        "confidence": 1.0,
+        "word": "the",
+        "alwaysCapitalized": false,
+        "index": 109,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 41.0,
+        "wordEnd": 41.39,
+        "confidence": 1.0,
+        "word": "meeting",
+        "alwaysCapitalized": false,
+        "index": 110,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 41.39,
+        "wordEnd": 41.51,
+        "confidence": 1.0,
+        "word": "is",
+        "alwaysCapitalized": false,
+        "index": 111,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 41.51,
+        "wordEnd": 41.78,
+        "confidence": 1.0,
+        "word": "being",
+        "alwaysCapitalized": false,
+        "index": 112,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 41.78,
+        "wordEnd": 42.35,
+        "confidence": 1.0,
+        "word": "recorded",
+        "alwaysCapitalized": false,
+        "index": 113,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 42.35,
+        "wordEnd": 42.5,
+        "confidence": 1.0,
+        "word": "for",
+        "alwaysCapitalized": false,
+        "index": 114,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 42.5,
+        "wordEnd": 42.59,
+        "confidence": 1.0,
+        "word": "the",
+        "alwaysCapitalized": false,
+        "index": 115,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 42.59,
+        "wordEnd": 43.010000000000005,
+        "confidence": 1.0,
+        "word": "purpose",
+        "alwaysCapitalized": false,
+        "index": 116,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 43.01,
+        "wordEnd": 43.1,
+        "confidence": 1.0,
+        "word": "of",
+        "alwaysCapitalized": false,
+        "index": 117,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 43.1,
+        "wordEnd": 43.58,
+        "confidence": 1.0,
+        "word": "creating",
+        "alwaysCapitalized": false,
+        "index": 118,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 43.58,
+        "wordEnd": 43.67,
+        "confidence": 1.0,
+        "word": "the",
+        "alwaysCapitalized": false,
+        "index": 119,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 43.67,
+        "wordEnd": 44.02,
+        "confidence": 1.0,
+        "word": "meeting",
+        "alwaysCapitalized": false,
+        "index": 120,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 44.03,
+        "wordEnd": 44.61,
+        "confidence": 0.96,
+        "word": "summary",
+        "alwaysCapitalized": false,
+        "index": 121,
+        "puncAfter": ".",
+        "puncBefore": false
+    },
+    {
+        "wordStart": 45.32,
+        "wordEnd": 45.68,
+        "confidence": 0.99,
+        "word": "At",
+        "alwaysCapitalized": false,
+        "index": 122,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 45.68,
+        "wordEnd": 45.92,
+        "confidence": 1.0,
+        "word": "this",
+        "alwaysCapitalized": false,
+        "index": 123,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 45.92,
+        "wordEnd": 46.25,
+        "confidence": 1.0,
+        "word": "time",
+        "alwaysCapitalized": false,
+        "index": 124,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 46.25,
+        "wordEnd": 46.34,
+        "confidence": 1.0,
+        "word": "you",
+        "alwaysCapitalized": false,
+        "index": 125,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 46.34,
+        "wordEnd": 46.52,
+        "confidence": 1.0,
+        "word": "should",
+        "alwaysCapitalized": false,
+        "index": 126,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 46.52,
+        "wordEnd": 46.67,
+        "confidence": 1.0,
+        "word": "be",
+        "alwaysCapitalized": false,
+        "index": 127,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 46.67,
+        "wordEnd": 47.15,
+        "confidence": 1.0,
+        "word": "aware",
+        "alwaysCapitalized": false,
+        "index": 128,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 47.15,
+        "wordEnd": 47.33,
+        "confidence": 1.0,
+        "word": "that",
+        "alwaysCapitalized": false,
+        "index": 129,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 47.33,
+        "wordEnd": 47.839999999999996,
+        "confidence": 1.0,
+        "word": "all",
+        "alwaysCapitalized": false,
+        "index": 130,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 47.9,
+        "wordEnd": 48.199999999999996,
+        "confidence": 1.0,
+        "word": "the",
+        "alwaysCapitalized": false,
+        "index": 131,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 48.26,
+        "wordEnd": 48.83,
+        "confidence": 1.0,
+        "word": "lines",
+        "alwaysCapitalized": false,
+        "index": 132,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 48.83,
+        "wordEnd": 48.949999999999996,
+        "confidence": 1.0,
+        "word": "are",
+        "alwaysCapitalized": false,
+        "index": 133,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 48.98,
+        "wordEnd": 49.519999999999996,
+        "confidence": 1.0,
+        "word": "open",
+        "alwaysCapitalized": false,
+        "index": 134,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 50.79,
+        "wordEnd": 51.11,
+        "confidence": 0.98,
+        "word": "and",
+        "alwaysCapitalized": false,
+        "index": 135,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 51.11,
+        "wordEnd": 51.29,
+        "confidence": 1.0,
+        "word": "we",
+        "alwaysCapitalized": false,
+        "index": 136,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 51.29,
+        "wordEnd": 51.44,
+        "confidence": 1.0,
+        "word": "would",
+        "alwaysCapitalized": false,
+        "index": 137,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 51.44,
+        "wordEnd": 51.71,
+        "confidence": 1.0,
+        "word": "ask",
+        "alwaysCapitalized": false,
+        "index": 138,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 51.71,
+        "wordEnd": 51.86,
+        "confidence": 1.0,
+        "word": "that",
+        "alwaysCapitalized": false,
+        "index": 139,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 51.95,
+        "wordEnd": 52.25,
+        "confidence": 1.0,
+        "word": "after",
+        "alwaysCapitalized": false,
+        "index": 140,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 52.25,
+        "wordEnd": 52.37,
+        "confidence": 1.0,
+        "word": "we",
+        "alwaysCapitalized": false,
+        "index": 141,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 52.37,
+        "wordEnd": 52.519999999999996,
+        "confidence": 1.0,
+        "word": "do",
+        "alwaysCapitalized": false,
+        "index": 142,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 52.52,
+        "wordEnd": 52.61000000000001,
+        "confidence": 1.0,
+        "word": "the",
+        "alwaysCapitalized": false,
+        "index": 143,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 52.61,
+        "wordEnd": 52.91,
+        "confidence": 1.0,
+        "word": "roll",
+        "alwaysCapitalized": false,
+        "index": 144,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 52.91,
+        "wordEnd": 53.33,
+        "confidence": 1.0,
+        "word": "call",
+        "alwaysCapitalized": false,
+        "index": 145,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 53.33,
+        "wordEnd": 53.42,
+        "confidence": 0.99,
+        "word": "and",
+        "alwaysCapitalized": false,
+        "index": 146,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 53.42,
+        "wordEnd": 54.17,
+        "confidence": 1.0,
+        "word": "disclosure",
+        "alwaysCapitalized": false,
+        "index": 147,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 54.17,
+        "wordEnd": 54.260000000000005,
+        "confidence": 0.97,
+        "word": "of",
+        "alwaysCapitalized": false,
+        "index": 148,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 54.26,
+        "wordEnd": 54.83,
+        "confidence": 1.0,
+        "word": "conflicts",
+        "alwaysCapitalized": false,
+        "index": 149,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 54.83,
+        "wordEnd": 54.949999999999996,
+        "confidence": 1.0,
+        "word": "of",
+        "alwaysCapitalized": false,
+        "index": 150,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 54.95,
+        "wordEnd": 55.49,
+        "confidence": 0.95,
+        "word": "interest",
+        "alwaysCapitalized": false,
+        "index": 151,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 55.85,
+        "wordEnd": 56.09,
+        "confidence": 1.0,
+        "word": "that",
+        "alwaysCapitalized": false,
+        "index": 152,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 56.09,
+        "wordEnd": 56.27,
+        "confidence": 0.99,
+        "word": "you",
+        "alwaysCapitalized": false,
+        "index": 153,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 56.3,
+        "wordEnd": 56.629999999999995,
+        "confidence": 0.97,
+        "word": "please",
+        "alwaysCapitalized": false,
+        "index": 154,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 56.66,
+        "wordEnd": 56.9,
+        "confidence": 1.0,
+        "word": "mute",
+        "alwaysCapitalized": false,
+        "index": 155,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 56.9,
+        "wordEnd": 57.05,
+        "confidence": 1.0,
+        "word": "your",
+        "alwaysCapitalized": false,
+        "index": 156,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 57.05,
+        "wordEnd": 57.62,
+        "confidence": 1.0,
+        "word": "phone",
+        "alwaysCapitalized": false,
+        "index": 157,
+        "puncAfter": ".",
+        "puncBefore": false
+    },
+    {
+        "wordStart": 58.04,
+        "wordEnd": 58.16,
+        "confidence": 1.0,
+        "word": "You",
+        "alwaysCapitalized": false,
+        "index": 158,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 58.16,
+        "wordEnd": 58.31999999999999,
+        "confidence": 0.78,
+        "word": "can",
+        "alwaysCapitalized": false,
+        "index": 159,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 58.32,
+        "wordEnd": 58.55,
+        "confidence": 1.0,
+        "word": "do",
+        "alwaysCapitalized": false,
+        "index": 160,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 58.55,
+        "wordEnd": 58.79,
+        "confidence": 1.0,
+        "word": "that",
+        "alwaysCapitalized": false,
+        "index": 161,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 58.79,
+        "wordEnd": 58.97,
+        "confidence": 1.0,
+        "word": "by",
+        "alwaysCapitalized": false,
+        "index": 162,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 58.97,
+        "wordEnd": 59.379999999999995,
+        "confidence": 0.55,
+        "word": "using",
+        "alwaysCapitalized": false,
+        "index": 163,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 59.39,
+        "wordEnd": 59.81,
+        "confidence": 1.0,
+        "word": "star",
+        "alwaysCapitalized": false,
+        "index": 164,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 59.81,
+        "wordEnd": 60.260000000000005,
+        "confidence": 0.77,
+        "word": "six",
+        "alwaysCapitalized": false,
+        "index": 165,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 60.26,
+        "wordEnd": 60.379999999999995,
+        "confidence": 1.0,
+        "word": "on",
+        "alwaysCapitalized": false,
+        "index": 166,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 60.38,
+        "wordEnd": 60.5,
+        "confidence": 1.0,
+        "word": "your",
+        "alwaysCapitalized": false,
+        "index": 167,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 60.5,
+        "wordEnd": 60.83,
+        "confidence": 1.0,
+        "word": "phone",
+        "alwaysCapitalized": false,
+        "index": 168,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 60.83,
+        "wordEnd": 60.949999999999996,
+        "confidence": 1.0,
+        "word": "to",
+        "alwaysCapitalized": false,
+        "index": 169,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 60.95,
+        "wordEnd": 61.38,
+        "confidence": 1.0,
+        "word": "mute",
+        "alwaysCapitalized": false,
+        "index": 170,
+        "puncAfter": ".",
+        "puncBefore": false
+    },
+    {
+        "wordStart": 61.55,
+        "wordEnd": 61.879999999999995,
+        "confidence": 0.98,
+        "word": "And",
+        "alwaysCapitalized": false,
+        "index": 171,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 61.91,
+        "wordEnd": 62.37,
+        "confidence": 0.75,
+        "word": "anytime",
+        "alwaysCapitalized": false,
+        "index": 172,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 62.45,
+        "wordEnd": 62.6,
+        "confidence": 1.0,
+        "word": "that",
+        "alwaysCapitalized": false,
+        "index": 173,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 62.6,
+        "wordEnd": 62.690000000000005,
+        "confidence": 1.0,
+        "word": "you",
+        "alwaysCapitalized": false,
+        "index": 174,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 62.69,
+        "wordEnd": 62.809999999999995,
+        "confidence": 1.0,
+        "word": "would",
+        "alwaysCapitalized": false,
+        "index": 175,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 62.81,
+        "wordEnd": 63.02,
+        "confidence": 1.0,
+        "word": "like",
+        "alwaysCapitalized": false,
+        "index": 176,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 63.02,
+        "wordEnd": 63.11000000000001,
+        "confidence": 1.0,
+        "word": "to",
+        "alwaysCapitalized": false,
+        "index": 177,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 63.11,
+        "wordEnd": 63.53,
+        "confidence": 1.0,
+        "word": "speak",
+        "alwaysCapitalized": false,
+        "index": 178,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 63.56,
+        "wordEnd": 63.650000000000006,
+        "confidence": 1.0,
+        "word": "you",
+        "alwaysCapitalized": false,
+        "index": 179,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 63.65,
+        "wordEnd": 63.83,
+        "confidence": 1.0,
+        "word": "can",
+        "alwaysCapitalized": false,
+        "index": 180,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 63.83,
+        "wordEnd": 64.07,
+        "confidence": 1.0,
+        "word": "use",
+        "alwaysCapitalized": false,
+        "index": 181,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 64.07,
+        "wordEnd": 64.46,
+        "confidence": 1.0,
+        "word": "Star",
+        "alwaysCapitalized": false,
+        "index": 182,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 64.46,
+        "wordEnd": 64.91,
+        "confidence": 0.8,
+        "word": "7",
+        "alwaysCapitalized": false,
+        "index": 183,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 64.93,
+        "wordEnd": 65.06,
+        "confidence": 0.83,
+        "word": "to",
+        "alwaysCapitalized": false,
+        "index": 184,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 65.24,
+        "wordEnd": 65.52,
+        "confidence": 1.0,
+        "word": "mute",
+        "alwaysCapitalized": false,
+        "index": 185,
+        "puncAfter": ".",
+        "puncBefore": false
+    },
+    {
+        "wordStart": 65.6,
+        "wordEnd": 65.99,
+        "confidence": 1.0,
+        "word": "So",
+        "alwaysCapitalized": false,
+        "index": 186,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 66.26,
+        "wordEnd": 66.62,
+        "confidence": 0.98,
+        "word": "Star",
+        "alwaysCapitalized": false,
+        "index": 187,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 66.62,
+        "wordEnd": 66.95,
+        "confidence": 0.84,
+        "word": "6",
+        "alwaysCapitalized": false,
+        "index": 188,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 66.95,
+        "wordEnd": 67.12,
+        "confidence": 0.75,
+        "word": "to",
+        "alwaysCapitalized": false,
+        "index": 189,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 67.12,
+        "wordEnd": 67.56,
+        "confidence": 0.46,
+        "word": "mute",
+        "alwaysCapitalized": false,
+        "index": 190,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 67.64,
+        "wordEnd": 67.97,
+        "confidence": 0.99,
+        "word": "Star",
+        "alwaysCapitalized": false,
+        "index": 191,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 67.97,
+        "wordEnd": 68.33,
+        "confidence": 0.97,
+        "word": "7",
+        "alwaysCapitalized": false,
+        "index": 192,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 68.33,
+        "wordEnd": 68.62,
+        "confidence": 0.21,
+        "word": "down",
+        "alwaysCapitalized": false,
+        "index": 193,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 68.63,
+        "wordEnd": 69.0,
+        "confidence": 1.0,
+        "word": "mute",
+        "alwaysCapitalized": false,
+        "index": 194,
+        "puncAfter": ".",
+        "puncBefore": false
+    },
+    {
+        "wordStart": 69.32,
+        "wordEnd": 69.47,
+        "confidence": 1.0,
+        "word": "Of",
+        "alwaysCapitalized": false,
+        "index": 195,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 69.47,
+        "wordEnd": 69.77,
+        "confidence": 1.0,
+        "word": "course",
+        "alwaysCapitalized": false,
+        "index": 196,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 69.8,
+        "wordEnd": 69.92,
+        "confidence": 1.0,
+        "word": "you",
+        "alwaysCapitalized": false,
+        "index": 197,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 69.92,
+        "wordEnd": 70.07000000000001,
+        "confidence": 1.0,
+        "word": "can",
+        "alwaysCapitalized": false,
+        "index": 198,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 70.07,
+        "wordEnd": 70.52,
+        "confidence": 1.0,
+        "word": "use",
+        "alwaysCapitalized": false,
+        "index": 199,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 70.82,
+        "wordEnd": 70.88,
+        "confidence": 1.0,
+        "word": "a",
+        "alwaysCapitalized": false,
+        "index": 200,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 70.88,
+        "wordEnd": 71.11999999999999,
+        "confidence": 1.0,
+        "word": "mute",
+        "alwaysCapitalized": false,
+        "index": 201,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 71.12,
+        "wordEnd": 71.48,
+        "confidence": 1.0,
+        "word": "button",
+        "alwaysCapitalized": false,
+        "index": 202,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 71.48,
+        "wordEnd": 71.63000000000001,
+        "confidence": 1.0,
+        "word": "on",
+        "alwaysCapitalized": false,
+        "index": 203,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 71.63,
+        "wordEnd": 71.75,
+        "confidence": 1.0,
+        "word": "your",
+        "alwaysCapitalized": false,
+        "index": 204,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 71.75,
+        "wordEnd": 72.14,
+        "confidence": 1.0,
+        "word": "phone",
+        "alwaysCapitalized": false,
+        "index": 205,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 72.17,
+        "wordEnd": 72.29,
+        "confidence": 1.0,
+        "word": "if",
+        "alwaysCapitalized": false,
+        "index": 206,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 72.29,
+        "wordEnd": 72.41000000000001,
+        "confidence": 1.0,
+        "word": "you",
+        "alwaysCapitalized": false,
+        "index": 207,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 72.41,
+        "wordEnd": 72.61999999999999,
+        "confidence": 1.0,
+        "word": "have",
+        "alwaysCapitalized": false,
+        "index": 208,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 72.62,
+        "wordEnd": 72.77000000000001,
+        "confidence": 1.0,
+        "word": "that",
+        "alwaysCapitalized": false,
+        "index": 209,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 72.77,
+        "wordEnd": 73.58,
+        "confidence": 0.99,
+        "word": "functionality",
+        "alwaysCapitalized": false,
+        "index": 210,
+        "puncAfter": ".",
+        "puncBefore": false
+    },
+    {
+        "wordStart": 74.57,
+        "wordEnd": 74.88,
+        "confidence": 0.87,
+        "word": "We'd",
+        "alwaysCapitalized": false,
+        "index": 211,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 75.05,
+        "wordEnd": 75.35,
+        "confidence": 1.0,
+        "word": "also",
+        "alwaysCapitalized": false,
+        "index": 212,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 75.35,
+        "wordEnd": 75.58999999999999,
+        "confidence": 0.99,
+        "word": "like",
+        "alwaysCapitalized": false,
+        "index": 213,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 75.59,
+        "wordEnd": 75.74000000000001,
+        "confidence": 1.0,
+        "word": "that",
+        "alwaysCapitalized": false,
+        "index": 214,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 75.74,
+        "wordEnd": 75.8,
+        "confidence": 1.0,
+        "word": "you",
+        "alwaysCapitalized": false,
+        "index": 215,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 75.8,
+        "wordEnd": 75.92,
+        "confidence": 0.96,
+        "word": "do",
+        "alwaysCapitalized": false,
+        "index": 216,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 75.92,
+        "wordEnd": 76.10000000000001,
+        "confidence": 1.0,
+        "word": "not",
+        "alwaysCapitalized": false,
+        "index": 217,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 76.19,
+        "wordEnd": 76.64,
+        "confidence": 1.0,
+        "word": "push",
+        "alwaysCapitalized": false,
+        "index": 218,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 76.73,
+        "wordEnd": 77.06,
+        "confidence": 1.0,
+        "word": "put",
+        "alwaysCapitalized": false,
+        "index": 219,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 77.06,
+        "wordEnd": 77.21000000000001,
+        "confidence": 1.0,
+        "word": "your",
+        "alwaysCapitalized": false,
+        "index": 220,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 77.21,
+        "wordEnd": 77.57,
+        "confidence": 1.0,
+        "word": "phone",
+        "alwaysCapitalized": false,
+        "index": 221,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 77.57,
+        "wordEnd": 77.86999999999999,
+        "confidence": 1.0,
+        "word": "line",
+        "alwaysCapitalized": false,
+        "index": 222,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 77.87,
+        "wordEnd": 77.99000000000001,
+        "confidence": 1.0,
+        "word": "on",
+        "alwaysCapitalized": false,
+        "index": 223,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 77.99,
+        "wordEnd": 78.41,
+        "confidence": 1.0,
+        "word": "hold",
+        "alwaysCapitalized": false,
+        "index": 224,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 78.41,
+        "wordEnd": 78.67999999999999,
+        "confidence": 1.0,
+        "word": "during",
+        "alwaysCapitalized": false,
+        "index": 225,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 78.68,
+        "wordEnd": 78.77000000000001,
+        "confidence": 0.99,
+        "word": "the",
+        "alwaysCapitalized": false,
+        "index": 226,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 78.77,
+        "wordEnd": 79.22,
+        "confidence": 1.0,
+        "word": "conference",
+        "alwaysCapitalized": false,
+        "index": 227,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 79.22,
+        "wordEnd": 79.55,
+        "confidence": 1.0,
+        "word": "call",
+        "alwaysCapitalized": false,
+        "index": 228,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 79.55,
+        "wordEnd": 79.67999999999999,
+        "confidence": 0.65,
+        "word": "as",
+        "alwaysCapitalized": false,
+        "index": 229,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 79.7,
+        "wordEnd": 80.09,
+        "confidence": 1.0,
+        "word": "everyone",
+        "alwaysCapitalized": false,
+        "index": 230,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 80.09,
+        "wordEnd": 80.21000000000001,
+        "confidence": 0.93,
+        "word": "will",
+        "alwaysCapitalized": false,
+        "index": 231,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 80.21,
+        "wordEnd": 80.36,
+        "confidence": 1.0,
+        "word": "get",
+        "alwaysCapitalized": false,
+        "index": 232,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 80.36,
+        "wordEnd": 80.48,
+        "confidence": 1.0,
+        "word": "to",
+        "alwaysCapitalized": false,
+        "index": 233,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 80.48,
+        "wordEnd": 80.63000000000001,
+        "confidence": 1.0,
+        "word": "hear",
+        "alwaysCapitalized": false,
+        "index": 234,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 80.63,
+        "wordEnd": 80.81,
+        "confidence": 1.0,
+        "word": "your",
+        "alwaysCapitalized": false,
+        "index": 235,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 80.81,
+        "wordEnd": 81.23,
+        "confidence": 0.66,
+        "word": "company's",
+        "alwaysCapitalized": false,
+        "index": 236,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 81.23,
+        "wordEnd": 81.47,
+        "confidence": 0.92,
+        "word": "hold",
+        "alwaysCapitalized": false,
+        "index": 237,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 81.47,
+        "wordEnd": 81.92,
+        "confidence": 1.0,
+        "word": "music",
+        "alwaysCapitalized": false,
+        "index": 238,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 81.95,
+        "wordEnd": 82.13000000000001,
+        "confidence": 1.0,
+        "word": "which",
+        "alwaysCapitalized": false,
+        "index": 239,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 82.13,
+        "wordEnd": 82.25,
+        "confidence": 1.0,
+        "word": "I'm",
+        "alwaysCapitalized": false,
+        "index": 240,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 82.25,
+        "wordEnd": 82.7,
+        "confidence": 1.0,
+        "word": "sure",
+        "alwaysCapitalized": false,
+        "index": 241,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 82.7,
+        "wordEnd": 82.88000000000001,
+        "confidence": 1.0,
+        "word": "is",
+        "alwaysCapitalized": false,
+        "index": 242,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 82.91,
+        "wordEnd": 83.47999999999999,
+        "confidence": 1.0,
+        "word": "awesome",
+        "alwaysCapitalized": false,
+        "index": 243,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 83.84,
+        "wordEnd": 84.35000000000001,
+        "confidence": 1.0,
+        "word": "but",
+        "alwaysCapitalized": false,
+        "index": 244,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 84.68,
+        "wordEnd": 84.89,
+        "confidence": 1.0,
+        "word": "it",
+        "alwaysCapitalized": false,
+        "index": 245,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 84.89,
+        "wordEnd": 85.13,
+        "confidence": 1.0,
+        "word": "may",
+        "alwaysCapitalized": false,
+        "index": 246,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 85.13,
+        "wordEnd": 85.46,
+        "confidence": 1.0,
+        "word": "interrupt",
+        "alwaysCapitalized": false,
+        "index": 247,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 85.46,
+        "wordEnd": 85.55,
+        "confidence": 1.0,
+        "word": "our",
+        "alwaysCapitalized": false,
+        "index": 248,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 85.55,
+        "wordEnd": 86.48,
+        "confidence": 1.0,
+        "word": "conversation",
+        "alwaysCapitalized": false,
+        "index": 249,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 86.88,
+        "wordEnd": 87.02,
+        "confidence": 0.94,
+        "word": "and",
+        "alwaysCapitalized": false,
+        "index": 250,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 87.02,
+        "wordEnd": 87.14,
+        "confidence": 1.0,
+        "word": "we",
+        "alwaysCapitalized": false,
+        "index": 251,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 87.14,
+        "wordEnd": 87.47,
+        "confidence": 1.0,
+        "word": "also",
+        "alwaysCapitalized": false,
+        "index": 252,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 87.47,
+        "wordEnd": 87.65,
+        "confidence": 0.97,
+        "word": "ask",
+        "alwaysCapitalized": false,
+        "index": 253,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 87.65,
+        "wordEnd": 87.77000000000001,
+        "confidence": 1.0,
+        "word": "that",
+        "alwaysCapitalized": false,
+        "index": 254,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 87.77,
+        "wordEnd": 87.89,
+        "confidence": 1.0,
+        "word": "you",
+        "alwaysCapitalized": false,
+        "index": 255,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 87.89,
+        "wordEnd": 88.34,
+        "confidence": 1.0,
+        "word": "silence",
+        "alwaysCapitalized": false,
+        "index": 256,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 88.34,
+        "wordEnd": 88.43,
+        "confidence": 1.0,
+        "word": "your",
+        "alwaysCapitalized": false,
+        "index": 257,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 88.43,
+        "wordEnd": 88.67,
+        "confidence": 1.0,
+        "word": "cell",
+        "alwaysCapitalized": false,
+        "index": 258,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 88.67,
+        "wordEnd": 89.18,
+        "confidence": 1.0,
+        "word": "phones",
+        "alwaysCapitalized": false,
+        "index": 259,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 89.18,
+        "wordEnd": 89.33000000000001,
+        "confidence": 1.0,
+        "word": "to",
+        "alwaysCapitalized": false,
+        "index": 260,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 89.33,
+        "wordEnd": 89.84,
+        "confidence": 0.75,
+        "word": "minimize",
+        "alwaysCapitalized": false,
+        "index": 261,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 89.84,
+        "wordEnd": 89.99000000000001,
+        "confidence": 1.0,
+        "word": "any",
+        "alwaysCapitalized": false,
+        "index": 262,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 89.99,
+        "wordEnd": 90.5,
+        "confidence": 1.0,
+        "word": "background",
+        "alwaysCapitalized": false,
+        "index": 263,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 90.53,
+        "wordEnd": 90.98,
+        "confidence": 1.0,
+        "word": "noise",
+        "alwaysCapitalized": false,
+        "index": 264,
+        "puncAfter": ".",
+        "puncBefore": false
+    },
+    {
+        "wordStart": 91.82,
+        "wordEnd": 92.27,
+        "confidence": 1.0,
+        "word": "Also",
+        "alwaysCapitalized": false,
+        "index": 265,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 92.27,
+        "wordEnd": 92.63,
+        "confidence": 1.0,
+        "word": "something",
+        "alwaysCapitalized": false,
+        "index": 266,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 92.63,
+        "wordEnd": 92.75,
+        "confidence": 1.0,
+        "word": "that",
+        "alwaysCapitalized": false,
+        "index": 267,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 92.75,
+        "wordEnd": 92.93,
+        "confidence": 1.0,
+        "word": "we've",
+        "alwaysCapitalized": false,
+        "index": 268,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 92.93,
+        "wordEnd": 93.41000000000001,
+        "confidence": 1.0,
+        "word": "noticed",
+        "alwaysCapitalized": false,
+        "index": 269,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 93.41,
+        "wordEnd": 93.95,
+        "confidence": 1.0,
+        "word": "recently",
+        "alwaysCapitalized": false,
+        "index": 270,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 93.95,
+        "wordEnd": 94.13000000000001,
+        "confidence": 1.0,
+        "word": "on",
+        "alwaysCapitalized": false,
+        "index": 271,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 94.13,
+        "wordEnd": 94.31,
+        "confidence": 1.0,
+        "word": "some",
+        "alwaysCapitalized": false,
+        "index": 272,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 94.31,
+        "wordEnd": 94.37,
+        "confidence": 1.0,
+        "word": "of",
+        "alwaysCapitalized": false,
+        "index": 273,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 94.37,
+        "wordEnd": 94.43,
+        "confidence": 1.0,
+        "word": "the",
+        "alwaysCapitalized": false,
+        "index": 274,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 94.43,
+        "wordEnd": 94.85000000000001,
+        "confidence": 1.0,
+        "word": "national",
+        "alwaysCapitalized": false,
+        "index": 275,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 94.85,
+        "wordEnd": 95.50999999999999,
+        "confidence": 1.0,
+        "word": "calls",
+        "alwaysCapitalized": false,
+        "index": 276,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 96.48,
+        "wordEnd": 97.09,
+        "confidence": 0.98,
+        "word": "is",
+        "alwaysCapitalized": false,
+        "index": 277,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 97.13,
+        "wordEnd": 97.31,
+        "confidence": 1.0,
+        "word": "we",
+        "alwaysCapitalized": false,
+        "index": 278,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 97.31,
+        "wordEnd": 97.63,
+        "confidence": 0.97,
+        "word": "pick",
+        "alwaysCapitalized": false,
+        "index": 279,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 97.63,
+        "wordEnd": 97.82,
+        "confidence": 0.97,
+        "word": "up",
+        "alwaysCapitalized": false,
+        "index": 280,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 97.91,
+        "wordEnd": 98.47999999999999,
+        "confidence": 0.97,
+        "word": "echoes",
+        "alwaysCapitalized": false,
+        "index": 281,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 98.48,
+        "wordEnd": 98.72,
+        "confidence": 1.0,
+        "word": "from",
+        "alwaysCapitalized": false,
+        "index": 282,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 98.75,
+        "wordEnd": 99.11,
+        "confidence": 1.0,
+        "word": "audio",
+        "alwaysCapitalized": false,
+        "index": 283,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 99.11,
+        "wordEnd": 99.92,
+        "confidence": 1.0,
+        "word": "feedback",
+        "alwaysCapitalized": false,
+        "index": 284,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 100.16,
+        "wordEnd": 100.58,
+        "confidence": 1.0,
+        "word": "so",
+        "alwaysCapitalized": false,
+        "index": 285,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 100.58,
+        "wordEnd": 100.75,
+        "confidence": 1.0,
+        "word": "it's",
+        "alwaysCapitalized": false,
+        "index": 286,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 100.77,
+        "wordEnd": 101.3,
+        "confidence": 1.0,
+        "word": "important",
+        "alwaysCapitalized": false,
+        "index": 287,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 101.3,
+        "wordEnd": 101.69,
+        "confidence": 1.0,
+        "word": "that",
+        "alwaysCapitalized": false,
+        "index": 288,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 101.78,
+        "wordEnd": 102.01,
+        "confidence": 0.96,
+        "word": "if",
+        "alwaysCapitalized": false,
+        "index": 289,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 102.02,
+        "wordEnd": 102.2,
+        "confidence": 1.0,
+        "word": "you're",
+        "alwaysCapitalized": false,
+        "index": 290,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 102.2,
+        "wordEnd": 102.53,
+        "confidence": 1.0,
+        "word": "using",
+        "alwaysCapitalized": false,
+        "index": 291,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 102.53,
+        "wordEnd": 102.56,
+        "confidence": 1.0,
+        "word": "a",
+        "alwaysCapitalized": false,
+        "index": 292,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 102.56,
+        "wordEnd": 103.22,
+        "confidence": 1.0,
+        "word": "microphone",
+        "alwaysCapitalized": false,
+        "index": 293,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 103.25,
+        "wordEnd": 103.34,
+        "confidence": 1.0,
+        "word": "or",
+        "alwaysCapitalized": false,
+        "index": 294,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 103.34,
+        "wordEnd": 103.37,
+        "confidence": 0.99,
+        "word": "a",
+        "alwaysCapitalized": false,
+        "index": 295,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 103.37,
+        "wordEnd": 104.12,
+        "confidence": 1.0,
+        "word": "headset",
+        "alwaysCapitalized": false,
+        "index": 296,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 105.05,
+        "wordEnd": 105.47,
+        "confidence": 1.0,
+        "word": "that",
+        "alwaysCapitalized": false,
+        "index": 297,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 105.92,
+        "wordEnd": 106.46000000000001,
+        "confidence": 1.0,
+        "word": "doesn't",
+        "alwaysCapitalized": false,
+        "index": 298,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 106.46,
+        "wordEnd": 106.77,
+        "confidence": 0.94,
+        "word": "pick",
+        "alwaysCapitalized": false,
+        "index": 299,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 106.77,
+        "wordEnd": 106.97,
+        "confidence": 0.94,
+        "word": "up",
+        "alwaysCapitalized": false,
+        "index": 300,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 106.97,
+        "wordEnd": 107.24,
+        "confidence": 1.0,
+        "word": "any",
+        "alwaysCapitalized": false,
+        "index": 301,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 107.24,
+        "wordEnd": 107.75999999999999,
+        "confidence": 1.0,
+        "word": "sound",
+        "alwaysCapitalized": false,
+        "index": 302,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 107.76,
+        "wordEnd": 107.9,
+        "confidence": 0.63,
+        "word": "that's",
+        "alwaysCapitalized": false,
+        "index": 303,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 107.9,
+        "wordEnd": 108.26,
+        "confidence": 1.0,
+        "word": "coming",
+        "alwaysCapitalized": false,
+        "index": 304,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 108.26,
+        "wordEnd": 108.47,
+        "confidence": 1.0,
+        "word": "from",
+        "alwaysCapitalized": false,
+        "index": 305,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 108.47,
+        "wordEnd": 108.59,
+        "confidence": 1.0,
+        "word": "your",
+        "alwaysCapitalized": false,
+        "index": 306,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 108.59,
+        "wordEnd": 109.07000000000001,
+        "confidence": 0.51,
+        "word": "computer's",
+        "alwaysCapitalized": false,
+        "index": 307,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 109.07,
+        "wordEnd": 109.82,
+        "confidence": 1.0,
+        "word": "speakers",
+        "alwaysCapitalized": false,
+        "index": 308,
+        "puncAfter": ".",
+        "puncBefore": false
+    },
+    {
+        "wordStart": 110.9,
+        "wordEnd": 111.02000000000001,
+        "confidence": 1.0,
+        "word": "If",
+        "alwaysCapitalized": false,
+        "index": 309,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 111.02,
+        "wordEnd": 111.17,
+        "confidence": 1.0,
+        "word": "you",
+        "alwaysCapitalized": false,
+        "index": 310,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 111.17,
+        "wordEnd": 111.47,
+        "confidence": 1.0,
+        "word": "hear",
+        "alwaysCapitalized": false,
+        "index": 311,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 111.47,
+        "wordEnd": 111.67999999999999,
+        "confidence": 1.0,
+        "word": "that",
+        "alwaysCapitalized": false,
+        "index": 312,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 111.68,
+        "wordEnd": 111.95,
+        "confidence": 1.0,
+        "word": "echo",
+        "alwaysCapitalized": false,
+        "index": 313,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 111.95,
+        "wordEnd": 112.04,
+        "confidence": 0.95,
+        "word": "or",
+        "alwaysCapitalized": false,
+        "index": 314,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 112.04,
+        "wordEnd": 112.55000000000001,
+        "confidence": 1.0,
+        "word": "feedback",
+        "alwaysCapitalized": false,
+        "index": 315,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 112.55,
+        "wordEnd": 112.78999999999999,
+        "confidence": 1.0,
+        "word": "just",
+        "alwaysCapitalized": false,
+        "index": 316,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 112.79,
+        "wordEnd": 113.15,
+        "confidence": 1.0,
+        "word": "please",
+        "alwaysCapitalized": false,
+        "index": 317,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 113.15,
+        "wordEnd": 113.36,
+        "confidence": 1.0,
+        "word": "move",
+        "alwaysCapitalized": false,
+        "index": 318,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 113.36,
+        "wordEnd": 113.48,
+        "confidence": 1.0,
+        "word": "your",
+        "alwaysCapitalized": false,
+        "index": 319,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 113.48,
+        "wordEnd": 114.01,
+        "confidence": 1.0,
+        "word": "microphone",
+        "alwaysCapitalized": false,
+        "index": 320,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 114.01,
+        "wordEnd": 114.06,
+        "confidence": 0.69,
+        "word": "or",
+        "alwaysCapitalized": false,
+        "index": 321,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 114.08,
+        "wordEnd": 114.5,
+        "confidence": 1.0,
+        "word": "headset",
+        "alwaysCapitalized": false,
+        "index": 322,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 114.5,
+        "wordEnd": 114.83,
+        "confidence": 1.0,
+        "word": "further",
+        "alwaysCapitalized": false,
+        "index": 323,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 114.83,
+        "wordEnd": 115.39999999999999,
+        "confidence": 1.0,
+        "word": "away",
+        "alwaysCapitalized": false,
+        "index": 324,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 116.57,
+        "wordEnd": 116.69,
+        "confidence": 0.99,
+        "word": "or",
+        "alwaysCapitalized": false,
+        "index": 325,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 116.69,
+        "wordEnd": 117.02,
+        "confidence": 1.0,
+        "word": "better",
+        "alwaysCapitalized": false,
+        "index": 326,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 117.02,
+        "wordEnd": 117.47,
+        "confidence": 1.0,
+        "word": "yet",
+        "alwaysCapitalized": false,
+        "index": 327,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 117.47,
+        "wordEnd": 118.16,
+        "confidence": 1.0,
+        "word": "play",
+        "alwaysCapitalized": false,
+        "index": 328,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 118.49,
+        "wordEnd": 118.69999999999999,
+        "confidence": 1.0,
+        "word": "the",
+        "alwaysCapitalized": false,
+        "index": 329,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 118.7,
+        "wordEnd": 119.21000000000001,
+        "confidence": 1.0,
+        "word": "audio",
+        "alwaysCapitalized": false,
+        "index": 330,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 119.21,
+        "wordEnd": 119.33,
+        "confidence": 1.0,
+        "word": "of",
+        "alwaysCapitalized": false,
+        "index": 331,
+        "puncAfter": false,
+        "puncBefore": false
+    },
+    {
+        "wordStart": 119.33,
+        "wordEnd": 119.72,
+        "confidence": 1.0,
+        "word": "this",
+        "alwaysCapitalized": false,
+        "index": 332,
+        "puncAfter": ".",
+        "puncBefore": false
+    }
+]

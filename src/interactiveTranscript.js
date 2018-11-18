@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import MediaPlayer from './mediaPlayer';
 import Transcript from './transcript';
-import transcript from './transcript.json';
+// import transcript from './two_min_processed.json';
 import EditModal from './editModal';
 import {
     removeSelection, endsSentence, removePunc, CONFIDENCE_THRESHOLD,
@@ -22,7 +22,7 @@ class InteractiveTranscript extends Component {
                 start: 0,
                 offset: 0
             },
-            transcript: transcript,
+            transcript: null,
             undoQueue: [],
             redoQueue: [],
             showEditModal: false,
@@ -33,6 +33,11 @@ class InteractiveTranscript extends Component {
     }
 
     componentDidMount() {
+        fetch('http://localhost:5000/transcript?transcript_id=1')
+            .then(response => response.json())
+            .then(data => {
+                this.setState({ transcript: data })
+            })
         document.addEventListener('keydown', this.handleKeyDown)
     }
 
@@ -352,6 +357,7 @@ class InteractiveTranscript extends Component {
         }
 
         if (step.change) {
+            console.log(step.change)
             transcript = this.changeQueueStep(whichOne, transcript, step.change)
         }
 
@@ -423,18 +429,18 @@ class InteractiveTranscript extends Component {
 
         const index = this.getSelectedWordIndex('last')
         const word = this.wordAtIndex(index)
-        if (word.puncAfter === punc) return
+        const { puncAfter } = word
+        if (puncAfter && puncAfter.includes(punc)) return
 
         let change
-
 
         change = [
             [
                 {
                     ...word,
-                    puncAfter: punc,
+                    puncAfter: puncAfter ? puncAfter.concat(punc) : [punc],
                     prevState: {
-                        puncAfter: word.puncAfter
+                        puncAfter: puncAfter
                     }
                 }
             ]
@@ -511,7 +517,7 @@ class InteractiveTranscript extends Component {
             selectedWord = this.wordAtIndex(selectedWordIndex)
 
             while (selectedWordIndex < transcriptLength - 1 && (
-                selectedWord.wordStart === null
+                selectedWord.start === null
                 || (skipHighConfidenceWords && selectedWord.confidence > CONFIDENCE_THRESHOLD)
             )) {
                 selectedWordIndex++;
@@ -529,7 +535,7 @@ class InteractiveTranscript extends Component {
                     offset: 0,
                 },
             })
-            player.currentTime = selectedWord.wordStart + Math.random() * .1
+            player.currentTime = selectedWord.start + Math.random() * .1
         }
     }
 
@@ -548,7 +554,7 @@ class InteractiveTranscript extends Component {
         let selectedWordIndex = firstWordIndex - 1
         let selectedWord = this.wordAtIndex(selectedWordIndex)
         while (selectedWordIndex !== 0 &&
-            (selectedWord.wordStart === null
+            (selectedWord.start === null
                 || (skipHighConfidenceWords && selectedWord.confidence > CONFIDENCE_THRESHOLD))) {
             selectedWordIndex--;
             selectedWord = this.wordAtIndex(selectedWordIndex)
@@ -575,12 +581,12 @@ class InteractiveTranscript extends Component {
                 offset: 0,
             },
         })
-        player.currentTime = selectedWord.wordStart
+        player.currentTime = selectedWord.start
     }
 
     getNewWordIndex = newPosition => {
         for (let wordObject of this.state.transcript) {
-            if (newPosition >= wordObject.wordStart && newPosition <= wordObject.wordEnd) {
+            if (newPosition >= wordObject.start && newPosition <= wordObject.end) {
                 return wordObject.index
             }
         }
@@ -606,7 +612,7 @@ class InteractiveTranscript extends Component {
                 offset: 0,
             },
         })
-        player.currentTime = word.wordStart + Math.random() * .1
+        player.currentTime = word.start + Math.random() * .1
     }
 
     toggleSelectionConfident = () => {
@@ -742,8 +748,21 @@ class InteractiveTranscript extends Component {
 
     }
 
+    renderTranscript = () => {
+        return (
+            <span id='transcript'>
+                <Transcript
+                    transcript={this.state.transcript}
+                    selectedWordIndices={this.state.selectedWordIndices}
+                    onClickWord={this.onClickWord}
+                    onMouseOver={this.onMouseOverWord}
+                />
+            </span>
+        )
+    }
+
     render() {
-        const { transcript, selectedWordIndices, showEditModal } = this.state
+        const { transcript, showEditModal } = this.state
 
         return (
             <React.Fragment>
@@ -757,14 +776,7 @@ class InteractiveTranscript extends Component {
 
                 </div>
                 {showEditModal && this.renderEditModal()}
-                <span id='transcript'>
-                    <Transcript
-                        transcript={transcript}
-                        selectedWordIndices={selectedWordIndices}
-                        onClickWord={this.onClickWord}
-                        onMouseOver={this.onMouseOverWord}
-                    />
-                </span>
+                {transcript && this.renderTranscript()}
             </React.Fragment >
         )
     }

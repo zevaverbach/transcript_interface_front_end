@@ -42,7 +42,7 @@ const Word = props => {
             <span
                 onClick={onClick}
                 className={className}
-                style={style}>{word.puncBefore ? word.puncBefore : ''}{word.word}{word.puncAfter ? word.puncAfter : ''}
+                style={style}>{word.puncBefore ? word.puncBefore.join('') : ''}{word.word}{word.puncAfter ? word.puncAfter.join('') : ''}
             </span>
 
         </Fragment>

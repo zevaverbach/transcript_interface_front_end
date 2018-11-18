@@ -53,8 +53,8 @@ export const removePunc = word => {
     return word
 }
 
-export const hasPuncAfter = word => punc.includes(word.slice(-1)[0]) ? word.slice(-1)[0] : false
-export const hasPuncBefore = word => punc.includes(word[0]) ? word[0] : false
+export const hasPuncAfter = word => punc.includes(word.slice(-1)[0]) ? word.slice(-1) : false
+export const hasPuncBefore = word => punc.includes(word[0]) ? [word[0]] : false
 
 export const alwaysCapitalized = word => {
     // TODO: call an endpoint for this (use code already in use in Python)

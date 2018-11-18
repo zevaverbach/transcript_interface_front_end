@@ -11,7 +11,7 @@ const Transcript = props => {
 
         paragraph.push(wordObject)
 
-        if (paragraph.length >= 80 && wordObject.puncAfter === '.') {
+        if (paragraph.length >= 80 && wordObject.puncAfter && wordObject.puncAfter.includes('.')) {
             paragraphs.push(
                 <Paragraph
                     onClickWord={props.onClickWord}
