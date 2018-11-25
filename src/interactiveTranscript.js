@@ -770,7 +770,7 @@ class InteractiveTranscript extends Component {
                         case 222:
                             if (event.metaKey && event.ctrlKey) { // ctrl + meta + '
                                 this.goToPreviousPhrase();
-                            } else if (!event.altKey) {
+                            } else if (!event.altKey && !event.ctrlKey) {
                                 this.surroundSelectionWithStuff('"');
                             }
                             break
