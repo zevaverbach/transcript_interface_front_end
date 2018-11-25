@@ -6,12 +6,17 @@ const Transcript = props => {
 
     const paragraphs = [];
     let paragraph = [];
+    const transcript = props.transcript
+    const transcriptLength = transcript.length
 
-    for (let wordObject of props.transcript) {
+    for (let [index, wordObject] of transcript.entries()) {
 
         paragraph.push(wordObject)
 
-        if (paragraph.length >= 80 && wordObject.puncAfter && wordObject.puncAfter.includes('.')) {
+        if (index === transcriptLength - 1
+            || (paragraph.length >= 80
+                && wordObject.puncAfter
+                && wordObject.puncAfter.includes('.'))) {
             paragraphs.push(
                 <Paragraph
                     onClickWord={props.onClickWord}

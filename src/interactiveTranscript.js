@@ -57,7 +57,7 @@ class InteractiveTranscript extends Component {
                 })
             }
         } else {
-            fetch('http://localhost:5000/transcript?transcript_id=6')
+            fetch('http://localhost:5000/transcript?transcript_id=9')
                 .then(response => response.json())
                 .then(data => {
                     this.setState({ transcript: data })
@@ -112,7 +112,7 @@ class InteractiveTranscript extends Component {
             let newWordsSurplus = editingWords.length - selectedWordsObject.offset - 1
 
             if (newWordsSurplus) {
-                changeArray = editingWords.slice(0, -newWordsSurplus)
+                changeArray = newWordsSurplus <= 0 ? [editingWords[0]] : editingWords.slice(0, -newWordsSurplus)
             } else {
                 changeArray = editingWords
             }
