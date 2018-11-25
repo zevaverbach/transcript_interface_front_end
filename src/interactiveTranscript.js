@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import MediaPlayer from './mediaPlayer';
 import Transcript from './transcript';
-// import transcript from './two_min_processed.json';
 import EditModal from './editModal';
 import { DownloadTranscript } from './downloadTranscript';
 import {
@@ -34,8 +33,6 @@ class InteractiveTranscript extends Component {
     }
 
     componentDidMount() {
-        document.addEventListener('keydown', this.handleKeyDown)
-
         let theTranscript;
 
         const transcript = localStorage.getItem('transcript')
@@ -60,7 +57,7 @@ class InteractiveTranscript extends Component {
             fetch('http://localhost:5000/transcript?transcript_id=9')
                 .then(response => response.json())
                 .then(data => {
-                    this.setState({ transcript: data })
+                    this.setState({ transcript: data }, this.addKeyboardListener)
                     localStorage.setItem(
                         'transcript',
                         JSON.stringify(data)
@@ -68,6 +65,9 @@ class InteractiveTranscript extends Component {
                 })
         }
     }
+
+    addKeyboardListener = () => document.addEventListener('keydown', this.handleKeyDown)
+
 
     wordAtIndex = index => this.state.transcript[index]
 
@@ -833,22 +833,25 @@ class InteractiveTranscript extends Component {
         )
     }
 
+    renderMedia = () => (
+        <div id='media-container'>
+            <MediaPlayer
+                ref={this.mediaPlayer}
+                src={this.props.mediaSource}
+                onTimeUpdate={this.onTimeUpdate}
+            />
+            <div id="media-label">{this.props.mediaSource}</div>
+
+        </div>
+    )
+
     render() {
         const { transcript, showEditModal } = this.state
-        const mediaSource = this.props.mediaSource
-        const title = mediaSource.split('.')[0] + '.txt'
+        const title = this.props.mediaSource.split('.')[0] + '.txt'
 
         return (
             <React.Fragment>
-                <div id='media-container'>
-                    <MediaPlayer
-                        ref={this.mediaPlayer}
-                        src={mediaSource}
-                        onTimeUpdate={this.onTimeUpdate}
-                    />
-                    <div id="media-label">{mediaSource}</div>
-
-                </div>
+                {transcript && this.renderMedia()}
                 {transcript && <DownloadTranscript transcript={transcript} title={title} />}
                 {showEditModal && this.renderEditModal()}
                 {transcript && this.renderTranscript()}
