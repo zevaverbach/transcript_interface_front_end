@@ -90,6 +90,7 @@ class MediaPlayer extends Component {
                     ref={this.player}
                     onTimeUpdate={this.onTimeUpdate}
                     controlsList={"nodownload nofullscreen"}
+                    controls
                 >
                 </video>
             </React.Fragment>

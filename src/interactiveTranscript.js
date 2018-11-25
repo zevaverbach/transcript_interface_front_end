@@ -33,13 +33,31 @@ class InteractiveTranscript extends Component {
     }
 
     componentDidMount() {
-        // fetch('http://transcribely.co/transcript?transcript_id=6')
-        fetch('http://localhost:5000/transcript?transcript_id=6')
-            .then(response => response.json())
-            .then(data => {
-                this.setState({ transcript: data })
-            })
         document.addEventListener('keydown', this.handleKeyDown)
+
+        let transcript;
+
+        const transcripts = localStorage.getItem('transcripts')
+        if (transcripts) {
+            const parsedTranscripts = JSON.parse(transcripts)
+            if (parsedTranscripts && parsedTranscripts[6]) {
+                transcript = parsedTranscripts[6]
+            }
+        }
+
+        if (transcript) {
+            this.setState({ transcript })
+        } else {
+            fetch('http://localhost:5000/transcript?transcript_id=6')
+                .then(response => response.json())
+                .then(data => {
+                    this.setState({ transcript: data })
+                    localStorage.setItem(
+                        'transcripts',
+                        JSON.stringify({ 6: data })
+                    )
+                })
+        }
     }
 
     wordAtIndex = index => this.state.transcript[index]
@@ -412,6 +430,11 @@ class InteractiveTranscript extends Component {
             ...queueState,
             selectedWordIndices
         })
+
+        localStorage.setItem(
+            'transcripts',
+            JSON.stringify({ 6: transcript })
+        )
 
     }
 
