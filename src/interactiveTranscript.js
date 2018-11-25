@@ -33,7 +33,8 @@ class InteractiveTranscript extends Component {
     }
 
     componentDidMount() {
-        fetch('http://localhost:5000/transcript?transcript_id=1')
+        // fetch('http://transcribely.co/transcript?transcript_id=6')
+        fetch('http://localhost:5000/transcript?transcript_id=6')
             .then(response => response.json())
             .then(data => {
                 this.setState({ transcript: data })
@@ -357,7 +358,6 @@ class InteractiveTranscript extends Component {
         }
 
         if (step.change) {
-            console.log(step.change)
             transcript = this.changeQueueStep(whichOne, transcript, step.change)
         }
 
@@ -585,16 +585,58 @@ class InteractiveTranscript extends Component {
     }
 
     getNewWordIndex = newPosition => {
-        for (let wordObject of this.state.transcript) {
-            if (newPosition >= wordObject.start && newPosition <= wordObject.end) {
-                return wordObject.index
-            }
+        const transcript = this.state.transcript
+        const start = this.state.selectedWordIndices.start
+        const transcript_length = transcript.length
+
+        let minimumIndex = 0;
+        let maxIndex = transcript_length - 1;
+        let currentIndex;
+
+        if (newPosition < transcript[0].start) {
+            return 0
+        } else if (newPosition > transcript.slice(-1)[0].end) {
+            return transcript_length - 1
         }
+
+        const search = firstGuess => {
+            currentIndex = firstGuess || Math.floor((minimumIndex + maxIndex) / 2);
+
+            const wordObject = transcript[currentIndex]
+
+            if (newPosition >= wordObject.start && newPosition <= wordObject.end) {
+                return currentIndex;
+            }
+
+            if (currentIndex < transcript_length - 1
+                && newPosition > wordObject.end
+                && newPosition < transcript[currentIndex + 1].start) {
+                return currentIndex;
+            }
+
+            // optimize for the current word being one of the next few
+            if (firstGuess && [start, start + 1, start + 2].includes(firstGuess)) {
+                firstGuess++
+            } else {
+                firstGuess = null;
+            }
+
+            if (wordObject.start < newPosition) {
+                minimumIndex = currentIndex + 1;
+            } else if (wordObject.end > newPosition) {
+                maxIndex = currentIndex - 1;
+            }
+
+            return search();
+        };
+
+        return search(start)
     }
+
 
     onTimeUpdate = newPosition => {
         const newWordIndex = this.getNewWordIndex(newPosition)
-        if (newWordIndex) {
+        if (newWordIndex !== undefined) {
             this.setState({
                 selectedWordIndices: {
                     start: newWordIndex,
