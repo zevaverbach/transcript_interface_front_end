@@ -3,6 +3,7 @@ import MediaPlayer from './mediaPlayer';
 import Transcript from './transcript';
 // import transcript from './two_min_processed.json';
 import EditModal from './editModal';
+import { DownloadTranscript } from './downloadTranscript';
 import {
     removeSelection, endsSentence, removePunc, CONFIDENCE_THRESHOLD,
     isCapitalized, toTitleCase, hasPuncAfter, hasPuncBefore, alwaysCapitalized
@@ -828,18 +829,21 @@ class InteractiveTranscript extends Component {
 
     render() {
         const { transcript, showEditModal } = this.state
+        const mediaSource = this.props.mediaSource
+        const title = mediaSource.split('.')[0] + '.txt'
 
         return (
             <React.Fragment>
                 <div id='media-container'>
                     <MediaPlayer
                         ref={this.mediaPlayer}
-                        src={this.props.mediaSource}
+                        src={mediaSource}
                         onTimeUpdate={this.onTimeUpdate}
                     />
-                    <div id="media-label">{this.props.mediaSource}</div>
+                    <div id="media-label">{mediaSource}</div>
 
                 </div>
+                {transcript && <DownloadTranscript transcript={transcript} title={title} />}
                 {showEditModal && this.renderEditModal()}
                 {transcript && this.renderTranscript()}
             </React.Fragment >
