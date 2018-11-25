@@ -36,26 +36,34 @@ class InteractiveTranscript extends Component {
     componentDidMount() {
         document.addEventListener('keydown', this.handleKeyDown)
 
-        let transcript;
+        let theTranscript;
 
-        const transcripts = localStorage.getItem('transcripts')
-        if (transcripts) {
-            const parsedTranscripts = JSON.parse(transcripts)
-            if (parsedTranscripts && parsedTranscripts[6]) {
-                transcript = parsedTranscripts[6]
+        const transcript = localStorage.getItem('transcript')
+        if (transcript) {
+            const parsedTranscript = JSON.parse(transcript)
+            if (parsedTranscript) {
+                theTranscript = parsedTranscript
             }
         }
 
-        if (transcript) {
-            this.setState({ transcript })
+        if (theTranscript) {
+            this.setState({ transcript: theTranscript })
+            const queueState = localStorage.getItem('queueState')
+            if (queueState) {
+                const parsedQueueState = JSON.parse(queueState)
+                this.setState({
+                    undoQueue: parsedQueueState.undoQueue,
+                    redoQueue: parsedQueueState.redoQueue
+                })
+            }
         } else {
             fetch('http://localhost:5000/transcript?transcript_id=6')
                 .then(response => response.json())
                 .then(data => {
                     this.setState({ transcript: data })
                     localStorage.setItem(
-                        'transcripts',
-                        JSON.stringify({ 6: data })
+                        'transcript',
+                        JSON.stringify(data)
                     )
                 })
         }
@@ -432,10 +440,8 @@ class InteractiveTranscript extends Component {
             selectedWordIndices
         })
 
-        localStorage.setItem(
-            'transcripts',
-            JSON.stringify({ 6: transcript })
-        )
+        localStorage.setItem('transcript', JSON.stringify(transcript))
+        localStorage.setItem('queueState', JSON.stringify(queueState))
 
     }
 
