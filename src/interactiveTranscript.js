@@ -707,6 +707,7 @@ class InteractiveTranscript extends Component {
 
     handleKeyDown = event => {
 
+        if (!this.state.transcript) return
         const { showEditModal } = this.state
         const player = this.mediaPlayer.current.player.current
 
