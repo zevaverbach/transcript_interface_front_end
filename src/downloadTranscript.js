@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { endsSentence } from './helpers'
+import { endsSentence, secondsTohhmmss } from './helpers'
 
 
 
@@ -8,13 +8,14 @@ export const DownloadTranscript = ({ transcript, title }) => {
 
     const makeTranscriptTxt = transcript => {
         let count = 0
-        let transcriptTxt = ''
-        for (let word of transcript) {
+        let transcriptTxt = `${secondsTohhmmss(transcript[0].start)}\n`
+        for (let [index, word] of transcript.entries()) {
             count++
             transcriptTxt += `${word.puncBefore ? word.puncBefore.join('') : ''}${word.word}${word.puncAfter ? word.puncAfter.join('') : ''} `
             if (count >= 80 && word.puncAfter && endsSentence(word.puncAfter.slice(-1)[0])) {
                 count = 0
                 transcriptTxt += '\n\n';
+                transcriptTxt += `${secondsTohhmmss(transcript[index + 1].start)}\n`
             }
         }
         return transcriptTxt

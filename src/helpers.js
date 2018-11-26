@@ -2,6 +2,22 @@ export const toTitleCase = word => (
     word.split('')
         .map((letter, index) => index === 0 ? letter.toUpperCase() : letter).join(''))
 
+export const secondsTohhmmss = totalSeconds => {
+    const decaseconds = totalSeconds - Math.floor(totalSeconds)
+    const hours = Math.floor(totalSeconds / 3600)
+    totalSeconds %= 3600
+    const minutes = Math.floor(totalSeconds / 60);
+    const seconds = Math.floor(totalSeconds % 60);
+    const decasecondsString = decaseconds ? `${decaseconds.toPrecision(1)}`.slice(1) : '.0'
+    return `${pad(hours, 2)}:${pad(minutes, 2)}:${pad(seconds, 2)}${decasecondsString}`
+}
+
+const pad = (number, width, padChar = '0') => {
+    number = number + '';
+    const padded = number.length >= width ? number : new Array(width - number.length + 1).join(padChar) + number;
+    return padded
+}
+
 export const hhmmssToSeconds = hhmmss => {
 
     if (!hhmmss.includes(':')) return ~~hhmmss;

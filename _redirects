@@ -1,0 +1,2 @@
+# Redirect default Netlify subdomain to primary domain
+https://transcribely.netlify.com/* https://app.transcribely.co/:splat 301!
