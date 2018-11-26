@@ -34,6 +34,7 @@ class InteractiveTranscript extends Component {
 
     componentDidMount() {
         let theTranscript;
+        this.addKeyboardListener()
 
         const transcript = localStorage.getItem('transcript')
         if (transcript) {
@@ -57,7 +58,7 @@ class InteractiveTranscript extends Component {
             fetch('http://localhost:5000/transcript?transcript_id=9')
                 .then(response => response.json())
                 .then(data => {
-                    this.setState({ transcript: data }, this.addKeyboardListener)
+                    this.setState({ transcript: data })
                     localStorage.setItem(
                         'transcript',
                         JSON.stringify(data)
@@ -67,7 +68,6 @@ class InteractiveTranscript extends Component {
     }
 
     addKeyboardListener = () => document.addEventListener('keydown', this.handleKeyDown)
-
 
     wordAtIndex = index => this.state.transcript[index]
 
@@ -707,8 +707,12 @@ class InteractiveTranscript extends Component {
 
     handleKeyDown = event => {
 
-        if (!this.state.transcript) return
         const { showEditModal } = this.state
+        if (!showEditModal) {
+            console.log('no modal')
+        } else {
+            console.log('modal')
+        }
         const player = this.mediaPlayer.current.player.current
 
         switch (event.keyCode) {
@@ -738,6 +742,7 @@ class InteractiveTranscript extends Component {
                 if (!showEditModal) {
                     switch (event.keyCode) {
                         case 13: // enter
+                            event.preventDefault()
                             this.setState({ showEditModal: true, wasPlaying: !player.paused })
                             player.pause()
                             break;
