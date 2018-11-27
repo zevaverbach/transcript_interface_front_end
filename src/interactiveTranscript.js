@@ -708,11 +708,6 @@ class InteractiveTranscript extends Component {
     handleKeyDown = event => {
 
         const { showEditModal } = this.state
-        if (!showEditModal) {
-            console.log('no modal')
-        } else {
-            console.log('modal')
-        }
         const player = this.mediaPlayer.current.player.current
 
         switch (event.keyCode) {
