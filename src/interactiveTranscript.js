@@ -267,7 +267,7 @@ class InteractiveTranscript extends Component {
         this.undoRedoEdit('edit',
             {
                 selectedWords: {
-                    ...this.getSelectedWordsObject(),
+                    ...this.getSelectedWordsObject(1),
                     offset: 0
                 },
                 delete: [this.selectedWords()]
@@ -473,8 +473,8 @@ class InteractiveTranscript extends Component {
 
     }
 
-    getSelectedWordsObject = () => {
-        const firstWordIndex = this.getSelectedWordIndex('first')
+    getSelectedWordsObject = (minus = 0) => {
+        const firstWordIndex = this.getSelectedWordIndex('first') - minus
         const lastWordIndex = this.getSelectedWordIndex('last')
 
         return {
