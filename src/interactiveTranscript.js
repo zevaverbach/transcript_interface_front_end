@@ -55,7 +55,7 @@ class InteractiveTranscript extends Component {
                 })
             }
         } else {
-            fetch('https://0011041a.ngrok.io/transcript?transcript_id=11')
+            fetch('https://4ff024a0.ngrok.io/transcript?transcript_id=11')
                 .then(response => response.json())
                 .then(data => {
                     this.setState({ transcript: data })
