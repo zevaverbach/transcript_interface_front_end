@@ -36,6 +36,7 @@ body {
 
 #media-container {
   position: fixed;
+  max-width: 480px;
 }
 
 video, audio {
@@ -57,16 +58,21 @@ audio {
   padding-left: .5em;
 }
 
-p {
+#controls {
+  position: fixed;
+  left: 10.5em;
+  font-size: 1.2em;
+}
+
+#controls span {
+  padding-left: .3em;
+}
+
+p{
   margin-left: 480px;
   padding: 0 20px;
 }
 
 .thin-underline {
     border-bottom: 3px solid red;
-}
-
-#download-transcript {
-  position: fixed;
-  bottom: 1%;
 }

@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { endsSentence, secondsTohhmmss } from './helpers'
+import { MdFileDownload } from 'react-icons/md';
 
 
 
@@ -33,9 +34,8 @@ export const DownloadTranscript = ({ transcript, title }) => {
         element.click();
     }
 
-    return (
-        <div>
-            <button id="download-transcript" onClick={_downloadTxtFile}>Download {title}</button>
-        </div>
-    );
+    return <span title='Download transcript'
+
+        style={{ cursor: 'pointer' }}
+        onClick={_downloadTxtFile}><MdFileDownload /></span>
 }

@@ -7,6 +7,7 @@ import {
     removeSelection, endsSentence, removePunc, CONFIDENCE_THRESHOLD,
     isCapitalized, toTitleCase, hasPuncAfter, hasPuncBefore, alwaysCapitalized
 } from './helpers'
+import { MdRedo, MdUndo, MdPlayArrow, MdPause } from 'react-icons/md'
 
 
 
@@ -29,6 +30,7 @@ class InteractiveTranscript extends Component {
             editingWords: [],
             editModalEdited: false,
             wasPlaying: false,
+            playing: false,
         }
     }
 
@@ -91,7 +93,7 @@ class InteractiveTranscript extends Component {
             })
             if (wasPlaying) {
                 player.play()
-                this.setState({ wasPlaying: false })
+                this.setState({ wasPlaying: false, playing: true })
             }
 
             removeSelection()
@@ -784,7 +786,7 @@ class InteractiveTranscript extends Component {
                     switch (event.keyCode) {
                         case 13: // enter
                             event.preventDefault()
-                            this.setState({ showEditModal: true, wasPlaying: !player.paused })
+                            this.setState({ showEditModal: true, wasPlaying: !player.paused, playing: false })
                             player.pause()
                             break;
                         case 32: // spacebar
@@ -825,9 +827,7 @@ class InteractiveTranscript extends Component {
                             }
                             break
                         case 222:
-                            if (event.metaKey && event.ctrlKey) { // ctrl + meta + '
-                                this.goToPreviousPhrase();
-                            } else if (event.shiftKey && !event.altKey && !event.ctrlKey && !event.metaKey) {
+                            if (event.shiftKey && !event.altKey && !event.ctrlKey && !event.metaKey) {
                                 this.surroundSelectionWithStuff(['"', '"']);
                             } else if (!event.shiftKey && !event.altKey && !event.ctrlKey && !event.metaKey) {
                                 this.surroundSelectionWithStuff(["'", "'"]);
@@ -854,11 +854,7 @@ class InteractiveTranscript extends Component {
                             }
                             break
                         case 186:
-                            if (event.metaKey && event.ctrlKey) { // ctrl + meta + ;
-                                this.goToNextPhrase();
-                            } else { // colon
-                                if (event.shiftKey) this.insertPunc(':')
-                            }
+                            if (event.shiftKey) this.insertPunc(':')
                             break
                         case 90:
                             if (event.metaKey && event.shiftKey) { // meta + shift + z
@@ -918,11 +914,39 @@ class InteractiveTranscript extends Component {
                 ref={this.mediaPlayer}
                 src={this.props.mediaSource}
                 onTimeUpdate={this.onTimeUpdate}
+                togglePlay={this.togglePlay}
             />
             <div id="media-label">{this.props.mediaSource}</div>
+            <span id='controls'>
+                <DownloadTranscript
+                    transcript={this.state.transcript}
+                    title={this.props.mediaSource.split('.')[0] + '.txt'}
+                />
+                <span title='undo' style={{ cursor: 'pointer' }} onClick={this.undo}><MdUndo /></span>
+                <span title='redo' style={{ cursor: 'pointer' }} onClick={this.redo}><MdRedo /></span>
+                <span i
+                    id="play-pause"
+                    title={this.state.playing ? "pause" : "play"}
+                    style={{ cursor: 'pointer' }}
+                    onClick={this.togglePlay}>
+                    {this.state.playing ? <MdPause /> : <MdPlayArrow />}
+                </span>
+            </span>
+
 
         </div>
     )
+
+    togglePlay = () => {
+        const player = this.mediaPlayer.current.player.current
+        if (player.paused) {
+            player.play()
+            this.setState({ playing: true })
+        } else {
+            player.pause()
+            this.setState({ playing: false })
+        }
+    }
 
     render() {
         const { transcript, showEditModal } = this.state
@@ -931,7 +955,6 @@ class InteractiveTranscript extends Component {
         return (
             <React.Fragment>
                 {transcript && this.renderMedia()}
-                {transcript && <DownloadTranscript transcript={transcript} title={title} />}
                 {showEditModal && this.renderEditModal()}
                 {transcript && this.renderTranscript()}
             </React.Fragment >

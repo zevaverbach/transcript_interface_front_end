@@ -27,14 +27,14 @@ class MediaPlayer extends Component {
                 if (player.currentTime === player.duration) {
                     player.currentTime -= 1.65
                 }
-                player.play();
+                this.props.togglePlay()
             } else {
                 player.currentTime -= 1.65
             }
         });
 
         Mousetrap.bind('`', () => {
-            player.pause();
+            this.props.togglePlay()
             player.currentTime -= 1.65
             player.playbackRate = 1;
         });
@@ -42,7 +42,7 @@ class MediaPlayer extends Component {
 
         Mousetrap.bind('ctrl+;', () => {
             player.playbackRate = 5;
-            if (player.paused) player.play();
+            if (player.paused) this.props.togglePlay()
         }, 'keydown');
 
         Mousetrap.bind('ctrl+;', () => {
@@ -77,7 +77,6 @@ class MediaPlayer extends Component {
                         ref={this.player}
                         onTimeUpdate={this.onTimeUpdate}
                         controlsList="nodownload"
-                        controls
                     >
                     </audio>
                 </React.Fragment>
@@ -90,7 +89,6 @@ class MediaPlayer extends Component {
                     ref={this.player}
                     onTimeUpdate={this.onTimeUpdate}
                     controlsList={"nodownload nofullscreen"}
-                    controls
                 >
                 </video>
             </React.Fragment>
