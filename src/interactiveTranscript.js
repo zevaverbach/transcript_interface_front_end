@@ -188,50 +188,78 @@ class InteractiveTranscript extends Component {
 
     surroundSelectionWithStuff = stuff => {
 
-        let change
+        let change, lastWord
+        const firstWord = this.selectedWords()[0]
+        const selectedWordsObject = this.getSelectedWordsObject()
+        const oneWord = selectedWordsObject.offset === 0
 
-        if (this.getSelectedWordsObject.offset === 0) {
+        if (oneWord) {
+            lastWord = firstWord
+        } else {
+            lastWord = this.selectedWords().slice(-1)[0]
+        }
+
+        let puncBefore, puncAfter
+
+        if (firstWord.puncBefore && lastWord.puncAfter) {
+
+            if (['(', ')'].includes(stuff) && firstWord.puncBefore.includes('[') && lastWord.puncAfter.includes(']')) {
+                this.surroundSelectionWithStuff(['[', ']'])
+            }
+
+            if (['[', ']'].includes(stuff) && firstWord.puncBefore.includes('(') && lastWord.puncAfter.includes(')')) {
+                this.surroundSelectionWithStuff(['(', ')'])
+            }
+
+            if (firstWord.puncBefore.includes(stuff[0]) && lastWord.puncAfter.includes(stuff[1])) {
+                puncBefore = firstWord.puncBefore.filter(punc => punc !== stuff[0])
+                puncAfter = lastWord.puncAfter.filter(punc => punc !== stuff[1])
+            } else {
+                puncBefore = [stuff[0]].concat(firstWord.puncBefore)
+                puncAfter = lastWord.puncAfter.concat(stuff[1])
+            }
+        } else {
+            puncBefore = [stuff[0]]
+            puncAfter = [stuff[1]]
+        }
+
+        if (oneWord) {
             change = [
                 [
                     {
-                        ...this.selectedWords()[0],
-                        puncBefore: '"',
-                        puncAfter: '"',
+                        ...firstWord,
+                        puncBefore,
+                        puncAfter,
                         prevState: {
-                            puncBefore: false,
-                            puncAfter: false,
+                            puncBefore: firstWord.puncBefore,
+                            puncAfter: lastWord.puncAfter
                         }
                     }
                 ]
             ]
         } else {
+
             change = [
                 [
                     {
-                        ...this.selectedWords()[0],
-                        puncBefore: '"',
+                        ...firstWord,
+                        puncBefore,
                         prevState: {
-                            puncBefore: false,
+                            puncBefore: firstWord.puncBefore,
                         }
-                    }
-                ],
-                [
+                    },
                     {
-                        ...this.selectedWords().slice(-1)[0],
-                        puncAfter: '"',
+                        ...lastWord,
+                        puncAfter,
                         prevState: {
-                            puncAfter: false,
+                            puncAfter: lastWord.puncAfter,
                         }
-                    }
+                    },
                 ]
             ]
         }
 
-        this.undoRedoEdit('edit',
-            {
-                selectedWords: this.getSelectedWordsObject(), change,
-            }
-        )
+        this.undoRedoEdit('edit', { selectedWords: selectedWordsObject, change })
     }
 
     deleteWords = () => {
@@ -771,8 +799,30 @@ class InteractiveTranscript extends Component {
                         case 222:
                             if (event.metaKey && event.ctrlKey) { // ctrl + meta + '
                                 this.goToPreviousPhrase();
-                            } else if (!event.altKey && !event.ctrlKey) {
-                                this.surroundSelectionWithStuff('"');
+                            } else if (event.shiftKey && !event.altKey && !event.ctrlKey && !event.metaKey) {
+                                this.surroundSelectionWithStuff(['"', '"']);
+                            } else if (!event.shiftKey && !event.altKey && !event.ctrlKey && !event.metaKey) {
+                                this.surroundSelectionWithStuff(["'", "'"]);
+                            }
+                            break
+                        case 219:
+                            if (!event.shiftKey && !event.ctrlKey && !event.altKey && !event.metaKey) { // [
+                                this.surroundSelectionWithStuff(["[", "]"]);
+                            }
+                            break
+                        case 221:
+                            if (!event.shiftKey && !event.ctrlKey && !event.altKey && !event.metaKey) { // [
+                                this.surroundSelectionWithStuff(["[", "]"]);
+                            }
+                            break
+                        case 57:
+                            if (event.shiftKey) { // (
+                                this.surroundSelectionWithStuff(["(", ")"]);
+                            }
+                            break
+                        case 48:
+                            if (event.shiftKey) { // )
+                                this.surroundSelectionWithStuff(["(", ")"]);
                             }
                             break
                         case 186:
