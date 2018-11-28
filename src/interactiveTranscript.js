@@ -492,17 +492,11 @@ class InteractiveTranscript extends Component {
 
         let change
 
-        change = [
-            [
-                {
-                    ...word,
-                    puncAfter: puncAfter ? puncAfter.concat(punc) : [punc],
-                    prevState: {
-                        puncAfter: puncAfter
-                    }
-                }
-            ]
-        ]
+        change = [[{
+            ...word,
+            puncAfter: [punc],
+            prevState: { puncAfter }
+        }]]
 
         if (endsSentence(punc)) {
             const nextWord = this.wordAtIndex(index + 1)

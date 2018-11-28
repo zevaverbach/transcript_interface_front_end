@@ -15,7 +15,9 @@ export const DownloadTranscript = ({ transcript, title }) => {
             if (count >= 80 && word.puncAfter && endsSentence(word.puncAfter.slice(-1)[0])) {
                 count = 0
                 transcriptTxt += '\n\n';
-                transcriptTxt += `${secondsTohhmmss(transcript[index + 1].start)}\n`
+                if (transcript[index + 1]) {
+                    transcriptTxt += `${secondsTohhmmss(transcript[index + 1].start)}\n`
+                }
             }
         }
         return transcriptTxt
