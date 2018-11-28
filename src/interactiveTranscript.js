@@ -55,7 +55,7 @@ class InteractiveTranscript extends Component {
                 })
             }
         } else {
-            fetch('https://0011041a.ngrok.io/transcript?transcript_id=10')
+            fetch('https://0011041a.ngrok.io/transcript?transcript_id=11')
                 .then(response => response.json())
                 .then(data => {
                     this.setState({ transcript: data })
@@ -203,14 +203,6 @@ class InteractiveTranscript extends Component {
 
         if (firstWord.puncBefore && lastWord.puncAfter) {
 
-            if (['(', ')'].includes(stuff) && firstWord.puncBefore.includes('[') && lastWord.puncAfter.includes(']')) {
-                this.surroundSelectionWithStuff(['[', ']'])
-            }
-
-            if (['[', ']'].includes(stuff) && firstWord.puncBefore.includes('(') && lastWord.puncAfter.includes(')')) {
-                this.surroundSelectionWithStuff(['(', ')'])
-            }
-
             if (firstWord.puncBefore.includes(stuff[0]) && lastWord.puncAfter.includes(stuff[1])) {
                 puncBefore = firstWord.puncBefore.filter(punc => punc !== stuff[0])
                 puncAfter = lastWord.puncAfter.filter(punc => punc !== stuff[1])
@@ -257,6 +249,31 @@ class InteractiveTranscript extends Component {
                     },
                 ]
             ]
+
+            const { selectedWordIndices, transcript } = this.state
+            const firstBetweenIndex = selectedWordIndices.start + 1
+            // const betweenWords = transcript.slice(firstBetweenIndex, firstBetweenIndex + selectedWordIndices.offset - 1)
+            const betweenWords = transcript.slice(firstBetweenIndex - 1, firstBetweenIndex + selectedWordIndices.offset)
+            console.log(betweenWords)
+            betweenWords.forEach(word => {
+                if (word.puncBefore && word.puncBefore.includes(stuff[0])) {
+                    change[0].push(
+                        {
+                            ...word,
+                            puncBefore: puncBefore.filter(punc => punc === stuff)
+                        }
+                    )
+                }
+                if (word.puncAfter && word.puncAfter.includes(stuff[1])) {
+                    change[0].push(
+                        {
+                            ...word,
+                            puncAfter: puncAfter.filter(punc => punc === stuff)
+                        }
+                    )
+                }
+            })
+
         }
 
         this.undoRedoEdit('edit', { selectedWords: selectedWordsObject, change })
@@ -483,9 +500,16 @@ class InteractiveTranscript extends Component {
         }
     }
 
-    insertPuncAfterSelectedWords = punc => {
+    insertPunc = (punc, beforeAfter = 'after') => {
 
-        const index = this.getSelectedWordIndex('last')
+        let index
+
+        if (beforeAfter === 'after') {
+            index = this.getSelectedWordIndex('last')
+        } else {
+            index = this.getSelectedWordIndex('first') - 1
+        }
+
         const word = this.wordAtIndex(index)
         const { puncAfter } = word
         if (puncAfter && puncAfter.includes(punc)) return
@@ -771,13 +795,23 @@ class InteractiveTranscript extends Component {
                             this.deleteWords();
                             break;
                         case 190: // period
-                            this.insertPuncAfterSelectedWords('.')
+                            if (!event.shiftKey && !event.metaKey && !event.ctrlKey && !event.altKey) {
+                                this.insertPunc('.')
+                            }
+                            if (event.shiftKey && !event.metaKey && !event.ctrlKey && !event.altKey) {
+                                this.insertPunc('.', 'before')
+                            }
                             break;
                         case 188: // comma
-                            this.insertPuncAfterSelectedWords(',')
+                            if (!event.shiftKey && !event.metaKey && !event.ctrlKey && !event.altKey) {
+                                this.insertPunc(',')
+                            }
+                            if (event.shiftKey && !event.metaKey && !event.ctrlKey && !event.altKey) {
+                                this.insertPunc(',', 'before')
+                            }
                             break
                         case 191: // question mark (or slash)
-                            this.insertPuncAfterSelectedWords('?')
+                            this.insertPunc('?')
                             break
                         case 192: // tilde
                             if (event.ctrlKey) {
@@ -787,7 +821,7 @@ class InteractiveTranscript extends Component {
                             break
                         case 49: // exclamation point
                             if (event.shiftKey) {
-                                this.insertPuncAfterSelectedWords('!')
+                                this.insertPunc('!')
                             }
                             break
                         case 222:
@@ -823,7 +857,7 @@ class InteractiveTranscript extends Component {
                             if (event.metaKey && event.ctrlKey) { // ctrl + meta + ;
                                 this.goToNextPhrase();
                             } else { // colon
-                                if (event.shiftKey) this.insertPuncAfterSelectedWords(':')
+                                if (event.shiftKey) this.insertPunc(':')
                             }
                             break
                         case 90:
