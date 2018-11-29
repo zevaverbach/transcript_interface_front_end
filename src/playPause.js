@@ -9,14 +9,14 @@ export class PlayPause extends Component {
     }
 
     render() {
-        const { playing, togglePlay } = this.props
+        const { playing, onClick } = this.props
         return (
             <span
                 id="play-pause"
                 ref={this.playPause}
-                title={playing ? "pause ('`') " : "play (';') "}
+                title={playing ? "pause (`) " : "play (;) "}
                 style={{ cursor: 'pointer' }}
-                onClick={togglePlay}
+                onClick={onClick}
             >
                 {playing ? <MdPause /> : <MdPlayArrow />}
             </span>

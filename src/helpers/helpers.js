@@ -61,14 +61,14 @@ export const getOffsetsOfWordAtIndex = index => {
 }
 
 
-export const animateClick = element => {
+export const animateClick = (element, duration = 100) => {
     element.animate(
         [
             { color: 'white', background: '#444' },
             { color: '#444', background: 'white' },
         ],
         {
-            duration: 100,
+            duration,
             iterations: 1
         }
     )

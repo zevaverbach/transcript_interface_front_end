@@ -13,7 +13,7 @@ export default class Undo extends Component {
         return (
             <span
                 ref={this.undoButton}
-                title="undo (&#8984;/&#8862; + 'z')" // Command or Windows key icons
+                title="undo (&#8984;/&#8862; + z)" // Command or Windows key icons
                 style={this.props.greyed ? { color: '#BBB' } : { cursor: 'pointer' }}
                 onClick={this.props.onClick}
             >

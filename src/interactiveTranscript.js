@@ -3,7 +3,7 @@ import Transcript from './transcript';
 import EditModal from './editModal';
 import MediaContainer from './mediaContainer'
 import path from 'path'
-import { CONFIDENCE_THRESHOLD } from './config'
+import { CONFIDENCE_THRESHOLD, transcriptEndpoint } from './config'
 import { removeSelection, animateClick, _downloadTxtFile } from './helpers/helpers'
 import { changeQueueStep, insertQueueStep, deleteQueueStep } from './helpers/edit'
 import { endsSentence, removePunc, isCapitalized, toTitleCase, hasPuncAfter, hasPuncBefore, alwaysCapitalized } from './helpers/punc'
@@ -53,16 +53,20 @@ class InteractiveTranscript extends Component {
                 })
             }
         } else {
-            fetch('https://4ff024a0.ngrok.io/transcript?transcript_id=11')
-                .then(response => response.json())
-                .then(data => {
-                    this.setState({ transcript: data })
-                    localStorage.setItem(
-                        'transcript',
-                        JSON.stringify(data)
-                    )
-                })
+            this.fetchTranscript()
         }
+    }
+
+    fetchTranscript = () => {
+        fetch(transcriptEndpoint)
+            .then(response => response.json())
+            .then(data => {
+                this.setState({ transcript: data })
+                localStorage.setItem(
+                    'transcript',
+                    JSON.stringify(data)
+                )
+            })
     }
 
     addKeyboardListener = () => document.addEventListener('keydown', this.handleKeyDown)
@@ -74,11 +78,15 @@ class InteractiveTranscript extends Component {
             case 'player':
                 return this.mediaContainer.current.mediaPlayer.current.player.current
             case 'downloadButton':
-                return this.mediaContainer.current.controls.current.downloadButton.current.downloadButton.current
+                return this.mediaContainer.current.controls.current.downloadButton.current.downloadButton.current.children[0]
             case 'redoButton':
-                return this.mediaContainer.current.controls.current.redo.current.redoButton.current
+                return this.mediaContainer.current.controls.current.redo.current.redoButton.current.children[0]
             case 'undoButton':
-                return this.mediaContainer.current.controls.current.undo.current.undoButton.current
+                return this.mediaContainer.current.controls.current.undo.current.undoButton.current.children[0]
+            case 'undoAll':
+                return this.mediaContainer.current.controls.current.undoAll.current.undoAll.current.children[0]
+            case 'playPause':
+                return this.mediaContainer.current.controls.current.playPause.current.playPause.current.children[0]
             default:
                 return
         }
@@ -805,6 +813,15 @@ class InteractiveTranscript extends Component {
         _downloadTxtFile(this.state.transcript, path.basename(mediaSource, path.extname(mediaSource)) + '.txt')
     }
 
+    onUndoAllClick = () => {
+        animateClick(this.getRef('undoAll'))
+        if (window.confirm('Remove all changes to transcript?  This is not reversible.')) {
+            localStorage.removeItem('queueState')
+            this.setState({ undoQueue: [], redoQueue: [], transcript: null })
+            this.fetchTranscript()
+        }
+    }
+
     togglePlay = () => {
         const player = this.getRef('player')
         if (player.paused) {
@@ -814,6 +831,12 @@ class InteractiveTranscript extends Component {
             player.pause()
             this.setState({ playing: false })
         }
+    }
+
+    stopPlayback = () => {
+        const player = this.getRef('player')
+        player.pause()
+        this.setState({ playing: false })
     }
 
     renderTranscript = () => {
@@ -856,10 +879,12 @@ class InteractiveTranscript extends Component {
                     redo={this.redo}
                     onTimeUpdate={this.onTimeUpdate}
                     mediaSource={this.props.mediaSource}
-                    togglePlay={this.togglePlay}
+                    onClickPlayPause={this.onClickPlayPause}
+                    onUndoAllClick={this.onUndoAllClick}
                     onDownloadTranscriptClick={this.onDownloadTranscriptClick}
                     playing={playing}
                     ready={transcript !== null}
+                    togglePlay={this.togglePlay}
                     ref={this.mediaContainer}
                 />
                 {showEditModal && this.renderEditModal()}

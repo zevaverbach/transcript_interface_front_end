@@ -13,8 +13,8 @@ export default class MediaContainer extends Component {
 
     render() {
         const {
-            queueLengths, mediaSource, onTimeUpdate, togglePlay, ready,
-            onDownloadTranscriptClick, undo, redo, playing } = this.props
+            queueLengths, mediaSource, onTimeUpdate, ready,
+            onDownloadTranscriptClick, togglePlay, undo, redo, playing, onUndoAllClick } = this.props
         if (!ready) return null
         return (
             <div id='media-container'>
@@ -27,6 +27,7 @@ export default class MediaContainer extends Component {
                 <div id="media-label">{mediaSource}</div>
                 <Controls
                     onDownloadTranscriptClick={onDownloadTranscriptClick}
+                    onUndoAllClick={onUndoAllClick}
                     queueLengths={queueLengths}
                     undo={undo}
                     redo={redo}
