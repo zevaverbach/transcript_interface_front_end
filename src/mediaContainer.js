@@ -13,8 +13,8 @@ export default class MediaContainer extends Component {
 
     render() {
         const {
-            queueLengths, mediaSource, onTimeUpdate, ready,
-            onDownloadTranscriptClick, togglePlay, undo, redo, playing, onUndoAllClick } = this.props
+            queueLengths, mediaSource, onTimeUpdate, ready, stopPlayback,
+            onDownloadTranscriptClick, togglePlay, undo, redo, onUndoAllClick } = this.props
         if (!ready) return null
         return (
             <div id='media-container'>
@@ -23,6 +23,7 @@ export default class MediaContainer extends Component {
                     src={mediaSource}
                     onTimeUpdate={onTimeUpdate}
                     togglePlay={togglePlay}
+                    stopPlayback={stopPlayback}
                 />
                 <div id="media-label">{mediaSource}</div>
                 <Controls
@@ -32,7 +33,6 @@ export default class MediaContainer extends Component {
                     undo={undo}
                     redo={redo}
                     togglePlay={togglePlay}
-                    playing={playing}
                     ref={this.controls}
                 />
             </div>

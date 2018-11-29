@@ -25,7 +25,6 @@ class InteractiveTranscript extends Component {
             editingWords: [],
             editModalEdited: false,
             wasPlaying: false,
-            playing: false,
         }
         this.mediaContainer = React.createRef()
     }
@@ -85,8 +84,6 @@ class InteractiveTranscript extends Component {
                 return this.mediaContainer.current.controls.current.undo.current.undoButton.current.children[0]
             case 'undoAll':
                 return this.mediaContainer.current.controls.current.undoAll.current.undoAll.current.children[0]
-            case 'playPause':
-                return this.mediaContainer.current.controls.current.playPause.current.playPause.current.children[0]
             default:
                 return
         }
@@ -124,7 +121,7 @@ class InteractiveTranscript extends Component {
                         case 13: // enter
                             event.preventDefault()
                             const player = this.getRef('player')
-                            this.setState({ showEditModal: true, wasPlaying: !player.paused, playing: false })
+                            this.setState({ showEditModal: true, wasPlaying: !player.paused })
                             player.pause()
                             break;
                         case 32: // spacebar
@@ -222,8 +219,8 @@ class InteractiveTranscript extends Component {
                                 window.getSelection().removeAllRanges();
                             }
                             break;
-                        case 90: // ctrl-z
-                            if (event.metaKey) { // meta + z
+                        case 90:
+                            if (event.metaKey || event.ctrlKey) { // meta/ctrl + z 
                                 this.setState({ showEditModal: false })
                                 removeSelection();
                             }
@@ -255,7 +252,7 @@ class InteractiveTranscript extends Component {
             })
             if (wasPlaying) {
                 player.play()
-                this.setState({ wasPlaying: false, playing: true })
+                this.setState({ wasPlaying: false })
             }
 
             removeSelection()
@@ -829,17 +826,14 @@ class InteractiveTranscript extends Component {
         const player = this.getRef('player')
         if (player.paused) {
             player.play()
-            this.setState({ playing: true })
         } else {
             player.pause()
-            this.setState({ playing: false })
         }
     }
 
     stopPlayback = () => {
         const player = this.getRef('player')
         player.pause()
-        this.setState({ playing: false })
     }
 
     renderTranscript = () => {
@@ -871,7 +865,7 @@ class InteractiveTranscript extends Component {
     }
 
     render() {
-        const { transcript, showEditModal, playing, undoQueue, redoQueue } = this.state
+        const { transcript, showEditModal, undoQueue, redoQueue } = this.state
         const queueLengths = [undoQueue.length, redoQueue.length]
 
         return (
@@ -885,9 +879,9 @@ class InteractiveTranscript extends Component {
                     onClickPlayPause={this.onClickPlayPause}
                     onUndoAllClick={this.onUndoAllClick}
                     onDownloadTranscriptClick={this.onDownloadTranscriptClick}
-                    playing={playing}
                     ready={transcript !== null}
                     togglePlay={this.togglePlay}
+                    stopPlayback={this.stopPlayback}
                     ref={this.mediaContainer}
                 />
                 {showEditModal && this.renderEditModal()}

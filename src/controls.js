@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Redo from './redo'
 import Undo from './undo'
 import UndoAll from './undoAll'
-import { PlayPause } from './playPause'
 import DownloadTranscript from './downloadTranscript'
 
 
@@ -14,11 +13,10 @@ export default class Controls extends Component {
         this.undoAll = React.createRef()
         this.redo = React.createRef()
         this.downloadButton = React.createRef()
-        this.playPause = React.createRef()
     }
 
     render() {
-        const { queueLengths, onDownloadTranscriptClick, undo, redo, togglePlay, playing, onUndoAllClick } = this.props
+        const { queueLengths, onDownloadTranscriptClick, undo, redo, onUndoAllClick } = this.props
         const [undoLength, redoLength] = queueLengths
         return (
             <span id='controls'>
@@ -26,7 +24,6 @@ export default class Controls extends Component {
                 <UndoAll ref={this.undoAll} onClick={onUndoAllClick} greyed={undoLength === 0} />
                 <Undo ref={this.undo} onClick={undo} greyed={undoLength === 0} />
                 <Redo ref={this.redo} onClick={redo} greyed={redoLength === 0} />
-                <PlayPause ref={this.playPause} playing={playing} onClick={togglePlay} />
             </span>
         )
     }
