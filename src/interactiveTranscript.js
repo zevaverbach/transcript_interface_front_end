@@ -571,17 +571,18 @@ class InteractiveTranscript extends Component {
 
         const word = this.wordAt(index)
         const { puncAfter } = word
-        if (puncAfter && puncAfter.includes(punc)) return
-
-        let change
+        let change, same = false
+        if (puncAfter && puncAfter.includes(punc)) {
+            same = true
+        }
 
         change = [[{
             ...word,
-            puncAfter: [punc],
+            puncAfter: same ? false : [punc],
             prevState: { puncAfter }
         }]]
 
-        if (endsSentence(punc)) {
+        if ((!same && endsSentence(punc)) || (same && !endsSentence(punc))) {
             const nextWord = this.wordAt(index + 1)
             if (!isCapitalized(nextWord.word)) {
                 change = change.concat([[
