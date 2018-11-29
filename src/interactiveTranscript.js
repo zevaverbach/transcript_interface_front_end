@@ -130,6 +130,7 @@ class InteractiveTranscript extends Component {
                         case 32: // spacebar
                             event.preventDefault()
                             this.toggleSelectionConfident()
+                            this.goToNextWord(true)
                             break;
                         case 8: // backspace
                             this.deleteWords();
@@ -315,6 +316,7 @@ class InteractiveTranscript extends Component {
             }
 
             this.undoRedoEdit('edit', edit)
+            this.goToNextWord(true)
         }
     }
 
