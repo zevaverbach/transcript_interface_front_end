@@ -6,10 +6,7 @@ import path from 'path'
 import { CONFIDENCE_THRESHOLD } from './config'
 import { removeSelection, animateClick, _downloadTxtFile } from './helpers/helpers'
 import { changeQueueStep, insertQueueStep, deleteQueueStep } from './helpers/edit'
-import {
-    endsSentence, removePunc, isCapitalized, toTitleCase,
-    hasPuncAfter, hasPuncBefore, alwaysCapitalized
-} from './helpers/punc'
+import { endsSentence, removePunc, isCapitalized, toTitleCase, hasPuncAfter, hasPuncBefore, alwaysCapitalized } from './helpers/punc'
 
 
 class InteractiveTranscript extends Component {
@@ -840,7 +837,7 @@ class InteractiveTranscript extends Component {
             <EditModal
                 onChange={this.onInputModalChange}
                 onKeyUp={this.onInputModalKeyUp}
-                onFocus={(event) => { document.execCommand('selectall') }}
+                onFocus={() => { document.execCommand('selectall') }}
                 value={this.state.editModalEdited ? editingWords : words}
             />
         )

@@ -9,12 +9,13 @@ const Word = props => {
 
     let style = {};
     let className = 'word'
-    if (selected) {
-        style = { color: 'blue', fontStyle: 'bold', backgroundColor: 'gray' }
-    }
 
     if (word.justChanged) {
-        style = { backgroundColor: 'teal' }
+        style = { backgroundColor: '#DDD' }
+    }
+
+    if (selected) {
+        style = { color: 'blue', fontStyle: 'bold', backgroundColor: 'gray' }
     }
 
     if (word.confidence <= CONFIDENCE_THRESHOLD) {
