@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import * as Mousetrap from 'mousetrap';
-import { hhmmssToSeconds } from './helpers';
+import { hhmmssToSeconds } from './helpers/helpers';
 
 class MediaPlayer extends Component {
 

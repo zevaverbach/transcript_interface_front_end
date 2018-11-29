@@ -65,7 +65,8 @@ audio {
 }
 
 #controls span {
-  padding-left: .3em;
+  padding-left: .15em;
+  padding-right: .15em;
 }
 
 p{

@@ -1,6 +1,4 @@
-export const toTitleCase = word => (
-    word.split('')
-        .map((letter, index) => index === 0 ? letter.toUpperCase() : letter).join(''))
+import { endsSentence } from './punc'
 
 export const secondsTohhmmss = totalSeconds => {
     const decaseconds = totalSeconds - Math.floor(totalSeconds)
@@ -49,33 +47,6 @@ export const removeSelection = () => {
     }
 }
 
-const punc = ['.', '?', ',', ':', '"', '!']
-const puncEndSentence = ['.', '?', ':', '!']
-const puncDelimitsPhrases = puncEndSentence.concat(',', ';')
-
-export const isCapitalized = word => word === toTitleCase(word)
-export const isPunc = word => punc.includes(word)
-export const endsSentence = word => puncEndSentence.includes(word)
-export const doesntHaveSpaceBefore = word => isPunc(word)
-export const doesntHaveSpaceAfter = word => ['"', '('].includes(word)
-export const isPhraseDelimiter = word => puncDelimitsPhrases.includes(word)
-
-export const removePunc = word => {
-    for (let p of punc) {
-        if (word.includes(p)) {
-            word = word.replace(p, '')
-        }
-    }
-    return word
-}
-
-export const hasPuncAfter = word => punc.includes(word.slice(-1)) ? [word.slice(-1)] : false
-export const hasPuncBefore = word => punc.includes(word[0]) ? [word[0]] : false
-
-export const alwaysCapitalized = word => {
-    // TODO: call an endpoint for this (use code already in use in Python)
-    return word === 'I'
-}
 
 export const getOffsetsOfWordAtIndex = index => {
     // TODO: support multiple indices, or make a separate method for that
@@ -89,4 +60,42 @@ export const getOffsetsOfWordAtIndex = index => {
     }
 }
 
-export const CONFIDENCE_THRESHOLD = .87
+
+export const animateClick = element => {
+    element.animate(
+        [
+            { color: 'white', background: '#444' },
+            { color: '#444', background: 'white' },
+        ],
+        {
+            duration: 100,
+            iterations: 1
+        }
+    )
+}
+
+export const makeTranscriptTxt = transcript => {
+    let count = 0
+    let transcriptTxt = `${secondsTohhmmss(transcript[0].start)}\n`
+    for (let [index, word] of transcript.entries()) {
+        count++
+        transcriptTxt += `${word.puncBefore ? word.puncBefore.join('') : ''}${word.word}${word.puncAfter ? word.puncAfter.join('') : ''} `
+        if (count >= 80 && word.puncAfter && endsSentence(word.puncAfter.slice(-1)[0])) {
+            count = 0
+            transcriptTxt += '\n\n';
+            if (transcript[index + 1]) {
+                transcriptTxt += `${secondsTohhmmss(transcript[index + 1].start)}\n`
+            }
+        }
+    }
+    return transcriptTxt
+}
+
+export const _downloadTxtFile = (transcript, filename) => {
+    const transcriptTxt = makeTranscriptTxt(transcript)
+    var element = document.createElement("a");
+    var file = new Blob([transcriptTxt], { type: 'text/plain' });
+    element.href = URL.createObjectURL(file);
+    element.download = filename
+    element.click();
+}

@@ -1,41 +1,23 @@
-
-import React from 'react';
-import { endsSentence, secondsTohhmmss } from './helpers'
-import { MdFileDownload } from 'react-icons/md';
+import React from 'react'
+import { FiDownload } from "react-icons/fi";
 
 
+export default class DownloadTranscript extends React.Component {
 
-export const DownloadTranscript = ({ transcript, title }) => {
-
-    const makeTranscriptTxt = transcript => {
-        let count = 0
-        let transcriptTxt = `${secondsTohhmmss(transcript[0].start)}\n`
-        for (let [index, word] of transcript.entries()) {
-            count++
-            transcriptTxt += `${word.puncBefore ? word.puncBefore.join('') : ''}${word.word}${word.puncAfter ? word.puncAfter.join('') : ''} `
-            if (count >= 80 && word.puncAfter && endsSentence(word.puncAfter.slice(-1)[0])) {
-                count = 0
-                transcriptTxt += '\n\n';
-                if (transcript[index + 1]) {
-                    transcriptTxt += `${secondsTohhmmss(transcript[index + 1].start)}\n`
-                }
-            }
-        }
-        return transcriptTxt
+    constructor(props) {
+        super(props)
+        this.downloadButton = React.createRef()
     }
 
-    const transcriptTxt = makeTranscriptTxt(transcript)
-
-    const _downloadTxtFile = () => {
-        var element = document.createElement("a");
-        var file = new Blob([transcriptTxt], { type: 'text/plain' });
-        element.href = URL.createObjectURL(file);
-        element.download = title;
-        element.click();
+    render() {
+        return (
+            <span
+                title='Download transcript'
+                ref={this.downloadButton}
+                onClick={this.props.onClick}
+                style={{ cursor: 'pointer' }}>
+                <FiDownload />
+            </span>
+        )
     }
-
-    return <span title='Download transcript'
-
-        style={{ cursor: 'pointer' }}
-        onClick={_downloadTxtFile}><MdFileDownload /></span>
 }

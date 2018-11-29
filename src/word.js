@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { CONFIDENCE_THRESHOLD } from './helpers';
+import { CONFIDENCE_THRESHOLD } from './config';
 import './App.css'
 
 
