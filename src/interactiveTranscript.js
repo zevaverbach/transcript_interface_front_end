@@ -32,6 +32,7 @@ class InteractiveTranscript extends Component {
     componentDidMount() {
         let theTranscript;
         this.addKeyboardListener()
+        this.addClickListener()
 
         const transcript = localStorage.getItem('transcript')
         if (transcript) {
@@ -69,6 +70,14 @@ class InteractiveTranscript extends Component {
     }
 
     addKeyboardListener = () => document.addEventListener('keydown', this.handleKeyDown)
+    addClickListener = (element = document.body) => element.addEventListener('click', this.handleClick)
+
+    handleClick = e => {
+        const { showEditModal } = this.state
+        if (showEditModal && e.target.tagName !== 'INPUT') {
+            this.setState({ showEditModal: false })
+        }
+    }
 
     wordAt = index => this.state.transcript[index]
 
