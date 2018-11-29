@@ -149,7 +149,12 @@ class InteractiveTranscript extends Component {
                             }
                             break
                         case 191: // question mark (or slash)
-                            this.insertPunc('?')
+                            if (event.shiftKey && !event.metaKey && !event.ctrlKey && !event.altKey) {
+                                this.insertPunc('?')
+                            }
+                            if (!event.shiftKey && !event.metaKey && !event.ctrlKey && !event.altKey) {
+                                this.insertPunc('/')
+                            }
                             break
                         case 192: // tilde
                             if (event.ctrlKey) {
@@ -158,7 +163,7 @@ class InteractiveTranscript extends Component {
                             }
                             break
                         case 49: // exclamation point
-                            if (event.shiftKey) {
+                            if (event.shiftKey && !event.altKey && !event.ctrlKey && !event.metaKey) {
                                 this.insertPunc('!')
                             }
                             break
@@ -579,7 +584,7 @@ class InteractiveTranscript extends Component {
             prevState: { puncAfter }
         }]]
 
-        if ((!same && endsSentence(punc)) || (same && !endsSentence(punc))) {
+        if (endsSentence(punc) && !same) {
             const nextWord = this.wordAt(index + 1)
             if (!isCapitalized(nextWord.word)) {
                 change = change.concat([[

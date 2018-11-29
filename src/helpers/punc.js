@@ -3,16 +3,12 @@ export const toTitleCase = word => (
     word.split('')
         .map((letter, index) => index === 0 ? letter.toUpperCase() : letter).join(''))
 
-const punc = ['.', '?', ',', ':', '"', '!']
+const punc = ['/', '.', '?', ',', ':', '"', '!']
 const puncEndSentence = ['.', '?', ':', '!']
-const puncDelimitsPhrases = puncEndSentence.concat(',', ';')
 
 export const isCapitalized = word => word === toTitleCase(word)
 export const isPunc = word => punc.includes(word)
 export const endsSentence = word => puncEndSentence.includes(word)
-export const doesntHaveSpaceBefore = word => isPunc(word)
-export const doesntHaveSpaceAfter = word => ['"', '('].includes(word)
-export const isPhraseDelimiter = word => puncDelimitsPhrases.includes(word)
 
 export const removePunc = word => {
     for (let p of punc) {
