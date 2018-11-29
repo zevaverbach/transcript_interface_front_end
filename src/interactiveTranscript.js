@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, useEffect } from 'react';
 import Transcript from './transcript';
 import EditModal from './editModal';
 import MediaContainer from './mediaContainer'
@@ -31,8 +31,7 @@ class InteractiveTranscript extends Component {
 
     componentDidMount() {
         let theTranscript;
-        this.addKeyboardListener()
-        this.addClickListener()
+        this.addListeners()
 
         const transcript = localStorage.getItem('transcript')
         if (transcript) {
@@ -42,7 +41,9 @@ class InteractiveTranscript extends Component {
             }
         }
 
-        if (theTranscript) {
+        if (!theTranscript) {
+            this.fetchTranscript()
+        } else {
             this.setState({ transcript: theTranscript })
             const queueState = localStorage.getItem('queueState')
             if (queueState) {
@@ -52,10 +53,11 @@ class InteractiveTranscript extends Component {
                     redoQueue: parsedQueueState.redoQueue
                 })
             }
-        } else {
-            this.fetchTranscript()
         }
+
     }
+
+
 
     fetchTranscript = () => {
         fetch(transcriptEndpoint)
@@ -69,8 +71,32 @@ class InteractiveTranscript extends Component {
             })
     }
 
+    addListeners = () => [
+        this.addKeyboardListener,
+        this.addClickListener,
+        this.addCloseListener,
+        this.addLoadListener,
+    ].forEach(func => func())
+
     addKeyboardListener = () => document.addEventListener('keydown', this.handleKeyDown)
     addClickListener = (element = document.body) => element.addEventListener('click', this.handleClick)
+    addCloseListener = () => window.addEventListener('beforeunload', () => localStorage.setItem('currentWordIndex', this.state.selectedWordIndices.start))
+
+    addLoadListener = () => window.addEventListener('load', () => {
+        let selectedWordIndex = localStorage.getItem('currentWordIndex')
+        if (selectedWordIndex) {
+            selectedWordIndex = parseInt(selectedWordIndex)
+
+            this.setState({
+                selectedWordIndices: {
+                    start: parseInt(selectedWordIndex),
+                    offset: 0
+                }
+            })
+        }
+        const player = this.getRef('player')
+        player.currentTime = this.wordAt(selectedWordIndex).start + Math.random() * .1
+    })
 
     handleClick = e => {
         const { showEditModal } = this.state

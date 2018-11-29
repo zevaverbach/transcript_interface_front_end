@@ -5,8 +5,8 @@
   "dependencies": {
     "lodash.differenceby": "^4.8.0",
     "mousetrap": "^1.6.2",
-    "react": "^16.5.2",
-    "react-dom": "^16.5.2",
+    "react": "^16.7.0-alpha.0",
+    "react-dom": "^16.7.0-alpha.0",
     "react-icons": "^3.2.2",
     "react-scripts": "2.0.4"
   },
