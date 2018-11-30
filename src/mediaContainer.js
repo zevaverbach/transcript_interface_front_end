@@ -8,7 +8,6 @@ export default class MediaContainer extends Component {
         super(props)
         this.mediaPlayer = React.createRef()
         this.controls = React.createRef()
-
     }
 
     render() {

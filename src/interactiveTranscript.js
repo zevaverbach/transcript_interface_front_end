@@ -357,6 +357,7 @@ class InteractiveTranscript extends Component {
 
             this.undoRedoEdit('edit', edit)
             this.goToNextWord(true)
+            this.setState({ editingWords: [] })
         }
     }
 
