@@ -35,9 +35,11 @@ class MediaPlayer extends Component {
         });
 
         Mousetrap.bind('`', () => {
-            stopPlayback()
-            player.currentTime -= 1.65
-            player.playbackRate = 1;
+            if (!player.paused) {
+                stopPlayback()
+                player.currentTime -= 1.65
+                player.playbackRate = 1;
+            }
         });
 
 
