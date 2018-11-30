@@ -10,7 +10,7 @@ const Word = props => {
     let style = {};
     let className = 'word'
 
-    if (word.justChanged) {
+    if (word.changed) {
         style = { backgroundColor: '#DDD' }
     }
 

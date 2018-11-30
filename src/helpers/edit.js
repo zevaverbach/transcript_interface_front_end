@@ -8,7 +8,7 @@ export const changeQueueStep = (whichOne, transcript, step) => {
             .map((word, index) => {
                 let changedWord = wordMap[index]
                 if (changedWord) {
-                    changedWord.justChanged = true
+                    changedWord.changed = true
                     if (whichOne === 'undo') {
                         changedWord = {
                             ...changedWord,
@@ -17,8 +17,6 @@ export const changeQueueStep = (whichOne, transcript, step) => {
                         delete changedWord.prevState
                     }
                     return changedWord
-                } else {
-                    if (word.justChanged) delete word.justChanged
                 }
                 return word
             })
@@ -37,20 +35,19 @@ export const insertQueueStep = (transcript, step) => {
         const numWords = insertChunk.length
 
         transcript = transcript
-            .slice(0, insertChunk[0].index + prevInsertLength).map(word => ({ ...word, justChanged: false }))
+            .slice(0, insertChunk[0].index + prevInsertLength).map(word => word)
             .concat(insertChunk
                 .map(word => ({
                     ...word,
                     index: word.index + prevInsertLength,
                     key: word.index + prevInsertLength,
-                    justChanged: true
+                    changed: true
                 })))
             .concat(transcript.slice(insertChunk[0].index + prevInsertLength)
                 .map(word => ({
                     ...word,
                     index: word.index + numWords,
                     key: word.index + numWords,
-                    justChanged: false,
                 })))
 
         let newSelectedWordsStartOffset = numWords - 1
