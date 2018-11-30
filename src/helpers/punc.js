@@ -5,6 +5,7 @@ export const toTitleCase = word => (
 
 const punc = ['/', '.', '?', ',', ':', '"', '!']
 const puncEndSentence = ['.', '?', ':', '!']
+export const surrounds = ['[', ']', '(', ')', '"']
 
 export const isCapitalized = word => word === toTitleCase(word)
 export const isPunc = word => punc.includes(word)

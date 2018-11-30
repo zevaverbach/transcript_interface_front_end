@@ -1,4 +1,4 @@
-import React, { Component, useEffect } from 'react';
+import React, { Component } from 'react';
 import Transcript from './transcript';
 import EditModal from './editModal';
 import MediaContainer from './mediaContainer'
@@ -6,7 +6,10 @@ import path from 'path'
 import { CONFIDENCE_THRESHOLD, transcriptEndpoint } from './config'
 import { removeSelection, animateClick, _downloadTxtFile } from './helpers/helpers'
 import { changeQueueStep, insertQueueStep, deleteQueueStep } from './helpers/edit'
-import { endsSentence, removePunc, isCapitalized, toTitleCase, hasPuncAfter, hasPuncBefore, alwaysCapitalized } from './helpers/punc'
+import {
+    surrounds, endsSentence, removePunc, isCapitalized,
+    toTitleCase, hasPuncAfter, hasPuncBefore, alwaysCapitalized
+} from './helpers/punc'
 
 
 class InteractiveTranscript extends Component {
@@ -450,7 +453,6 @@ class InteractiveTranscript extends Component {
             const { selectedWordIndices, transcript } = this.state
             const firstBetweenIndex = selectedWordIndices.start + 1
             const betweenWords = transcript.slice(firstBetweenIndex - 1, firstBetweenIndex + selectedWordIndices.offset)
-            console.log(betweenWords)
             betweenWords.forEach(word => {
                 if (word.puncBefore && word.puncBefore.includes(stuff[0])) {
                     change[0].push(
@@ -608,14 +610,22 @@ class InteractiveTranscript extends Component {
 
         const word = this.wordAt(index)
         const { puncAfter } = word
-        let change, same = false
+        let change, same = false, newPunc
         if (puncAfter && puncAfter.includes(punc)) {
             same = true
         }
 
+        if (same) {
+            newPunc = puncAfter.filter(p => p !== punc)
+        } else if (puncAfter && surrounds.some(p => puncAfter.includes(p))) {
+            newPunc = [punc, '"']
+        } else {
+            newPunc = [punc]
+        }
+
         change = [[{
             ...word,
-            puncAfter: same ? false : [punc],
+            puncAfter: newPunc,
             prevState: { puncAfter }
         }]]
 
@@ -857,7 +867,17 @@ class InteractiveTranscript extends Component {
         animateClick(this.getRef('undoAll'))
         if (window.confirm('Remove all changes to transcript?  This is not reversible.')) {
             localStorage.removeItem('queueState')
-            this.setState({ undoQueue: [], redoQueue: [], transcript: null })
+            localStorage.removeItem('transcript')
+            localStorage.removeItem('currentWordIndex')
+            this.setState({
+                undoQueue: [],
+                redoQueue: [],
+                transcript: null,
+                selectedWordIndices: {
+                    start: 0,
+                    offset: 0
+                }
+            })
             this.fetchTranscript()
         }
     }
