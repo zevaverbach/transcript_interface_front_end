@@ -865,6 +865,7 @@ class InteractiveTranscript extends Component {
     }
 
     onUndoAllClick = () => {
+        if (this.state.undoQueue.length === 0 && this.state.redoQueue.length === 0) return
         animateClick(this.getRef('undoAll'))
         if (window.confirm('Remove all changes to transcript?  This is not reversible.')) {
             localStorage.removeItem('queueState')

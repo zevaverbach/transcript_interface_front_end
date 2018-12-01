@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 import { CONFIDENCE_THRESHOLD } from './config';
+import ReactCursorPosition, { INTERACTIONS } from 'react-cursor-position';
 import './App.css'
 
 
@@ -9,13 +10,14 @@ const Word = props => {
 
     let style = {};
     let className = 'word'
+    let selectedStyle = { color: 'blue', fontStyle: 'bold', backgroundColor: 'gray' }
 
     if (word.changed) {
         style = { backgroundColor: '#DDD' }
     }
 
     if (selected) {
-        style = { color: 'blue', fontStyle: 'bold', backgroundColor: 'gray' }
+        style = selectedStyle
     }
 
     if (word.confidence <= CONFIDENCE_THRESHOLD) {
@@ -37,11 +39,16 @@ const Word = props => {
     return (
         <Fragment>
             {renderSpace()}
-            <span
-                onClick={onClick}
-                className={className}
-                style={style}>{word.puncBefore ? word.puncBefore.join('') : ''}{word.word}{word.puncAfter ? word.puncAfter.join('') : ''}
-            </span>
+            <ReactCursorPosition
+                activationInteractionMouse={INTERACTIONS.HOVER}
+                style={{ display: 'inline' }}
+            >
+                <span
+                    onClick={onClick}
+                    className={className}
+                    style={style}>{word.puncBefore ? word.puncBefore.join('') : ''}{word.word}{word.puncAfter ? word.puncAfter.join('') : ''}
+                </span>
+            </ReactCursorPosition>
 
         </Fragment>
     )
