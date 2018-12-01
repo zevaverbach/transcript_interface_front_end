@@ -86,7 +86,7 @@ class InteractiveTranscript extends Component {
     addCloseListener = () => window.addEventListener('beforeunload', () => localStorage.setItem('currentWordIndex', this.state.selectedWordIndices.start))
 
     addLoadListener = () => window.addEventListener('load', () => {
-        let selectedWordIndex = localStorage.getItem('currentWordIndex')
+        let selectedWordIndex = localStorage.getItem('currentWordIndex') || 0
         if (selectedWordIndex) {
             selectedWordIndex = parseInt(selectedWordIndex)
 
@@ -98,7 +98,7 @@ class InteractiveTranscript extends Component {
             })
         }
         const player = this.getRef('player')
-        player.currentTime = this.wordAt(selectedWordIndex).start + Math.random() * .1
+        player.currentTime = this.wordAt(selectedWordIndex).start + Math.random() * .01
     })
 
     handleClick = e => {
@@ -718,7 +718,7 @@ class InteractiveTranscript extends Component {
                     offset: 0,
                 },
             })
-            player.currentTime = selectedWord.start + Math.random() * .1
+            player.currentTime = selectedWord.start + Math.random() * .01
         }
     }
 
@@ -768,8 +768,8 @@ class InteractiveTranscript extends Component {
     }
 
     getNewWordIndex = newPosition => {
-        const transcript = this.state.transcript
-        const start = this.state.selectedWordIndices.start
+        const { transcript, selectedWordIndices } = this.state
+        const { start } = selectedWordIndices
         const transcript_length = transcript.length
 
         let minimumIndex = 0;
@@ -816,8 +816,8 @@ class InteractiveTranscript extends Component {
         return search(start)
     }
 
-
     onTimeUpdate = newPosition => {
+        if (this.state.selectedWordIndices.offset !== 0) return
         const newWordIndex = this.getNewWordIndex(newPosition)
         if (newWordIndex !== undefined) {
             this.setState({
@@ -837,7 +837,7 @@ class InteractiveTranscript extends Component {
                 offset: 0,
             },
         })
-        player.currentTime = word.start + Math.random() * .1
+        player.currentTime = word.start + Math.random() * .01
     }
 
     toggleSelectionConfident = () => {
