@@ -1,5 +1,6 @@
 import React from 'react';
 import Word from './word'
+import uuidv4 from 'uuid/v4'
 
 const Paragraph = props => {
     return (
@@ -34,14 +35,13 @@ const Paragraph = props => {
 
                 return (
                     <Word
-                        key={word.index}
+                        key={uuidv4()}
                         word={word}
                         onClick={props.onClickWord}
                         confidenceThreshold={props.confidenceThreshold}
                         selected={selected}
                         offset={offset}
                         firstSelectedWordIndex={firstSelectedWordIndex}
-                        onMouseOver={props.onMouseOver}
                     />
                 )
             })}

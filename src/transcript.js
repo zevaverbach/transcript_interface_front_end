@@ -1,5 +1,6 @@
 import React from 'react';
 import Paragraph from './paragraph'
+import uuidv4 from 'uuid/v4'
 
 
 const Transcript = props => {
@@ -20,10 +21,9 @@ const Transcript = props => {
             paragraphs.push(
                 <Paragraph
                     onClickWord={props.onClickWord}
-                    key={wordObject.index}
+                    key={uuidv4()}
                     words={paragraph}
                     selectedWordIndices={props.selectedWordIndices}
-                    onMouseOver={props.onMouseOver}
                 />)
             paragraph = [];
         }

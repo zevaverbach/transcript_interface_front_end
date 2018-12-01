@@ -164,8 +164,12 @@ class InteractiveTranscript extends Component {
                             break;
                         case 32: // spacebar
                             event.preventDefault()
-                            this.toggleSelectionConfident()
-                            this.goToNextWord(true)
+                            if (!event.shiftKey && !event.metaKey && !event.ctrlKey && !event.altKey) {
+                                this.toggleSelectionConfident()
+                                this.goToNextWord(true)
+                            } else if (event.shiftKey && !event.metaKey && !event.ctrlKey && !event.altKey) {
+                                this.setAllWordsConfident()
+                            }
                             break;
                         case 8: // backspace
                             this.deleteWords();
@@ -840,6 +844,10 @@ class InteractiveTranscript extends Component {
         player.currentTime = word.start + Math.random() * .01
     }
 
+    setAllWordsConfident = () => {
+        this.setState({ transcript: this.state.transcript.map(word => word.confidence < CONFIDENCE_THRESHOLD ? { ...word, confidence: 1 } : word) })
+    }
+
     toggleSelectionConfident = () => {
         const edit = {
             selectedWords: this.getSelectedWordsObject(),
@@ -905,7 +913,6 @@ class InteractiveTranscript extends Component {
                     transcript={this.state.transcript}
                     selectedWordIndices={this.state.selectedWordIndices}
                     onClickWord={this.onClickWord}
-                    onMouseOver={this.onMouseOverWord}
                 />
             </span>
         )

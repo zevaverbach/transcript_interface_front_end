@@ -1,12 +1,11 @@
 import React, { Fragment } from 'react';
 import { CONFIDENCE_THRESHOLD } from './config';
-import ReactCursorPosition, { INTERACTIONS } from 'react-cursor-position';
 import './App.css'
 
 
 const Word = props => {
 
-    let { word, selected, firstSelectedWordIndex } = props
+    let { word, selected, firstSelectedWordIndex, isActive } = props
 
     let style = {};
     let className = 'word'
@@ -16,7 +15,8 @@ const Word = props => {
         style = { backgroundColor: '#DDD' }
     }
 
-    if (selected) {
+    if (selected || isActive) {
+        // isActive is a proper from ReactCursorPosition, meaning the cursor is over this word
         style = selectedStyle
     }
 
@@ -29,7 +29,7 @@ const Word = props => {
     const onClick = () => props.onClick(word)
 
     const renderSpace = () => {
-        if (word.index === firstSelectedWordIndex || word.changed) {
+        if (word.index === firstSelectedWordIndex || word.changed || isActive) {
             return <span onClick={onClick}>{space}</span>
         } else {
             return <span onClick={onClick} style={style}>{space}</span>
@@ -39,16 +39,11 @@ const Word = props => {
     return (
         <Fragment>
             {renderSpace()}
-            <ReactCursorPosition
-                activationInteractionMouse={INTERACTIONS.HOVER}
-                style={{ display: 'inline' }}
-            >
-                <span
-                    onClick={onClick}
-                    className={className}
-                    style={style}>{word.puncBefore ? word.puncBefore.join('') : ''}{word.word}{word.puncAfter ? word.puncAfter.join('') : ''}
-                </span>
-            </ReactCursorPosition>
+            <span
+                onClick={onClick}
+                className={className}
+                style={style}>{word.puncBefore ? word.puncBefore.join('') : ''}{word.word}{word.puncAfter ? word.puncAfter.join('') : ''}
+            </span>
 
         </Fragment>
     )
