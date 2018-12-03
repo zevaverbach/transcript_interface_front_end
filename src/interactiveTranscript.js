@@ -61,7 +61,6 @@ class InteractiveTranscript extends Component {
     }
 
 
-
     fetchTranscript = () => {
         fetch(transcriptEndpoint)
             .then(response => response.json())
@@ -518,37 +517,37 @@ class InteractiveTranscript extends Component {
         if (!['edit', 'undo', 'redo'].includes(whichOne)) throw Error('invalid argument for `whichOne`.')
 
         let { redoQueue, undoQueue, transcript } = this.state
-        let queue, step, selectedWordIndices
+        let queue, steps, selectedWordIndices
 
         queue = whichOne === 'undo' ? undoQueue : redoQueue
 
         if (edit) {
             queue = null
-            step = edit
+            steps = edit
         }
 
         if (queue) {
             if (queue.length === 0) return
-            step = queue.slice(-1)[0]
+            steps = queue.slice(-1)[0]
         }
 
-        if (step.change) {
-            transcript = changeQueueStep(whichOne, transcript, step.change)
+        if (steps.change) {
+            transcript = changeQueueStep(whichOne, transcript, steps.change)
         }
 
-        if (step.insert) {
+        if (steps.insert) {
             if (whichOne === 'undo') {
-                [transcript, selectedWordIndices] = deleteQueueStep(transcript, step.insert)
+                [transcript, selectedWordIndices] = deleteQueueStep(transcript, steps.insert)
             } else {
-                [transcript, selectedWordIndices] = insertQueueStep(transcript, step.insert)
+                [transcript, selectedWordIndices] = insertQueueStep(transcript, steps.insert)
             }
         }
 
-        if (step.delete) {
+        if (steps.delete) {
             if (whichOne === 'undo') {
-                [transcript, selectedWordIndices] = insertQueueStep(transcript, step.delete)
+                [transcript, selectedWordIndices] = insertQueueStep(transcript, steps.delete)
             } else {
-                [transcript, selectedWordIndices] = deleteQueueStep(transcript, step.delete)
+                [transcript, selectedWordIndices] = deleteQueueStep(transcript, steps.delete)
             }
         }
 
@@ -556,29 +555,29 @@ class InteractiveTranscript extends Component {
         if (whichOne === 'undo') {
             queueState = {
                 undoQueue: queue.slice(0, -1),
-                redoQueue: redoQueue.concat(step),
+                redoQueue: redoQueue.concat(steps),
             }
         } else if (whichOne === 'redo') {
             queueState = {
                 redoQueue: queue.slice(0, -1),
-                undoQueue: undoQueue.concat(step),
+                undoQueue: undoQueue.concat(steps),
             }
         } else {
             // edit
             queueState = {
-                undoQueue: undoQueue.concat(step),
+                undoQueue: undoQueue.concat(steps),
                 redoQueue: [],
             }
         }
 
-        if (step.selectedWords) {
-            if (whichOne === 'undo' && step.insert && step.insert.length > 1) {
+        if (steps.selectedWords) {
+            if (whichOne === 'undo' && steps.insert && steps.insert.length > 1) {
                 selectedWordIndices = {
-                    ...step.selectedWords,
-                    start: step.selectedWords.start - 1
+                    ...steps.selectedWords,
+                    start: steps.selectedWords.start - 1
                 }
             } else {
-                selectedWordIndices = step.selectedWords
+                selectedWordIndices = steps.selectedWords
             }
         }
 
