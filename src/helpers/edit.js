@@ -1,29 +1,20 @@
 
-export const changeQueueStep = (whichOne, transcript, step) => {
-    step.forEach(changeChunk => {
-        const wordMap = {}
-        changeChunk.forEach(word => wordMap[word.index] = word)
-
-        transcript = transcript
-            .map((word, index) => {
-                let changedWord = wordMap[index]
-                if (changedWord) {
-                    changedWord.changed = true
-                    if (whichOne === 'undo') {
-                        changedWord = {
-                            ...changedWord,
-                            ...changedWord.prevState
-                        }
-                        delete changedWord.prevState
-                    }
-                    return changedWord
+export const changeQueueStep = (whichOne, transcript, steps) => {
+    let t = { ...transcript }
+    steps.forEach(step => {
+        step.forEach(word => {
+            if (whichOne !== 'undo') {
+                t[word.start] = { ...word, changed: true }
+            } else {
+                t[word.start] = {
+                    ...t[word.start],
+                    ...t[word.start].prevState
                 }
-                return word
-            })
-
+            }
+        })
     })
 
-    return transcript
+    return t
 }
 
 export const insertQueueStep = (transcript, step) => {

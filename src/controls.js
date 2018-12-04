@@ -3,6 +3,7 @@ import Redo from './redo'
 import Undo from './undo'
 import UndoAll from './undoAll'
 import DownloadTranscript from './downloadTranscript'
+import { test } from './config'
 
 
 export default class Controls extends Component {
@@ -21,7 +22,7 @@ export default class Controls extends Component {
         return (
             <span id='controls'>
                 <DownloadTranscript ref={this.downloadButton} onClick={onDownloadTranscriptClick} />
-                <UndoAll ref={this.undoAll} onClick={onUndoAllClick} greyed={undoLength === 0 && redoLength === 0} />
+                <UndoAll ref={this.undoAll} onClick={onUndoAllClick} greyed={!test && undoLength === 0 && redoLength === 0} />
                 <Undo ref={this.undo} onClick={undo} greyed={undoLength === 0} />
                 <Redo ref={this.redo} onClick={redo} greyed={redoLength === 0} />
             </span>

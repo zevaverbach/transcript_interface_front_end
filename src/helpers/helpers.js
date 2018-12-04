@@ -51,7 +51,6 @@ export const removeSelection = () => {
 export const getOffsetsOfWordAtIndex = index => {
     // TODO: support multiple indices, or make a separate method for that
     const span = document.querySelectorAll('span.word')[index]
-    console.log(span)
     return {
         x: span.offsetLeft,
         y: span.offsetTop,
@@ -98,4 +97,17 @@ export const _downloadTxtFile = (transcript, filename) => {
     element.href = URL.createObjectURL(file);
     element.download = filename
     element.click();
+}
+
+
+export const makeTranscriptSecondsObject = transcript => {
+    const transcriptSecondsObject = {}
+    Object.entries(transcript).forEach(([wordStart, word]) => {
+        const wordStartInt = parseInt(wordStart)
+        if (!transcriptSecondsObject[wordStartInt]) {
+            transcriptSecondsObject[wordStartInt] = []
+        }
+        transcriptSecondsObject[wordStartInt].push(word)
+    })
+    return transcriptSecondsObject
 }

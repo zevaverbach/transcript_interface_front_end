@@ -7,26 +7,29 @@ const Transcript = props => {
 
     const paragraphs = [];
     let paragraph = [];
-    const transcript = props.transcript
-    const transcriptLength = transcript.length
+    const { firstWord, getNextWord, selectedWordPositions, onClickWord } = props
+    let wordObject = firstWord
 
-    for (let [index, wordObject] of transcript.entries()) {
+    while (true) {
 
         paragraph.push(wordObject)
 
-        if (index === transcriptLength - 1
+        if (!wordObject.next
             || (paragraph.length >= 80
                 && wordObject.puncAfter
                 && wordObject.puncAfter.includes('.'))) {
             paragraphs.push(
                 <Paragraph
-                    onClickWord={props.onClickWord}
+                    onClickWord={onClickWord}
                     key={uuidv4()}
                     words={paragraph}
-                    selectedWordIndices={props.selectedWordIndices}
+                    selectedWordPositions={selectedWordPositions}
                 />)
             paragraph = [];
         }
+
+        if (!wordObject.next) break
+        wordObject = getNextWord(wordObject)
     }
     return paragraphs;
 }

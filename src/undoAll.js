@@ -22,4 +22,4 @@ export default class MediaContainer extends Component {
             </span>
         )
     }
-    }
+}

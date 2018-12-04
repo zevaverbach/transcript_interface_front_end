@@ -4,7 +4,7 @@ import EditModal from './editModal';
 import MediaContainer from './mediaContainer'
 import path from 'path'
 import { CONFIDENCE_THRESHOLD, transcriptEndpoint } from './config'
-import { removeSelection, animateClick, _downloadTxtFile } from './helpers/helpers'
+import { removeSelection, animateClick, _downloadTxtFile, makeTranscriptSecondsObject } from './helpers/helpers'
 import { changeQueueStep, insertQueueStep, deleteQueueStep } from './helpers/edit'
 import {
     surrounds, endsSentence, removePunc, isCapitalized,
@@ -17,11 +17,13 @@ class InteractiveTranscript extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            selectedWordIndices: {
-                start: 0,
-                offset: 0
-            },
+            selectedWordPositions: [],
             transcript: null,
+            transcriptSeconds: null,
+            transcriptKeys: null,
+            currentPosition: null,
+            firstWordPosition: null,
+            lastWordPosition: null,
             undoQueue: [],
             redoQueue: [],
             showEditModal: false,
@@ -32,44 +34,54 @@ class InteractiveTranscript extends Component {
         this.mediaContainer = React.createRef()
     }
 
+    wordAt = time => this.state.transcript[time]
+    wordsAt = times => times.map(time => this.state.transcript[time])
+    nextWord = word => this.wordAt(word.next)
+    selectedWords = () => this.wordsAt(this.state.selectedWordPositions)
+    firstWord = () => this.wordAt(this.state.firstWordPosition)
+
     componentDidMount() {
-        let theTranscript;
         this.addListeners()
 
-        const transcript = localStorage.getItem('transcript')
-        if (transcript) {
-            const parsedTranscript = JSON.parse(transcript)
-            if (parsedTranscript) {
-                theTranscript = parsedTranscript
-            }
-        }
-
-        if (!theTranscript) {
+        if (!localStorage.getItem('transcript')) {
             this.fetchTranscript()
         } else {
-            this.setState({ transcript: theTranscript })
-            const queueState = localStorage.getItem('queueState')
-            if (queueState) {
-                const parsedQueueState = JSON.parse(queueState)
-                this.setState({
-                    undoQueue: parsedQueueState.undoQueue,
-                    redoQueue: parsedQueueState.redoQueue
-                })
-            }
+            const { undoQueue, redoQueue } = JSON.parse(localStorage.getItem('queueState'))
+            const transcript = JSON.parse(localStorage.getItem('transcript'))
+            const firstWordPosition = parseFloat(localStorage.getItem('firstWordPosition'))
+            this.setState({
+                transcript,
+                undoQueue,
+                redoQueue,
+                firstWordPosition,
+                lastWordPosition: parseFloat(localStorage.getItem('lastWordPosition')),
+                selectedWordPositions: JSON.parse(localStorage.getItem('selectedWordPositions')) || [firstWordPosition],
+                transcriptSeconds: makeTranscriptSecondsObject(transcript),
+                transcriptKeys: Object.keys(transcript).map(time => parseFloat(time)).sort(),
+            })
         }
-
     }
-
 
     fetchTranscript = () => {
         fetch(transcriptEndpoint)
             .then(response => response.json())
             .then(data => {
-                this.setState({ transcript: data })
-                localStorage.setItem(
-                    'transcript',
-                    JSON.stringify(data)
-                )
+                let transcript = Object()
+                Object.entries(data.transcript).forEach(([startTime, word]) => {
+                    transcript[parseFloat(startTime)] = word
+                })
+
+                const transcriptSeconds = makeTranscriptSecondsObject(transcript)
+                const firstWordPosition = parseFloat(data.firstWordPosition)
+                const lastWordPosition = parseFloat(data.lastWordPosition)
+                const transcriptKeys = Object.keys(transcript).map(time => parseFloat(time)).sort()
+
+                this.setState({ transcript, firstWordPosition, lastWordPosition, transcriptSeconds, transcriptKeys })
+
+                localStorage.setItem('transcript', JSON.stringify(transcript))
+                localStorage.setItem('firstWordPosition', firstWordPosition)
+                localStorage.setItem('lastWordPosition', lastWordPosition)
+                localStorage.setItem('queueState', JSON.stringify({ undoQueue: [], redoQueue: [] }))
             })
     }
 
@@ -82,22 +94,11 @@ class InteractiveTranscript extends Component {
 
     addKeyboardListener = () => document.addEventListener('keydown', this.handleKeyDown)
     addClickListener = (element = document.body) => element.addEventListener('click', this.handleClick)
-    addCloseListener = () => window.addEventListener('beforeunload', () => localStorage.setItem('currentWordIndex', this.state.selectedWordIndices.start))
+    addCloseListener = () => window.addEventListener('beforeunload', () => localStorage.setItem('currentPosition', this.state.currentPosition))
 
     addLoadListener = () => window.addEventListener('load', () => {
-        let selectedWordIndex = localStorage.getItem('currentWordIndex') || 0
-        if (selectedWordIndex) {
-            selectedWordIndex = parseInt(selectedWordIndex)
-
-            this.setState({
-                selectedWordIndices: {
-                    start: parseInt(selectedWordIndex),
-                    offset: 0
-                }
-            })
-        }
-        const player = this.getRef('player')
-        player.currentTime = this.wordAt(selectedWordIndex).start + Math.random() * .01
+        // const player = this.getRef('player')
+        // player.currentTime = selectedWordPosition + Math.random() * .01
     })
 
     handleClick = e => {
@@ -106,8 +107,6 @@ class InteractiveTranscript extends Component {
             this.setState({ showEditModal: false })
         }
     }
-
-    wordAt = index => this.state.transcript[index]
 
     getRef = refName => {
         switch (refName) {
@@ -305,18 +304,12 @@ class InteractiveTranscript extends Component {
 
             if (editingWords.length === 0) return
 
-            const selectedWordsObject = this.getSelectedWordsObject()
             const selectedWords = this.selectedWords()
 
-            const edit = {
-                selectedWords: {
-                    ...selectedWordsObject,
-                    offset: 0
-                }
-            }
+            const edit = { selectedWords }
 
             editingWords = editingWords.split(' ')
-            let newWordsSurplus = editingWords.length - selectedWordsObject.offset - 1
+            let newWordsSurplus = editingWords.length - selectedWords.length
 
             if (newWordsSurplus) {
                 changeArray = newWordsSurplus <= 0 ? [editingWords[0]] : editingWords.slice(0, -newWordsSurplus)
@@ -343,9 +336,8 @@ class InteractiveTranscript extends Component {
 
             } else if (newWordsSurplus > 0) {
                 const lastOverlappingWord = selectedWords.slice(-1)[0]
-                const lastChangeIndex = edit.change[0].slice(-1)[0].index
                 edit.insert = [
-                    editingWords.slice(-newWordsSurplus).map((word, index) => (
+                    editingWords.slice(-newWordsSurplus).map(word => (
                         {
                             ...lastOverlappingWord,
                             confidence: 1,
@@ -353,7 +345,6 @@ class InteractiveTranscript extends Component {
                             word: removePunc(word),
                             puncAfter: hasPuncAfter(word),
                             puncBefore: hasPuncBefore(word),
-                            index: lastChangeIndex + index + 1,
                         }))
                 ]
             }
@@ -377,108 +368,123 @@ class InteractiveTranscript extends Component {
         }
     }
 
-    getSelectedWordIndex = firstLast => {
-        const { selectedWordIndices } = this.state
-        const { offset, start } = selectedWordIndices
-        if (firstLast === 'first') {
-            return offset < 0 ? start + offset : start
-        }
-        return offset > 0 ? start + offset : start
+    consecutive = wordPositions => {
+        let prevWord = wordPositions[0]
+        wordPositions.slice(1).forEach(word => {
+            if (prevWord.next !== word.start) {
+                return false
+            }
+        })
+        return true
     }
 
-    selectedWords = () => this.state.transcript.slice(
-        this.getSelectedWordIndex('first'),
-        this.getSelectedWordIndex('last') + 1)
+    surroundSelectionWithStuff = (stuff, selection = null) => {
 
-    surroundSelectionWithStuff = stuff => {
+        const selectedWordPositions = selection || this.state.selectedWordPositions
 
-        let change, lastWord
-        const firstWord = this.selectedWords()[0]
-        const selectedWordsObject = this.getSelectedWordsObject()
-        const oneWord = selectedWordsObject.offset === 0
+        if (!this.consecutive(selectedWordPositions)) {
+            const selectedWords = this.selectedWords()
+            let prevWord = selectedWords[0]
+            let chunk = [prevWord.start]
 
-        if (oneWord) {
-            lastWord = firstWord
-        } else {
-            lastWord = this.selectedWords().slice(-1)[0]
-        }
-
-        let puncBefore, puncAfter
-
-        if (firstWord.puncBefore && lastWord.puncAfter) {
-
-            if (firstWord.puncBefore.includes(stuff[0]) && lastWord.puncAfter.includes(stuff[1])) {
-                puncBefore = firstWord.puncBefore.filter(punc => punc !== stuff[0])
-                puncAfter = lastWord.puncAfter.filter(punc => punc !== stuff[1])
-            } else {
-                puncBefore = [stuff[0]].concat(firstWord.puncBefore)
-                puncAfter = lastWord.puncAfter.concat(stuff[1])
-            }
-        } else {
-            puncBefore = [stuff[0]]
-            puncAfter = [stuff[1]]
-        }
-
-        if (oneWord) {
-            change = [
-                [
-                    {
-                        ...firstWord,
-                        puncBefore,
-                        puncAfter,
-                        prevState: {
-                            puncBefore: firstWord.puncBefore,
-                            puncAfter: lastWord.puncAfter
-                        }
-                    }
-                ]
-            ]
-        } else {
-
-            change = [
-                [
-                    {
-                        ...firstWord,
-                        puncBefore,
-                        prevState: {
-                            puncBefore: firstWord.puncBefore,
-                        }
-                    },
-                    {
-                        ...lastWord,
-                        puncAfter,
-                        prevState: {
-                            puncAfter: lastWord.puncAfter,
-                        }
-                    },
-                ]
-            ]
-
-            const { selectedWordIndices, transcript } = this.state
-            const firstBetweenIndex = selectedWordIndices.start + 1
-            const betweenWords = transcript.slice(firstBetweenIndex - 1, firstBetweenIndex + selectedWordIndices.offset)
-            betweenWords.forEach(word => {
-                if (word.puncBefore && word.puncBefore.includes(stuff[0])) {
-                    change[0].push(
-                        {
-                            ...word,
-                            puncBefore: puncBefore.filter(punc => punc === stuff)
-                        }
-                    )
+            selectedWords.slice(1).forEach(word => {
+                if (prevWord.next === word.start) {
+                    chunk.push(word.start)
+                } else {
+                    this.surroundSelectionWithStuff(stuff, chunk)
+                    chunk = []
                 }
-                if (word.puncAfter && word.puncAfter.includes(stuff[1])) {
-                    change[0].push(
-                        {
-                            ...word,
-                            puncAfter: puncAfter.filter(punc => punc === stuff)
-                        }
-                    )
-                }
+                prevWord = word
             })
 
-        }
+        } else {
 
-        this.undoRedoEdit('edit', { selectedWords: selectedWordsObject, change })
+            let change, lastWord
+            const firstWord = this.wordAt(selectedWordPositions[0])
+            const oneWord = selectedWordPositions.length === 1
+
+            if (oneWord) {
+                lastWord = firstWord
+            } else {
+                lastWord = this.wordAt(selectedWordPositions.slice(-1)[0])
+            }
+
+            let puncBefore, puncAfter
+
+            if (firstWord.puncBefore && lastWord.puncAfter) {
+
+                if (firstWord.puncBefore.includes(stuff[0]) && lastWord.puncAfter.includes(stuff[1])) {
+                    puncBefore = firstWord.puncBefore.filter(punc => punc !== stuff[0])
+                    puncAfter = lastWord.puncAfter.filter(punc => punc !== stuff[1])
+                } else {
+                    puncBefore = [stuff[0]].concat(firstWord.puncBefore)
+                    puncAfter = lastWord.puncAfter.concat(stuff[1])
+                }
+            } else {
+                puncBefore = [stuff[0]]
+                puncAfter = [stuff[1]]
+            }
+
+            if (oneWord) {
+                change = [
+                    [
+                        {
+                            ...firstWord,
+                            puncBefore,
+                            puncAfter,
+                            prevState: {
+                                puncBefore: firstWord.puncBefore,
+                                puncAfter: lastWord.puncAfter
+                            }
+                        }
+                    ]
+                ]
+            } else {
+
+                change = [
+                    [
+                        {
+                            ...firstWord,
+                            puncBefore,
+                            prevState: {
+                                puncBefore: firstWord.puncBefore,
+                            }
+                        },
+                        {
+                            ...lastWord,
+                            puncAfter,
+                            prevState: {
+                                puncAfter: lastWord.puncAfter,
+                            }
+                        },
+                    ]
+                ]
+
+                let word = firstWord
+
+                Array(selectedWordPositions.length - 2).fill(null) // repeat 
+                    .forEach(_ => {
+                        word = this.wordAt(word.next)
+                        if (word.puncBefore && word.puncBefore.includes(stuff[0])) {
+                            change[0].push(
+                                {
+                                    ...word,
+                                    puncBefore: puncBefore.filter(punc => punc === stuff)
+                                }
+                            )
+                        }
+                        if (word.puncAfter && word.puncAfter.includes(stuff[1])) {
+                            change[0].push(
+                                {
+                                    ...word,
+                                    puncAfter: puncAfter.filter(punc => punc === stuff)
+                                }
+                            )
+                        }
+                    })
+            }
+            this.undoRedoEdit('edit', { selectedWordPositions, change })
+        }
     }
 
     deleteWords = () => {
@@ -517,7 +523,7 @@ class InteractiveTranscript extends Component {
         if (!['edit', 'undo', 'redo'].includes(whichOne)) throw Error('invalid argument for `whichOne`.')
 
         let { redoQueue, undoQueue, transcript } = this.state
-        let queue, steps, selectedWordIndices
+        let queue, steps, selectedWordPositions
 
         queue = whichOne === 'undo' ? undoQueue : redoQueue
 
@@ -537,17 +543,17 @@ class InteractiveTranscript extends Component {
 
         if (steps.insert) {
             if (whichOne === 'undo') {
-                [transcript, selectedWordIndices] = deleteQueueStep(transcript, steps.insert)
+                [transcript, selectedWordPositions] = deleteQueueStep(transcript, steps.insert)
             } else {
-                [transcript, selectedWordIndices] = insertQueueStep(transcript, steps.insert)
+                [transcript, selectedWordPositions] = insertQueueStep(transcript, steps.insert)
             }
         }
 
         if (steps.delete) {
             if (whichOne === 'undo') {
-                [transcript, selectedWordIndices] = insertQueueStep(transcript, steps.delete)
+                [transcript, selectedWordPositions] = insertQueueStep(transcript, steps.delete)
             } else {
-                [transcript, selectedWordIndices] = deleteQueueStep(transcript, steps.delete)
+                [transcript, selectedWordPositions] = deleteQueueStep(transcript, steps.delete)
             }
         }
 
@@ -570,51 +576,43 @@ class InteractiveTranscript extends Component {
             }
         }
 
-        if (steps.selectedWords) {
+        if (steps.selectedWordPositions) {
             if (whichOne === 'undo' && steps.insert && steps.insert.length > 1) {
-                selectedWordIndices = {
+                selectedWordPositions = {
                     ...steps.selectedWords,
                     start: steps.selectedWords.start - 1
                 }
             } else {
-                selectedWordIndices = steps.selectedWords
+                selectedWordPositions = steps.selectedWordPositions
             }
         }
 
         this.setState({
             transcript,
             ...queueState,
-            selectedWordIndices
+            selectedWordPositions
         })
 
         localStorage.setItem('transcript', JSON.stringify(transcript))
         localStorage.setItem('queueState', JSON.stringify(queueState))
+        localStorage.setItem('selectedWordPositions', JSON.stringify(selectedWordPositions))
 
-    }
-
-    getSelectedWordsObject = (minus = 0) => {
-        const firstWordIndex = this.getSelectedWordIndex('first') - minus
-        const lastWordIndex = this.getSelectedWordIndex('last')
-
-        return {
-            start: firstWordIndex,
-            offset: lastWordIndex - firstWordIndex
-        }
     }
 
     insertPunc = (punc, beforeAfter = 'after') => {
 
-        let index
+        let wordPosition
+        const selectedWordPositions = this.state.selectedWordPositions
 
         if (beforeAfter === 'after') {
-            index = this.getSelectedWordIndex('last')
+            wordPosition = selectedWordPositions.slice(-1)[0]
         } else {
-            index = this.getSelectedWordIndex('first') - 1
+            wordPosition = selectedWordPositions[0]
         }
 
-        const word = this.wordAt(index)
+        const word = this.wordAt(wordPosition)
         const { puncAfter } = word
-        let change, same = false, newPunc
+        let change, newPunc, same = false
         if (puncAfter && puncAfter.includes(punc)) {
             same = true
         }
@@ -633,8 +631,8 @@ class InteractiveTranscript extends Component {
             prevState: { puncAfter }
         }]]
 
+        const nextWord = this.nextWord(word)
         if (endsSentence(punc) && !same) {
-            const nextWord = this.wordAt(index + 1)
             if (!isCapitalized(nextWord.word)) {
                 change = change.concat([[
                     {
@@ -647,7 +645,6 @@ class InteractiveTranscript extends Component {
                 ]])
             }
         } else {
-            const nextWord = this.wordAt(index + 1)
             if (isCapitalized(nextWord.word) && !alwaysCapitalized(nextWord.word)) {
                 change = change.concat([[
                     {
@@ -661,18 +658,15 @@ class InteractiveTranscript extends Component {
             }
         }
 
-        const edit = {
-            selectedWords: this.getSelectedWordsObject(),
-            change
-        }
+        const edit = { selectedWordPositions, change }
 
         this.undoRedoEdit('edit', edit)
 
     }
 
     selectWords = whichOne => {
-        const { selectedWordIndices, transcript } = this.state
-        const firstOrLastWordIndex = selectedWordIndices.start + selectedWordIndices.offset
+        const { selectedWordPositions, transcript } = this.state
+        const firstOrLastWordIndex = selectedWordPositions.start + selectedWordPositions.offset
 
         if ((whichOne === 'increase' && firstOrLastWordIndex === transcript.length)
             || (whichOne === 'decrease' && firstOrLastWordIndex === 0)) return
@@ -680,21 +674,21 @@ class InteractiveTranscript extends Component {
         const offset = whichOne === 'increase' ? 1 : -1
 
         this.setState({
-            selectedWordIndices: {
-                ...selectedWordIndices,
-                offset: selectedWordIndices.offset + offset
+            selectedWordPositions: {
+                ...selectedWordPositions,
+                offset: selectedWordPositions.offset + offset
             }
         })
 
     }
 
     goToNextWord = (skipHighConfidenceWords = false) => {
-        const { transcript, selectedWordIndices } = this.state
+        const { transcript, selectedWordPositions } = this.state
         const player = this.getRef('player')
 
         let transcriptLength = transcript.length;
 
-        let lastWordIndex = selectedWordIndices.offset > 1 ? selectedWordIndices.start + selectedWordIndices.offset : selectedWordIndices.start
+        let lastWordIndex = selectedWordPositions.offset > 1 ? selectedWordPositions.start + selectedWordPositions.offset : selectedWordPositions.start
 
         let selectedWordIndex, selectedWord
 
@@ -710,13 +704,13 @@ class InteractiveTranscript extends Component {
                 selectedWord = this.wordAt(selectedWordIndex)
             }
 
-            if (!player.paused && selectedWordIndex > selectedWordIndices.start + 2) {
+            if (!player.paused && selectedWordIndex > selectedWordPositions.start + 2) {
                 selectedWordIndex -= 2
                 selectedWord = this.wordAt(selectedWordIndex)
             }
 
             this.setState({
-                selectedWordIndices: {
+                selectedWordPositions: {
                     start: selectedWordIndex,
                     offset: 0,
                 },
@@ -726,13 +720,13 @@ class InteractiveTranscript extends Component {
     }
 
     goToPreviousWord = (skipHighConfidenceWords = false) => {
-        const { selectedWordIndices } = this.state
+        const { selectedWordPositions } = this.state
         const player = this.getRef('player')
         let firstWordIndex;
-        if (selectedWordIndices.offset < 0) {
-            firstWordIndex = selectedWordIndices.start + selectedWordIndices.offset
+        if (selectedWordPositions.offset < 0) {
+            firstWordIndex = selectedWordPositions.start + selectedWordPositions.offset
         } else {
-            firstWordIndex = selectedWordIndices.start
+            firstWordIndex = selectedWordPositions.start
         }
 
         if (firstWordIndex === 0) return;
@@ -746,15 +740,15 @@ class InteractiveTranscript extends Component {
             selectedWord = this.wordAt(selectedWordIndex)
         }
 
-        if (!player.paused && selectedWordIndex > selectedWordIndices.start + 2) {
+        if (!player.paused && selectedWordIndex > selectedWordPositions.start + 2) {
             selectedWordIndex -= 2
             selectedWord = this.wordAt(selectedWordIndex)
         }
 
-        if (!player.paused && selectedWordIndex === selectedWordIndices.start) {
+        if (!player.paused && selectedWordIndex === selectedWordPositions.start) {
             this.setState({
-                selectedWordIndices: {
-                    start: selectedWordIndices.start - 2,
+                selectedWordPositions: {
+                    start: selectedWordPositions.start - 2,
                     offset: 0,
                 }
             })
@@ -762,7 +756,7 @@ class InteractiveTranscript extends Component {
         }
 
         this.setState({
-            selectedWordIndices: {
+            selectedWordPositions: {
                 start: selectedWordIndex,
                 offset: 0,
             },
@@ -770,61 +764,45 @@ class InteractiveTranscript extends Component {
         player.currentTime = selectedWord.start
     }
 
-    getNewWordIndex = newPosition => {
-        const { transcript, selectedWordIndices } = this.state
-        const { start } = selectedWordIndices
-        const transcript_length = transcript.length
+    positionClosestTo = position => {
+        const wordsAtSecond = this.state.transcriptSeconds[parseInt(position)]
+        if (wordsAtSecond.length === 0) return null
+        let closestWord = wordsAtSecond[0]
+        let diff = closestWord.start - position
+        let smallestDiff
 
-        let minimumIndex = 0;
-        let maxIndex = transcript_length - 1;
-        let currentIndex;
-
-        if (newPosition < transcript[0].start) {
-            return 0
-        } else if (newPosition > transcript.slice(-1)[0].end) {
-            return transcript_length - 1
+        for (const word of Object.values(wordsAtSecond).slice(1)) {
+            if (diff < 0 && diff > smallestDiff) {
+                smallestDiff = diff
+                closestWord = word
+            }
+            diff = word.start - position
         }
+        return closestWord.start
 
-        const search = firstGuess => {
-            currentIndex = firstGuess || Math.floor((minimumIndex + maxIndex) / 2);
-
-            const wordObject = transcript[currentIndex]
-
-            if (newPosition >= wordObject.start && newPosition <= wordObject.end) {
-                return currentIndex;
-            }
-
-            if (currentIndex < transcript_length - 1
-                && newPosition > wordObject.end
-                && newPosition < transcript[currentIndex + 1].start) {
-                return currentIndex;
-            }
-
-            // optimize for the current word being one of the next few
-            if (firstGuess && [start, start + 1, start + 2].includes(firstGuess)) {
-                firstGuess++
-            } else {
-                firstGuess = null;
-            }
-
-            if (wordObject.start < newPosition) {
-                minimumIndex = currentIndex + 1;
-            } else if (wordObject.end > newPosition) {
-                maxIndex = currentIndex - 1;
-            }
-
-            return search();
-        };
-
-        return search(start)
     }
 
+    getNewWordIndex = newPosition => {
+        const { transcriptSeconds, firstWordPosition, lastWordPosition } = this.state
+
+        if (newPosition <= firstWordPosition) return firstWordPosition
+        if (newPosition >= lastWordPosition) return lastWordPosition
+
+        if (Object.keys(transcriptSeconds).includes(parseInt(newPosition).toString())) {
+            const guess = this.positionClosestTo(newPosition)
+            return guess
+        }
+    }
+
+
+    firstWord = () => this.state.transcript[this.state.firstWordPosition]
+
     onTimeUpdate = newPosition => {
-        if (this.state.selectedWordIndices.offset !== 0) return
+        if (this.state.selectedWordPositions.offset !== 0) return
         const newWordIndex = this.getNewWordIndex(newPosition)
-        if (newWordIndex !== undefined) {
+        if (newWordIndex) {
             this.setState({
-                selectedWordIndices: {
+                selectedWordPositions: {
                     start: newWordIndex,
                     offset: 0,
                 },
@@ -833,13 +811,10 @@ class InteractiveTranscript extends Component {
     }
 
     onClickWord = word => {
-        const player = this.getRef('player')
         this.setState({
-            selectedWordIndices: {
-                start: word.index,
-                offset: 0,
-            },
+            selectedWordPositions: [word.start]
         })
+        const player = this.getRef('player')
         player.currentTime = word.start + Math.random() * .01
     }
 
@@ -872,17 +847,17 @@ class InteractiveTranscript extends Component {
     }
 
     onUndoAllClick = () => {
-        if (this.state.undoQueue.length === 0 && this.state.redoQueue.length === 0) return
+        // if (this.state.undoQueue.length === 0 && this.state.redoQueue.length === 0) return
         animateClick(this.getRef('undoAll'))
         if (window.confirm('Remove all changes to transcript?  This is not reversible.')) {
             localStorage.removeItem('queueState')
             localStorage.removeItem('transcript')
-            localStorage.removeItem('currentWordIndex')
+            localStorage.removeItem('currentPosition')
             this.setState({
                 undoQueue: [],
                 redoQueue: [],
                 transcript: null,
-                selectedWordIndices: {
+                selectedWordPositions: {
                     start: 0,
                     offset: 0
                 }
@@ -905,18 +880,6 @@ class InteractiveTranscript extends Component {
         player.pause()
     }
 
-    renderTranscript = () => {
-        return (
-            <span id='transcript'>
-                <Transcript
-                    transcript={this.state.transcript}
-                    selectedWordIndices={this.state.selectedWordIndices}
-                    onClickWord={this.onClickWord}
-                />
-            </span>
-        )
-    }
-
     renderEditModal() {
         const { editingWords } = this.state
         const words = this.selectedWords().map(word => word.word).join(' ')
@@ -925,7 +888,8 @@ class InteractiveTranscript extends Component {
             <EditModal
                 onChange={this.onInputModalChange}
                 onKeyUp={this.onInputModalKeyUp}
-                onFocus={() => { document.execCommand('selectall') }}
+                onFocus={() => { document.execCommand('selectall') }
+                }
                 value={this.state.editModalEdited ? editingWords : words}
             />
         )
@@ -933,7 +897,7 @@ class InteractiveTranscript extends Component {
     }
 
     render() {
-        const { transcript, showEditModal, undoQueue, redoQueue } = this.state
+        const { selectedWordPositions, transcript, showEditModal, undoQueue, redoQueue } = this.state
         const queueLengths = [undoQueue.length, redoQueue.length]
 
         return (
@@ -953,7 +917,17 @@ class InteractiveTranscript extends Component {
                     ref={this.mediaContainer}
                 />
                 {showEditModal && this.renderEditModal()}
-                {transcript && this.renderTranscript()}
+                {transcript && (
+                    <span id='transcript'>
+                        <Transcript
+                            firstWord={this.firstWord()}
+                            getNextWord={this.nextWord}
+                            selectedWordPositions={selectedWordPositions}
+                            onClickWord={this.onClickWord}
+                        />
+                    </span>
+                )
+                }
             </React.Fragment >
         )
     }
