@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Transcript from './transcript';
 import EditModal from './editModal';
-import MediaContainer from './mediaContainer'
+import MediaContainer from './MediaContainer'
 import path from 'path'
 import { CONFIDENCE_THRESHOLD, transcriptEndpoint } from './config'
 import { removeSelection, animateClick, _downloadTxtFile } from './helpers/helpers'
