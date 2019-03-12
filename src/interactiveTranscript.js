@@ -62,17 +62,19 @@ class InteractiveTranscript extends Component {
 
 
     fetchTranscript = () => {
-			if (localStorage.getItem('username') === null) this.getAuth('username')
-			if (localStorage.getItem('password') === null) this.getAuth('password')
-			const username = localStorage.getItem('username')
-			const password = localStorage.getItem('password')
+			['username', 'password', 'transcript_id'].forEach(itemName => {
+				if (localStorage.getItem(itemName) === null) {
+					itemValue = this.get(itemName)
+					window[itemName] = itemValue
+				}
 
 			let headers = new Headers();
 			headers.set(
 				'Authorization', 
 				'Basic ' + window.btoa(username + ":" + password).toString('base64'));
 
-      fetch(transcriptEndpoint, {method: 'GET', headers: headers})
+			fetch(transcriptEndpoint + transcript_id, 
+						{method: 'GET', headers: headers})
         .then(response => response.json())
         .then(data => {
 					this.setState({ transcript: data })
@@ -83,7 +85,7 @@ class InteractiveTranscript extends Component {
 				})
     }
 
-		getAuth = which => {
+		get = which => {
 			localStorage.setItem(which, prompt(which + '?'))	
 		}
 
