@@ -67,6 +67,7 @@ class InteractiveTranscript extends Component {
 					itemValue = this.get(itemName)
 					window[itemName] = itemValue
 				}
+			}
 
 			let headers = new Headers();
 			headers.set(
