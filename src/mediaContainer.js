@@ -17,13 +17,13 @@ export default class MediaContainer extends Component {
         if (!ready) return null
         return (
             <div id='media-container'>
-                <MediaPlayer
+							{mediaSource && <MediaPlayer
                     ref={this.mediaPlayer}
                     src={mediaSource}
                     onTimeUpdate={onTimeUpdate}
                     togglePlay={togglePlay}
                     stopPlayback={stopPlayback}
-                />
+                />}
                 <div id="media-label">{mediaSource}</div>
                 <Controls
                     onDownloadTranscriptClick={onDownloadTranscriptClick}

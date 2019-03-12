@@ -14,110 +14,102 @@ import {
 
 class InteractiveTranscript extends Component {
 
-    constructor(props) {
-        super(props)
-        this.state = {
-            selectedWordIndices: {
-                start: 0,
-                offset: 0
-            },
-            transcript: null,
-            undoQueue: [],
-            redoQueue: [],
-            showEditModal: false,
-            editingWords: [],
-            editModalEdited: false,
-            wasPlaying: false,
+  constructor(props) {
+    super(props)
+    this.state = {
+      selectedWordIndices: {
+          start: 0,
+          offset: 0
+      },
+      transcript: null,
+      undoQueue: [],
+      redoQueue: [],
+      showEditModal: false,
+      editingWords: [],
+      editModalEdited: false,
+      wasPlaying: false,
+    }
+    this.mediaContainer = React.createRef()
+  }
+
+  componentDidMount() {
+    let theTranscript;
+   	this.addListeners()
+
+    const transcript = localStorage.getItem('transcript')
+    if (transcript) {
+        const parsedTranscript = JSON.parse(transcript)
+        if (parsedTranscript) {
+            theTranscript = parsedTranscript
         }
-        this.mediaContainer = React.createRef()
     }
 
-    componentDidMount() {
-        let theTranscript;
-        this.addListeners()
-
-        const transcript = localStorage.getItem('transcript')
-        if (transcript) {
-            const parsedTranscript = JSON.parse(transcript)
-            if (parsedTranscript) {
-                theTranscript = parsedTranscript
-            }
-        }
-
-        if (!theTranscript) {
-            this.fetchTranscript()
-        } else {
-            this.setState({ transcript: theTranscript })
-            const queueState = localStorage.getItem('queueState')
-            if (queueState) {
-                const parsedQueueState = JSON.parse(queueState)
-                this.setState({
-                    undoQueue: parsedQueueState.undoQueue,
-                    redoQueue: parsedQueueState.redoQueue
-                })
-            }
-        }
-
-    }
-
-
-    fetchTranscript = () => {
-			['username', 'password', 'transcript_id'].forEach(itemName => {
-				if (localStorage.getItem(itemName) === null) {
-					let itemValue = this.get(itemName);
-					window[itemName] = itemValue;
-				}
-			});
-
-			let headers = new Headers();
-			headers.set(
-				'Authorization', 
-				'Basic ' + window.btoa(username + ":" + password).toString('base64'));
-
-			fetch(transcriptEndpoint + transcript_id, 
-						{method: 'GET', headers: headers})
-        .then(response => response.json())
-        .then(data => {
-					this.setState({ transcript: data })
-						localStorage.setItem(
-							'transcript',
-							JSON.stringify(data)
-						)
-				})
-    }
-
-		get = which => {
-			const itemValue = prompt(which + '?');
-			localStorage.setItem(which, itemValue);
-			return itemValue;
-		}
-
-    addListeners = () => [
-        this.addKeyboardListener,
-        this.addClickListener,
-        this.addCloseListener,
-        this.addLoadListener,
-    ].forEach(func => func())
-
-    addKeyboardListener = () => document.addEventListener('keydown', this.handleKeyDown)
-    addClickListener = (element = document.body) => element.addEventListener('click', this.handleClick)
-    addCloseListener = () => window.addEventListener('beforeunload', () => localStorage.setItem('currentWordIndex', this.state.selectedWordIndices.start))
-
-    addLoadListener = () => window.addEventListener('load', () => {
-        let selectedWordIndex = localStorage.getItem('currentWordIndex') || 0
-        if (selectedWordIndex) {
-            selectedWordIndex = parseInt(selectedWordIndex)
-
+    if (!theTranscript) {
+        this.fetchTranscript()
+    } else {
+        this.setState({ transcript: theTranscript })
+        const queueState = localStorage.getItem('queueState')
+        if (queueState) {
+            const parsedQueueState = JSON.parse(queueState)
             this.setState({
-                selectedWordIndices: {
-                    start: parseInt(selectedWordIndex),
-                    offset: 0
-                }
+                undoQueue: parsedQueueState.undoQueue,
+                redoQueue: parsedQueueState.redoQueue
             })
         }
-        const player = this.getRef('player')
-        player.currentTime = this.wordAt(selectedWordIndex).start + Math.random() * .01
-    })
+    }
+
+  }
+
+  fetchTranscript = () => {
+		const { username, password, transcriptID } = this.props
+		console.log(transcriptID)
+		let headers = new Headers();
+		headers.set(
+			'Authorization', 
+			'Basic ' + window.btoa(username + ":" + password).toString('base64'));
+
+		console.log(headers)
+
+		fetch(transcriptEndpoint + transcriptID, {method: 'GET', headers: headers})
+      .then(response => response.json())
+      .then(data => {
+				this.setState({ transcript: data })
+					localStorage.setItem(
+						'transcript',
+						JSON.stringify(data)
+					)
+			})
+  }
+
+  addListeners = () => [
+    this.addKeyboardListener,
+    this.addClickListener,
+    this.addCloseListener,
+    this.addLoadListener,
+  ].forEach(func => func())
+
+  addKeyboardListener = () => document.addEventListener('keydown', this.handleKeyDown)
+  addClickListener = (element = document.body) => element.addEventListener('click', this.handleClick)
+  addCloseListener = () => window.addEventListener('beforeunload', () => localStorage.setItem('currentWordIndex', this.state.selectedWordIndices.start))
+
+  addLoadListener = () => window.addEventListener('load', () => {
+      let selectedWordIndex = localStorage.getItem('currentWordIndex') || 0
+      if (selectedWordIndex) {
+          selectedWordIndex = parseInt(selectedWordIndex)
+
+          this.setState({
+              selectedWordIndices: {
+                  start: parseInt(selectedWordIndex),
+                  offset: 0
+              }
+          })
+      }
+		  if (this.state.mediaSource) {
+      const player = this.getRef('player')
+      player.currentTime = this.wordAt(selectedWordIndex).start + Math.random() * .01
+		}		
+				
+  })
 
     handleClick = e => {
         const { showEditModal } = this.state
@@ -925,16 +917,16 @@ class InteractiveTranscript extends Component {
     }
 
     renderTranscript = () => {
-        return (
-            <span id='transcript'>
-                <Transcript
-                    transcript={this.state.transcript}
-                    selectedWordIndices={this.state.selectedWordIndices}
-                    onClickWord={this.onClickWord}
-                />
-            </span>
-        )
-    }
+      return (
+        <span id='transcript'>
+          <Transcript
+            transcript={this.state.transcript}
+            selectedWordIndices={this.state.selectedWordIndices}
+            onClickWord={this.onClickWord}
+          />
+        </span>
+    )
+  }
 
     renderEditModal() {
         const { editingWords } = this.state
