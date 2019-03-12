@@ -64,10 +64,10 @@ class InteractiveTranscript extends Component {
     fetchTranscript = () => {
 			['username', 'password', 'transcript_id'].forEach(itemName => {
 				if (localStorage.getItem(itemName) === null) {
-					itemValue = this.get(itemName)
-					window[itemName] = itemValue
+					itemValue = this.get(itemName);
+					window[itemName] = itemValue;
 				}
-			}
+			});
 
 			let headers = new Headers();
 			headers.set(
