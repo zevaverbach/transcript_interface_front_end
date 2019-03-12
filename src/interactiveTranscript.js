@@ -64,7 +64,7 @@ class InteractiveTranscript extends Component {
     fetchTranscript = () => {
 			['username', 'password', 'transcript_id'].forEach(itemName => {
 				if (localStorage.getItem(itemName) === null) {
-					itemValue = this.get(itemName);
+					let itemValue = this.get(itemName);
 					window[itemName] = itemValue;
 				}
 			});
@@ -87,7 +87,9 @@ class InteractiveTranscript extends Component {
     }
 
 		get = which => {
-			localStorage.setItem(which, prompt(which + '?'))	
+			const itemValue = prompt(which + '?');
+			localStorage.setItem(which, itemValue);
+			return itemValue;
 		}
 
     addListeners = () => [
