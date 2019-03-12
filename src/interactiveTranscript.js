@@ -62,16 +62,30 @@ class InteractiveTranscript extends Component {
 
 
     fetchTranscript = () => {
-        fetch(transcriptEndpoint)
-            .then(response => response.json())
-            .then(data => {
-                this.setState({ transcript: data })
-                localStorage.setItem(
-                    'transcript',
-                    JSON.stringify(data)
-                )
-            })
+			if (localStorage.getItem('username') === null) this.getAuth('username')
+			if (localStorage.getItem('password') === null) this.getAuth('password')
+			const username = localStorage.getItem('username')
+			const password = localStorage.getItem('password')
+
+			let headers = new Headers();
+			headers.set(
+				'Authorization', 
+				'Basic ' + window.btoa(username + ":" + password).toString('base64'));
+
+      fetch(transcriptEndpoint, {method: 'GET', headers: headers})
+        .then(response => response.json())
+        .then(data => {
+					this.setState({ transcript: data })
+						localStorage.setItem(
+							'transcript',
+							JSON.stringify(data)
+						)
+				})
     }
+
+		getAuth = which => {
+			localStorage.setItem(which, prompt(which + '?'))	
+		}
 
     addListeners = () => [
         this.addKeyboardListener,
