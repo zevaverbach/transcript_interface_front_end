@@ -10,10 +10,12 @@ class App extends Component {
 		username: 'zev@averba.ch',
 		transcriptID: 9,
 		mediaSource: 'https://www.dropbox.com/s/qzvsuugul4yet2a/Big%20Think%3A%20Leland%20Melvin.webm?dl=1',
+		isLoading: true,
 	}
 
 	componentDidMount() {
 		this.getCredentialsAndAssets();
+		this.setState({isLoading: false})
 	}
 
 	get = which => {
@@ -31,18 +33,23 @@ class App extends Component {
 	}
 
   render() {
-		const { username, password, transcriptID, mediaSource } = this.state
-		return (
-      <div className="App">
-				{transcriptID && mediaSource && <InteractiveTranscript 
-					password={password}
-					username={username}
-					transcriptID={transcriptID}
-					mediaSource={mediaSource}
-				/>}
-      </div>
-    );
-  }
+		const { username, password, transcriptID, mediaSource, isLoading } = this.state
+
+		if (isLoading) {
+			return <div className="App">Loading...</div>
+		} else {
+			return (
+				<div className="App">
+					{transcriptID && mediaSource && <InteractiveTranscript 
+						password={password}
+						username={username}
+						transcriptID={transcriptID}
+						mediaSource={mediaSource}
+					/>}
+				</div>
+			);
+		}
+	}
 }
 
 export default App;
