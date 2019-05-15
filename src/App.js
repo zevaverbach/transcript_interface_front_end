@@ -33,16 +33,16 @@ class App extends Component {
   render() {
 		const { username, password, transcriptID, mediaSource } = this.state
 		return (
-			<div className="App">
+      <div className="App">
 				{transcriptID && mediaSource && <InteractiveTranscript 
 					password={password}
 					username={username}
 					transcriptID={transcriptID}
 					mediaSource={mediaSource}
 				/>}
-			</div>
-		);
-	}
+      </div>
+    );
+  }
 }
 
 export default App;

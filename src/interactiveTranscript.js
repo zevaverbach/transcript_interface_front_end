@@ -62,10 +62,13 @@ class InteractiveTranscript extends Component {
 
   fetchTranscript = () => {
 		const { username, password, transcriptID } = this.props
+		console.log(transcriptID)
 		let headers = new Headers();
 		headers.set(
 			'Authorization', 
 			'Basic ' + window.btoa(username + ":" + password).toString('base64'));
+
+		console.log(headers)
 
 		fetch(transcriptEndpoint + transcriptID, {method: 'GET', headers: headers})
       .then(response => response.json())

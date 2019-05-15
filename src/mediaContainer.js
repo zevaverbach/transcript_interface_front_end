@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import MediaPlayer from './mediaPlayer';
-import Controls from './controls';
-import Cheatsheet from './cheatsheet';
+import Controls from './controls'
 
 export default class MediaContainer extends Component {
 
@@ -25,6 +24,7 @@ export default class MediaContainer extends Component {
                     togglePlay={togglePlay}
                     stopPlayback={stopPlayback}
                 />}
+                <div id="media-label">{mediaSource}</div>
                 <Controls
                     onDownloadTranscriptClick={onDownloadTranscriptClick}
                     onUndoAllClick={onUndoAllClick}
@@ -34,7 +34,6 @@ export default class MediaContainer extends Component {
                     togglePlay={togglePlay}
                     ref={this.controls}
                 />
-								<Cheatsheet />
             </div>
         )
     }
