@@ -8,8 +8,8 @@ class App extends Component {
 	state = {
 		password: null,
 		username: null,
-		transcriptID: null,
-		mediaSource: null,
+		transcriptID: 9,
+		mediaSource: 'https://www.dropbox.com/s/qzvsuugul4yet2a/Big%20Think%3A%20Leland%20Melvin.webm?dl=1',
 	}
 
 	componentDidMount() {
