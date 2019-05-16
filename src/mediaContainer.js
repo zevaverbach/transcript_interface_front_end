@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import MediaPlayer from './mediaPlayer';
 import Controls from './controls';
-import Cheatsheet from './cheatsheet';
+import CheatSheet from './cheatSheet';
 
 
 export default class MediaContainer extends Component {
