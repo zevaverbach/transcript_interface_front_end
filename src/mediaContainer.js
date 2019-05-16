@@ -35,7 +35,7 @@ export default class MediaContainer extends Component {
                     togglePlay={togglePlay}
                     ref={this.controls}
                 />
-								<Cheatsheet />
+								<CheatSheet />
             </div>
         )
     }
