@@ -9,7 +9,7 @@ class App extends Component {
 		password: '$pbkdf2-sha256$200000$A8DYG6M0plSKcQ5hzJlzDg$VG1lyV.4/ILqHgrLzd0XgPTWya/gZd9QiQAMOA0e91s',
 		username: 'zev@averba.ch',
 		transcriptID: 9,
-		mediaSource: 'https://www.dropbox.com/s/qzvsuugul4yet2a/Big%20Think%3A%20Leland%20Melvin.webm?dl=1',
+		mediaSource: 'https://www.dropbox.com/s/18rs3mfewxsnub5/Big%20Think%3A%20Leland%20Melvin.webm?dl=1',
 	}
 
 	componentDidMount() {

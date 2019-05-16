@@ -77,3 +77,21 @@ p{
 .thin-underline {
     border-bottom: 3px solid red;
 }
+
+.shortcut-key, .shortcut-headings, .shortcut-action {
+  font-size: .55em;
+}
+
+.shortcut-headings {
+  text-decoration: underline;
+  padding-bottom: 1em;
+  text-align: left;
+}
+
+.cheatsheet {
+  line-height: .7em;
+  margin: 2em 1em;
+  padding: 1em;
+  color: gray;
+  background-color: #DDD;
+}
