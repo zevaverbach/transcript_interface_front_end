@@ -27,4 +27,4 @@ const CheatSheet = () => (
 );
 
 
-export default Cheatsheet;
+export default CheatSheet;
