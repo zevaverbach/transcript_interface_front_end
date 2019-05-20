@@ -15,8 +15,8 @@ const CheatSheet = () => (
 			<tr><td className='shortcut-key cheatsheet-item'>^+;</td><td className='shortcut-action'>fast forward (or ⌘/❖+;)</td></tr>
 			<tr><td className='shortcut-key cheatsheet-item'>^+’</td><td className='shortcut-action'>rewind 10 seconds (or ⌘/❖+’)</td></tr>
 			<tr><td className='shortcut-key cheatsheet-item'>↵</td><td className='shortcut-action'>Edit and add words</td></tr>
-			<tr><td className='shortcut-key cheatsheet-item'>^+z </td><td className='shortcut-action'>undo  (or ⌘/❖+z)</td></tr>
-			<tr><td className='shortcut-key cheatsheet-item'>^+⇧+z</td><td className='shortcut-action'>redo (or ⌘/❖+⇧+z)</td></tr>
+			<tr><td className='shortcut-key cheatsheet-item'>⌘/❖+z</td><td className='shortcut-action'>undo</td></tr>
+			<tr><td className='shortcut-key cheatsheet-item'>⌘/❖+⇧+z</td><td className='shortcut-action'>redo</td></tr>
 			<tr><td className='shortcut-key cheatsheet-item'>⌫</td><td className='shortcut-action'>delete words </td></tr>
 			<tr><td className='shortcut-key cheatsheet-item'>, . : ? ! / “ ( ) [ ]</td><td className='shortcut-action'>add and remove punctuation on the fly.</td></tr>
 			<tr><td className='shortcut-key cheatsheet-item'>^+`</td><td className='shortcut-action'>toggle capitalization</td></tr>
