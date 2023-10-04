@@ -7,8 +7,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <InteractiveTranscript mediaSource={'Big Think: Leland Melvin.mp4'} />
-        {/* <InteractiveTranscript mediaSource={'audio.m4a'} /> */}
+        {/* <InteractiveTranscript mediaSource={'Big Think: Leland Melvin.mp4'} /> */}
+        <InteractiveTranscript mediaSource={'audio.m4a'} />
       </div>
     );
   }
